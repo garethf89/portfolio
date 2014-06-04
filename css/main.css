@@ -434,6 +434,9 @@ h4 {
   -moz-box-shadow: 2px 3px 5px #aaa;
   -webkit-box-shadow: 2px 3px 5px #aaa; }
 
+.work_image.work_ba{
+    background-position:-16px -1707px;}
+
 .work_image.work_elevon {
   background-position: -18px -1463px; }
 

@@ -95,6 +95,10 @@
 			<h2>My Work...</h2>
 			
 			<div id="work_items">
+            <div class="work_item" data-work="ba">
+				<div class="work_image work_ba"></div>
+				<h4>British Airways</h4>
+			</div>      
             <div class="work_item" data-work="elevon">
 				<div class="work_image work_elevon"></div>
 				<h4>Elévon World</h4>
@@ -110,10 +114,6 @@
 			<div class="work_item end" data-work="esearcher">
 				<div class="work_image work_esearch"></div>
 				<h4>eSearcher</h4>
-			</div>
-			<div class="work_item" data-work="music_finder">
-				<div class="work_image work_music"></div>
-				<h4>Music Finder</h4>
 			</div>
 			<div class="work_item" data-work="other_projects">
 				<div class="work_image work_mini"></div>

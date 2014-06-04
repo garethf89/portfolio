@@ -1,6 +1,26 @@
 $(document).ready(function(){
 //define data for all work
 var work = {};
+work['ba'] = {
+    name: 'Biritish Airways',
+    desc: 'While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.',
+    input: '',
+    skills: ['CSS3', 'HTML5', 'JQuery & Javascript'],
+    images: [{
+        thumb: 'img/thumbs/bathumb1.png',
+        image: 'images/lightboximg/bamain1.png'
+    }, {
+        thumb: 'img/thumbs/bathumb2.png',
+        image: 'images/lightboximg/bamain2.png'
+    }, {
+        thumb: 'img/thumbs/bathumb3.png',
+        image: 'images/lightboximg/bamain3.png'
+    }],
+    links: [{
+        title: 'Leighton',
+        link: 'http://www.leighton.com'
+    }]
+};
 work['elevon'] = {
     name: 'Elévon World',
     desc: "Wordpress based site for a fashion company. This project invovled work on the wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.",
@@ -8,13 +28,13 @@ work['elevon'] = {
     skills: ['Wordpress', 'PayPal','CSS3', 'HTML5', 'JQuery & Javascript', 'PHP'],
     images: [{
         thumb: 'img/thumbs/elevonthumb1.png',
-        image: 'img/lightboximg/elevonmain1.png'
+        image: 'images/lightboximg/elevonmain1.png'
     }, {
         thumb: 'img/thumbs/elevonthumb2.png',
-        image: 'img/lightboximg/elevonmain2.png'
+        image: 'images/lightboximg/elevonmain2.png'
     }, {
         thumb: 'img/thumbs/elevonthumb3.png',
-        image: 'img/lightboximg/elevonmain3.png'
+        image: 'images/lightboximg/elevonmain3.png'
     }],
     links: [{
         title: 'Elevon',
@@ -81,35 +101,22 @@ work['esearcher'] = {
         link: 'http://garethferguson.co.uk/projects/esearcher/eSearcher.swf'
     }]
 };
-work['music_finder'] = {
-    name: 'Music Finder',
-    desc: "This Adobe Flash builder application allows a user to view their music collection and find information about albums. The user can then edit the album details and create notes, making this application ideal as a back end system for a music store.",
-    input: 'I developed this for a university project. ',
-    skills: ['Flash Builder', 'PHP', 'SQL Lite'],
-    images: [{
-        thumb: 'img/shots/music1.png',
-        image: 'img/shots/music1.png'
-    }, {
-        thumb: 'img/shots/music2.png',
-        image: 'img/shots/music2.png'
-    }, {
-        thumb: 'img/shots/music3.png',
-        image: 'img/shots/music3.png'
-    }],    
-    links: [{
-        title: 'Music Finder',
-        link: 'http://garethferguson.co.uk/projects/esearcher/eSearcher.swf'
-    }]
-};
+
 work['other_projects'] = {
     name: 'Other Projects',
-    desc: ' I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers, It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>There are also smaller projects that I worked on for a specific event or purpose. <br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ',
-    skills: ['HTML5', 'CSS3', 'JQuery & Javascript', 'Adobe Flash'],
+    desc: ' I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers, It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This allowed the user to search for music in a database.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ',
+    skills: ['HTML5', 'CSS3', 'JQuery & Javascript', 'Adobe Flash','Flash Builder', 'PHP', 'SQL Lite'],
     links: [{
         title: 'WiiSources',
         link: 'http://garethferguson.co.uk/files/menu.swf'
+    },{
+        title: 'Music Finder',
+        link: 'http://garethferguson.co.uk/projects/esearcher/eSearcher.swf'
     }],
     images: [{
+        thumb: 'img/shots/music1.png',
+        image: 'img/shots/music1.png'
+    },{
         thumb: 'img/shots/mini1.png',
         image: 'img/shots/mini1.png'
     }, {
