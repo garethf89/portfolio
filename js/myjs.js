@@ -10,9 +10,6 @@ work['ba'] = {
         thumb: 'img/thumbs/bathumb1.png',
         image: 'images/lightboximg/bamain1.png'
     }, {
-        thumb: 'img/thumbs/bathumb2.png',
-        image: 'images/lightboximg/bamain2.png'
-    }, {
         thumb: 'img/thumbs/bathumb3.png',
         image: 'images/lightboximg/bamain3.png'
     }],
