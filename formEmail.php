@@ -15,6 +15,6 @@ $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
 mail($myemail,$subject,$message,$headers,"-f $email") or die ("failed");
 
-header('Location: http://www.garethferguson.co.uk/index.php?email=success');
+echo "success";
 
 ?>

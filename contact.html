@@ -1,0 +1,42 @@
+<section id="contact_me" class="site_width centered">
+
+    <section id="contact_success" class="site_width fadeAnimation" ng-show="showSuccessMessage">
+
+        <h2>Thank you!</h2>
+
+        <p>Your email was successfully sent, thanks for your interest!</p>
+
+    </section>
+    
+    <section id="contact_error" class="site_width fadeAnimation" ng-show="showErrorMessage">
+        <p class="error">Failed to send enquiry! You could try directly emailing gareth.f@hotmail.co.uk</p>
+    </section>
+
+    <form id="contact_form" ng-submit="submitEnquiry()" class="fadeAnimation" ng-show="!showSuccessMessage" method="post">
+
+        <h2>Contact me</h2>
+
+        <label for="person_name">Name:
+            <span class="required">*</span>
+        </label>
+        <input type="text" required name="person_name" ng-model="formData.person_name" id="person_name" tabindex="1" />
+
+        <label for="person_email">Email:
+            <span class="required">*</span>
+        </label>
+        <input type="email" autocomplete="off" equired name="person_email" ng-model="formData.person_email" id="person_email" tabindex="2" />
+
+        <label for="person_enq">Message:
+            <span class="required">*</span>
+        </label>
+        <textarea name="person_enq" id="person_enq" ng-model="formData.person_enq" tabindex="3" rows="4"></textarea>
+
+        <button id="submit_message" class="green_button" tabindex="4">Submit</button>
+
+        <p>
+            <span class="required">* = Required field</span>
+        </p>
+
+    </form>
+
+</section>

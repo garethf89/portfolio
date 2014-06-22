@@ -1,0 +1,40 @@
+<section id="work_page" class="site_width" ng-if="currentItem != undefined">
+
+    <section id="work_details">
+
+        <header class="wiHeader clearfix">
+            <a href="#/" class="workPage_home home_button">Home</a>
+            <span class="workPage_divider">&#47;</span>
+            <h2>{{currentItem.name}}</h2>
+        </header>
+
+        <h4>Details:</h4>
+        <p>{{currentItem.desc}}</p>
+
+        <h4>Technology:</h4>
+        <ul id="tech_used">
+            <li ng-repeat="skill in currentItem.skills" ng-add-custom-class>
+                <div ng-class="tech_classes[skill]"></div>{{skill}}
+            </li>
+        </ul>
+
+        <div class="clearfix">&nbsp;</div>
+
+        <h4>Images:</h4>
+        <div id="work_slider">
+
+            <div class="sliderContainer">
+                <a ng-repeat="image in currentItem.images" class="fancyModal" rel="galWork" href="{{image.image}}" light-box>
+                    <img ng-src="{{image.thumb}}" />
+                </a>
+            </div>
+
+            <div ng-if="currentItem.links" ng-repeat="link in currentItem.links">
+                <a class="green_button work_link" target="_blank" href="{{link.link}}" tabindex="1">Visit {{link.title}}</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</section>

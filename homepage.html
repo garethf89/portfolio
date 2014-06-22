@@ -1,0 +1,23 @@
+<section id="main_content_upper" class="site_width clearfix centered">
+    
+    <article id="about_me">
+        <h2>About Me...</h2>
+        <p class="about_text">
+            Hi, I am a Front End Web Developer based in Newcastle Upon Tyne, UK. I graduated from Northumbria University in 2011 with first class honors and have been working on various projects since then. I specialise in working on large scale web applications in which I have used primarily JQuery and PHP. I also have experience in regular web pages and converting PSD images to HTML code.
+        </p>
+    </article>
+    
+</section>
+
+<section id="my_work" class="site_width centered">
+
+    <h2>My Work...</h2>
+    
+    <div id="work_items">
+        <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="#/{{work}}" class="work_item">
+            <div class="work_image {{value.work_class}}"></div>
+            <h4>{{value.name}}</h4>
+        </a>
+    </div>
+
+</section>
