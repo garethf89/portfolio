@@ -29,8 +29,8 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-        <script src="//code.angularjs.org/1.2.18/angular-route.min.js"></script>
-        <script src="//code.angularjs.org/1.2.18/angular-animate.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/angular-animate.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers.js"></script>
         
