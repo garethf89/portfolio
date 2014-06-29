@@ -1,9 +1,9 @@
 
-var garethPortfolio = angular.module('garethPortfolio', ['ngRoute','ngAnimate','garethPortfolioControllers']);
+var garethPortfolio = angular.module('garethPortfolio', ['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize']);
 
 
-garethPortfolio.config(['$routeProvider',
-  function($routeProvider) {
+garethPortfolio.config(['$routeProvider','$locationProvider',
+  function($routeProvider,$locationProvider) {
     $routeProvider.
       when('/', {
         templateUrl: '/homepage.html',
@@ -20,6 +20,8 @@ garethPortfolio.config(['$routeProvider',
       otherwise({
         redirectTo: '/'
       });
+      
+      $locationProvider.html5Mode(true);
       
   }]);
 

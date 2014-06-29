@@ -3,13 +3,13 @@
     <section id="work_details">
 
         <header class="wiHeader clearfix">
-            <a href="#/" class="workPage_home home_button">Home</a>
+            <a ng-href="/" class="workPage_home home_button">Home</a>
             <span class="workPage_divider">&#47;</span>
             <h2>{{currentItem.name}}</h2>
         </header>
 
         <h4>Details:</h4>
-        <p>{{currentItem.desc}}</p>
+        <p ng-bind-html="convertToHTML()"></p>
 
         <h4>Technology:</h4>
         <ul id="tech_used">
@@ -24,13 +24,13 @@
         <div id="work_slider">
 
             <div class="sliderContainer">
-                <a ng-repeat="image in currentItem.images" class="fancyModal" rel="galWork" href="{{image.image}}" light-box>
+                <a ng-repeat="image in currentItem.images" class="fancyModal" rel="galWork" ng-href="{{image.image}}" light-box>
                     <img ng-src="{{image.thumb}}" />
                 </a>
             </div>
 
             <div ng-if="currentItem.links" ng-repeat="link in currentItem.links">
-                <a class="green_button work_link" target="_blank" href="{{link.link}}" tabindex="1">Visit {{link.title}}</a>
+                <a class="green_button work_link" target="_blank" ng-href="{{link.link}}" tabindex="1">Visit {{link.title}}</a>
             </div>
 
         </div>

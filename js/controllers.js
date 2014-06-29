@@ -3,9 +3,9 @@
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce',
 
- function ($scope, $routeParams, $location, dataService) {
+ function ($scope, $routeParams, $location, dataService,$sce) {
 
         $scope.tech_classes = {
             'CSS3': 'tech_css',
@@ -40,6 +40,11 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
 
                 if ($scope.portfolios[$routeParams.workID]) {
                     $scope.currentItem = $scope.portfolios[$routeParams.workID];
+                    
+                      $scope.convertToHTML = function() {
+                            return $sce.trustAsHtml($scope.currentItem.desc);
+                      };
+                    
                 } else {
                     $location.path('/');
                 }

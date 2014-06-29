@@ -14,7 +14,7 @@
     <h2>My Work...</h2>
     
     <div id="work_items">
-        <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="#/{{work}}" class="work_item">
+        <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}" class="work_item">
             <div class="work_image {{value.work_class}}"></div>
             <h4>{{value.name}}</h4>
         </a>

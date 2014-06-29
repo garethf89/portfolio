@@ -9,6 +9,8 @@
         <title>Gareth Ferguson - Web Developer</title>
         <meta name="description" content="Personal portfolio of Gareth Ferguson, web developer from Newcastle, UK">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,target-densitydpi=device-dpi">
+
+        <base href="/">
         
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -29,6 +31,7 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-animate.min.js"></script>
         <script src="js/main.js"></script>
