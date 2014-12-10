@@ -1,0 +1,233 @@
+/* Desktop Specific */
+@media screen and (min-width: 768px) {
+
+    #nav nav.revealHeader {
+        position: fixed;
+        top:0em;
+        right:0;
+        width:100%;
+        background:$mainGreen;
+        text-align: right;
+    }
+    
+    #nav nav.revealHeader ul {
+        margin:0;
+        padding:0.5em;
+    }
+
+    #nav nav.revealHeader-add
+    {
+        @include animationMixin(reveal-nav, 0.5s, 0, none);
+    }
+    
+}
+
+/* First Breakpoint */
+@media screen and (max-width: 1400px) {
+    
+    body{
+        font-size:14pt;
+    }   
+    
+    .site_row{
+        width:80%;
+    }        
+    
+    ul.icando-icons li .item{
+        font-size: 6em;
+    }
+}
+
+/* Second Breakpoint */
+@media screen and (max-width: 1100px) {
+    
+    body{
+        font-size:13pt;
+    }          
+    
+    ul.icando-icons li .item{
+        font-size: 4em;
+    }
+    #work_page .left_work,
+    #work_page .right_work{
+	    float:none;
+	    width:100%;
+	}
+    
+}
+
+/* Tablets */
+@media screen and (max-width: 880px) {
+    
+     .site_row{
+        width:90%;
+    }  
+    
+    .topSection:before, .topSection:after {
+        width: 35%;
+    }
+    
+    .topSection br{
+        display: none;
+    }
+    
+    .skillIcon{
+        clear:both;   
+        width:100%;
+        padding-left: 0;
+        padding-top:2em;
+    }
+    
+    .topSection{
+        margin-bottom:3em;
+    }
+    
+    .work_item{
+        width:100%;   
+    }        
+}
+
+/* Mobile Phones */
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        min-width: 320px;
+    }
+    h2 {
+        font-size: 1.25em;
+        letter-spacing: 0.1em;
+    }
+    h3 {
+        font-size: 1em;
+        letter-spacing: 0.025em;
+    }
+    p {
+        text-align: justify;
+    }
+    
+    /* Nav */
+    
+    #nav{
+        padding:0;
+    }
+    
+    #nav #pullDown{
+        float:left;
+        font-size:1.5em;
+        font-family: FontAwesome;
+        -webkit-font-smoothing: antialiased;
+        left:50%;
+        margin-top:1.5em;
+        cursor:pointer;
+        margin-left: -1.25em;
+        padding:0 0.5em 0.2em 0.5em;
+        background: rgba(163, 169, 170, 0.75);
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+        display: block;
+        @include transitionMixin(all,.5s,ease-in-out);
+    }
+    
+    
+    #nav nav{
+        position: relative;
+        left:0;
+        top:0;
+    }
+    
+    #nav{
+        top:-11em;
+    }
+    
+    #nav.slideDown{
+        top:0em;
+    }
+
+    #nav.slideDown-add,
+    #nav.slideDown-remove,
+    {
+        @include transitionMixin(all,.5s,ease-in-out);
+    }
+    
+    #nav.slideDown + #header{
+        margin-top:6em;
+    } 
+    
+     #nav.slideDown #pullDown{
+        margin-top:0em;
+    }
+    
+    #nav nav ul{
+        margin:0;
+    }
+
+     #nav nav ul li{
+         dispay:block;
+         width:100%;
+         text-align: center;
+         background:white;
+         margin-left:0;
+     }
+    
+    #nav nav ul li a{
+       color:#000; 
+        width:100%;
+        border:none;
+        border-bottom: dotted 1px;
+    }
+    
+    #nav nav ul li:last-child a{
+        border-bottom:none;
+    }
+    
+   #nav nav ul li:hover > a {
+        border: none;
+        border-bottom: dotted 1px;
+    }
+    
+    #nav nav ul li:last-child:hover > a {
+        border: none;
+    }
+    
+    /*Header*/
+    #header {
+        background-size: 10em, 10em, auto, cover;
+        padding: 4em 0;
+        text-align: center;
+        @include transitionMixin(all,.5s,ease-in-out);
+    }
+    #header .inner {
+        background: none;
+        display: block;
+        padding: 0 1.5em;
+    }
+    #header .inner header h2 {
+        font-size: 1.5em;
+    }
+    #header .inner p {
+        text-align: center;
+    }
+    #header .inner br {
+        display: none;
+    }
+    
+
+    /* Skills */
+    
+    .highlightContainer{
+        padding:1em;   
+    }
+    
+    ul.icando-icons li{
+        width:33%;
+        padding-bottom: 2em;
+    }
+    
+    /* Contact */
+    #contact_me input,
+    #contact_me button{
+        width:100%;
+    }
+    
+}

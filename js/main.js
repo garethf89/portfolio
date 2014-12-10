@@ -22,7 +22,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
       });
       
       $locationProvider.html5Mode(true);
-      
+          
   }]);
 
     //directive to initiate Lightbox
@@ -34,9 +34,29 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
             }
         };
     }); 
+
+    //directive to show menu on scroll
+    garethPortfolio.directive("scroll",function ($window,$animate) {
+        return {
+            link: function(scope, element, attrs) {
+                var windowElement = angular.element($window),
+                    headerDiv = document.querySelector("#header");
+                
+                windowElement.bind('scroll', function(){
+                    if(this.pageYOffset > headerDiv.offsetHeight){
+                        if(!element.hasClass('revealHeader')){
+                            $animate.addClass(element,'revealHeader');
+                        }
+                    }else{
+                        $animate.removeClass(element,'revealHeader'); 
+                    }
+                });
+            }
+        };
+    });
   
   //Service to get JSON data
-  garethPortfolio.factory('dataService', function($rootScope, $http, $q) {
+  garethPortfolio.factory("dataService", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
@@ -69,3 +89,27 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 		return serviceObj;
 		
  });
+
+
+    //service to send email
+    garethPortfolio.factory('emailService', function ($rootScope, $http) {
+
+        var serviceObj = {};
+
+        serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
+            $http({
+                method: 'POST',
+                url: 'formEmail.php',
+                data: $.param(formData),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            }).success(function (data) {
+                callbackSuccess(data);
+            }).error(function (data) {
+                callbackFailure(data);
+            })
+        };
+
+        return serviceObj;
+    });

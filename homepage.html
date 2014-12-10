@@ -1,23 +1,98 @@
-<section id="main_content_upper" class="site_width clearfix centered">
-    
-    <article id="about_me">
-        <h2>About Me...</h2>
-        <p class="about_text">
-            Hi, I am a Front End Web Developer based in Newcastle Upon Tyne, UK. I graduated from Northumbria University in 2011 with first class honors and have been working on various projects since then. I specialise in working on large scale web applications in which I have used primarily JQuery and PHP. I also have experience in regular web pages and converting PSD images to HTML code.
-        </p>
-    </article>
-    
-</section>
+<article id="about_me" class="site_row centered topSection">
+    <span class="icon face">
+            <img src="images/circle.png" />
+        </span>
+    <h2>About Me...</h2>
+    <p class="about_text">
+        Hi, I am a Front End Web Developer based in Newcastle Upon Tyne, UK.
+        <br/>I graduated from Northumbria University in 2011 with first class honors and have been working on various projects since then.
+        <br/>I specialise in working on large scale web applications, mainly using front end technologies such as Javascript.
+    </p>
+</article>
 
-<section id="my_work" class="site_width centered">
+<!-- Skill icons -->
+<article class="site_row centered">
+    <div class="row">
+        <div class="skillIcon">
+            <section>
+                <span class="icon feature fa-briefcase"></span>
+                <header>
+                    <h3>Experience with many clients</h3>
+                </header>
+                <p>Clients I have wroked with have ranged from small start-ups & organisations to large global brands.</p>
+            </section>
+        </div>
+        <div class="skillIcon">
+            <section>
+                <span class="icon feature fa-cog"></span>
+                <header>
+                    <h3>Front end skill set</h3>
+                </header>
+                <p>I have experience developing web applications using large MVC frameworks such as Angular JS. I have also developed in Javascript, JQuery and Wordpress. On the server side I have used PHP and NodeJS.</p>
+            </section>
+        </div>
+        <div class="skillIcon">
+            <section>
+                <span class="icon feature fa-mobile-phone"></span>
+                <header>
+                    <h3>Responsive</h3>
+                </header>
+                <p>I have experience developing website compatible with all devices, without the aid of a framework.</p>
+            </section>
+        </div>
+    </div>
+</article>
 
-    <h2>My Work...</h2>
+<!-- Things I can doo -->
+
+<article class="site_row highlightContainer">
+
+    <header>
+        <h2>Things I can do.</h2>
+    </header>
+    <ul class="icando-icons">
+        <li>
+            <span class="item devicons devicons-jquery"></span>
+            <span class="label">JQuery</span>
+        </li>
+        <li>
+            <span class="item devicons devicons-angular"></span>
+            <span class="label">Angular</span>
+        </li>
+        <li>
+            <span class="item devicons devicons-sass"></span>
+            <span class="label">Sass</span>
+        </li>
+        <li>
+            <span class="item devicons devicons-html5"></span>
+            <span class="label">HTML5</span>
+        </li>
+        <li>
+            <span class="item devicons devicons-php"></span>
+            <span class="label">PHP</span>
+        </li>
+    </ul>
+</article>
+
+
+<article id="my_work" class="site_row highlightContainer centered">
     
-    <div id="work_items">
-        <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}" class="work_item">
-            <div class="work_image {{value.work_class}}"></div>
-            <h4>{{value.name}}</h4>
-        </a>
+    <header>
+        <h2>My Work...</h2>
+    </header>
+<div id="work_items" class="row">
+    <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}?scroll=main_content" class="work_item">
+        <picture>
+            <source media="(max-width: 500px)" srcset="{{value.cover}}_small.jpg" />
+            <source media="(max-width: 880px)" srcset="{{value.cover}}_med.jpg" />
+            <source media="(max-width: 1100px)" srcset="{{value.cover}}_small.jpg" />
+            <source media="(max-width: 1200px)" srcset="{{value.cover}}_med.jpg" />
+            <source media="(max-width: 1300px)" srcset="{{value.cover}}_large.jpg" />
+            <source srcset="{{value.cover}}_large.jpg" />
+            <img src="{{value.cover}}_large.jpg" class="work_image" alt="{{value.name}}" />
+        </picture>
+        <h4>{{value.name}}</h4>
+    </a>
     </div>
 
-</section>
+</article>

@@ -3,23 +3,24 @@
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','$anchorScroll',
 
- function ($scope, $routeParams, $location, dataService,$sce) {
-
+ function ($scope, $routeParams, $location, dataService,$sce, $anchorScroll, message) {
+     
         $scope.tech_classes = {
-            'CSS3': 'tech_css',
-            'HTML5': 'tech_html',
-            'Responsive Design': 'tech_responsive',
-            'JQuery & Javascript': 'tech_jquery',
-            'PHP': 'tech_php',
-            'Flash Builder': 'tech_fb',
-            'Adobe Flash': 'tech_fl',
-            'MySQL': 'tech_db',
-            'SQL Lite': 'tech_db',
-            'PostgreSQL': 'tech_db',
-            'Wordpress': 'tech_wordpress',
-            'PayPal': 'tech_paypal'
+	        'AngularJS': 'devicons devicons-angular',
+            'CSS3': 'devicons devicons-css3',
+            'HTML5': 'fa fa-html5',
+            'Responsive Design': 'devicons devicons-responsive',
+            'JQuery & Javascript': 'devicons devicons-javascript_badge',
+            'PHP': 'devicons devicons-php',
+            'Adobe Flash': 'fa fa-flash',
+            'MySQL': 'devicons devicons-mysql',
+            'SQL Lite': 'fa fa-database',
+            'PostgreSQL': 'devicons devicons-postgresql',
+            'Wordpress': 'fa fa-wordpress',
+            'PayPal': 'fa fa-paypal',
+            'SASS': 'devicons devicons-sass'
         };
      
         //prevent sorting on ngrepeat
@@ -31,11 +32,11 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }
 
         $scope.portfolios;
-
+     
         dataService.getPortfolioItems().then(function (result) {
 
             $scope.portfolios = result;
-
+            
             if ($routeParams.workID) {
 
                 if ($scope.portfolios[$routeParams.workID]) {
@@ -54,31 +55,38 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }, function () {
             console.log('error');
         });
+        
+        
+    $anchorScroll();        
+     
+     //auto scroll for work
+     if($routeParams.scroll){
+        $location.hash($routeParams.scroll);
+        $anchorScroll();    
+     }
 
 }]);
 
 //Controller for the contact form
-garethPortfolioControllers.controller('contactForm', ['$scope', '$http',
+garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailService',
 
- function ($scope, $http) {
+ function ($scope, $http, emailService) {
 
         //Hold form data
         $scope.formData = {};
 
         //form submit
         $scope.submitEnquiry = function () {
-
-
-            $http.post('/formEmail.php', $scope.formData)
-                .success(function (data) {
-                    if (data == 'success') {
-                        $scope.showSuccessMessage = 'true';
-                    } else {
-                        $scope.showErrorMessage = 'true';
-                    }
-                });
-
-
+            
+            //call service
+            emailService.sendEmail($scope.formData, function(data){
+                if (data == 'success') {
+                    $scope.showSuccessMessage = 'true';
+                } else {
+                    $scope.showErrorMessage = 'true';
+                }
+            }, function(data){
+                $scope.showErrorMessage = 'true';
+            });
         }
-
 }]);

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Gareth Ferguson - Web Developer</title>
+        <meta name="description" content="Personal portfolio of Gareth Ferguson, web developer from Newcastle, UK">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,target-densitydpi=device-dpi">
+
+        <base href="/">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+         
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!--[if lt IE 9]>
+    		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+			<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]><!-->
+   			 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<!--<![endif]-->
+        
+        <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-animate.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers.js"></script>
+        
+        <!-- Fancybox, CLassySocial -->
+        <script src="js/plugins.js"></script>
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+         
+    </head>
+    <body ng-app="garethPortfolio">
+    
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<!-- Header -->
+        <header id="nav" class="fadeAnimation" ng-class="{'slideDown': isActive}" >
+				<nav class="fadeAnimation" scroll>
+					<ul>
+						<li class="current"><a href="/">Home</a></li>
+						<li><a  href="/?scroll=my_work">Work</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li>
+                            <a target="_blank" href="files/cv.pdf" download="cv.pdf"> <span class="icon dlIcon fa fa-download"></span>Download CV</a>
+                        </li>
+					</ul>
+				</nav>
+                <div id="pullDown" class="icon fa fa-bars"  ng-click="isActive = !isActive"></div>
+
+        </header>
+
+
+        <!-- Header Text -->
+        <section id="header">
+            <div class="inner">
+
+                <header>
+                    <h2>Gareth Ferguson</h2>
+                </header>
+                <p>Web Developer based in Newcastle Upon Tyne</p>
+            </div>
+
+        </section>
+		
+        <!-- Content gets insterted here using Angular -->
+		<section id="main_content"  ng-view class="fadeAnimation2"></section> 
+		
+		<!-- Footer -->
+			<footer id="footer">
+			    
+                <h3>Share</h3>
+                
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+                    <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				
+				<span class="copyright">Gareth Ferguson, 2014</span>
+			
+			</footer>
+
+
+
+
+
+
+
+        <!-- Google Analytics -->
+<script type="text/javascript">
+/*  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23609811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })(); */
+	</script>
+                              
+    </body>
+</html>

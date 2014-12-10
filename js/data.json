@@ -2,7 +2,7 @@
     "portfolio": {
         "Items": {
             "ba": {
-                "name": "Biritish Airways",
+                "name": "British Airways",
                 "work_class" : "work_ba",
                 "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
                 "skills": [
@@ -10,6 +10,7 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
+                "cover" : "img/home/bacover",
                 "images": [
                     {
                         "thumb": "img/thumbs/bathumb1.png",
@@ -31,7 +32,8 @@
                 "name": "Elevon World",
                 "order" : "1",
                 "work_class" : "work_elevon",
-                "desc": "Wordpress based site for a fashion company. This project invovled work on the wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.",
+                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.",
+                "cover" : "img/home/elevoncover",
                 "skills": [
                     "Wordpress",
                     "PayPal",
@@ -40,6 +42,7 @@
                     "JQuery & Javascript",
                     "PHP"
                 ],
+                "bg" :"images/backgrounds/elevonbg.jpg",
                 "images": [
                     {
                         "thumb": "img/thumbs/elevonthumb1.png",
@@ -61,16 +64,51 @@
                     }
                 ]
             },
+            "elevonblog": {
+                "name": "Elevon Lifestyle Journal",
+                "work_class" : "work_elevonblog",
+                "desc": "This was an addition to the Elevon World website which was to add a blog. It was done using Wordpress and involved use of the full front end technology stack to design and create it.",
+                "skills": [
+                    "Wordpress",
+                    "PHP",
+                    "JQuery & Javascript",
+                    "CSS3",
+                    "HTML5",
+                    "Responsive Design"
+                ],
+                "cover" : "img/thumbs/esearcher1.png",
+                "images": [
+                    {
+                        "thumb": "img/shots/esearcher1.png",
+                        "image": "img/shots/esearcher1.png"
+                    },
+                    {
+                        "thumb": "img/shots/esearcher2.png",
+                        "image": "img/shots/esearcher2.png"
+                    },
+                    {
+                        "thumb": "img/shots/esearcher3.png",
+                        "image": "img/shots/esearcher3.png"
+                    }
+                ],
+                "links": [
+                    {
+                        "title": "Elevon Lifestlye Journal",
+                        "link": "http://www.elevonworld.com/lifestylejournal"
+                    }
+                ]
+            },
             "happiest_homepage": {
                 "name": "Happiest Homepage",
                 "work_class" : "work_hhomepage",
-                "desc": "Happiest's latest homepage was designed mobile first so it would be compatible with all devices. the aim of the page is to give the user enough information about the company to convince them to sign up. <br /> <br /> This project was developed using HTML5 and CSS3 with the modal popups and other functionality using JQuery.",
+                "desc": "Happiest's latest homepage was designed mobile first so it would be compatible with all devices. The aim of the page is to give the user enough information about the company to convince them to sign up to the main web app. <br /> <br /> This project was developed using HTML5 and CSS3 with the modal popups and other functionality using JQuery.",
                 "skills": [
                     "Responsive Design",
                     "CSS3",
                     "HTML5",
                     "JQuery & Javascript"
                 ],
+                "cover" : "img/thumbs/hphome1.png",
                 "images": [
                     {
                         "thumb": "img/shots/hphome1.png",
@@ -95,7 +133,7 @@
             "happiest_app": {
                 "name": "Happiest Application",
                 "work_class" : "work_happ",
-                "desc": "Happiest is a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex site was built with PHP & JQuery which connected to a PHP API and Postgres database. ",
+                "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built with client side JQuery & Javascript and server side PHP which was built as an API connecting to a Postgres database.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
                 "skills": [
                     "CSS3",
                     "HTML5",
@@ -103,6 +141,7 @@
                     "PHP",
                     "PostgreSQL"
                 ],
+                "cover" : "img/thumbs/hpapp1.png",
                 "images": [
                     {
                         "thumb": "img/shots/hpapp1.png",
@@ -116,47 +155,20 @@
                         "thumb": "img/shots/hpapp3.png",
                         "image": "img/shots/hpapp3.png"
                     }
-                ],
-                "links": [
-                    {
-                        "title": "Happiest",
-                        "link": "http://www.happie.st"
-                    }
-                ]
-            },
-            "esearcher": {
-                "name": "eSearcher",
-                "work_class" : "work_esearch",
-                "desc": "This project intended to provide a visually appealing application that used a database to display media from events by the client. It supplied videos, images, documents and links to learning resources. The aim was make content easy to find by using sorting and searching features. <br/><br/> In addition to the main app, a client admin app was also created to allow the client to add and edit resources.",
-                "skills": [
-                    "Flash Builder",
-                    "PHP",
-                    "MySQL"
-                ],
-                "images": [
-                    {
-                        "thumb": "img/shots/esearcher1.png",
-                        "image": "img/shots/esearcher1.png"
-                    },
-                    {
-                        "thumb": "img/shots/esearcher2.png",
-                        "image": "img/shots/esearcher2.png"
-                    },
-                    {
-                        "thumb": "img/shots/esearcher3.png",
-                        "image": "img/shots/esearcher3.png"
-                    }
                 ]
             },
             "other_projects": {
                 "name": "Other Projects",
                 "work_class" : "work_mini",
-                "desc": "I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers, It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This allowed the user to search for music in a database.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
+                "desc": "I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way/<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers. It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to da tabase and provide a rich user interface, back in the days before many of the big JS frameworks existed.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built as a single page application using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
                 "skills": [
-                    "Flash Builder",
                     "PHP",
-                    "MySQL"
+                    "MySQL",
+                    "CSS3",
+                    "HTML5",
+                    "JQuery & Javascript"
                 ],
+                "cover" : "img/thumbs/music1.png",
                 "images": [
                     {
                         "thumb": "img/shots/music1.png",

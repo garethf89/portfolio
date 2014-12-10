@@ -1,3 +1,434 @@
+@charset "UTF-8";
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/*
+ * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0; }
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none; }
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /*
  * HTML5 Boilerplate
  *
@@ -17,8 +448,7 @@ textarea {
 
 body {
   font-size: 100%;
-  line-height: 1.4;
-  zoom: 101%; }
+  line-height: 1.4; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -207,7 +637,6 @@ textarea {
 
   @page {
     margin: 0.5cm; }
-
   p,
   h2,
   h3 {
@@ -217,200 +646,2639 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14286em;
+  list-style-type: none; }
+  .fa-ul > li {
+    position: relative; }
+
+.fa-li {
+  position: absolute;
+  left: -2.14286em;
+  width: 2.14286em;
+  top: 0.14286em;
+  text-align: center; }
+  .fa-li.fa-lg {
+    left: -1.85714em; }
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.fa.pull-left {
+  margin-right: .3em; }
+.fa.pull-right {
+  margin-left: .3em; }
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none; }
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.fa-stack-1x {
+  line-height: inherit; }
+
+.fa-stack-2x {
+  font-size: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-glass:before {
+  content: ""; }
+
+.fa-music:before {
+  content: ""; }
+
+.fa-search:before {
+  content: ""; }
+
+.fa-envelope-o:before {
+  content: ""; }
+
+.fa-heart:before {
+  content: ""; }
+
+.fa-star:before {
+  content: ""; }
+
+.fa-star-o:before {
+  content: ""; }
+
+.fa-user:before {
+  content: ""; }
+
+.fa-film:before {
+  content: ""; }
+
+.fa-th-large:before {
+  content: ""; }
+
+.fa-th:before {
+  content: ""; }
+
+.fa-th-list:before {
+  content: ""; }
+
+.fa-check:before {
+  content: ""; }
+
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: ""; }
+
+.fa-search-plus:before {
+  content: ""; }
+
+.fa-search-minus:before {
+  content: ""; }
+
+.fa-power-off:before {
+  content: ""; }
+
+.fa-signal:before {
+  content: ""; }
+
+.fa-gear:before,
+.fa-cog:before {
+  content: ""; }
+
+.fa-trash-o:before {
+  content: ""; }
+
+.fa-home:before {
+  content: ""; }
+
+.fa-file-o:before {
+  content: ""; }
+
+.fa-clock-o:before {
+  content: ""; }
+
+.fa-road:before {
+  content: ""; }
+
+.fa-download:before {
+  content: ""; }
+
+.fa-arrow-circle-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-o-up:before {
+  content: ""; }
+
+.fa-inbox:before {
+  content: ""; }
+
+.fa-play-circle-o:before {
+  content: ""; }
+
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: ""; }
+
+.fa-refresh:before {
+  content: ""; }
+
+.fa-list-alt:before {
+  content: ""; }
+
+.fa-lock:before {
+  content: ""; }
+
+.fa-flag:before {
+  content: ""; }
+
+.fa-headphones:before {
+  content: ""; }
+
+.fa-volume-off:before {
+  content: ""; }
+
+.fa-volume-down:before {
+  content: ""; }
+
+.fa-volume-up:before {
+  content: ""; }
+
+.fa-qrcode:before {
+  content: ""; }
+
+.fa-barcode:before {
+  content: ""; }
+
+.fa-tag:before {
+  content: ""; }
+
+.fa-tags:before {
+  content: ""; }
+
+.fa-book:before {
+  content: ""; }
+
+.fa-bookmark:before {
+  content: ""; }
+
+.fa-print:before {
+  content: ""; }
+
+.fa-camera:before {
+  content: ""; }
+
+.fa-font:before {
+  content: ""; }
+
+.fa-bold:before {
+  content: ""; }
+
+.fa-italic:before {
+  content: ""; }
+
+.fa-text-height:before {
+  content: ""; }
+
+.fa-text-width:before {
+  content: ""; }
+
+.fa-align-left:before {
+  content: ""; }
+
+.fa-align-center:before {
+  content: ""; }
+
+.fa-align-right:before {
+  content: ""; }
+
+.fa-align-justify:before {
+  content: ""; }
+
+.fa-list:before {
+  content: ""; }
+
+.fa-dedent:before,
+.fa-outdent:before {
+  content: ""; }
+
+.fa-indent:before {
+  content: ""; }
+
+.fa-video-camera:before {
+  content: ""; }
+
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: ""; }
+
+.fa-pencil:before {
+  content: ""; }
+
+.fa-map-marker:before {
+  content: ""; }
+
+.fa-adjust:before {
+  content: ""; }
+
+.fa-tint:before {
+  content: ""; }
+
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: ""; }
+
+.fa-share-square-o:before {
+  content: ""; }
+
+.fa-check-square-o:before {
+  content: ""; }
+
+.fa-arrows:before {
+  content: ""; }
+
+.fa-step-backward:before {
+  content: ""; }
+
+.fa-fast-backward:before {
+  content: ""; }
+
+.fa-backward:before {
+  content: ""; }
+
+.fa-play:before {
+  content: ""; }
+
+.fa-pause:before {
+  content: ""; }
+
+.fa-stop:before {
+  content: ""; }
+
+.fa-forward:before {
+  content: ""; }
+
+.fa-fast-forward:before {
+  content: ""; }
+
+.fa-step-forward:before {
+  content: ""; }
+
+.fa-eject:before {
+  content: ""; }
+
+.fa-chevron-left:before {
+  content: ""; }
+
+.fa-chevron-right:before {
+  content: ""; }
+
+.fa-plus-circle:before {
+  content: ""; }
+
+.fa-minus-circle:before {
+  content: ""; }
+
+.fa-times-circle:before {
+  content: ""; }
+
+.fa-check-circle:before {
+  content: ""; }
+
+.fa-question-circle:before {
+  content: ""; }
+
+.fa-info-circle:before {
+  content: ""; }
+
+.fa-crosshairs:before {
+  content: ""; }
+
+.fa-times-circle-o:before {
+  content: ""; }
+
+.fa-check-circle-o:before {
+  content: ""; }
+
+.fa-ban:before {
+  content: ""; }
+
+.fa-arrow-left:before {
+  content: ""; }
+
+.fa-arrow-right:before {
+  content: ""; }
+
+.fa-arrow-up:before {
+  content: ""; }
+
+.fa-arrow-down:before {
+  content: ""; }
+
+.fa-mail-forward:before,
+.fa-share:before {
+  content: ""; }
+
+.fa-expand:before {
+  content: ""; }
+
+.fa-compress:before {
+  content: ""; }
+
+.fa-plus:before {
+  content: ""; }
+
+.fa-minus:before {
+  content: ""; }
+
+.fa-asterisk:before {
+  content: ""; }
+
+.fa-exclamation-circle:before {
+  content: ""; }
+
+.fa-gift:before {
+  content: ""; }
+
+.fa-leaf:before {
+  content: ""; }
+
+.fa-fire:before {
+  content: ""; }
+
+.fa-eye:before {
+  content: ""; }
+
+.fa-eye-slash:before {
+  content: ""; }
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: ""; }
+
+.fa-plane:before {
+  content: ""; }
+
+.fa-calendar:before {
+  content: ""; }
+
+.fa-random:before {
+  content: ""; }
+
+.fa-comment:before {
+  content: ""; }
+
+.fa-magnet:before {
+  content: ""; }
+
+.fa-chevron-up:before {
+  content: ""; }
+
+.fa-chevron-down:before {
+  content: ""; }
+
+.fa-retweet:before {
+  content: ""; }
+
+.fa-shopping-cart:before {
+  content: ""; }
+
+.fa-folder:before {
+  content: ""; }
+
+.fa-folder-open:before {
+  content: ""; }
+
+.fa-arrows-v:before {
+  content: ""; }
+
+.fa-arrows-h:before {
+  content: ""; }
+
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: ""; }
+
+.fa-twitter-square:before {
+  content: ""; }
+
+.fa-facebook-square:before {
+  content: ""; }
+
+.fa-camera-retro:before {
+  content: ""; }
+
+.fa-key:before {
+  content: ""; }
+
+.fa-gears:before,
+.fa-cogs:before {
+  content: ""; }
+
+.fa-comments:before {
+  content: ""; }
+
+.fa-thumbs-o-up:before {
+  content: ""; }
+
+.fa-thumbs-o-down:before {
+  content: ""; }
+
+.fa-star-half:before {
+  content: ""; }
+
+.fa-heart-o:before {
+  content: ""; }
+
+.fa-sign-out:before {
+  content: ""; }
+
+.fa-linkedin-square:before {
+  content: ""; }
+
+.fa-thumb-tack:before {
+  content: ""; }
+
+.fa-external-link:before {
+  content: ""; }
+
+.fa-sign-in:before {
+  content: ""; }
+
+.fa-trophy:before {
+  content: ""; }
+
+.fa-github-square:before {
+  content: ""; }
+
+.fa-upload:before {
+  content: ""; }
+
+.fa-lemon-o:before {
+  content: ""; }
+
+.fa-phone:before {
+  content: ""; }
+
+.fa-square-o:before {
+  content: ""; }
+
+.fa-bookmark-o:before {
+  content: ""; }
+
+.fa-phone-square:before {
+  content: ""; }
+
+.fa-twitter:before {
+  content: ""; }
+
+.fa-facebook:before {
+  content: ""; }
+
+.fa-github:before {
+  content: ""; }
+
+.fa-unlock:before {
+  content: ""; }
+
+.fa-credit-card:before {
+  content: ""; }
+
+.fa-rss:before {
+  content: ""; }
+
+.fa-hdd-o:before {
+  content: ""; }
+
+.fa-bullhorn:before {
+  content: ""; }
+
+.fa-bell:before {
+  content: ""; }
+
+.fa-certificate:before {
+  content: ""; }
+
+.fa-hand-o-right:before {
+  content: ""; }
+
+.fa-hand-o-left:before {
+  content: ""; }
+
+.fa-hand-o-up:before {
+  content: ""; }
+
+.fa-hand-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-left:before {
+  content: ""; }
+
+.fa-arrow-circle-right:before {
+  content: ""; }
+
+.fa-arrow-circle-up:before {
+  content: ""; }
+
+.fa-arrow-circle-down:before {
+  content: ""; }
+
+.fa-globe:before {
+  content: ""; }
+
+.fa-wrench:before {
+  content: ""; }
+
+.fa-tasks:before {
+  content: ""; }
+
+.fa-filter:before {
+  content: ""; }
+
+.fa-briefcase:before {
+  content: ""; }
+
+.fa-arrows-alt:before {
+  content: ""; }
+
+.fa-group:before,
+.fa-users:before {
+  content: ""; }
+
+.fa-chain:before,
+.fa-link:before {
+  content: ""; }
+
+.fa-cloud:before {
+  content: ""; }
+
+.fa-flask:before {
+  content: ""; }
+
+.fa-cut:before,
+.fa-scissors:before {
+  content: ""; }
+
+.fa-copy:before,
+.fa-files-o:before {
+  content: ""; }
+
+.fa-paperclip:before {
+  content: ""; }
+
+.fa-save:before,
+.fa-floppy-o:before {
+  content: ""; }
+
+.fa-square:before {
+  content: ""; }
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: ""; }
+
+.fa-list-ul:before {
+  content: ""; }
+
+.fa-list-ol:before {
+  content: ""; }
+
+.fa-strikethrough:before {
+  content: ""; }
+
+.fa-underline:before {
+  content: ""; }
+
+.fa-table:before {
+  content: ""; }
+
+.fa-magic:before {
+  content: ""; }
+
+.fa-truck:before {
+  content: ""; }
+
+.fa-pinterest:before {
+  content: ""; }
+
+.fa-pinterest-square:before {
+  content: ""; }
+
+.fa-google-plus-square:before {
+  content: ""; }
+
+.fa-google-plus:before {
+  content: ""; }
+
+.fa-money:before {
+  content: ""; }
+
+.fa-caret-down:before {
+  content: ""; }
+
+.fa-caret-up:before {
+  content: ""; }
+
+.fa-caret-left:before {
+  content: ""; }
+
+.fa-caret-right:before {
+  content: ""; }
+
+.fa-columns:before {
+  content: ""; }
+
+.fa-unsorted:before,
+.fa-sort:before {
+  content: ""; }
+
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: ""; }
+
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: ""; }
+
+.fa-envelope:before {
+  content: ""; }
+
+.fa-linkedin:before {
+  content: ""; }
+
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: ""; }
+
+.fa-legal:before,
+.fa-gavel:before {
+  content: ""; }
+
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: ""; }
+
+.fa-comment-o:before {
+  content: ""; }
+
+.fa-comments-o:before {
+  content: ""; }
+
+.fa-flash:before,
+.fa-bolt:before {
+  content: ""; }
+
+.fa-sitemap:before {
+  content: ""; }
+
+.fa-umbrella:before {
+  content: ""; }
+
+.fa-paste:before,
+.fa-clipboard:before {
+  content: ""; }
+
+.fa-lightbulb-o:before {
+  content: ""; }
+
+.fa-exchange:before {
+  content: ""; }
+
+.fa-cloud-download:before {
+  content: ""; }
+
+.fa-cloud-upload:before {
+  content: ""; }
+
+.fa-user-md:before {
+  content: ""; }
+
+.fa-stethoscope:before {
+  content: ""; }
+
+.fa-suitcase:before {
+  content: ""; }
+
+.fa-bell-o:before {
+  content: ""; }
+
+.fa-coffee:before {
+  content: ""; }
+
+.fa-cutlery:before {
+  content: ""; }
+
+.fa-file-text-o:before {
+  content: ""; }
+
+.fa-building-o:before {
+  content: ""; }
+
+.fa-hospital-o:before {
+  content: ""; }
+
+.fa-ambulance:before {
+  content: ""; }
+
+.fa-medkit:before {
+  content: ""; }
+
+.fa-fighter-jet:before {
+  content: ""; }
+
+.fa-beer:before {
+  content: ""; }
+
+.fa-h-square:before {
+  content: ""; }
+
+.fa-plus-square:before {
+  content: ""; }
+
+.fa-angle-double-left:before {
+  content: ""; }
+
+.fa-angle-double-right:before {
+  content: ""; }
+
+.fa-angle-double-up:before {
+  content: ""; }
+
+.fa-angle-double-down:before {
+  content: ""; }
+
+.fa-angle-left:before {
+  content: ""; }
+
+.fa-angle-right:before {
+  content: ""; }
+
+.fa-angle-up:before {
+  content: ""; }
+
+.fa-angle-down:before {
+  content: ""; }
+
+.fa-desktop:before {
+  content: ""; }
+
+.fa-laptop:before {
+  content: ""; }
+
+.fa-tablet:before {
+  content: ""; }
+
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: ""; }
+
+.fa-circle-o:before {
+  content: ""; }
+
+.fa-quote-left:before {
+  content: ""; }
+
+.fa-quote-right:before {
+  content: ""; }
+
+.fa-spinner:before {
+  content: ""; }
+
+.fa-circle:before {
+  content: ""; }
+
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: ""; }
+
+.fa-github-alt:before {
+  content: ""; }
+
+.fa-folder-o:before {
+  content: ""; }
+
+.fa-folder-open-o:before {
+  content: ""; }
+
+.fa-smile-o:before {
+  content: ""; }
+
+.fa-frown-o:before {
+  content: ""; }
+
+.fa-meh-o:before {
+  content: ""; }
+
+.fa-gamepad:before {
+  content: ""; }
+
+.fa-keyboard-o:before {
+  content: ""; }
+
+.fa-flag-o:before {
+  content: ""; }
+
+.fa-flag-checkered:before {
+  content: ""; }
+
+.fa-terminal:before {
+  content: ""; }
+
+.fa-code:before {
+  content: ""; }
+
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: ""; }
+
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: ""; }
+
+.fa-location-arrow:before {
+  content: ""; }
+
+.fa-crop:before {
+  content: ""; }
+
+.fa-code-fork:before {
+  content: ""; }
+
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: ""; }
+
+.fa-question:before {
+  content: ""; }
+
+.fa-info:before {
+  content: ""; }
+
+.fa-exclamation:before {
+  content: ""; }
+
+.fa-superscript:before {
+  content: ""; }
+
+.fa-subscript:before {
+  content: ""; }
+
+.fa-eraser:before {
+  content: ""; }
+
+.fa-puzzle-piece:before {
+  content: ""; }
+
+.fa-microphone:before {
+  content: ""; }
+
+.fa-microphone-slash:before {
+  content: ""; }
+
+.fa-shield:before {
+  content: ""; }
+
+.fa-calendar-o:before {
+  content: ""; }
+
+.fa-fire-extinguisher:before {
+  content: ""; }
+
+.fa-rocket:before {
+  content: ""; }
+
+.fa-maxcdn:before {
+  content: ""; }
+
+.fa-chevron-circle-left:before {
+  content: ""; }
+
+.fa-chevron-circle-right:before {
+  content: ""; }
+
+.fa-chevron-circle-up:before {
+  content: ""; }
+
+.fa-chevron-circle-down:before {
+  content: ""; }
+
+.fa-html5:before {
+  content: ""; }
+
+.fa-css3:before {
+  content: ""; }
+
+.fa-anchor:before {
+  content: ""; }
+
+.fa-unlock-alt:before {
+  content: ""; }
+
+.fa-bullseye:before {
+  content: ""; }
+
+.fa-ellipsis-h:before {
+  content: ""; }
+
+.fa-ellipsis-v:before {
+  content: ""; }
+
+.fa-rss-square:before {
+  content: ""; }
+
+.fa-play-circle:before {
+  content: ""; }
+
+.fa-ticket:before {
+  content: ""; }
+
+.fa-minus-square:before {
+  content: ""; }
+
+.fa-minus-square-o:before {
+  content: ""; }
+
+.fa-level-up:before {
+  content: ""; }
+
+.fa-level-down:before {
+  content: ""; }
+
+.fa-check-square:before {
+  content: ""; }
+
+.fa-pencil-square:before {
+  content: ""; }
+
+.fa-external-link-square:before {
+  content: ""; }
+
+.fa-share-square:before {
+  content: ""; }
+
+.fa-compass:before {
+  content: ""; }
+
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: ""; }
+
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: ""; }
+
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: ""; }
+
+.fa-euro:before,
+.fa-eur:before {
+  content: ""; }
+
+.fa-gbp:before {
+  content: ""; }
+
+.fa-dollar:before,
+.fa-usd:before {
+  content: ""; }
+
+.fa-rupee:before,
+.fa-inr:before {
+  content: ""; }
+
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: ""; }
+
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: ""; }
+
+.fa-won:before,
+.fa-krw:before {
+  content: ""; }
+
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: ""; }
+
+.fa-file:before {
+  content: ""; }
+
+.fa-file-text:before {
+  content: ""; }
+
+.fa-sort-alpha-asc:before {
+  content: ""; }
+
+.fa-sort-alpha-desc:before {
+  content: ""; }
+
+.fa-sort-amount-asc:before {
+  content: ""; }
+
+.fa-sort-amount-desc:before {
+  content: ""; }
+
+.fa-sort-numeric-asc:before {
+  content: ""; }
+
+.fa-sort-numeric-desc:before {
+  content: ""; }
+
+.fa-thumbs-up:before {
+  content: ""; }
+
+.fa-thumbs-down:before {
+  content: ""; }
+
+.fa-youtube-square:before {
+  content: ""; }
+
+.fa-youtube:before {
+  content: ""; }
+
+.fa-xing:before {
+  content: ""; }
+
+.fa-xing-square:before {
+  content: ""; }
+
+.fa-youtube-play:before {
+  content: ""; }
+
+.fa-dropbox:before {
+  content: ""; }
+
+.fa-stack-overflow:before {
+  content: ""; }
+
+.fa-instagram:before {
+  content: ""; }
+
+.fa-flickr:before {
+  content: ""; }
+
+.fa-adn:before {
+  content: ""; }
+
+.fa-bitbucket:before {
+  content: ""; }
+
+.fa-bitbucket-square:before {
+  content: ""; }
+
+.fa-tumblr:before {
+  content: ""; }
+
+.fa-tumblr-square:before {
+  content: ""; }
+
+.fa-long-arrow-down:before {
+  content: ""; }
+
+.fa-long-arrow-up:before {
+  content: ""; }
+
+.fa-long-arrow-left:before {
+  content: ""; }
+
+.fa-long-arrow-right:before {
+  content: ""; }
+
+.fa-apple:before {
+  content: ""; }
+
+.fa-windows:before {
+  content: ""; }
+
+.fa-android:before {
+  content: ""; }
+
+.fa-linux:before {
+  content: ""; }
+
+.fa-dribbble:before {
+  content: ""; }
+
+.fa-skype:before {
+  content: ""; }
+
+.fa-foursquare:before {
+  content: ""; }
+
+.fa-trello:before {
+  content: ""; }
+
+.fa-female:before {
+  content: ""; }
+
+.fa-male:before {
+  content: ""; }
+
+.fa-gittip:before {
+  content: ""; }
+
+.fa-sun-o:before {
+  content: ""; }
+
+.fa-moon-o:before {
+  content: ""; }
+
+.fa-archive:before {
+  content: ""; }
+
+.fa-bug:before {
+  content: ""; }
+
+.fa-vk:before {
+  content: ""; }
+
+.fa-weibo:before {
+  content: ""; }
+
+.fa-renren:before {
+  content: ""; }
+
+.fa-pagelines:before {
+  content: ""; }
+
+.fa-stack-exchange:before {
+  content: ""; }
+
+.fa-arrow-circle-o-right:before {
+  content: ""; }
+
+.fa-arrow-circle-o-left:before {
+  content: ""; }
+
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: ""; }
+
+.fa-dot-circle-o:before {
+  content: ""; }
+
+.fa-wheelchair:before {
+  content: ""; }
+
+.fa-vimeo-square:before {
+  content: ""; }
+
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: ""; }
+
+.fa-plus-square-o:before {
+  content: ""; }
+
+.fa-space-shuttle:before {
+  content: ""; }
+
+.fa-slack:before {
+  content: ""; }
+
+.fa-envelope-square:before {
+  content: ""; }
+
+.fa-wordpress:before {
+  content: ""; }
+
+.fa-openid:before {
+  content: ""; }
+
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: ""; }
+
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: ""; }
+
+.fa-yahoo:before {
+  content: ""; }
+
+.fa-google:before {
+  content: ""; }
+
+.fa-reddit:before {
+  content: ""; }
+
+.fa-reddit-square:before {
+  content: ""; }
+
+.fa-stumbleupon-circle:before {
+  content: ""; }
+
+.fa-stumbleupon:before {
+  content: ""; }
+
+.fa-delicious:before {
+  content: ""; }
+
+.fa-digg:before {
+  content: ""; }
+
+.fa-pied-piper:before {
+  content: ""; }
+
+.fa-pied-piper-alt:before {
+  content: ""; }
+
+.fa-drupal:before {
+  content: ""; }
+
+.fa-joomla:before {
+  content: ""; }
+
+.fa-language:before {
+  content: ""; }
+
+.fa-fax:before {
+  content: ""; }
+
+.fa-building:before {
+  content: ""; }
+
+.fa-child:before {
+  content: ""; }
+
+.fa-paw:before {
+  content: ""; }
+
+.fa-spoon:before {
+  content: ""; }
+
+.fa-cube:before {
+  content: ""; }
+
+.fa-cubes:before {
+  content: ""; }
+
+.fa-behance:before {
+  content: ""; }
+
+.fa-behance-square:before {
+  content: ""; }
+
+.fa-steam:before {
+  content: ""; }
+
+.fa-steam-square:before {
+  content: ""; }
+
+.fa-recycle:before {
+  content: ""; }
+
+.fa-automobile:before,
+.fa-car:before {
+  content: ""; }
+
+.fa-cab:before,
+.fa-taxi:before {
+  content: ""; }
+
+.fa-tree:before {
+  content: ""; }
+
+.fa-spotify:before {
+  content: ""; }
+
+.fa-deviantart:before {
+  content: ""; }
+
+.fa-soundcloud:before {
+  content: ""; }
+
+.fa-database:before {
+  content: ""; }
+
+.fa-file-pdf-o:before {
+  content: ""; }
+
+.fa-file-word-o:before {
+  content: ""; }
+
+.fa-file-excel-o:before {
+  content: ""; }
+
+.fa-file-powerpoint-o:before {
+  content: ""; }
+
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: ""; }
+
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: ""; }
+
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: ""; }
+
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: ""; }
+
+.fa-file-code-o:before {
+  content: ""; }
+
+.fa-vine:before {
+  content: ""; }
+
+.fa-codepen:before {
+  content: ""; }
+
+.fa-jsfiddle:before {
+  content: ""; }
+
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: ""; }
+
+.fa-circle-o-notch:before {
+  content: ""; }
+
+.fa-ra:before,
+.fa-rebel:before {
+  content: ""; }
+
+.fa-ge:before,
+.fa-empire:before {
+  content: ""; }
+
+.fa-git-square:before {
+  content: ""; }
+
+.fa-git:before {
+  content: ""; }
+
+.fa-hacker-news:before {
+  content: ""; }
+
+.fa-tencent-weibo:before {
+  content: ""; }
+
+.fa-qq:before {
+  content: ""; }
+
+.fa-wechat:before,
+.fa-weixin:before {
+  content: ""; }
+
+.fa-send:before,
+.fa-paper-plane:before {
+  content: ""; }
+
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: ""; }
+
+.fa-history:before {
+  content: ""; }
+
+.fa-circle-thin:before {
+  content: ""; }
+
+.fa-header:before {
+  content: ""; }
+
+.fa-paragraph:before {
+  content: ""; }
+
+.fa-sliders:before {
+  content: ""; }
+
+.fa-share-alt:before {
+  content: ""; }
+
+.fa-share-alt-square:before {
+  content: ""; }
+
+.fa-bomb:before {
+  content: ""; }
+
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: ""; }
+
+.fa-tty:before {
+  content: ""; }
+
+.fa-binoculars:before {
+  content: ""; }
+
+.fa-plug:before {
+  content: ""; }
+
+.fa-slideshare:before {
+  content: ""; }
+
+.fa-twitch:before {
+  content: ""; }
+
+.fa-yelp:before {
+  content: ""; }
+
+.fa-newspaper-o:before {
+  content: ""; }
+
+.fa-wifi:before {
+  content: ""; }
+
+.fa-calculator:before {
+  content: ""; }
+
+.fa-paypal:before {
+  content: ""; }
+
+.fa-google-wallet:before {
+  content: ""; }
+
+.fa-cc-visa:before {
+  content: ""; }
+
+.fa-cc-mastercard:before {
+  content: ""; }
+
+.fa-cc-discover:before {
+  content: ""; }
+
+.fa-cc-amex:before {
+  content: ""; }
+
+.fa-cc-paypal:before {
+  content: ""; }
+
+.fa-cc-stripe:before {
+  content: ""; }
+
+.fa-bell-slash:before {
+  content: ""; }
+
+.fa-bell-slash-o:before {
+  content: ""; }
+
+.fa-trash:before {
+  content: ""; }
+
+.fa-copyright:before {
+  content: ""; }
+
+.fa-at:before {
+  content: ""; }
+
+.fa-eyedropper:before {
+  content: ""; }
+
+.fa-paint-brush:before {
+  content: ""; }
+
+.fa-birthday-cake:before {
+  content: ""; }
+
+.fa-area-chart:before {
+  content: ""; }
+
+.fa-pie-chart:before {
+  content: ""; }
+
+.fa-line-chart:before {
+  content: ""; }
+
+.fa-lastfm:before {
+  content: ""; }
+
+.fa-lastfm-square:before {
+  content: ""; }
+
+.fa-toggle-off:before {
+  content: ""; }
+
+.fa-toggle-on:before {
+  content: ""; }
+
+.fa-bicycle:before {
+  content: ""; }
+
+.fa-bus:before {
+  content: ""; }
+
+.fa-ioxhost:before {
+  content: ""; }
+
+.fa-angellist:before {
+  content: ""; }
+
+.fa-cc:before {
+  content: ""; }
+
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: ""; }
+
+.fa-meanpath:before {
+  content: ""; }
+
+/*!
+ *  Devicons 1.6.0 made by Theodore Vorillas / http://vorillaz.com 
+ */
+@font-face {
+  font-family: 'devicons';
+  src: url("../fonts/devicons.eot?xqxft6");
+  src: url("../fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../fonts/devicons.woff?xqxft6") format("woff"), url("../fonts/devicons.ttf?xqxft6") format("truetype"), url("../fonts/devicons.svg?xqxft6#devicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.devicons {
+  font-family: 'devicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.devicons-git:before {
+  content: ""; }
+
+.devicons-git_compare:before {
+  content: ""; }
+
+.devicons-git_branch:before {
+  content: ""; }
+
+.devicons-git_commit:before {
+  content: ""; }
+
+.devicons-git_pull_request:before {
+  content: ""; }
+
+.devicons-git_merge:before {
+  content: ""; }
+
+.devicons-bitbucket:before {
+  content: ""; }
+
+.devicons-github_alt:before {
+  content: ""; }
+
+.devicons-github_badge:before {
+  content: ""; }
+
+.devicons-github:before {
+  content: ""; }
+
+.devicons-github_full:before {
+  content: ""; }
+
+.devicons-java:before {
+  content: ""; }
+
+.devicons-ruby:before {
+  content: ""; }
+
+.devicons-scala:before {
+  content: ""; }
+
+.devicons-python:before {
+  content: ""; }
+
+.devicons-go:before {
+  content: ""; }
+
+.devicons-ruby_on_rails:before {
+  content: ""; }
+
+.devicons-django:before {
+  content: ""; }
+
+.devicons-markdown:before {
+  content: ""; }
+
+.devicons-php:before {
+  content: ""; }
+
+.devicons-mysql:before {
+  content: ""; }
+
+.devicons-streamline:before {
+  content: ""; }
+
+.devicons-database:before {
+  content: ""; }
+
+.devicons-laravel:before {
+  content: ""; }
+
+.devicons-javascript:before {
+  content: ""; }
+
+.devicons-angular:before {
+  content: ""; }
+
+.devicons-backbone:before {
+  content: ""; }
+
+.devicons-coffeescript:before {
+  content: ""; }
+
+.devicons-jquery:before {
+  content: ""; }
+
+.devicons-modernizr:before {
+  content: ""; }
+
+.devicons-jquery_ui:before {
+  content: ""; }
+
+.devicons-ember:before {
+  content: ""; }
+
+.devicons-dojo:before {
+  content: ""; }
+
+.devicons-nodejs:before {
+  content: ""; }
+
+.devicons-nodejs_small:before {
+  content: ""; }
+
+.devicons-javascript_shield:before {
+  content: ""; }
+
+.devicons-bootstrap:before {
+  content: ""; }
+
+.devicons-sass:before {
+  content: ""; }
+
+.devicons-css3_full:before {
+  content: ""; }
+
+.devicons-css3:before {
+  content: ""; }
+
+.devicons-html5:before {
+  content: ""; }
+
+.devicons-html5_multimedia:before {
+  content: ""; }
+
+.devicons-html5_device_access:before {
+  content: ""; }
+
+.devicons-html5_3d_effects:before {
+  content: ""; }
+
+.devicons-html5_connectivity:before {
+  content: ""; }
+
+.devicons-ghost_small:before {
+  content: ""; }
+
+.devicons-ghost:before {
+  content: ""; }
+
+.devicons-magento:before {
+  content: ""; }
+
+.devicons-joomla:before {
+  content: ""; }
+
+.devicons-jekyll_small:before {
+  content: ""; }
+
+.devicons-drupal:before {
+  content: ""; }
+
+.devicons-wordpress:before {
+  content: ""; }
+
+.devicons-grunt:before {
+  content: ""; }
+
+.devicons-bower:before {
+  content: ""; }
+
+.devicons-npm:before {
+  content: ""; }
+
+.devicons-yahoo_small:before {
+  content: ""; }
+
+.devicons-yahoo:before {
+  content: ""; }
+
+.devicons-bing_small:before {
+  content: ""; }
+
+.devicons-windows:before {
+  content: ""; }
+
+.devicons-linux:before {
+  content: ""; }
+
+.devicons-ubuntu:before {
+  content: ""; }
+
+.devicons-android:before {
+  content: ""; }
+
+.devicons-apple:before {
+  content: ""; }
+
+.devicons-appstore:before {
+  content: ""; }
+
+.devicons-phonegap:before {
+  content: ""; }
+
+.devicons-blackberry:before {
+  content: ""; }
+
+.devicons-stackoverflow:before {
+  content: ""; }
+
+.devicons-techcrunch:before {
+  content: ""; }
+
+.devicons-codrops:before {
+  content: ""; }
+
+.devicons-css_tricks:before {
+  content: ""; }
+
+.devicons-smashing_magazine:before {
+  content: ""; }
+
+.devicons-netmagazine:before {
+  content: ""; }
+
+.devicons-codepen:before {
+  content: ""; }
+
+.devicons-cssdeck:before {
+  content: ""; }
+
+.devicons-hackernews:before {
+  content: ""; }
+
+.devicons-dropbox:before {
+  content: ""; }
+
+.devicons-google_drive:before {
+  content: ""; }
+
+.devicons-visualstudio:before {
+  content: ""; }
+
+.devicons-unity_small:before {
+  content: ""; }
+
+.devicons-rasberry_pi:before {
+  content: ""; }
+
+.devicons-chrome:before {
+  content: ""; }
+
+.devicons-ie:before {
+  content: ""; }
+
+.devicons-firefox:before {
+  content: ""; }
+
+.devicons-opera:before {
+  content: ""; }
+
+.devicons-safari:before {
+  content: ""; }
+
+.devicons-swift:before {
+  content: ""; }
+
+.devicons-symfony:before {
+  content: ""; }
+
+.devicons-symfony_badge:before {
+  content: ""; }
+
+.devicons-less:before {
+  content: ""; }
+
+.devicons-stylus:before {
+  content: ""; }
+
+.devicons-trello:before {
+  content: ""; }
+
+.devicons-atlassian:before {
+  content: ""; }
+
+.devicons-jira:before {
+  content: ""; }
+
+.devicons-envato:before {
+  content: ""; }
+
+.devicons-snap_svg:before {
+  content: ""; }
+
+.devicons-raphael:before {
+  content: ""; }
+
+.devicons-google_analytics:before {
+  content: ""; }
+
+.devicons-compass:before {
+  content: ""; }
+
+.devicons-onedrive:before {
+  content: ""; }
+
+.devicons-gulp:before {
+  content: ""; }
+
+.devicons-atom:before {
+  content: ""; }
+
+.devicons-cisco:before {
+  content: ""; }
+
+.devicons-nancy:before {
+  content: ""; }
+
+.devicons-clojure:before {
+  content: ""; }
+
+.devicons-clojure_alt:before {
+  content: ""; }
+
+.devicons-perl:before {
+  content: ""; }
+
+.devicons-celluloid:before {
+  content: ""; }
+
+.devicons-w3c:before {
+  content: ""; }
+
+.devicons-redis:before {
+  content: ""; }
+
+.devicons-postgresql:before {
+  content: ""; }
+
+.devicons-webplatform:before {
+  content: ""; }
+
+.devicons-jenkins:before {
+  content: ""; }
+
+.devicons-requirejs:before {
+  content: ""; }
+
+.devicons-opensource:before {
+  content: ""; }
+
+.devicons-typo3:before {
+  content: ""; }
+
+.devicons-uikit:before {
+  content: ""; }
+
+.devicons-doctrine:before {
+  content: ""; }
+
+.devicons-groovy:before {
+  content: ""; }
+
+.devicons-nginx:before {
+  content: ""; }
+
+.devicons-haskell:before {
+  content: ""; }
+
+.devicons-zend:before {
+  content: ""; }
+
+.devicons-gnu:before {
+  content: ""; }
+
+.devicons-yeoman:before {
+  content: ""; }
+
+.devicons-heroku:before {
+  content: ""; }
+
+.devicons-debian:before {
+  content: ""; }
+
+.devicons-travis:before {
+  content: ""; }
+
+.devicons-dotnet:before {
+  content: ""; }
+
+.devicons-codeigniter:before {
+  content: ""; }
+
+.devicons-javascript_badge:before {
+  content: ""; }
+
+.devicons-yii:before {
+  content: ""; }
+
+.devicons-msql_server:before {
+  content: ""; }
+
+.devicons-composer:before {
+  content: ""; }
+
+.devicons-krakenjs_badge:before {
+  content: ""; }
+
+.devicons-krakenjs:before {
+  content: ""; }
+
+.devicons-mozilla:before {
+  content: ""; }
+
+.devicons-firebase:before {
+  content: ""; }
+
+.devicons-sizzlejs:before {
+  content: ""; }
+
+.devicons-creativecommons:before {
+  content: ""; }
+
+.devicons-creativecommons_badge:before {
+  content: ""; }
+
+.devicons-mitlicence:before {
+  content: ""; }
+
+.devicons-senchatouch:before {
+  content: ""; }
+
+.devicons-bugsense:before {
+  content: ""; }
+
+.devicons-extjs:before {
+  content: ""; }
+
+.devicons-mootools_badge:before {
+  content: ""; }
+
+.devicons-mootools:before {
+  content: ""; }
+
+.devicons-ruby_rough:before {
+  content: ""; }
+
+.devicons-komodo:before {
+  content: ""; }
+
+.devicons-coda:before {
+  content: ""; }
+
+.devicons-bintray:before {
+  content: ""; }
+
+.devicons-terminal:before {
+  content: ""; }
+
+.devicons-code:before {
+  content: ""; }
+
+.devicons-responsive:before {
+  content: ""; }
+
+.devicons-dart:before {
+  content: ""; }
+
+.devicons-aptana:before {
+  content: ""; }
+
+.devicons-mailchimp:before {
+  content: ""; }
+
+.devicons-netbeans:before {
+  content: ""; }
+
+.devicons-dreamweaver:before {
+  content: ""; }
+
+.devicons-brackets:before {
+  content: ""; }
+
+.devicons-eclipse:before {
+  content: ""; }
+
+.devicons-cloud9:before {
+  content: ""; }
+
+.devicons-scrum:before {
+  content: ""; }
+
+.devicons-prolog:before {
+  content: ""; }
+
+.devicons-terminal_badge:before {
+  content: ""; }
+
+.devicons-code_badge:before {
+  content: ""; }
+
+.devicons-mongodb:before {
+  content: ""; }
+
 /* ==========================================================================
-   Plugins
+  Defaults
    ========================================================================== */
+body {
+  background: #f3f6fa; }
+
+body, input, select, textarea {
+  color: #7c8081;
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  line-height: 1.75em; }
+
+a {
+  color: #3fb1a3;
+  text-decoration: none;
+  border-bottom: dotted 1px; }
+
+a:hover {
+  border-bottom-color: transparent; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.75em;
+  margin-bottom: 1em;
+  text-transform: uppercase; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+  border: 0; }
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.1em; }
+
+h3 {
+  font-size: 1.15em;
+  letter-spacing: 0.025em; }
+
+hr {
+  border-top: solid 1px rgba(124, 128, 129, 0.2);
+  border: 0;
+  margin-bottom: 1.5em; }
+
+p, ul, ol, dl, table {
+  margin: 0 0 2em 0;
+  padding: 0; }
+
+.icon {
+  position: relative; }
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal; }
+
+.icon > .label {
+  display: none; }
+
+.item > .label {
+  display: none; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /* ==========================================================================
    My Styles
    ========================================================================== */
-/* Global Styles */
-body {
-  font-family: 'Open Sans', sans-serif; }
-
-ul {
-  margin: 0;
-  padding: 0; }
-
-h1 {
-  color: #466818;
-  font-size: 3em;
-  font-weight: 300; }
-
-h2 {
-  color: #89b53c;
-  font-size: 1.4em;
-  font-weight: 300;
-  padding: 0 0 10px 0;
-  border-bottom: 1px solid #e9e9e8; }
-
-h4 {
-  font-weight: 300; }
-
-.site_width {
-  min-width: 320px;
-  margin: 0 auto;
-  overflow: hidden; }
+/* Buttons */
+/*Fade Keyframe */
+/*Animation*/
+/*Transition*/
+/*Keyframes */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-ms-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-ms-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/* Fade Out */
+@-webkit-keyframes reveal-nav {
+  0% {
+    top: -2em; }
+  100% {
+    top: 0; } }
+@-moz-keyframes reveal-nav {
+  0% {
+    top: -2em; }
+  100% {
+    top: 0; } }
+@-ms-keyframes reveal-nav {
+  0% {
+    top: -2em; }
+  100% {
+    top: 0; } }
+@keyframes reveal-nav {
+  0% {
+    top: -2em; }
+  100% {
+    top: 0; } }
+/* Global */
+.site_row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1400px; }
 
 .centered {
   text-align: center; }
+
+#main_content {
+  margin-top: 5em; }
 
 .required {
   color: #dc121c;
   font-weight: bold; }
 
-.green_button {
-  font-size: 0.875em;
-  padding: 10px 50px;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
-  background: #6d9030;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #6d9030 1%, #5b7828 98%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #6d9030), color-stop(98%, #5b7828));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #6d9030 1%, #5b7828 98%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #6d9030 1%, #5b7828 98%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #6d9030 1%, #5b7828 98%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #6d9030 1%, #5b7828 98%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d9030', endColorstr='#5b7828',GradientType=0 );
-  /* IE6-9 */
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  cursor: pointer;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4);
-  border: 1px solid #22597f; }
-
-.green_button:hover {
-  color: #360943;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3); }
-
-/* Top Banner */
-#top_header {
-  background-color: #6d9030;
-  border-bottom: 1px solid #d2d2d2;
-  width: 100%; }
-
-#main_nav {
-  color: white;
-  padding: 10px;
-  float: left;
-  min-width: 50%; }
-
-#main_nav li {
-  cursor: pointer;
-  float: left;
-  padding: 0 20px;
-  font-size: 1.2em;
-  font-weight: 300;
+.devicons {
   display: inline-block; }
 
-#main_nav li a {
-  text-decoration: none;
-  color: white; }
+.float_block:after {
+  display: block;
+  content: "";
+  clear: both; }
 
-#social_nav {
-  position: absolute;
-  top: 0;
-  right: 0; }
+/* Header */
+#header {
+  color: white;
+  cursor: default;
+  padding: 2em 0 0 0;
+  text-align: center;
+  background: #6d9030;
+  color: #fff; }
 
-/* Main Header */
-#main_header {
-  background: #f6fbf8 url("../img/noise.png") repeat;
-  border-bottom: 1px solid #d2d2d2; }
-
-#main_header h1 {
-  margin: 0;
-  padding: 20px 0 0 0; }
-
-#main_header .heading_subtext {
-  font-size: 1.5em;
-  color: #213701;
-  margin: 0;
-  padding: 10px 0 10px 0;
-  font-weight: 300; }
-
-/* Top Slider */
-.home_slider {
-  width: 54.1%;
-  margin: 20px auto; }
-
-.home_slider_text {
-  width: 50%;
-  float: left;
-  font-size: 1.5em;
-  margin: 10% 0 0 0; }
-
-.home_slider_image {
-  max-width: 190px;
-  margin: 0 auto; }
-
-.home_slide_image_cont {
-  width: 50%;
-  float: left; }
-
-.home_slider1_text {
-  text-align: left; }
-
-.home_slider2_text {
-  text-align: right; }
-
-.home_slide3_image_cont {
-  width: 25%;
-  float: left; }
-
-.home_slide3_image {
-  margin: 0 auto; }
-
-.home_slide3_text {
-  width: 50%;
+#header .inner {
+  -moz-animation: fade-in 1s 0s ease-in-out;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation: fade-in 1s 0s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation: fade-in 1s 0s ease-in-out;
+  -o-animation-fill-mode: forwards;
+  -ms-animation: fade-in 1s 0s ease-in-out;
+  -ms-animation-fill-mode: forwards;
+  animation: fade-in 1s 0s ease-in-out;
+  animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  background: none;
+  color: white;
+  display: inline-block;
+  opacity: 0;
+  padding: 2em;
   text-align: center; }
 
-/* Main Home Top */
-#main_content_upper {
-  display: block; }
-
-#about_me {
-  width: 46%;
-  margin: 0 auto; }
-
-.about_text {
-  font-size: 1em;
-  line-height: 1.5em;
-  font-weight: 300;
-  text-align: left; }
-
-/* My Work */
-#my_work {
-  display: block;
-  overflow: visible;
-  padding: 2% 2% 0 2%; }
-
-#my_work h2 {
-  margin: 0 0 30px 0; }
-
-.work_item {
-  width: 33%;
+#header .inner header {
   display: inline-block;
-  cursor: pointer;
+  margin: 0 0 2em 0;
+  padding: 3px 0 3px 0; }
+
+#header .inner header h2 {
+  font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase; }
+
+#header .inner p {
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase; }
+
+#header .inner p a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration: none; }
+
+/* Header */
+@-webkit-keyframes reveal-header {
+  0% {
+    top: -5em; }
+  100% {
+    top: 0; } }
+@-moz-keyframes reveal-header {
+  0% {
+    top: -5em; }
+  100% {
+    top: 0; } }
+@-ms-keyframes reveal-header {
+  0% {
+    top: -5em; }
+  100% {
+    top: 0; } }
+@keyframes reveal-header {
+  0% {
+    top: -5em; }
+  100% {
+    top: 0; } }
+#nav {
+  cursor: default;
+  font-size: 0.8em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background: transparent;
+  box-shadow: none;
+  color: white;
+  padding: 2em 2.5em;
+  position: absolute; }
+
+#nav nav {
+  letter-spacing: 0.075em;
+  position: absolute;
+  text-transform: uppercase;
+  right: 2.5em;
+  top: 1.75em; }
+
+#nav nav ul li {
+  display: inline-block;
+  margin-left: 1.5em; }
+
+#nav nav ul li > ul {
+  display: none; }
+
+#nav nav ul li a {
+  border: solid 1px transparent;
+  display: inline-block;
+  padding: 0em 0.75em;
+  text-decoration: none;
+  color: #fff; }
+
+#nav nav ul li.active > a, #nav nav ul li:hover > a {
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: rgba(188, 202, 206, 0.15);
+  border: solid 1px; }
+
+#nav nav ul li.current > a {
+  font-weight: 900; }
+
+#nav.reveal {
+  -moz-animation: reveal-header 0.5s 0 "";
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation: reveal-header 0.5s 0 "";
+  -webkit-animation-fill-mode: forwards;
+  -o-animation: reveal-header 0.5s 0 "";
+  -o-animation-fill-mode: forwards;
+  -ms-animation: reveal-header 0.5s 0 "";
+  -ms-animation-fill-mode: forwards;
+  animation: reveal-header 0.5s 0 "";
+  animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  height: 55px;
+  padding: 0.5em 1.5em;
+  background: #6d9030;
+  color: #fff; }
+
+.dlIcon {
+  font-size: 1em;
+  margin: 0 0.75em 0 0; }
+
+#nav #pullDown {
+  display: none; }
+
+/* About Me */
+.topSection {
+  margin-bottom: 5em;
+  padding-top: 4em;
+  position: relative;
+  text-align: center; }
+
+.topSection:before {
+  left: 0; }
+
+.topSection:after {
+  right: 0; }
+
+.topSection:before, .topSection:after {
+  border-bottom: solid 2px;
+  content: '';
+  height: 7px;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.75em;
+  width: 43%; }
+
+.topSection h2 {
+  margin-bottom: 0em; }
+
+.topSection h2 + p {
+  margin-bottom: 0;
+  padding-top: 1.5em; }
+
+#about_me .icon {
+  cursor: default;
+  height: 7em;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 1em;
+  width: 100%; }
+
+.face img {
+  margin: -30px 0 0 0 !important; }
+
+/* Icons */
+.icon.feature {
+  cursor: default;
+  display: block;
+  margin: 0 0 1.5em 0;
+  opacity: 0.35;
+  text-align: center;
+  color: #6D902C; }
+
+.icon.feature:before {
+  font-size: 5em;
+  line-height: 1em; }
+
+.icon > .label {
+  display: none; }
+
+.skillIcon {
+  float: left;
+  padding: 0 1.75%;
+  width: 33.3333333333%; }
+
+.skillIcon:first-child {
+  padding-left: 0px; }
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0; }
+
+/* Things I can do */
+.highlightContainer {
+  background: #fff;
+  padding: 3em;
+  margin-bottom: 5em; }
+
+ul.icando-icons {
+  overflow: hidden;
+  margin: 0; }
+
+ul.icando-icons li {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 20%; }
+
+ul.icando-icons li .item {
+  display: inline-block;
+  font-size: 8em;
+  width: 100%; }
+
+/* Icon Colors */
+.devicons-sass {
+  color: #CC6699; }
+
+.devicons-jquery {
+  color: #096BB6; }
+
+.devicons-angular {
+  color: #E62A39; }
+
+.devicons-html5,
+.fa-html5 {
+  color: #E34C26; }
+
+.devicons-php {
+  color: #6C7EB7; }
+
+.devicons-css3 {
+  color: #0171BB; }
+
+.devicons-javascript_badge {
+  color: #F0DB4F; }
+
+.fa-flash {
+  color: #CF081C; }
+
+.fa-database {
+  color: #4C4C4C; }
+
+.devicons-mysql {
+  color: #00618A; }
+
+.fa-paypal {
+  color: #003358; }
+
+.fa-wordpress {
+  color: #464646; }
+
+.devicons-postgresql {
+  color: #326590; }
+
+/* Work - homepage */
+.work_item {
+  width: 50%;
+  float: left;
+  border: 0;
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  text-decoration: none;
-  color:black;
-}
+  text-decoration: none; }
+
+.work_image {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  max-height: 400px; }
 
 #work_items:hover > .work_item {
   opacity: 0.5; }
@@ -422,312 +3290,386 @@ h4 {
   -o-transform: scale(1.1);
   opacity: 1; }
 
-.work_item h4 {
-  text-align: center;
-  font-size: 1.2em; }
+/* Footer */
+#footer {
+  background: #e8eef4;
+  color: #7c8081;
+  padding: 2em 5em;
+  text-align: center; }
 
-.work_image {
-  border: 1px solid #aaa;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 300px;
-  background: url("../img/sprite_shots.png") no-repeat;
-  height: 180px;
-  box-shadow: 2px 3px 5px #aaa;
-  -moz-box-shadow: 2px 3px 5px #aaa;
-  -webkit-box-shadow: 2px 3px 5px #aaa; }
+#footer .copyright {
+  font-size: 0.8em; }
 
-.work_image.work_ba{
-    background-position:-61px -1739px;}
+#footer .icon {
+  height: 2.25em;
+  width: 2.25em;
+  line-height: 2.25em;
+  font-size: 1.4em;
+  border-bottom: none;
+  margin: 0 0.3em; }
 
-.work_image.work_elevon {
-  background-position: -18px -1463px; }
+ul.icons li {
+  display: inline-block;
+  line-height: 1em;
+  padding-left: 0.5em; }
 
-.work_image.work_hhomepage {
-  background-position: -16px -20px; }
+/* Contact */
+#contact_me {
+  max-width: 800px; }
 
-.work_image.work_happ {
-  background-position: -21px -240px; }
+#contact_me textarea {
+  display: block;
+  text-align: left;
+  width: 100%; }
 
-.work_image.work_esearch {
-  background-position: -19px -470px; }
-
-.work_image.work_music {
-  background-position: -19px -740px; }
-
-.work_image.work_flash {
-  background-position: -19px -960px; }
-
-.work_image.work_mini {
-  background-position: -19px -1180px; }
-
-/* Contact Form */
-#contact_form {
-  width: 60%;
-  margin: 2% auto 0 auto;
-  max-width: 700px; }
-
-#contact_form input, #contact_form textarea, #contact_form label, #contact_form button, #contact_form p {
-  float: left;
-  clear: both; }
-
-#contact_form input {
-  width: 96%; }
-
-#contact_form label {
-  font-size: 0.85em; }
-
-#contact_form textarea {
-  resize: none;
-  width: 96%; }
-
-#contact_form input, #contact_form textarea {
-  margin: 0 0 30px 0;
-  padding: 10px 2%;
-  border-radius: 3px;
+#contact_me input,
+#contact_me textarea {
   border: 1px solid #CECECE;
-  box-shadow: inset 0px 1px 2px rgba(151, 151, 151, 0.8);
-  -moz-box-shadow: inset 0px 1px 2px rgba(151, 151, 151, 0.8);
-  -webkit-box-shadow: inset 0px 1px 2px rgba(151, 151, 151, 0.8); }
+  padding: 0.5em;
+  border-radius: 0.3em; }
 
-#contact_success {
-  width: 60%;
-  margin: 0 auto; }
+#contact_me input,
+#contact_me label {
+  display: block;
+  text-align: left;
+  width: 50%;
+  margin-bottom: 0.5em; }
 
-/* Work Page */
+#contact_me button {
+  display: block;
+  color: #fff;
+  background: #6ba500;
+  text-shadow: 0 -1px 0 #669E00;
+  border: 1px solid #669E00;
+  background: -moz-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8fc400), color-stop(100%, #6ba500));
+  background: -webkit-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: -o-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  padding: 0.5em;
+  margin-top: 1em;
+  width: 25%; }
+  #contact_me button:hover {
+    text-shadow: 0 1px 0 #borderHover;
+    border: 1px solid #borderHover;
+    background: #c6e278;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c6e278), color-stop(100%, #a7d32c));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* Opera 11.10+ */
+    background: linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* W3C */ }
+
+.requiredWarning {
+  font-size: 0.8em;
+  text-align: left;
+  margin: 2em 0; }
+
+/* Work */
 #work_page {
-  padding: 2%; }
+  background-repeat: repeat-y;
+  background-position: top right; }
 
-#work_page h4 {
-  color: #89b53c; }
+#work_page h2 {
+  display: inline-block; }
 
-#work_page p, #work_page ul {
-  font-weight: 300; }
-
-#work_page ul {
-  list-style-type: none; }
-
-#work_page .wiHeader * {
-  float: left;
-  border-bottom: 1px solid #e9e9e8;
+.workPage_home {
   border-bottom: none; }
 
-#work_page .wiHeader h2 {
-  padding: 0;
+.workPage_home:after {
+  content: '/';
+  margin: 0 10px; }
+
+#work_page .left_work {
+  float: left;
+  width: 60%; }
+
+#work_page .right_work {
+  float: right;
+  width: 35%; }
+
+#work_page h4 {
   margin: 0; }
 
-#work_page .workPage_home {
-  opacity: 0.4;
-  background: url("../img/sprite.png") no-repeat -700px -9px;
-  text-indent: -9999px;
-  height: 30px;
-  width: 30px; }
+#work_page .button {
+  display: block;
+  color: #fff;
+  background: #6ba500;
+  text-shadow: 0 -1px 0 #669E00;
+  border: 1px solid #669E00;
+  background: -moz-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8fc400), color-stop(100%, #6ba500));
+  background: -webkit-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: -o-linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  background: linear-gradient(top, #8fc400 0%, #6ba500 100%);
+  padding: 0.5em;
+  margin-top: 2em;
+  text-align: center;
+  min-width: 150px; }
+  #work_page .button:hover {
+    text-shadow: 0 1px 0 #borderHover;
+    border: 1px solid #borderHover;
+    background: #c6e278;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c6e278), color-stop(100%, #a7d32c));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* Opera 11.10+ */
+    background: linear-gradient(top, #c6e278 0%, #a7d32c 100%);
+    /* W3C */ }
 
-#work_page .workPage_home:hover {
-  cursor: pointer; }
+.work_screenshot {
+  float: left;
+  width: 40%;
+  margin: 5% 5% 0 0; }
 
-#work_page .workPage_divider {
-  color: #89b53c;
-  font-size: 1.3em;
-  margin: 0 0.5em; }
+.work_screenshot img {
+  width: 100%; }
 
-#work_details {
-  width: 60%;
-  margin:0 auto;
-  padding: 0 2% 0 0;
-}
+/* Tech Used List */
+#tech_used {
+  list-style-type: none; }
 
 #tech_used li {
-  float: left;
-  clear: left; }
+  margin: 1em 0; }
 
-#tech_used li div {
-  background: url("../img/sprite.png") no-repeat;
-  height: 30px;
-  width: 30px;
-  float: left;
-  margin: 0 0 10px 0; }
+.work_icon {
+  font-size: 2em;
+  vertical-align: middle;
+  padding: 0 0.5em 0 0;
+  width: 1.5em; }
 
-#tech_used li .tech_responsive {
-  background-position: -227px -7px; }
+/* Animations */
+.fadeAnimation2.ng-enter,
+.fadeAnimation2.ng-leave {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 10.5s ease;
+  transition: all 0.5s ease; }
 
-#tech_used li .tech_css {
-  background-position: -305px -9px; }
+.fadeAnimation2.ng-enter {
+  opacity: 0; }
 
-#tech_used li .tech_html {
-  background-position: -265px -11px; }
+.fadeAnimation2.ng-enter-active {
+  opacity: 1;
+  transition-delay: 0.5s; }
 
-#tech_used li .tech_jquery {
-  background-position: -352px -7px; }
+.fadeAnimation2.ng-leave {
+  opacity: 1; }
 
-#tech_used li .tech_php {
-  background-position: -389px -10px; }
+.fadeAnimation2.ng-leave-active {
+  opacity: 0; }
 
-#tech_used li .tech_db {
-  background-position: -442px -10px; }
+.fadeAnimation2.ng-hide-add.ng-hide-add-active,
+.fadeAnimation2.ng-hide-remove {
+  opacity: 0; }
 
-#tech_used li .tech_fl {
-  background-position: -529px -10px; }
+/* Desktop Specific */
+@media screen and (min-width: 768px) {
+  #nav nav.revealHeader {
+    position: fixed;
+    top: 0em;
+    right: 0;
+    width: 100%;
+    background: #6d9030;
+    text-align: right; }
 
-#tech_used li .tech_fb {
-  background-position: -487px -10px; }
+  #nav nav.revealHeader ul {
+    margin: 0;
+    padding: 0.5em; }
 
-#tech_used li .tech_wordpress {
-    background-position: -740px -13px; }
-
-#tech_used li .tech_paypal {
-  background-position: -778px -13px; }
-
-
-.work_link {
-  text-decoration: none;
-  margin: 20px 0 0 0;
-  display: block;
-  float: left;
-  clear: both; }
-
-.sliderContainer {
-  float: left; }
-
-.sliderContainer a{
-    display:inline-block;
-    cursor:pointer;
-}
-
-.sliderContainer img{
-    float:left;
-    width:200px;
-    margin:0 10px 0 0;
-}
-
-.classysocial.bubble .main img{
-    background:#6d9030;
-}
-
-.error{
-    color:red;
-}
-
-/* Animation - Angular */
-
-.fadeAnimation {
-    height: 100%;
-
-}
-.fadeAnimation.ng-enter,
-.fadeAnimation.ng-leave,
-.fadeAnimation.ng-hide-add, 
-.fadeAnimation.ng-hide-remove
-{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 10.5s ease;
-    transition: all 0.5s ease;
-}
-.fadeAnimation.ng-enter {
-    opacity: 0;
-}
-.fadeAnimation.ng-enter-active {
-    opacity: 1;
-    transition-delay: 0.5s;
-}
-.fadeAnimation.ng-leave {
-    opacity: 1;
-}
-.fadeAnimation.ng-leave-active {
-    opacity: 0;
-}
-
-.fadeAnimation.ng-hide-add.ng-hide-add-active,
-.fadeAnimation.ng-hide-remove {
-  opacity:0;
-}
-
-.fadeAnimationng-hide-add,
-.fadeAnimation.ng-hide-remove.ng-hide-remove-active {
-  opacity:1;
-}
-
-/* Media Queries */
-/* 800 - Most Tablets */
-@media screen and (max-width: 1024px) {
-  .home_slider {
-    width: 100%; }
-
-  #about_me {
-    width: 60%; }
-
-  .work_item {
-    width: 47.5%; }
-
-  #contact_form {
-    width: 90%; } }
-/*High pixel density */
-@media (max-width: 1000px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1000px) and (min--moz-device-pixel-ratio: 2) {
-  #main_nav {
-    float: none;
-    text-align: center; }
-
-  #main_nav li {
-    float: none;
-    display: inline; }
-
-  #about_me, #my_work {
-    width: 90%; }
-
-  .about_text {
-    line-height: 1em;
-    font-size: 0.8em; }
-
-  .right_menu {
-    display: none; }
-
-  #work_details {
-    width: 95%;
-    border: none;
-    padding: 0;
-    margin: 0 auto; }
-
-  .work_item {
-    width: 100%; }
-
+  #nav nav.revealHeader-add {
+    -moz-animation: reveal-nav 0.5s 0 none;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation: reveal-nav 0.5s 0 none;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: reveal-nav 0.5s 0 none;
+    -o-animation-fill-mode: forwards;
+    -ms-animation: reveal-nav 0.5s 0 none;
+    -ms-animation-fill-mode: forwards;
+    animation: reveal-nav 0.5s 0 none;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards; } }
+/* First Breakpoint */
+@media screen and (max-width: 1400px) {
   body {
-    zoom: 200%; } }
-/* iPhone 4s/ 5 */
-@media screen and (max-width: 768px) {
-  #main_nav {
-    float: none;
-    text-align: center; }
+    font-size: 14pt; }
 
-  #main_nav li {
-    float: none;
-    display: inline; }
+  .site_row {
+    width: 80%; }
 
-  #social_nav {
+  ul.icando-icons li .item {
+    font-size: 6em; } }
+/* Second Breakpoint */
+@media screen and (max-width: 1100px) {
+  body {
+    font-size: 13pt; }
+
+  ul.icando-icons li .item {
+    font-size: 4em; }
+
+  #work_page .left_work,
+  #work_page .right_work {
+    float: none;
+    width: 100%; } }
+/* Tablets */
+@media screen and (max-width: 880px) {
+  .site_row {
+    width: 90%; }
+
+  .topSection:before, .topSection:after {
+    width: 35%; }
+
+  .topSection br {
     display: none; }
 
-  #about_me, #my_work {
-    width: 90%; }
+  .skillIcon {
+    clear: both;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 2em; }
 
-  .about_text {
-    padding: 0;
-    background-image: none; }
+  .topSection {
+    margin-bottom: 3em; }
 
   .work_item {
-    width: 100%; }
+    width: 100%; } }
+/* Mobile Phones */
+@media screen and (max-width: 768px) {
+  body {
+    min-width: 320px; }
 
-  #contact_success {
-    width: 90%; }
+  h2 {
+    font-size: 1.25em;
+    letter-spacing: 0.1em; }
 
-  #work_details, #work_slider {
-    width: 95%;
+  h3 {
+    font-size: 1em;
+    letter-spacing: 0.025em; }
+
+  p {
+    text-align: justify; }
+
+  /* Nav */
+  #nav {
+    padding: 0; }
+
+  #nav #pullDown {
+    float: left;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    left: 50%;
+    margin-top: 1.5em;
+    cursor: pointer;
+    margin-left: -1.25em;
+    padding: 0 0.5em 0.2em 0.5em;
+    background: rgba(163, 169, 170, 0.75);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: block;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+  #nav nav {
+    position: relative;
+    left: 0;
+    top: 0; }
+
+  #nav {
+    top: -11em; }
+
+  #nav.slideDown {
+    top: 0em; }
+
+  #nav.slideDown-add,
+  #nav.slideDown-remove {
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+  #nav.slideDown + #header {
+    margin-top: 6em; }
+
+  #nav.slideDown #pullDown {
+    margin-top: 0em; }
+
+  #nav nav ul {
+    margin: 0; }
+
+  #nav nav ul li {
+    dispay: block;
+    width: 100%;
+    text-align: center;
+    background: white;
+    margin-left: 0; }
+
+  #nav nav ul li a {
+    color: #000;
+    width: 100%;
     border: none;
-    padding: 0;
-    margin: 0 auto; }
+    border-bottom: dotted 1px; }
 
-  .work_link {
-    margin: 20px auto; } }
-/* iPhone 3G and smaller devices */
-@media screen and (max-width: 340px) {
-  #main_nav li {
-    padding: 0 10px; } }
+  #nav nav ul li:last-child a {
+    border-bottom: none; }
+
+  #nav nav ul li:hover > a {
+    border: none;
+    border-bottom: dotted 1px; }
+
+  #nav nav ul li:last-child:hover > a {
+    border: none; }
+
+  /*Header*/
+  #header {
+    background-size: 10em, 10em, auto, cover;
+    padding: 4em 0;
+    text-align: center;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
+  #header .inner {
+    background: none;
+    display: block;
+    padding: 0 1.5em; }
+
+  #header .inner header h2 {
+    font-size: 1.5em; }
+
+  #header .inner p {
+    text-align: center; }
+
+  #header .inner br {
+    display: none; }
+
+  /* Skills */
+  .highlightContainer {
+    padding: 1em; }
+
+  ul.icando-icons li {
+    width: 33%;
+    padding-bottom: 2em; }
+
+  /* Contact */
+  #contact_me input,
+  #contact_me button {
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */

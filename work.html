@@ -1,40 +1,32 @@
-<section id="work_page" class="site_width" ng-if="currentItem != undefined">
-
-    <section id="work_details">
-
-        <header class="wiHeader clearfix">
-            <a ng-href="/" class="workPage_home home_button">Home</a>
-            <span class="workPage_divider">&#47;</span>
-            <h2>{{currentItem.name}}</h2>
-        </header>
-
-        <h4>Details:</h4>
-        <p ng-bind-html="convertToHTML()"></p>
-
-        <h4>Technology:</h4>
+<article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.8) 100%),url({{currentItem.bg}})">
+	
+    <header>
+        <a ng-href="/" class="workPage_home home_button">Home</a>
+        <h2>{{currentItem.name}}</h2>
+    </header>
+    
+    <section class="left_work">
+        <p ng-bind-html="convertToHTML()"></p>       
+                
+        <h4>Technology</h4>
         <ul id="tech_used">
             <li ng-repeat="skill in currentItem.skills" ng-add-custom-class>
-                <div ng-class="tech_classes[skill]"></div>{{skill}}
-            </li>
+                <div class="work_icon {{tech_classes[skill]}}"></div>{{skill}}
+            </li> 
         </ul>
-
-        <div class="clearfix">&nbsp;</div>
-
-        <h4>Images:</h4>
-        <div id="work_slider">
-
-            <div class="sliderContainer">
-                <a ng-repeat="image in currentItem.images" class="fancyModal" rel="galWork" ng-href="{{image.image}}" light-box>
-                    <img ng-src="{{image.thumb}}" />
-                </a>
-            </div>
-
-            <div ng-if="currentItem.links" ng-repeat="link in currentItem.links">
-                <a class="green_button work_link" target="_blank" ng-href="{{link.link}}" tabindex="1">Visit {{link.title}}</a>
-            </div>
-
-        </div>
-
+                
     </section>
-
-</section>
+    
+    <section class="right_work">
+                
+        <h4>Images</h4>
+        <div class="float_block">
+	        <a ng-repeat="image in currentItem.images" class="fancyModal work_screenshot" rel="galWork" ng-href="{{image.image}}" light-box>
+	            <img ng-src="{{image.thumb}}" />
+	        </a> 
+        </div>
+       
+        <a ng-if="currentItem.links" ng-repeat="link in currentItem.links" class="button" target="_blank" ng-href="{{link.link}}" tabindex="1">Visit {{link.title}}</a>
+           
+    </section>
+</article>
