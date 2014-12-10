@@ -51,6 +51,8 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
                 }
 
             }
+            
+            $scope.status = 'ready';
 
         }, function () {
             console.log('error');
@@ -89,4 +91,6 @@ garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailSe
                 $scope.showErrorMessage = 'true';
             });
         }
+        
+        $scope.status = 'ready';
 }]);
