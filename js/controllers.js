@@ -49,23 +49,21 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
                 } else {
                     $location.path('/');
                 }
-
+                
             }
             
             $scope.status = 'ready';
 
         }, function () {
-            console.log('error');
+            //console.log('error');
         });
         
-        
-    $anchorScroll();        
-     
      //auto scroll for work
      if($routeParams.scroll){
         $location.hash($routeParams.scroll);
-        $anchorScroll();    
      }
+     
+     $anchorScroll(); 
 
 }]);
 

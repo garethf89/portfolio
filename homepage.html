@@ -81,7 +81,7 @@
         <h2>My Work...</h2>
     </header>
 <div id="work_items" class="row">
-    <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}?scroll=main_content" class="work_item">
+    <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}?" class="work_item">
         <picture>
             <source media="(max-width: 500px)" srcset="{{value.cover}}_small.jpg" />
             <source media="(max-width: 880px)" srcset="{{value.cover}}_med.jpg" />

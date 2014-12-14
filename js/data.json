@@ -10,15 +10,16 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover" : "img/home/bacover",
+                "cover" : "images/home/bacover",
+                "bg" :"images/backgrounds/babg.jpg",
                 "images": [
                     {
-                        "thumb": "img/thumbs/bathumb1.png",
-                        "image": "images/lightboximg/bamain1.png"
+                        "thumb": "images/thumbs/bathumb1.png",
+                        "image": "images/lightboximages/bamain1.png"
                     },
                     {
-                        "thumb": "img/thumbs/bathumb3.png",
-                        "image": "images/lightboximg/bamain3.png"
+                        "thumb": "images/thumbs/bathumb3.png",
+                        "image": "images/lightboximages/bamain3.png"
                     }
                 ],
                 "links": [
@@ -33,7 +34,7 @@
                 "order" : "1",
                 "work_class" : "work_elevon",
                 "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.",
-                "cover" : "img/home/elevoncover",
+                "cover" : "images/home/elevoncover",
                 "skills": [
                     "Wordpress",
                     "PayPal",
@@ -45,16 +46,16 @@
                 "bg" :"images/backgrounds/elevonbg.jpg",
                 "images": [
                     {
-                        "thumb": "img/thumbs/elevonthumb1.png",
-                        "image": "images/lightboximg/elevonmain1.png"
+                        "thumb": "images/thumbs/elevonthumb1.png",
+                        "image": "images/lightboximages/elevonmain1.png"
                     },
                     {
-                        "thumb": "img/thumbs/elevonthumb2.png",
-                        "image": "images/lightboximg/elevonmain2.png"
+                        "thumb": "images/thumbs/elevonthumb2.png",
+                        "image": "images/lightboximages/elevonmain2.png"
                     },
                     {
-                        "thumb": "img/thumbs/elevonthumb3.png",
-                        "image": "images/lightboximg/elevonmain3.png"
+                        "thumb": "images/thumbs/elevonthumb3.png",
+                        "image": "images/lightboximages/elevonmain3.png"
                     }
                 ],
                 "links": [
@@ -76,20 +77,20 @@
                     "HTML5",
                     "Responsive Design"
                 ],
-                "cover" : "img/thumbs/esearcher1.png",
+                "cover" : "images/home/ljcover",
                 "images": [
                     {
-                        "thumb": "img/shots/esearcher1.png",
-                        "image": "img/shots/esearcher1.png"
+                        "thumb": "images/thumbs/lifestylethumb1.png",
+                        "image": "images/lightboximages/lifestyle1.png"
                     },
-                    {
-                        "thumb": "img/shots/esearcher2.png",
-                        "image": "img/shots/esearcher2.png"
-                    },
-                    {
-                        "thumb": "img/shots/esearcher3.png",
-                        "image": "img/shots/esearcher3.png"
+                                        {
+                        "thumb": "images/thumbs/lifestylethumb2.png",
+                        "image": "images/lightboximages/lifestyle2.png"
+                    },                    {
+                        "thumb": "images/thumbs/lifestylethumb3.png",
+                        "image": "images/lightboximages/lifestyle3.png"
                     }
+
                 ],
                 "links": [
                     {
@@ -108,19 +109,19 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover" : "img/thumbs/hphome1.png",
+                "cover" : "images/thumbs/hphome1.png",
                 "images": [
                     {
-                        "thumb": "img/shots/hphome1.png",
-                        "image": "img/shots/hphome1.png"
+                        "thumb": "images/shots/hphome1.png",
+                        "image": "images/shots/hphome1.png"
                     },
                     {
-                        "thumb": "img/shots/hphome2.png",
-                        "image": "img/shots/hphome2.png"
+                        "thumb": "images/shots/hphome2.png",
+                        "image": "images/shots/hphome2.png"
                     },
                     {
-                        "thumb": "img/shots/hphome3.png",
-                        "image": "img/shots/hphome3.png"
+                        "thumb": "images/shots/hphome3.png",
+                        "image": "images/shots/hphome3.png"
                     }
                 ],
                 "links": [
@@ -141,19 +142,19 @@
                     "PHP",
                     "PostgreSQL"
                 ],
-                "cover" : "img/thumbs/hpapp1.png",
+                "cover" : "images/thumbs/hpapp1.png",
                 "images": [
                     {
-                        "thumb": "img/shots/hpapp1.png",
-                        "image": "img/shots/hpapp1.png"
+                        "thumb": "images/shots/hpapp1.png",
+                        "image": "images/shots/hpapp1.png"
                     },
                     {
-                        "thumb": "img/shots/hpapp2.png",
-                        "image": "img/shots/hpapp2.png"
+                        "thumb": "images/shots/hpapp2.png",
+                        "image": "images/shots/hpapp2.png"
                     },
                     {
-                        "thumb": "img/shots/hpapp3.png",
-                        "image": "img/shots/hpapp3.png"
+                        "thumb": "images/shots/hpapp3.png",
+                        "image": "images/shots/hpapp3.png"
                     }
                 ]
             },
@@ -168,19 +169,19 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover" : "img/thumbs/music1.png",
+                "cover" : "images/thumbs/music1.png",
                 "images": [
                     {
-                        "thumb": "img/shots/music1.png",
-                        "image": "img/shots/music1.png"
+                        "thumb": "images/shots/music1.png",
+                        "image": "images/shots/music1.png"
                     },
                     {
-                        "thumb": "img/shots/music2.png",
-                        "image": "img/shots/music2.png"
+                        "thumb": "images/shots/music2.png",
+                        "image": "images/shots/music2.png"
                     },
                     {
-                        "thumb": "img/shots/music3.png",
-                        "image": "img/shots/music3.png"
+                        "thumb": "images/shots/music3.png",
+                        "image": "images/shots/music3.png"
                     }
                 ],
                 "links": [
