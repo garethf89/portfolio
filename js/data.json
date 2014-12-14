@@ -77,6 +77,7 @@
                     "HTML5",
                     "Responsive Design"
                 ],
+                "bg" :"images/backgrounds/elevonbg.jpg",
                 "cover" : "images/home/ljcover",
                 "images": [
                     {
@@ -109,20 +110,21 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover" : "images/thumbs/hphome1.png",
+                "bg" :"images/backgrounds/hphomebg.jpg",
+                "cover" : "images/home/hhomecover",
                 "images": [
                     {
-                        "thumb": "images/shots/hphome1.png",
-                        "image": "images/shots/hphome1.png"
+                        "thumb": "images/thumbs/hphomethumb1.png",
+                        "image": "images/lightboximages/hphome2.png"
                     },
-                    {
-                        "thumb": "images/shots/hphome2.png",
-                        "image": "images/shots/hphome2.png"
-                    },
-                    {
-                        "thumb": "images/shots/hphome3.png",
-                        "image": "images/shots/hphome3.png"
+                                        {
+                        "thumb": "images/thumbs/hphomethumb2.png",
+                        "image": "images/lightboximages/hphome2.png"
+                    },                    {
+                        "thumb": "images/thumbs/hphomethumb3.png",
+                        "image": "images/lightboximages/hphome3.png"
                     }
+
                 ],
                 "links": [
                     {
@@ -142,20 +144,21 @@
                     "PHP",
                     "PostgreSQL"
                 ],
-                "cover" : "images/thumbs/hpapp1.png",
+                "bg" :"images/backgrounds/hpbg.jpg",
+                "cover" : "images/home/hpcover",
                 "images": [
                     {
-                        "thumb": "images/shots/hpapp1.png",
-                        "image": "images/shots/hpapp1.png"
+                        "thumb": "images/thumbs/hpthumb1.png",
+                        "image": "images/lightboximages/hp2.png"
                     },
-                    {
-                        "thumb": "images/shots/hpapp2.png",
-                        "image": "images/shots/hpapp2.png"
-                    },
-                    {
-                        "thumb": "images/shots/hpapp3.png",
-                        "image": "images/shots/hpapp3.png"
+                                        {
+                        "thumb": "images/thumbs/hpthumb2.png",
+                        "image": "images/lightboximages/hp2.png"
+                    },                    {
+                        "thumb": "images/thumbs/hpthumb3.png",
+                        "image": "images/lightboximages/hp3.png"
                     }
+
                 ]
             },
             "other_projects": {
@@ -169,20 +172,29 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover" : "images/thumbs/music1.png",
+                "bg" :"images/backgrounds/otherbg.jpg",
+                "cover" : "images/home/othercover",
                 "images": [
                     {
-                        "thumb": "images/shots/music1.png",
-                        "image": "images/shots/music1.png"
+                        "thumb": "images/thumbs/otherthumb1.png",
+                        "image": "images/lightboximages/other1.png"
                     },
                     {
-                        "thumb": "images/shots/music2.png",
-                        "image": "images/shots/music2.png"
+                        "thumb": "images/thumbs/otherthumb2.png",
+                        "image": "images/lightboximages/other2.png"
                     },
                     {
-                        "thumb": "images/shots/music3.png",
-                        "image": "images/shots/music3.png"
-                    }
+                        "thumb": "images/thumbs/otherthumb3.png",
+                        "image": "images/lightboximages/other3.png"
+                    },
+                                        {
+                        "thumb": "images/thumbs/otherthumb4.png",
+                        "image": "images/lightboximages/other4.png"
+                    },
+                                        {
+                        "thumb": "images/thumbs/otherthumb5.png",
+                        "image": "images/lightboximages/other5.png"
+                    }                   
                 ],
                 "links": [
                     {
