@@ -2,4 +2,4 @@
 !/.gitignore
 !/.htaccess
 node-modules/imagemin/gifsicle/*
-/ode-modules/imagemin/gifsicle/*
+/node-modules/imagemin/gifsicle/*
