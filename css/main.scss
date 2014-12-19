@@ -638,4 +638,13 @@ ul.icons li {
   opacity:1;
 } 
 
+/* fancybox */
+.fancybox-wrap{
+    z-index: 9999;
+}
+.fancybox-close {
+    border-bottom: none;
+}
+
+
 @import 'media_queries';
