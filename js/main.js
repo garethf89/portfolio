@@ -9,6 +9,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         templateUrl: '/homepage.html',
         controller: 'portfolioItems'
       }).
+      when('/my_work?scrollTo=my_work', {
+        templateUrl: '/homepage.html',
+        controller: 'portfolioItems'
+      }).
         when('/contact', {
         templateUrl: '/contact.html',
         controller: 'contactForm'
@@ -25,6 +29,13 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
           
   }]);
 
+    garethPortfolio.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+      $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+        $location.hash($routeParams.scrollTo);
+        $anchorScroll();  
+      });
+    });
+
     //directive to initiate Lightbox
     garethPortfolio.directive('lightBox', function() {
         return {
@@ -39,16 +50,17 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
     garethPortfolio.directive("scroll",function ($window,$animate) {
         return {
             link: function(scope, element, attrs) {
+                
                 var windowElement = angular.element($window),
                     headerDiv = document.querySelector("#header");
                 
                 windowElement.bind('scroll', function(){
                     if(this.pageYOffset > headerDiv.offsetHeight){
                         if(!element.hasClass('revealHeader')){
-                            $animate.addClass(element,'revealHeader');
+                            element.addClass('revealHeader');
                         }
                     }else{
-                        $animate.removeClass(element,'revealHeader'); 
+                        element.removeClass('revealHeader');
                     }
                 });
             }

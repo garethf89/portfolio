@@ -57,13 +57,7 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }, function () {
             //console.log('error');
         });
-        
-     //auto scroll for work
-     if($routeParams.scroll){
-        $location.hash($routeParams.scroll);
-     }
-     
-     $anchorScroll(); 
+
 
 }]);
 

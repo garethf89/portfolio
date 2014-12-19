@@ -22,8 +22,8 @@ module.exports = function(grunt) {
             js: { //JS
                 src: [
                     'js/angular/angular.min.js',
-                    'js/angular/angular-animate.min.js',
                     'js/angular/angular-route.min.js',
+                    'js/angular/angular-animate.min.js',
                     'js/angular/angular-sanitize.min.js',
                     'js/main.js',
                     'js/controllers.js'
@@ -47,6 +47,9 @@ module.exports = function(grunt) {
         //MINIFY
         uglify: {
             js: {
+                options: {
+                    mangle: false
+                },
                 src: [
                     'js/build/libs.js',
                     'js/build/plugins.js',
@@ -82,9 +85,9 @@ module.exports = function(grunt) {
             lightbox: {
                 files: [{
                     expand: true,
-                    cwd: 'images/lighboximg',
+                    cwd: 'images/lighboximages',
                     src: ['**/*.{png,jpg}'],
-                    dest: 'images/lighboximg'
+                    dest: 'images/lighboximages'
                 }]
             },
             bg: {
@@ -94,6 +97,22 @@ module.exports = function(grunt) {
                     src: ['**/*.{png,jpg}'],
                     dest: 'images/backgrounds'
                 }]
+            },
+            home: {
+                files: [{
+                    expand: true,
+                    cwd: 'images/home',
+                    src: ['**/*.{png,jpg}'],
+                    dest: 'images/home'
+                }]
+            },
+            thumbs: {
+                files: [{
+                    expand: true,
+                    cwd: 'images/thumbs',
+                    src: ['**/*.{png,jpg}'],
+                    dest: 'images/thumbs'
+                }]
             }
         },
         
@@ -101,7 +120,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['js/**/*.js'],
-                tasks: ['concat:js','concat:libs','concat:plugins', 'uglify', 'version'],
+                tasks: ['concat:js','concat:libs','concat:plugins', 'uglify'],
                 options: {
                     spawn: false,
                 },
@@ -128,6 +147,15 @@ module.exports = function(grunt) {
                     src: ['index.php']
                 }
             }
+        },
+        
+        //NG ANNOTATE
+        ngAnnotate: {
+            app: {
+                files: {
+                      'js/build/angular_app.js': ['js/build/angular_app.js']
+                 },
+             }
         }
     });
 
@@ -138,8 +166,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-cache-breaker');
+    grunt.loadNpmTasks('grunt-ng-annotate');
     
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin',]);
+    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'cssmin','watch']);
 
 };

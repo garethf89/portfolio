@@ -3263,22 +3263,25 @@ ul.icando-icons li .item {
 .devicons-postgresql {
   color: #326590; }
 
-/* Work - homepage */
-.work_item {
-  width: 50%;
-  float: left;
-  border: 0;
+.work_item{
+    width:50%;
+float:left;
+border:0;
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-bottom: 5%;
+}
 
-.work_image {
-  display: block;
-  width: 95%;
-  margin: 0 auto;
-  max-height: 400px; }
+.work_image{
+    display: block;
+    width:95%;
+    margin:0 auto;
+    max-height:400px;
+    max-width:550px
+}
 
 #work_items:hover > .work_item {
   opacity: 0.5; }
@@ -3373,7 +3376,7 @@ ul.icons li {
 /* Work */
 #work_page {
   background-repeat: repeat-y;
-  background-position: top right; }
+  background-position: top right!important; }
 
 #work_page h2 {
   display: inline-block; }

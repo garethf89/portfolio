@@ -29,7 +29,7 @@
         <meta name="msapplication-TileColor" content="#00a300">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main_css.min.css">
         
         <!--[if lt IE 9]>
     		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -42,12 +42,7 @@
         
         <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
         
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-animate.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/controllers.js"></script>
+        <script src="js/build/production.min.js"></script>
                  
     </head>
     <body data-status="{{ status }}" ng-app="garethPortfolio">
@@ -61,7 +56,7 @@
 				<nav class="fadeAnimation" scroll>
 					<ul>
 						<li class="current"><a href="/">Home</a></li>
-						<li><a  href="/?scroll=my_work">Work</a></li>
+						<li><a  href="/#my_work?scrollTo=my_work">Work</a></li>
                         <li><a href="/contact">Contact</a></li>
                         <li>
                             <a target="_blank" href="files/cv.pdf" download="cv.pdf"> <span class="icon dlIcon fa fa-download"></span>Download CV</a>
@@ -103,10 +98,7 @@
 				<span class="copyright">Gareth Ferguson, 2014</span>
 			
 			</footer>
-
-
-        <script src="js/build/plugins.js"></script>
-
+        
         <!-- Google Analytics -->
 <script type="text/javascript">
 /*  var _gaq = _gaq || [];

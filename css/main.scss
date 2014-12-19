@@ -471,6 +471,7 @@ ul.icando-icons li .item{
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   text-decoration: none;
+  margin-bottom: 5%;
 }
 
 .work_image{
@@ -478,6 +479,7 @@ ul.icando-icons li .item{
     width:95%;
     margin:0 auto;
     max-height:400px;
+    max-width:550px
 }
 
 #work_items:hover > .work_item {
