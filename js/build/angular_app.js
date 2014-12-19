@@ -347,12 +347,12 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
           
   }]);
 
-    garethPortfolio.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+    garethPortfolio.run(["$rootScope", "$location", "$anchorScroll", "$routeParams", function($rootScope, $location, $anchorScroll, $routeParams) {
       $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
         $location.hash($routeParams.scrollTo);
         $anchorScroll();  
       });
-    });
+    }]);
 
     //directive to initiate Lightbox
     garethPortfolio.directive('lightBox', function() {
@@ -365,7 +365,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
     }); 
 
     //directive to show menu on scroll
-    garethPortfolio.directive("scroll",function ($window,$animate) {
+    garethPortfolio.directive("scroll",["$window", "$animate", function ($window,$animate) {
         return {
             link: function(scope, element, attrs) {
                 
@@ -383,10 +383,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
                 });
             }
         };
-    });
+    }]);
   
   //Service to get JSON data
-  garethPortfolio.factory("dataService", function($rootScope, $http, $q) {
+  garethPortfolio.factory("dataService", ["$rootScope", "$http", "$q", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
@@ -418,11 +418,11 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 		
 		return serviceObj;
 		
- });
+ }]);
 
 
     //service to send email
-    garethPortfolio.factory('emailService', function ($rootScope, $http) {
+    garethPortfolio.factory('emailService', ["$rootScope", "$http", function ($rootScope, $http) {
 
         var serviceObj = {};
 
@@ -442,7 +442,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         };
 
         return serviceObj;
-    });
+    }]);
 /* Controllers */
 
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);

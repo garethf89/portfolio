@@ -15,7 +15,7 @@
                 "images": [
                     {
                         "thumb": "images/thumbs/bathumb1.png",
-                        "image": "images/lightboximages/bamain1.png"
+                        "image": "images/lightboximages/bamain1.jpg"
                     },
                     {
                         "thumb": "images/thumbs/bathumb3.png",
@@ -47,7 +47,7 @@
                 "images": [
                     {
                         "thumb": "images/thumbs/elevonthumb1.png",
-                        "image": "images/lightboximages/elevonmain1.png"
+                        "image": "images/lightboximages/elevonmain1.jpg"
                     },
                     {
                         "thumb": "images/thumbs/elevonthumb2.png",
@@ -181,7 +181,7 @@
                     },
                     {
                         "thumb": "images/thumbs/otherthumb2.png",
-                        "image": "images/lightboximages/other2.png"
+                        "image": "images/lightboximages/other2.jpg"
                     },
                     {
                         "thumb": "images/thumbs/otherthumb3.png",

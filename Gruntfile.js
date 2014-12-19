@@ -169,6 +169,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ng-annotate');
     
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'cssmin','watch']);
+    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'cssmin','imagemin','watch']);
 
 };
