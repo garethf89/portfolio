@@ -1,3 +1,7 @@
+<script type="text/ng-template" id="imageTemplate">
+    <img src="{{ngDialogData}}" alt="work image" />
+</script>
+
 <article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url({{currentItem.bg}})">
 	
     <header>
@@ -21,7 +25,7 @@
                 
         <h4>Images</h4>
         <div class="float_block">
-	        <a ng-repeat="image in currentItem.images" class="fancyModal work_screenshot" rel="galWork" ng-href="{{image.image}}" light-box>
+	        <a ng-repeat="image in currentItem.images" class="fancyModal work_screenshot" rel="galWork" ng-dialog="imageTemplate" ng-dialog-data="{{image.image}}" ng-dialog-class="ngdialog-theme-flat" ng-dialog-close-previous >
 	            <img ng-src="{{image.thumb}}" />
 	        </a> 
         </div>

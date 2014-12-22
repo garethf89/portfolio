@@ -639,8 +639,8 @@ ul.icons li {
 } 
 
 /* fancybox */
-.fancybox-wrap{
-    z-index: 9999;
+.fancybox-overlay{
+    z-index: 10001;
 }
 .fancybox-close {
     border-bottom: none;

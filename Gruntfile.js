@@ -14,7 +14,8 @@ module.exports = function(grunt) {
             css: { //CSS
                 src: [
                     'css/main.css',
-                    'js/fancybox/jquery.fancybox.css'
+                    'css/ngDialog.css',
+                    'css/ngDialog-theme-flat.css'
                 ],
                 dest: 'css/main_css.css',
             },
@@ -25,6 +26,7 @@ module.exports = function(grunt) {
                     'js/angular/angular-route.min.js',
                     'js/angular/angular-animate.min.js',
                     'js/angular/angular-sanitize.min.js',
+                    'js/angular/ngDialog.js',
                     'js/main.js',
                     'js/controllers.js'
                 ],

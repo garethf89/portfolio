@@ -3471,12 +3471,14 @@ ul.icons li {
   opacity:1;
 }
 
-/* fancybox */
-.fancybox-wrap{
-    z-index: 9999;
+/* lightbox */
+.ngdialog-content img{
+    max-width: 100%;
 }
-.fancybox-close {
-    border-bottom: none;
+.ngdialog.ngdialog-theme-flat .ngdialog-content{
+    width:auto!important;
+    max-width:90%!important;
+    text-align: center;
 }
 /* Desktop Specific */
 @media screen and (min-width: 768px) {

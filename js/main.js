@@ -1,5 +1,5 @@
 
-var garethPortfolio = angular.module('garethPortfolio', ['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize']);
+var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize','ngDialog']);
 
 
 garethPortfolio.config(['$routeProvider','$locationProvider',
@@ -37,14 +37,16 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
     });
 
     //directive to initiate Lightbox
-    garethPortfolio.directive('lightBox', function() {
+    /*garethPortfolio.directive('lightBox', function() {
         return {
             restrict: 'A',
             link: function(scope, element, attrs) {
                 $(element).fancybox();
             }
         };
-    }); 
+    });*/ 
+
+
 
     //directive to show menu on scroll
     garethPortfolio.directive("scroll",function ($window,$animate) {
