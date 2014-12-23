@@ -158,7 +158,21 @@ module.exports = function(grunt) {
                       'js/build/angular_app.js': ['js/build/angular_app.js']
                  },
              }
-        }
+        },
+        
+        //Minify JSON
+          jsonmin: {
+            dev: {
+              options: {
+                stripWhitespace: true || false,
+                stripComments: true || false
+              },
+              files: {
+                "js/data.min.json" : "js/data.json"
+              }
+            }
+          }
+        
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
@@ -169,8 +183,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-cache-breaker');
     grunt.loadNpmTasks('grunt-ng-annotate');
+    grunt.loadNpmTasks('grunt-jsonmin');
     
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'cssmin','imagemin','watch']);
+    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'jsonmin', 'cssmin','imagemin','watch']);
 
 };

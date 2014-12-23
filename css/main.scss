@@ -3,9 +3,6 @@
 @import '../font-awesome/scss/font-awesome';
 @import 'devicons';
 
-
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
-
 /* ==========================================================================
   Defaults
    ========================================================================== */
@@ -80,7 +77,15 @@ $flash:#CF081C;
 		}
 	
 }
-    
+
+/*Scale */
+@mixin scaleMixin($val){
+    transform: scale($val);
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+     -o-transform: scale($val);
+}
+
 /*Fade Keyframe */
 @mixin createKeyframe($name) {
   @-webkit-keyframes #{$name} {
@@ -477,6 +482,7 @@ ul.icando-icons li .item{
 .work_image{
     display: block;
     width:95%;
+    height:auto;
     margin:0 auto;
     max-height:400px;
     max-width:550px
@@ -486,11 +492,9 @@ ul.icando-icons li .item{
   opacity: 0.5; }
 
 #work_items > .work_item:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  opacity: 1; }
+@include scaleMixin(1.1);
+  opacity: 1; 
+}
     
 /* Footer */
 
@@ -604,6 +608,17 @@ ul.icons li {
     float:left;
     width:40%;
     margin:5% 5% 0 0;
+    cursor:pointer;
+    @include transitionMixin(all,0.2s,ease-in-out);
+}
+
+    
+.right_work .float_block:hover > .work_screenshot {
+  opacity: 0.5; }
+
+.right_work .float_block > .work_screenshot:hover{
+    @include scaleMixin(1.1);
+    opacity:1;
 }
 
 .work_screenshot img{ 
@@ -638,12 +653,14 @@ ul.icons li {
   opacity:1;
 } 
 
-/* fancybox */
-.fancybox-overlay{
-    z-index: 10001;
+/* lightbox */
+.ngdialog-content img{
+    max-width: 100%;
 }
-.fancybox-close {
-    border-bottom: none;
+.ngdialog.ngdialog-theme-flat .ngdialog-content{
+    width:auto!important;
+    max-width:90%!important;
+    text-align: center;
 }
 
 
