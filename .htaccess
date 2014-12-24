@@ -115,8 +115,25 @@ AddDefaultCharset utf-8
 
     # Web Open Font Format (WOFF) 2.0
     ExpiresByType application/font-woff2                "access plus 1 month"
+    ExpiresByType font/woff2                             "access plus 1 month"
 
   # Other
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
 </IfModule>
+
+# ----------------------------------------------------------------------
+# | ETags                                                              |
+# ----------------------------------------------------------------------
+
+# Remove `ETags` as resources are sent with far-future expires headers.
+#
+# https://developer.yahoo.com/performance/rules.html#etags
+# https://tools.ietf.org/html/rfc7232#section-2.3
+
+# `FileETag None` doesn't work in all cases.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None

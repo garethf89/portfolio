@@ -36,18 +36,6 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
       });
     });
 
-    //directive to initiate Lightbox
-    /*garethPortfolio.directive('lightBox', function() {
-        return {
-            restrict: 'A',
-            link: function(scope, element, attrs) {
-                $(element).fancybox();
-            }
-        };
-    });*/ 
-
-
-
     //directive to show menu on scroll
     garethPortfolio.directive("scroll",function ($window,$animate) {
         return {
