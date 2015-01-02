@@ -10,6 +10,17 @@ RewriteCond %{REQUEST_URI}  ^/$
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
 RewriteRule ^(.*)$ /snapshots/%1? [NC,L]
 
+# Block spam
+Options +FollowSymLinks
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?kambasoft.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?semalt.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?buttons-for-website.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?make-money-online.7makemoneyonline.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?forum.topic23609811.darodar.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?7makemoneyonline.com [NC, OR]
+RewriteCond %{HTTP_REFERER} ^([^.]+.)*?medispainstitute.com.au [NC, OR]
+RewriteRule .* - [F]
+
 # compress text, html, javascript, css, xml:
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
