@@ -1,6 +1,6 @@
 <article itemscope itemtype="http://schema.org/Person" id="about_me" class="site_row centered topSection">
     <span class="icon face">
-            <img src="images/circle.png" width="87" height="96" alt="Gareth Ferguson face" />
+            <img src="http://garethferguson.s3.amazonaws.com/images/circle.png" width="87" height="96" alt="Gareth Ferguson face" />
         </span>
     <h2>About Me...</h2>
     <p class="about_text">
@@ -83,13 +83,13 @@
 <div id="work_items" class="row">
     <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}" class="work_item">
         <picture>
-            <source media="(max-width: 500px)" srcset="{{value.cover}}_small.jpg" />
-            <source media="(max-width: 880px)" srcset="{{value.cover}}_med.jpg" />
-            <source media="(max-width: 1100px)" srcset="{{value.cover}}_small.jpg" />
-            <source media="(max-width: 1200px)" srcset="{{value.cover}}_med.jpg" />
-            <source media="(max-width: 1300px)" srcset="{{value.cover}}_large.jpg" />
+            <source media="(max-width: 500px)" srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_small.jpg" />
+            <source media="(max-width: 880px)" srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_med.jpg" />
+            <source media="(max-width: 1100px)" srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_small.jpg" />
+            <source media="(max-width: 1200px)" srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_med.jpg" />
+            <source media="(max-width: 1300px)" srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_large.jpg" />
             <source srcset="{{value.cover}}_large.jpg" />
-            <img width="550" height="344" src="{{value.cover}}_large.jpg" class="work_image" alt="{{value.name}}" />
+            <img width="550" height="344" src="http://garethferguson.s3.amazonaws.com/{{value.cover}}_large.jpg" class="work_image" alt="{{value.name}}" />
         </picture>
         <h4>{{value.name}}</h4>
     </a>
