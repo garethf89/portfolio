@@ -2311,8 +2311,8 @@ textarea {
  */
 @font-face {
   font-family: 'devicons';
-  src: url("../fonts/devicons.eot?xqxft6");
-  src: url("../fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../fonts/devicons.woff?xqxft6") format("woff"), url("../fonts/devicons.ttf?xqxft6") format("truetype"), url("../fonts/devicons.svg?xqxft6#devicons") format("svg");
+  src: url("../fonts/devicons.eot");
+  src: url("../fonts/devicons.eot") format("embedded-opentype"), url("../fonts/devicons.woff") format("woff"), url("../fonts/devicons.ttf") format("truetype"), url("../fonts/devicons.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 .devicons {
@@ -3130,6 +3130,37 @@ p, ul, ol, dl, table {
 #nav #pullDown {
   display: none; }
 
+/* Counter */
+#counter {
+  opacity: 0;
+  position: absolute;
+  background: #6d9030;
+  color: white;
+  padding: .5em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 0.8em;
+  width: 15%;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  min-width: 150px;
+  -moz-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+#counter.visible {
+  opacity: 1;
+  bottom: -30px; }
+
+#counter strong {
+  margin-right: .2em; }
+
+#header .site_row {
+  position: relative; }
+
 /* About Me */
 .topSection {
   margin-bottom: 5em;
@@ -3222,6 +3253,9 @@ ul.icando-icons li .item {
   font-size: 8em;
   width: 100%; }
 
+ul.icando-icons li:nth-child(n+6) {
+  margin-top: 2em; }
+
 /* Icon Colors */
 .devicons-sass {
   color: #CC6699; }
@@ -3258,10 +3292,19 @@ ul.icando-icons li .item {
   color: #003358; }
 
 .fa-wordpress {
-  color: #464646; }
+  color: #21759B; }
 
 .devicons-postgresql {
   color: #326590; }
+
+.devicons-nodejs {
+  color: #7FBD42; }
+
+.devicons-grunt {
+  color: #FBA919; }
+
+.devicons-wordpress {
+  color: #21759B; }
 
 /* Work - homepage */
 .work_item {
@@ -3544,6 +3587,9 @@ ul.icons li {
     width: 100%; } }
 /* Tablets */
 @media screen and (max-width: 880px) {
+  #counter {
+    display: none; }
+
   .site_row {
     width: 90%; }
 
@@ -3687,6 +3733,9 @@ ul.icons li {
   ul.icando-icons li {
     width: 33%;
     padding-bottom: 2em; }
+
+  ul.icando-icons li:nth-child(n+6) {
+    margin-top: 0; }
 
   /* Contact */
   #contact_me input,

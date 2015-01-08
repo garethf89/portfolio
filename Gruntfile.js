@@ -8,6 +8,15 @@ module.exports = function(grunt) {
         
         pkg: grunt.file.readJSON('package.json'),
         
+                
+        sass: {
+			dist: {
+				files: {
+					'css/main.css' : 'css/main.scss'
+				}
+			}
+		},
+        
         //COMBINE FILES
         concat: { 
 
@@ -22,6 +31,7 @@ module.exports = function(grunt) {
             
             js: { //JS
                 src: [
+                    'js/socket.io.js',
                     'js/angular/angular.min.js',
                     'js/angular/angular-route.min.js',
                     'js/angular/angular-animate.min.js',
@@ -128,8 +138,8 @@ module.exports = function(grunt) {
                 },
             }, 
             css: {
-                files: ['css/*.css'],
-                tasks: ['concat:css', 'cssmin'],
+                files: ['css/*.css','css/*.scss'],
+                tasks: ['sass','concat:css', 'cssmin'],
                 options: {
                     spawn: false,
                 },
@@ -184,8 +194,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-cache-breaker');
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-jsonmin');
-    
+    grunt.loadNpmTasks('grunt-contrib-sass');
+
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'jsonmin', 'cssmin','imagemin','watch']);
+    grunt.registerTask('default', ['sass','concat', 'ngAnnotate', 'uglify', 'jsonmin', 'cssmin','imagemin','watch']);
 
 };

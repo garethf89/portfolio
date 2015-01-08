@@ -29,11 +29,41 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
           
   }]);
 
-    garethPortfolio.run(function($rootScope, $location, $anchorScroll, $routeParams) {
-      $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-        $location.hash($routeParams.scrollTo);
-        $anchorScroll();  
-      });
+    garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
+
+        var counterStatus = 'off';
+        
+        $rootScope.$on('$routeChangeSuccess', function (newRoute, oldRoute) {
+            $location.hash($routeParams.scrollTo);
+            $anchorScroll();
+        });
+
+        var socket = io.connect('http://garethferguson.co.uk');
+        socket.on('connect', function () {
+            
+            socket.send('here');
+            
+            var count;
+
+            socket.on('count', function (msg) {
+                
+                if(msg.count > 1){
+                    count = '<strong>' + msg.count + '</strong> current viewers'; 
+                }else{
+                    count = '<strong>' + msg.count + '</strong> current viewer';   
+                }
+                
+                $('#counter').html(count);
+                
+                if(counterStatus == 'off'){
+                    counterStatus ='on';
+                    $('#counter').addClass('visible');
+                }
+                
+            });
+
+        });
+
     });
 
     //directive to show menu on scroll
@@ -65,7 +95,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 	  		
 		//HTTP Request for new JSON
 		serviceObj.requestPortfolioData = function(){
-			return $http.get('js/data.min.json').success(function(data){
+			return $http.get('http://garethferguson.s3.amazonaws.com/js/data.min.json').success(function(data){
 				allJSON = data;
 			});
 		}
@@ -112,6 +142,20 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
                 callbackFailure(data);
             })
         };
+
+        return serviceObj;
+    });
+
+
+    //service to send email
+    garethPortfolio.factory('nodeService', function ($rootScope, $http) {
+
+        var serviceObj = {};
+
+        serviceObj.nodeTest1 = function(){
+         console.log('yes');
+            
+        }
 
         return serviceObj;
     });

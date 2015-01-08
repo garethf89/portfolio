@@ -32,7 +32,7 @@
     .site_row{
         width:80%;
     }        
-    
+
     ul.icando-icons li .item{
         font-size: 6em;
     }
@@ -58,6 +58,10 @@
 
 /* Tablets */
 @media screen and (max-width: 880px) {
+    
+    #counter{
+        display: none;   
+    }
     
      .site_row{
         width:90%;
@@ -222,6 +226,9 @@
     ul.icando-icons li{
         width:33%;
         padding-bottom: 2em;
+    }
+    ul.icando-icons li:nth-child(n+6){
+        margin-top:0;  
     }
     
     /* Contact */

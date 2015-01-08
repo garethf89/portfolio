@@ -45,12 +45,14 @@ $jquery:#096BB6;
 $angular:#E62A39;  
 $css3:#0171BB;  
 $paypal:#003358;
-$wordpress:#464646;
+$wordpress:#21759B;
 $javacript:#F0DB4F;
 $sql:#00618A;
 $postg:#326590;
 $db:#4C4C4C;
 $flash:#CF081C;
+$grunt:#FBA919;
+$node:#7FBD42;
 
 /* Buttons */
 @mixin buttonMixin($color1,$color2,$hover1,$hover2,$text:#fff, $border:#669E00,$borderHover:#669E00){
@@ -310,6 +312,37 @@ margin-left: 1.5em;
      display: none;
  }
 
+/* Counter */
+#counter{
+    opacity:0;   
+    position: absolute;
+    background: $mainGreen;
+    color: white;
+    padding: .5em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8em;
+    width: 15%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    min-width: 150px;   
+    @include transitionMixin(bottom,.4s,cubic-bezier(0.68, -0.55, 0.265, 1.55));
+}
+
+#counter.visible{
+    opacity: 1;
+    bottom:-30px;
+}
+
+#counter strong{
+    margin-right: .2em;   
+}
+
+#header .site_row{
+    position: relative;
+}
+
 /* About Me */
 
 .topSection{
@@ -423,6 +456,10 @@ ul.icando-icons li .item{
     width: 100%;
 }
 
+ul.icando-icons li:nth-child(n+6){
+    margin-top:2em;  
+}
+
 /* Icon Colors */
 
 .devicons-sass{
@@ -464,6 +501,15 @@ ul.icando-icons li .item{
 }
 .devicons-postgresql{
 	color:$postg
+}
+.devicons-nodejs{
+	color:$node;
+}
+.devicons-grunt{
+	color:$grunt;
+}
+.devicons-wordpress{
+	color:$wordpress;
 }
 
 /* Work - homepage */

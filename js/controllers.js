@@ -3,11 +3,11 @@
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','$anchorScroll',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','$anchorScroll','$http',
 
- function ($scope, $routeParams, $location, dataService,$sce, $anchorScroll, message) {
+ function ($scope, $routeParams, $location, dataService,$sce, $anchorScroll,$http,message) {
      
-        $scope.tech_classes = {
+     $scope.tech_classes = {
 	        'AngularJS': 'devicons devicons-angular',
             'CSS3': 'devicons devicons-css3',
             'HTML5': 'fa fa-html5',
@@ -51,7 +51,7 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
                 }
                 
             }
-            
+                        
             $scope.status = 'ready';
 
         }, function () {

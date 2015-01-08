@@ -35,14 +35,14 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
 
         <script src="js/build/production.min.js"></script>
-                
+                        
     </head>
     <body ng-app="garethPortfolio">
     
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
+        <![endif]-->        
+        
 		<!-- Header -->
         <header id="nav" class="fadeAnimation" ng-class="{'slideDown': isActive}" >
 				<nav class="fadeAnimation" scroll>
@@ -59,7 +59,7 @@
 
         </header>
 
-
+        
         <!-- Header Text -->
         <section id="header">
             <div class="inner">
@@ -70,6 +70,11 @@
                 <p>Web Developer based in Newcastle Upon Tyne</p>
             </div>
 
+            <!-- Counter -->
+            <div class="site_row">
+                <div id="counter"></div>
+            </div>
+            
         </section>
 		
         <!-- Content gets insterted here using Angular -->
@@ -107,6 +112,8 @@
       })(); 
     }
 </script>
-                              
+        
+                
+       
     </body>
 </html>
