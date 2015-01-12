@@ -95,7 +95,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 	  		
 		//HTTP Request for new JSON
 		serviceObj.requestPortfolioData = function(){
-			return $http.get('http://garethferguson.s3.amazonaws.com/js/data.min.json').success(function(data){
+			return $http.get('/js/data.min.json').success(function(data){
 				allJSON = data;
 			});
 		}

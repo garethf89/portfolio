@@ -5,8 +5,14 @@ var express = require('express'),
 app.use(compression());
 app.disable('etag');
 
+// a convenient variable to refer to the HTML directory
+var html_dir = './';
+
+app.use(express.static(html_dir));
+app.use('/*', express.static(html_dir, { maxAge: 86400000 }));
+
 // Loading socket.io
-var io = require('socket.io').listen(app.listen(8000));
+var io = require('socket.io').listen(app.listen(8080));
 
 var count = 0,
     users = [];
@@ -18,8 +24,6 @@ io.sockets.on('connection', function (socket) {
     io.sockets.emit('count',{
         'count': count
     });
-    
-    //console.log(socket.handshake.address);
             
     //reduce counter when user leaves
     socket.on('disconnect', function () {
@@ -31,14 +35,10 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-app.use(express.static('./'));
-
-// a convenient variable to refer to the HTML directory
-var html_dir = './';
 
 // routes to serve the static HTML files
-app.get('*', function(req, res) {
-    res.header("Content-Type", "application/json; charset=utf-8");
+app.get('/', function(req, res) {
+    res.header("Content-Type", "application/html; charset=utf-8");
     res.sendFile('index.html', { root: html_dir });
 });
 

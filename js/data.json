@@ -33,7 +33,7 @@
                 "name": "Elevon World",
                 "order" : "1",
                 "work_class" : "work_elevon",
-                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.",
+                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
                 "cover" : "images/home/elevoncover",
                 "skills": [
                     "Wordpress",
@@ -41,7 +41,8 @@
                     "CSS3",
                     "HTML5",
                     "JQuery & Javascript",
-                    "PHP"
+                    "PHP",
+                    "Responsive Design"
                 ],
                 "bg" :"images/backgrounds/elevonbg.jpg",
                 "images": [
@@ -56,47 +57,28 @@
                     {
                         "thumb": "images/thumbs/elevonthumb3.png",
                         "image": "images/lightboximages/elevonmain3.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/lifestylethumb1.png",
+                        "image": "images/lightboximages/lifestyle1.png"
+                    },                                        
+                    {
+                        "thumb": "images/thumbs/lifestylethumb2.png",
+                        "image": "images/lightboximages/lifestyle2.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/lifestylethumb3.png",
+                        "image": "images/lightboximages/lifestyle3.png"
                     }
                 ],
                 "links": [
                     {
                         "title": "Elevon",
                         "link": "http://www.elevonworld.com"
-                    }
-                ]
-            },
-            "elevonblog": {
-                "name": "Elevon Lifestyle Journal",
-                "work_class" : "work_elevonblog",
-                "desc": "This was an addition to the Elevon World website which was to add a blog. It was done using Wordpress and involved use of the full front end technology stack to design and create it.",
-                "skills": [
-                    "Wordpress",
-                    "PHP",
-                    "JQuery & Javascript",
-                    "CSS3",
-                    "HTML5",
-                    "Responsive Design"
-                ],
-                "bg" :"images/backgrounds/elevonbg.jpg",
-                "cover" : "images/home/ljcover",
-                "images": [
-                    {
-                        "thumb": "images/thumbs/lifestylethumb1.png",
-                        "image": "images/lightboximages/lifestyle1.png"
                     },
-                                        {
-                        "thumb": "images/thumbs/lifestylethumb2.png",
-                        "image": "images/lightboximages/lifestyle2.png"
-                    },                    {
-                        "thumb": "images/thumbs/lifestylethumb3.png",
-                        "image": "images/lightboximages/lifestyle3.png"
-                    }
-
-                ],
-                "links": [
                     {
-                        "title": "Elevon Lifestlye Journal",
-                        "link": "http://www.elevonworld.com/lifestylejournal"
+                    "title": "Elevon Lifestlye Journal",
+                    "link": "http://www.elevonworld.com/lifestylejournal"
                     }
                 ]
             },
@@ -130,6 +112,39 @@
                     {
                         "title": "Happiest",
                         "link": "http://www.happie.st"
+                    }
+                ]
+            },
+            "anglian": {
+                "name": "Anglian Home Improvements",
+                "work_class" : "work_ahi",
+                "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.",
+                "skills": [
+                    "Responsive Design",
+                    "CSS3",
+                    "HTML5",
+                    "JQuery & Javascript"
+                ],
+                "bg" :"images/backgrounds/ahibg.jpg",
+                "cover" : "images/home/ahicover",
+                "images": [
+                    {
+                        "thumb": "images/thumbs/ahithumb1.jpg",
+                        "image": "images/lightboximages/ahimain1.jpg"
+                    },
+                                        {
+                        "thumb": "images/thumbs/ahithumb2.jpg",
+                        "image": "images/lightboximages/ahimain2.jpg"
+                    },                    {
+                        "thumb": "images/thumbs/ahithumb3.jpg",
+                        "image": "images/lightboximages/ahimain3.jpg"
+                    }
+
+                ],
+                "links": [
+                    {
+                        "title": "Anglian Home Improvements",
+                        "link": "http://www.anglianhome.co.uk/"
                     }
                 ]
             },
