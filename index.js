@@ -1,15 +1,49 @@
 var express = require('express'),
     app = express(),
-    compression = require('compression');
+    compression = require('compression'),
+    routes = require('./routes'),
+    bodyParser = require('body-parser'),
+    os = require("os");
+
+
+//App setup
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.use(compression());
+
 app.disable('etag');
 
-// a convenient variable to refer to the HTML directory
+//Pre render
+app.use(require('prerender-node').set('prerenderToken', 'xP146Gly52Kf5snlwYCB'));
+
+// set up HTML
 var html_dir = './';
+
+if(os.hostname().indexOf("ip") > -1){
+    html_dir = '/var/www/html';
+}
 
 app.use(express.static(html_dir));
 app.use('/*', express.static(html_dir, { maxAge: 86400000 }));
+
+//Routes
+
+//let angular handle routing
+app.get('/', routes.default);
+
+//send contact form
+app.post('/formEmail', function(req,res){
+    routes.formEmail(req.body,function(error){
+        if(!error){
+            res.send('success');
+        }else{
+            res.send('error');
+        }
+    });
+});
 
 // Loading socket.io
 var io = require('socket.io').listen(app.listen(8080));
@@ -34,11 +68,3 @@ io.sockets.on('connection', function (socket) {
     });
 
 });
-
-
-// routes to serve the static HTML files
-app.get('/', function(req, res) {
-    res.header("Content-Type", "application/html; charset=utf-8");
-    res.sendFile('index.html', { root: html_dir });
-});
-

@@ -26,13 +26,14 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
       });
       
       $locationProvider.html5Mode(true);
-          
+      $locationProvider.hashPrefix('!');
+      
   }]);
 
     garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
-        
+    
         $rootScope.$on('$routeChangeSuccess', function (newRoute, oldRoute) {
             $location.hash($routeParams.scrollTo);
             $anchorScroll();
@@ -131,7 +132,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
             $http({
                 method: 'POST',
-                url: 'formEmail.php',
+                url: '/formEmail',
                 data: $.param(formData),
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'

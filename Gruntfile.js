@@ -1,202 +1,28 @@
-module.exports = function(grunt) {
-    
-    
-    var pkg =  grunt.file.readJSON('package.json');
+module.exports = function (grunt) {
 
-    // 1. All configuration goes here 
-    grunt.initConfig({
-        
-        pkg: grunt.file.readJSON('package.json'),
-        
-                
-        sass: {
-			dist: {
-				files: {
-					'css/main.css' : 'css/main.scss'
-				}
+	var data = {
+		pkg: grunt.file.readJSON('package.json'),
+		paths: {
+			src:{
+				root:"",
+				css:"css",
+				scss:"css",
+				js:"js",
+				img:"images"
+			},
+			dest:{
+				root:"",
+                scss:"css",
+				css:"css",
+				js:"js",
+				img:"images",
 			}
-		},
-        
-        //COMBINE FILES
-        concat: { 
+		}
+	};
+    
+    
+    // measures the time each task takes
+    require('time-grunt')(grunt);
 
-            css: { //CSS
-                src: [
-                    'css/main.css',
-                    'css/ngDialog.css',
-                    'css/ngDialog-theme-flat.css'
-                ],
-                dest: 'css/main_css.css',
-            },
-            
-            js: { //JS
-                src: [
-                    'js/socket.io.js',
-                    'js/angular/angular.min.js',
-                    'js/angular/angular-route.min.js',
-                    'js/angular/angular-animate.min.js',
-                    'js/angular/angular-sanitize.min.js',
-                    'js/angular/ngDialog.js',
-                    'js/main.js',
-                    'js/controllers.js'
-                ],
-                dest: 'js/build/angular_app.js',
-            },
-            libs: {
-                src: [
-                    'js/vendor/*.js'
-                ],
-                dest: 'js/build/libs.js',
-            },
-            plugins: {
-                src: [
-                    'js/plugins/*.js'
-                ],
-                dest: 'js/build/plugins.js',
-            }
-        },
-         
-        //MINIFY
-        uglify: {
-            js: {
-                options: {
-                    mangle: false
-                },
-                src: [
-                    'js/build/libs.js',
-                    'js/build/plugins.js',
-                    'js/build/angular_app.js'
-                ],
-                dest: 'js/build/production.min.js'
-            }
-        },
-        
-        //MINIFY
-        cssmin: {
-          my_target: {
-            files: [{
-              expand: true,
-              cwd: 'css/',
-              src: ['main_css.css'],
-              dest: 'css/',
-              ext: '.min.css'
-            }]
-          }
-        },
-        
-        //IMAGES
-        imagemin: {
-            images: {
-                files: [{
-                    expand: true,
-                    cwd: 'images/',
-                    src: ['**/*.{png,jpg}'],
-                    dest: 'images/'
-                }]
-            },
-            lightbox: {
-                files: [{
-                    expand: true,
-                    cwd: 'images/lighboximages',
-                    src: ['**/*.{png,jpg}'],
-                    dest: 'images/lighboximages'
-                }]
-            },
-            bg: {
-                files: [{
-                    expand: true,
-                    cwd: 'images/backgrounds',
-                    src: ['**/*.{png,jpg}'],
-                    dest: 'images/backgrounds'
-                }]
-            },
-            home: {
-                files: [{
-                    expand: true,
-                    cwd: 'images/home',
-                    src: ['**/*.{png,jpg}'],
-                    dest: 'images/home'
-                }]
-            },
-            thumbs: {
-                files: [{
-                    expand: true,
-                    cwd: 'images/thumbs',
-                    src: ['**/*.{png,jpg}'],
-                    dest: 'images/thumbs'
-                }]
-            }
-        },
-        
-        //WATCH
-        watch: {
-            scripts: {
-                files: ['js/**/*.js','js/**/*.json'],
-                tasks: ['jsonmin','concat:js','concat:libs','concat:plugins', 'uglify'],
-                options: {
-                    spawn: false,
-                },
-            }, 
-            css: {
-                files: ['css/*.css','css/*.scss'],
-                tasks: ['sass','concat:css', 'cssmin'],
-                options: {
-                    spawn: false,
-                },
-            } 
-        },
-        
-        //VERSION
-        cachebreaker: {
-            dev: {
-                options: {
-                    match: ['js/build/production.min.js'],
-                    replacement: function (){
-                        return  "v_" + pkg.version
-                    }
-                },
-                files: {
-                    src: ['index.php']
-                }
-            }
-        },
-        
-        //NG ANNOTATE
-        ngAnnotate: {
-            app: {
-                files: {
-                      'js/build/angular_app.js': ['js/build/angular_app.js']
-                 },
-             }
-        },
-        
-        //Minify JSON
-          jsonmin: {
-            dev: {
-              options: {
-                stripWhitespace: true || false,
-                stripComments: true || false
-              },
-              files: {
-                "js/data.min.json" : "js/data.json"
-              }
-            }
-          }
-        
-    });
-
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-cache-breaker');
-    grunt.loadNpmTasks('grunt-ng-annotate');
-    grunt.loadNpmTasks('grunt-jsonmin');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass','concat', 'ngAnnotate', 'uglify', 'jsonmin', 'cssmin','imagemin','watch']);
-
+    require('load-grunt-config')(grunt,{data: data});
 };
