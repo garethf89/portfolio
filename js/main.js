@@ -130,6 +130,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         var serviceObj = {};
 
         serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
+            console.log(formData);
             $http({
                 method: 'POST',
                 url: '/formEmail',
@@ -147,16 +148,45 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         return serviceObj;
     });
 
+    //last fm service
+    garethPortfolio.factory('lastFmService', function ($rootScope, $http, $q) {
 
-    //service to send email
-    garethPortfolio.factory('nodeService', function ($rootScope, $http) {
+            var serviceObj = {},
+                albums,
+                deferred = $q.defer();
 
-        var serviceObj = {};
-
-        serviceObj.nodeTest1 = function(){
-         console.log('yes');
+            //get albums JSOn
+        	serviceObj.requestAlbumData = function(){
+                return $http({
+                    method: 'POST',
+                    url: '/lastFm',
+                    data: 'name=DirtyG',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                }).success(function (data) {
+                    albums = data;
+                    deferred.resolve(data);
+                    return deferred.promise;
+                }).error(function (data) {
+                    deferred.resolve(data);
+                    return deferred.promise;
+                })
+            }
             
-        }
+            //return albums object        
+            serviceObj.getAlbums = function () {
+                if(albums){
+                    deferred.resolve(albums);
+				    return deferred.promise;
+                }else{
+                    return serviceObj.requestAlbumData().then(function(result){
+                        deferred.resolve(albums);
+                        return deferred.promise;
+				    });             
+                }
+            }
 
         return serviceObj;
+
     });

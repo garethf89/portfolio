@@ -799,7 +799,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
       
   }]);
 
-    garethPortfolio.run(["$rootScope", "$location", "$anchorScroll", "$routeParams", function ($rootScope, $location, $anchorScroll, $routeParams) {
+    garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
     
@@ -834,10 +834,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 
         });
 
-    }]);
+    });
 
     //directive to show menu on scroll
-    garethPortfolio.directive("scroll",["$window", "$animate", function ($window,$animate) {
+    garethPortfolio.directive("scroll",function ($window,$animate) {
         return {
             link: function(scope, element, attrs) {
                 
@@ -855,10 +855,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
                 });
             }
         };
-    }]);
+    });
   
   //Service to get JSON data
-  garethPortfolio.factory("dataService", ["$rootScope", "$http", "$q", function($rootScope, $http, $q) {
+  garethPortfolio.factory("dataService", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
@@ -890,15 +890,16 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 		
 		return serviceObj;
 		
- }]);
+ });
 
 
     //service to send email
-    garethPortfolio.factory('emailService', ["$rootScope", "$http", function ($rootScope, $http) {
+    garethPortfolio.factory('emailService', function ($rootScope, $http) {
 
         var serviceObj = {};
 
         serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
+            console.log(formData);
             $http({
                 method: 'POST',
                 url: '/formEmail',
@@ -914,29 +915,58 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         };
 
         return serviceObj;
-    }]);
+    });
 
+    //last fm service
+    garethPortfolio.factory('lastFmService', function ($rootScope, $http, $q) {
 
-    //service to send email
-    garethPortfolio.factory('nodeService', ["$rootScope", "$http", function ($rootScope, $http) {
+            var serviceObj = {},
+                albums,
+                deferred = $q.defer();
 
-        var serviceObj = {};
-
-        serviceObj.nodeTest1 = function(){
-         console.log('yes');
+            //get albums JSOn
+        	serviceObj.requestAlbumData = function(){
+                return $http({
+                    method: 'POST',
+                    url: '/lastFm',
+                    data: 'name=DirtyG',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                }).success(function (data) {
+                    albums = data;
+                    deferred.resolve(data);
+                    return deferred.promise;
+                }).error(function (data) {
+                    deferred.resolve(data);
+                    return deferred.promise;
+                })
+            }
             
-        }
+            //return albums object        
+            serviceObj.getAlbums = function () {
+                if(albums){
+                    deferred.resolve(albums);
+				    return deferred.promise;
+                }else{
+                    return serviceObj.requestAlbumData().then(function(result){
+                        deferred.resolve(albums);
+                        return deferred.promise;
+				    });             
+                }
+            }
 
         return serviceObj;
-    }]);
+
+    });
 /* Controllers */
 
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','$anchorScroll','$http',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','lastFmService','$anchorScroll','$http',
 
- function ($scope, $routeParams, $location, dataService,$sce, $anchorScroll,$http,message) {
+ function ($scope, $routeParams, $location, dataService,$sce,lastFmService,$anchorScroll,$http,message) {
      
      $scope.tech_classes = {
 	        'AngularJS': 'devicons devicons-angular',
@@ -988,6 +1018,12 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }, function () {
             //console.log('error');
         });
+     
+     
+     //last.fm plays
+    lastFmService.getAlbums().then(function(albums) {
+        $scope.albums = albums.topalbums.album;
+    });
 
 
 }]);

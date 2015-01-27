@@ -18,7 +18,8 @@
   "author": "Gareth Ferguson",
   "dependencies": {
     "express": "4.x",
-    "prerender-node": "latest"
+    "prerender-node": "latest",
+    "request": "latest"
   },
   "main": "index.js",
   "repository": {

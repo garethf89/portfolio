@@ -45,6 +45,13 @@ app.post('/formEmail', function(req,res){
     });
 });
 
+//LASTfm Request
+app.post('/lastFm', function(req,res){
+    routes.getAlbums(req.body,function(albums){
+        res.send(albums);
+    });
+});
+
 // Loading socket.io
 var io = require('socket.io').listen(app.listen(8080));
 

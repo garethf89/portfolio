@@ -3,9 +3,9 @@
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','$anchorScroll','$http',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','lastFmService','$anchorScroll','$http',
 
- function ($scope, $routeParams, $location, dataService,$sce, $anchorScroll,$http,message) {
+ function ($scope, $routeParams, $location, dataService,$sce,lastFmService,$anchorScroll,$http,message) {
      
      $scope.tech_classes = {
 	        'AngularJS': 'devicons devicons-angular',
@@ -57,7 +57,12 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }, function () {
             //console.log('error');
         });
-
+     
+     
+     //last.fm plays
+    lastFmService.getAlbums().then(function(albums) {
+        $scope.albums = albums.topalbums.album;
+    });
 
 }]);
 

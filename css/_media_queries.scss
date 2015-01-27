@@ -19,7 +19,6 @@
     {
         @include animationMixin(reveal-nav, 0.5s, 0, none);
     }
-    
 }
 
 /* First Breakpoint */
@@ -36,6 +35,13 @@
     ul.icando-icons li .item{
         font-size: 6em;
     }
+    
+    .lastfm-albums .music-info{
+        clear:both;
+        width:100%;
+        margin: 1em 0 0 0 ;
+    }
+    
 }
 
 /* Second Breakpoint */
@@ -236,5 +242,11 @@
     #contact_me button{
         width:100%;
     }
+    
+    .lastfm-albums .music-container{
+    margin-right: 1.5em;
+    }
+
+    
     
 }

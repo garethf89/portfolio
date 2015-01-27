@@ -106,5 +106,21 @@
         <h4>{{value.name}}</h4>
     </a>
     </div>
+</article>
 
+<!-- Lastfm -->
+<article ng-if="albums" id="lastfm_albums" class="lastfm-albums site_row">
+    <header>
+        <div class="icon fa-lastfm logo-large"></div>
+        <h2>Recently Played...</h2>
+    </header>
+    
+    <div class="music-container" ng-repeat="album in albums">
+        <img src="{{album.image[2]['#text']}}" />
+        <div class="music-info">
+            <h5>{{album.name}}</h5>
+            <h6>{{album.artist.name}}</h6>
+        </div>
+    </div>
+    
 </article>

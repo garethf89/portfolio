@@ -1,8 +1,13 @@
-var emailContact = require('./email');
+var emailContact = require('./email'),
+    lastFmService = require('./lastFm');
         
 //send email
 exports.formEmail =  function(req,callback) {
     emailContact.sendEmail(req,callback);
+};
+
+exports.getAlbums = function(req,callback) {
+    lastFmService.getAlbums(req,callback);
 };
 
 exports.default = function(req, res) {
