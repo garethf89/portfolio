@@ -3541,42 +3541,34 @@ ul.icons li {
 #lastfm_albums {
   margin-bottom: 3em; }
 
-.lastfm-albums header {
-  margin-bottom: 2em; }
-
 .logo-large {
   font-size: 3em; }
 
-.lastfm-albums .logo-large {
-  margin-right: 0.3em;
-  float: left;
-  opacity: 0.5; }
-
 .lastfm-albums {
   overflow: hidden; }
-
-.lastfm-albums .music-container,
-.lastfm-albums .music-container img {
-  float: left; }
-
-.lastfm-albums .music-container {
-  margin-right: 2em;
-  width: 26%;
-  margin-bottom: 2em; }
-
-.lastfm-albums .music-container img {
-  max-width: 50%; }
-
-.lastfm-albums .music-info {
-  float: left;
-  width: 50%;
-  margin: 0 0 0 1em; }
-
-.lastfm-albums .music-info h5 {
-  margin: 0 0 1em; }
-
-.lastfm-albums .music-info h6 {
-  margin: 0; }
+  .lastfm-albums header {
+    margin-bottom: 2em; }
+  .lastfm-albums .logo-large {
+    margin-right: 0.3em;
+    float: left;
+    opacity: 0.5; }
+  .lastfm-albums .music-container,
+  .lastfm-albums .music-container img {
+    float: left; }
+  .lastfm-albums .music-container {
+    margin-right: 2em;
+    width: 26%;
+    margin-bottom: 2em; }
+  .lastfm-albums .music-container img {
+    max-width: 50%; }
+  .lastfm-albums .music-info {
+    float: left;
+    width: 50%;
+    margin: 0 0 0 1em; }
+  .lastfm-albums .music-info h5 {
+    margin: 0 0 1em; }
+  .lastfm-albums .music-info h6 {
+    margin: 0; }
 
 /* Desktop Specific */
 @media screen and (min-width: 768px) {
@@ -3788,7 +3780,17 @@ ul.icons li {
   #contact_me button {
     width: 100%; }
 
+  /* Last FM */
+  #my_work {
+    margin-bottom: 3em; }
+
+  .lastfm-albums header {
+    text-align: center; }
   .lastfm-albums .music-container {
-    margin-right: 1.5em; } }
+    margin-right: 1.5em;
+    width: 100%;
+    text-align: center; }
+  .lastfm-albums .music-container, .lastfm-albums .music-container img, .lastfm-albums .music-info, .lastfm-albums .logo-large {
+    float: none; } }
 
 /*# sourceMappingURL=main.css.map */

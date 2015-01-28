@@ -714,52 +714,53 @@ ul.icons li {
     margin-bottom: 3em;
 }
 
-.lastfm-albums header{
-    margin-bottom: 2em;
-}
-
 .logo-large{
     font-size:3em;
 }
 
-.lastfm-albums .logo-large{
-    margin-right: 0.3em;
-    float: left;
-    opacity: 0.5;
-}
-
 .lastfm-albums{
+    
+    header{
+        margin-bottom: 2em;
+    }
+
+    .logo-large{
+        margin-right: 0.3em;
+        float: left;
+        opacity: 0.5;
+    }
+
     overflow: hidden;
-}
 
-.lastfm-albums .music-container,
-.lastfm-albums .music-container img{
-    float:left;
-}
+    .music-container,
+    .music-container img{
+        float:left;
+    }
 
-.lastfm-albums .music-container{
-    margin-right: 2em;
-    width: 26%;
-    margin-bottom: 2em;
-}
+    .music-container{
+        margin-right: 2em;
+        width: 26%;
+        margin-bottom: 2em;
+    }
 
-.lastfm-albums .music-container img{
-    max-width: 50%;
-}
+    .music-container img{
+        max-width: 50%;
+    }
 
-    .lastfm-albums .music-info{
+    .music-info{
         float:left;
         width:50%;
         margin: 0 0 0 1em;
     }   
-    
 
-.lastfm-albums .music-info h5{
-    margin: 0 0 1em;
-}
 
-.lastfm-albums .music-info h6{
-    margin: 0;
+   .music-info h5{
+        margin: 0 0 1em;
+    }
+
+    .music-info h6{
+        margin: 0;
+    }    
 }
 
 

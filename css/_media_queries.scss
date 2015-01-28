@@ -243,8 +243,30 @@
         width:100%;
     }
     
-    .lastfm-albums .music-container{
-    margin-right: 1.5em;
+    /* Last FM */
+    
+    #my_work{
+        margin-bottom:3em;
+    }
+    
+    .lastfm-albums {
+        
+        header{
+            text-align: center;   
+        }
+        
+        .music-container{
+            margin-right: 1.5em;
+            width:100%;
+            text-align: center;
+        }
+        
+        .music-container, .music-container img, .music-info, .logo-large{
+            float:none;
+        }
+        
+        
+        
     }
 
     
