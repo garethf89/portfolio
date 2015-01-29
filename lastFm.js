@@ -3,13 +3,22 @@ var express = require("express"),
     lastfmConstants,
     lastFmSettings,
     url,
-    request = require('request');
+    request = require('request'),
+    mongojs = require('mongojs'),
+    mongoURL = 'mongodb://test:pass@ds039281.mongolab.com:39281/gareth';
 
 if(os.hostname().indexOf("ip") > -1){
     lastfmConstants = require("/var/www/configLastFM.json");
 }else{
     lastfmConstants = require("./configLastFM.json");
 }
+
+//database connect
+var mongodb = mongojs(mongoURL, ['lastfm']);
+
+  mongodb.lastfm.find(function(err, docs) {
+    console.log(docs);
+});
 
 exports.getAlbums = function(options, callback){
         
