@@ -5,25 +5,64 @@ var express = require("express"),
     url,
     request = require('request'),
     mongojs = require('mongojs'),
-    mongoURL = 'mongodb://test:pass@ds039281.mongolab.com:39281/gareth';
+    schedule = require('node-schedule'),
+    mongoURL;
 
-if(os.hostname().indexOf("ip") > -1){
+if (os.hostname().indexOf("ip") > -1) {
     lastfmConstants = require("/var/www/configLastFM.json");
-}else{
+    mongoUrl = lastfmConstants.mongoURL;
+} else {
     lastfmConstants = require("./configLastFM.json");
+    mongoUrl = "gareth";
 }
 
 //database connect
-var mongodb = mongojs(mongoURL, ['lastfm']);
+var mongodb = mongojs(mongoUrl, ['lastfm']);
 
-  mongodb.lastfm.find(function(err, docs) {
-    console.log(docs);
-});
+exports.getAlbums = function (options, callback) {
 
-exports.getAlbums = function(options, callback){
-        
-    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=3month&limit=3';
-    request({url: url}, function (error, response, body) {
-        callback(body);
-    });    
+    //Its already in DB - get it from there
+    mongodb.lastfm.find({
+        _id: options.name
+    }, function (err, result) {
+
+        //Use result
+        if (err || !result[0]) {
+            url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=3month&limit=3';
+
+            request({
+                url: url
+            }, function (error, response, body) {
+
+                callback(body);
+
+                //store in mongoDB
+                mongodb.lastfm.insert([{
+                    _id: options.name,
+                    data: body
+                }]);
+            });
+        } else {
+            callback(result[0].data);
+        }
+
+    });
+
 }
+
+//update every week!
+var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function () {
+
+    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=DirtyG&api_key=' + lastfmConstants.auth.key + '&format=json&period=3month&limit=3';
+
+    request({
+        url: url
+    }, function (error, response, body) {
+
+        //store in mongoDB
+        mongodb.collection('lastfm').insert([{
+            _id: 'Dirtyg',
+            data: body
+        }]);
+    });
+});

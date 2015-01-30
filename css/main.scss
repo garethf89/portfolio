@@ -53,6 +53,7 @@ $db:#4C4C4C;
 $flash:#CF081C;
 $grunt:#FBA919;
 $node:#7FBD42;
+$mongo:#58AE47;
 
 /* Buttons */
 @mixin buttonMixin($color1,$color2,$hover1,$hover2,$text:#fff, $border:#669E00,$borderHover:#669E00){
@@ -511,7 +512,9 @@ ul.icando-icons li:nth-child(n+6){
 .devicons-wordpress{
 	color:$wordpress;
 }
-
+.devicons-mongodb{
+	color:$mongo;
+}
 /* Work - homepage */
 .work_item{
     width:50%;
