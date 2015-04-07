@@ -1,7 +1,13 @@
 module.exports = {
     dist: {
-        files: {
-            '<%= paths.src.css %>/main.css': '<%= paths.dest.css %>/main.scss'
-        }
+        files: [
+            {
+                expand: true,
+                cwd: "<%= paths.src.css %>",
+                src: "main.scss",
+                dest: "<%= paths.dest.css %>",
+                ext: ".css"
+                }
+            ]
     }
 };

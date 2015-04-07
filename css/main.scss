@@ -32,11 +32,11 @@ p, ul, ol, dl, table {margin: 0 0 2em 0;padding:0;}
 /* ==========================================================================
    My Styles
    ========================================================================== */
-	
 
 $mainGreen:#6d9030;
 $footerBG:#e8eef4;
 $backgroundHighlightContainer:#fff;
+$headerBG: url('../images/white-texture.png');
 
 $sass:#CC6699;
 $html:#E34C26;
@@ -69,8 +69,8 @@ $mongo:#58AE47;
     padding:0.5em;
     &:hover
 		{
-			text-shadow:0 1px 0 #borderHover;
-            border:1px solid #borderHover;
+			text-shadow:0 1px 0 #669E00;
+            border:1px solid #669E00;
             background:$hover1; /* Old browsers */
             background: -moz-linear-gradient(top, $hover1 0%, $hover2 100%); /* FF3.6+ */
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$hover1), color-stop(100%,$hover2)); /* Chrome,Safari4+ */
@@ -200,6 +200,7 @@ $mongo:#58AE47;
     padding: 2em 0 0 0;
     text-align: center;
     background: $mainGreen;
+    background-image:$headerBG;
     color: #fff;
 }
 #header .inner {

@@ -48,8 +48,8 @@ exports.getAlbums = function (options, callback) {
         }
 
     });
-
 }
+
 
 //update every week!
 var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function () {

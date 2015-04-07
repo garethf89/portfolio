@@ -4,6 +4,7 @@ module.exports = {
         tasks: ['jsonmin', 'concat:js', 'concat:libs', 'concat:plugins', 'uglify'],
         options: {
             spawn: false,
+            livereload: true
         },
     },
     css: {
@@ -11,6 +12,13 @@ module.exports = {
         tasks: ['sass', 'concat:css', 'cssmin'],
         options: {
             spawn: false,
+            livereload: true
         },
+    },
+    server: {
+    files: ['.rebooted'],
+    options: {
+      livereload: true
     }
+  } 
 };
