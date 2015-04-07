@@ -37,10 +37,11 @@ exports.getAlbums = function (options, callback) {
                 callback(body);
 
                 //store in mongoDB
-                mongodb.lastfm.insert([{
+                mongodb.lastfm.update([{
                     _id: options.name,
                     data: body
-                }]);
+                }],
+                { upsert: true });
             });
         } else {
             callback(result[0].data);
@@ -60,9 +61,10 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
     }, function (error, response, body) {
 
         //store in mongoDB
-        mongodb.collection('lastfm').insert([{
+        mongodb.collection('lastfm').update([{
             _id: 'Dirtyg',
             data: body
-        }]);
+        }],
+        { upsert: true } );
     });
 });
