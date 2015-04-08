@@ -8,7 +8,7 @@ module.exports = {
         },
     },
     css: {
-        files: ['css/*.css', 'css/*.scss'],
+        files: ['css/*.css', 'css/*.scss', 'css/*/*.scss'],
         tasks: ['sass', 'concat:css', 'cssmin'],
         options: {
             spawn: false,

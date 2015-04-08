@@ -1,0 +1,56 @@
+/* Work Item */
+.work_item{
+    width:50%;   
+}   
+
+/*Skills*/
+
+.highlightContainer{
+    padding:3em;   
+}
+
+ul.icando-icons{
+    
+    li {
+        display: block;
+        float: left;
+        text-align: center;
+        width: 20%;
+        
+        &:nth-child(n+6){
+            margin-top:2em;  
+        }
+        
+    }
+}
+
+
+/* Last FM */
+.lastfm-albums{
+    
+    header{
+        text-align: left;  
+        margin-bottom: 2em;
+    }
+    
+    .music-container{
+        margin-right: 2em;
+        width: 26%;
+        margin-bottom: 2em;
+        float:left;
+        
+        img{
+            float: left;   
+        }
+        
+    }
+    
+    .music-info{
+        float:left;
+        text-align: left;
+    }   
+    
+    .logo-large{
+        float: left;
+    }
+}

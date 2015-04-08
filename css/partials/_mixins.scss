@@ -1,0 +1,113 @@
+/* Buttons */
+@mixin buttonMixin($color1,$color2,$hover1,$hover2,$text:#fff, $border:#669E00,$borderHover:#669E00){
+    color:$text;
+    background: $color2;
+    text-shadow: 0 -1px 0 $border;
+    border: 1px solid $border;
+    background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+    background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+    background: -o-linear-gradient(top, $color1 0%,$color2 100%);
+    background: linear-gradient(top, $color1 0%,$color2 100%);
+    padding:0.5em;
+    &:hover
+		{
+			text-shadow:0 1px 0 #669E00;
+            border:1px solid #669E00;
+            background:$hover1; /* Old browsers */
+            background: -moz-linear-gradient(top, $hover1 0%, $hover2 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$hover1), color-stop(100%,$hover2)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, $hover1 0%,$hover2 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, $hover1 0%,$hover2 100%); /* Opera 11.10+ */
+            background: linear-gradient(top, $hover1 0%,$hover2 100%); /* W3C */
+		}
+	
+}
+
+/*Scale */
+@mixin scaleMixin($val){
+    transform: scale($val);
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+     -o-transform: scale($val);
+}
+
+/*Fade Keyframe */
+@mixin createKeyframe($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+/*Animation*/
+@mixin animationMixin($name, $duration, $delay:"", $animation:"") {
+    -moz-animation: $name $duration $delay $animation;
+	-moz-animation-fill-mode: forwards;		
+    -webkit-animation: $name $duration $delay $animation;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation: $name $duration $delay $animation;
+    -o-animation-fill-mode: forwards;
+    -ms-animation: $name $duration $delay $animation;
+    -ms-animation-fill-mode: forwards;
+    animation: $name $duration $delay $animation;
+	animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+/*Transition*/
+@mixin transitionMixin($type, $time, $ease:"") {
+    -moz-transition: $type $time $ease;
+    -webkit-transition:$type $time $ease;
+    -o-transition: $type $time $ease;
+    -ms-transition: $type $time $ease;
+	transition: $type $time $ease;
+}
+
+/*Keyframes */
+
+@include createKeyframe(fade-in) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include createKeyframe(fade-out) {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Fade Out */
+@include createKeyframe(reveal-nav) {
+    0% {
+        top: -2em;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@include createKeyframe(reveal-header) {
+    0% {
+        top: -5em;
+    }
+    100% {
+        top: 0;
+    }
+}
