@@ -16,6 +16,7 @@
                     '<%= paths.src.js %>/angular-route.min.js',
                     '<%= paths.src.js %>/angular-animate.min.js',
                     '<%= paths.src.js %>/angular-sanitize.min.js',
+                    '<%= paths.src.js %>/angular-aria.min.js',
                     '<%= paths.src.js %>/main.js',
                     '<%= paths.src.js %>/controllers.js'
                 ],
