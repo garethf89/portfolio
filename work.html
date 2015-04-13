@@ -1,5 +1,13 @@
 <script type="text/ng-template" id="imageTemplate">
     <img src="{{ngDialogData}}" alt="work image" />
+    <span class="fa-stack fa-lg ngDialog-next" ng-click="nextDialog()" >
+      <i class="fa fa-stop fa-stack-2x"></i>
+      <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
+    </span>
+    <span class="fa-stack fa-lg ngDialog-prev">
+      <i class="fa fa-stop fa-stack-2x"></i>
+      <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
+    </span>
 </script>
 
 <article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url({{currentItem.bg}})">
@@ -25,8 +33,8 @@
                 
         <h4>Images</h4>
         <div class="float_block">
-	        <a ng-repeat="image in currentItem.images" class="fancyModal work_screenshot" rel="galWork" ng-dialog="imageTemplate" ng-dialog-data="{{image.image}}" ng-dialog-class="ngdialog-theme-flat" ng-dialog-close-previous >
-	            <img ng-src="{{image.thumb}}" />
+	        <a fancybox ng-repeat="image in currentItem.images" class="work_screenshot fancybox" rel="galWork" href="{{image.image}}">
+	            <img ng-src="{{image.thumb}}" class="work_thumb"  />
 	        </a> 
         </div>
        

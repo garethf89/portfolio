@@ -4,8 +4,7 @@
            css: {
                src: [
                     '<%= paths.src.css %>/main.css',
-                    '<%= paths.src.css %>/ngDialog.css',
-                    '<%= paths.src.css %>/ngDialog-theme-flat.css'
+                    '<%= paths.src.css %>/jquery.fancybox.css'
                 ],
                dest: '<%= paths.dest.css %>/main_css.css'
            },
@@ -17,7 +16,6 @@
                     '<%= paths.src.js %>/angular-route.min.js',
                     '<%= paths.src.js %>/angular-animate.min.js',
                     '<%= paths.src.js %>/angular-sanitize.min.js',
-                    '<%= paths.src.js %>/ngDialog.js',
                     '<%= paths.src.js %>/main.js',
                     '<%= paths.src.js %>/controllers.js'
                 ],

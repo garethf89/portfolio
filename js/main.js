@@ -1,5 +1,5 @@
 
-var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize','ngDialog']);
+var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize']);
 
 
 garethPortfolio.config(['$routeProvider','$locationProvider',
@@ -122,6 +122,26 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 		return serviceObj;
 		
  });
+
+
+    garethPortfolio.directive('fancybox',function($compile, $timeout){
+        return {
+            link: function($scope, element, attrs) {
+                element.fancybox({
+                    hideOnOverlayClick:false,
+                    hideOnContentClick:false,
+                    showNavArrows:true,
+                    onComplete: function(){
+                        $timeout(function(){
+                            $compile($("#fancybox-content"))($scope);
+                            $scope.$apply();
+                            $.fancybox.resize();
+                        })
+                    }
+                });
+            }
+        }
+    });
 
 
     //service to send email

@@ -2892,7 +2892,8 @@ p, ul, ol, dl, table {
 /* Global */
 body {
   font-size: 13pt;
-  min-width: 320px; }
+  min-width: 320px;
+  padding-right: 0 !important; }
 
 p {
   text-align: justify; }
@@ -2981,7 +2982,7 @@ p {
   font-size: 0.8em;
   left: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 1000;
   background: transparent;
   box-shadow: none;
   color: white;
@@ -3449,6 +3450,22 @@ ul.icons li {
   width: auto !important;
   max-width: 90% !important;
   text-align: center; }
+
+.ngDialog-next {
+  position: absolute;
+  top: 25%;
+  right: -0.2em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #27AE60; }
+
+.ngDialog-prev {
+  position: absolute;
+  top: 25%;
+  left: -.2em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #27AE60; }
 
 /* Last FM */
 .lastfm-albums {
