@@ -1,15 +1,3 @@
-<script type="text/ng-template" id="imageTemplate">
-    <img src="{{ngDialogData}}" alt="work image" />
-    <span class="fa-stack fa-lg ngDialog-next" ng-click="nextDialog()" >
-      <i class="fa fa-stop fa-stack-2x"></i>
-      <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
-    </span>
-    <span class="fa-stack fa-lg ngDialog-prev">
-      <i class="fa fa-stop fa-stack-2x"></i>
-      <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
-    </span>
-</script>
-
 <article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url({{currentItem.bg}})">
 	
     <header>

@@ -331,11 +331,11 @@ h,f){a.config("tabindex")&&!h.attr("tabindex")&&h.attr("tabindex",0)}}])})(windo
 //# sourceMappingURL=angular-aria.min.js.map
 
 
-var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize']);
+var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize', 'ngAria']);
 
 
-garethPortfolio.config(['$routeProvider','$locationProvider',
-  function($routeProvider,$locationProvider) {
+garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
+  function($routeProvider,$locationProvider,$ariaProvider) {
     $routeProvider.
       when('/', {
         templateUrl: '/homepage.html',
@@ -357,19 +357,19 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         redirectTo: '/'
       });
       
+      $ariaProvider.config({
+          tabindex: true,
+          ariaHidden: true
+      });
+      
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix('!');
       
   }]);
 
-    garethPortfolio.run(["$rootScope", "$location", "$anchorScroll", "$routeParams", function ($rootScope, $location, $anchorScroll, $routeParams) {
+    garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
-    
-        $rootScope.$on('$routeChangeSuccess', function (newRoute, oldRoute) {
-            $location.hash($routeParams.scrollTo);
-            $anchorScroll();
-        });
 
         var socket = io.connect('http://garethferguson.co.uk');
         socket.on('connect', function () {
@@ -397,10 +397,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 
         });
 
-    }]);
+    });
 
     //directive to show menu on scroll
-    garethPortfolio.directive("scroll",["$window", "$animate", function ($window,$animate) {
+    garethPortfolio.directive("scroll",function ($window,$animate) {
         return {
             link: function(scope, element, attrs) {
                 
@@ -418,10 +418,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
                 });
             }
         };
-    }]);
+    });
   
   //Service to get JSON data
-  garethPortfolio.factory("dataService", ["$rootScope", "$http", "$q", function($rootScope, $http, $q) {
+  garethPortfolio.factory("dataService", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
@@ -453,10 +453,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 		
 		return serviceObj;
 		
- }]);
+ });
 
 
-    garethPortfolio.directive('fancybox',["$compile", "$timeout", function($compile, $timeout){
+    garethPortfolio.directive('fancybox',function($compile, $timeout){
         return {
             link: function($scope, element, attrs) {
                 element.fancybox({
@@ -473,11 +473,11 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
                 });
             }
         }
-    }]);
+    });
 
 
     //service to send email
-    garethPortfolio.factory('emailService', ["$rootScope", "$http", function ($rootScope, $http) {
+    garethPortfolio.factory('emailService', function ($rootScope, $http) {
 
         var serviceObj = {};
 
@@ -498,10 +498,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         };
 
         return serviceObj;
-    }]);
+    });
 
     //last fm service
-    garethPortfolio.factory('lastFmService', ["$rootScope", "$http", "$q", function ($rootScope, $http, $q) {
+    garethPortfolio.factory('lastFmService', function ($rootScope, $http, $q) {
 
             var serviceObj = {},
                 albums,
@@ -541,7 +541,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
 
         return serviceObj;
 
-    }]);
+    });
 /* Controllers */
 
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);

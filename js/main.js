@@ -1,9 +1,9 @@
 
-var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize']);
+var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize', 'ngAria']);
 
 
-garethPortfolio.config(['$routeProvider','$locationProvider',
-  function($routeProvider,$locationProvider) {
+garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
+  function($routeProvider,$locationProvider,$ariaProvider) {
     $routeProvider.
       when('/', {
         templateUrl: '/homepage.html',
@@ -25,6 +25,11 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
         redirectTo: '/'
       });
       
+      $ariaProvider.config({
+          tabindex: true,
+          ariaHidden: true
+      });
+      
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix('!');
       
@@ -33,11 +38,6 @@ garethPortfolio.config(['$routeProvider','$locationProvider',
     garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
-    
-        $rootScope.$on('$routeChangeSuccess', function (newRoute, oldRoute) {
-            $location.hash($routeParams.scrollTo);
-            $anchorScroll();
-        });
 
         var socket = io.connect('http://garethferguson.co.uk');
         socket.on('connect', function () {
