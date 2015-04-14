@@ -48,9 +48,9 @@
 <article class="site_row highlightContainer">
 
     <header>
-        <h2>Things I can do.</h2>
+        <h2 id="thingsIcanDo">Things I can do.</h2>
     </header>
-    <ul class="icando-icons">
+    <ul class="icando-icons" aria-labelledby="thingsIcanDo" >
         <li>
             <span class="item devicons devicons-jquery"></span>
             <span class="label">JQuery</span>
@@ -120,7 +120,7 @@
     </header>
     
     <div class="music-container" ng-repeat="album in albums">
-        <img src="{{album.image[2]['#text']}}" />
+        <img src="css/blank.gif" alt="{{album.name}} cover" ng-src="{{album.image[2]['#text']}}" />
         <div class="music-info">
             <h5>{{album.name}}</h5>
             <h6>{{album.artist.name}}</h6>

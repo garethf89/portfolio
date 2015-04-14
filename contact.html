@@ -1,6 +1,6 @@
 <article id="contact_me" class="site_row centered">
 
-    <section id="contact_success" class="site_width fadeAnimation" ng-show="showSuccessMessage">
+    <section id="contact_success" aria-hidden="true" class="site_width fadeAnimation" ng-show="showSuccessMessage">
 
         <h2>Thank you!</h2>
 
@@ -19,19 +19,19 @@
         <label for="person_name">Name:
             <span class="required">*</span>
         </label>
-        <input type="text" required name="person_name" ng-model="formData.person_name" id="person_name" tabindex="1" />
+        <input aria-required="true" type="text" required name="person_name" ng-model="formData.person_name" id="person_name" />
 
         <label for="person_email">Email:
             <span class="required">*</span>
         </label>
-        <input type="email" required name="person_email" ng-model="formData.person_email" id="person_email" tabindex="2" />
+        <input aria-required="true" type="email" required name="person_email" ng-model="formData.person_email" id="person_email" />
 
         <label for="person_enq">Message:
             <span class="required">*</span>
         </label>
-        <textarea name="person_enq" id="person_enq" ng-model="formData.person_enq" tabindex="3" rows="4"></textarea>
+        <textarea aria-required="true" name="person_enq" id="person_enq" ng-model="formData.person_enq" rows="4"></textarea>
 
-        <button id="submit_message" class="green_button" tabindex="4">
+        <button role="button" id="submit_message" class="green_button">
             <span class="icon fa-envelope-o"></span>
             Submit
         </button>
