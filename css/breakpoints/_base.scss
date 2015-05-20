@@ -76,8 +76,11 @@ p {
     cursor: default;
     padding: 4em 0;
     text-align: center;
-    background: $mainGreen;
+    background-image:url('http://garethferguson.s3.amazonaws.com/images/mountains.jpg');
+    background-size: cover;
+    background-position: center;
     color: #fff;
+    position: relative;
     @include transitionMixin(all,.5s,ease-in-out);
 
     .inner{
@@ -118,6 +121,15 @@ p {
             }
         }
     }
+}
+#header:before{
+    content: " ";
+    background:  $mainGreen; 
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
 }
 
 /* Nav */
