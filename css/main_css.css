@@ -2928,7 +2928,7 @@ p {
   cursor: default;
   padding: 4em 0;
   text-align: center;
-  background-image: url('http://garethferguson.s3.amazonaws.com/images/mountains.jpg');
+  background-image: url('http://garethferguson.s3.amazonaws.com/images/woods.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -3069,11 +3069,9 @@ p {
   display: none;
   opacity: 0;
   position: absolute;
-  background: rgba(109, 144, 48, 0.5);
+  background: #6d9030;
   color: white;
   padding: .5em;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   font-size: 0.8em;
   width: 15%;
   bottom: 0;
@@ -3087,7 +3085,7 @@ p {
   transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   #counter.visible {
     opacity: 1;
-    bottom: -30px; }
+    bottom: -47px; }
   #counter strong {
     margin-right: .2em; }
 
@@ -3509,6 +3507,10 @@ ul.icons li {
     .lastfm-albums .music-info h6 {
       margin: 0; }
 
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
+  #header {
+    background-image: url('http://garethferguson.s3.amazonaws.com/images/woods2x.jpg'); } }
+
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -3577,7 +3579,7 @@ you can add resource intensive styles.
         top: 0em;
         right: 0;
         width: 100%;
-        background: rgba(109, 144, 48, 0.5);
+        background: #6d9030;
         text-align: right; }
         #nav nav.revealHeader ul {
           margin: 0;
@@ -3637,10 +3639,11 @@ you can add resource intensive styles.
       display: none; }
   /*Header */
   #header {
-    padding: 2em 0 0; }
+    padding: 2em 0 0;
+    background-image: url('http://garethferguson.s3.amazonaws.com/images/woods2x.jpg'); }
     #header .inner {
       display: inline-block;
-      padding: 6em; }
+      padding: 8em; }
       #header .inner br {
         display: none; }
       #header .inner header h2 {
@@ -3679,10 +3682,7 @@ you can add resource intensive styles.
   .lastfm-albums .music-info {
     clear: both;
     width: 100%;
-    margin: 1em 0 0 0; }
-  @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
-    #header {
-      background-image: url('http://garethferguson.s3.amazonaws.com/images/mountains2x.jpg'); } } }
+    margin: 1em 0 0 0; } }
 
 /*********************
 LARGE VIEWING SIZE

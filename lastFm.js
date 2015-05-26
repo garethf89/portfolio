@@ -62,7 +62,7 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
 
         //store in mongoDB
         mongodb.collection('lastfm').update([{
-            _id: 'Dirtyg',
+            _id: 'DirtyG',
             data: body
         }],
         { upsert: true } );
