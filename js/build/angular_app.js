@@ -367,7 +367,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
       
   }]);
 
-    garethPortfolio.run(["$rootScope", "$location", "$anchorScroll", "$routeParams", function ($rootScope, $location, $anchorScroll, $routeParams) {
+    garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
 
@@ -397,10 +397,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         });
 
-    }]);
+    });
 
     //directive to show menu on scroll
-    garethPortfolio.directive("scroll",["$window", "$animate", function ($window,$animate) {
+    garethPortfolio.directive("scroll",function ($window,$animate) {
         return {
             link: function(scope, element, attrs) {
                 
@@ -418,10 +418,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                 });
             }
         };
-    }]);
+    });
   
   //Service to get JSON data
-  garethPortfolio.factory("dataService", ["$rootScope", "$http", "$q", function($rootScope, $http, $q) {
+  garethPortfolio.factory("dataService", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
@@ -453,10 +453,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 		
 		return serviceObj;
 		
- }]);
+ });
 
 
-    garethPortfolio.directive('fancybox',["$compile", "$timeout", function($compile, $timeout){
+    garethPortfolio.directive('fancybox',function($compile, $timeout){
         return {
             link: function($scope, element, attrs) {
                 element.fancybox({
@@ -473,11 +473,11 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                 });
             }
         }
-    }]);
+    });
 
 
     //service to send email
-    garethPortfolio.factory('emailService', ["$rootScope", "$http", function ($rootScope, $http) {
+    garethPortfolio.factory('emailService', function ($rootScope, $http) {
 
         var serviceObj = {};
 
@@ -498,10 +498,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         };
 
         return serviceObj;
-    }]);
+    });
 
     //last fm service
-    garethPortfolio.factory('lastFmService', ["$rootScope", "$http", "$q", function ($rootScope, $http, $q) {
+    garethPortfolio.factory('lastFmService', function ($rootScope, $http, $q) {
 
             var serviceObj = {},
                 albums,
@@ -541,7 +541,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         return serviceObj;
 
-    }]);
+    });
 /* Controllers */
 
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
@@ -576,6 +576,13 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
         }
 
         $scope.portfolios;
+     
+        //resposive image solution
+        if($(window).width() > 767){
+            $scope.size = 'full';        
+        }else{
+            $scope.size = 'small';   
+        }
      
         dataService.getPortfolioItems().then(function (result) {
 

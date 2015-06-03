@@ -61,10 +61,13 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
     }, function (error, response, body) {
 
         //store in mongoDB
-        mongodb.collection('lastfm').update([{
-            _id: 'DirtyG',
+        mongodb.collection('lastfm').update(
+        { _id: "DirtyG" },
+        {
+            _id: "DirtyG",
             data: body
-        }],
+        },    
         { upsert: true } );
+        
     });
 });

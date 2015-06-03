@@ -95,24 +95,31 @@
 </article>
 
 
-<article id="my_work" class="site_row highlightContainer centered">
+<article id="my_work" class="site_row centered">
     
     <header>
         <h2>My Work...</h2>
     </header>
-<div id="work_items" class="row">
-    <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}" class="work_item">
-        
-        <img 
-        	srcset="http://garethferguson.s3.amazonaws.com/{{value.cover}}_large.jpg 550w, 
-	        http://garethferguson.s3.amazonaws.com/{{value.cover}}_med.jpg 500w,
-	        http://garethferguson.s3.amazonaws.com/{{value.cover}}_small.jpg 400w"
+    <div id="work_items" class="row">
+        <a ng-repeat="work in notSorted(portfolios)" ng-init="value = portfolios[work]" href="/{{work}}" class="work_item {{value.width}}"
+           data-temp="http://garethferguson.s3.amazonaws.com/">
+            
+            <img ng-if="size == 'full'"
+            ng-srcset="/{{value.cover}}2x.jpg 2x,
+                       /{{value.cover}}.jpg 1x,"
             class="work_image"
-            src="http://garethferguson.s3.amazonaws.com/{{value.cover}}_large.jpg"             
+            src="/{{value.cover}}.jpg"             
             alt="{{value.name}} main cover image" />
-        
-        <h4>{{value.name}}</h4>
-    </a>
+            
+            <img ng-if="size == 'small'"
+            ng-srcset="/{{value.cover}}Half.jpg 1x, 
+                       /{{value.cover}}.jpg 2x"
+            class="work_image"
+            src="/{{value.cover}}Half.jpg"             
+            alt="{{value.name}} main cover image" />
+            
+            <h4>{{value.name}}</h4>
+        </a>
     </div>
 </article>
 

@@ -33,6 +33,13 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
 
         $scope.portfolios;
      
+        //resposive image solution
+        if($(window).width() > 767){
+            $scope.size = 'full';        
+        }else{
+            $scope.size = 'small';   
+        }
+     
         dataService.getPortfolioItems().then(function (result) {
 
             $scope.portfolios = result;
