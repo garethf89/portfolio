@@ -1,5 +1,6 @@
 var express = require("express"),
     os = require("os"),
+    fs = require("fs"),
     lastfmConstants,
     lastFmSettings,
     url,
@@ -68,6 +69,10 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
             data: body
         },    
         { upsert: true } );
+        
+        var today = new Date();
+
+        fs.appendFile('my_log.txt', 'Done on ' + today.getDate() + ' ' + (today.getMonth() + 1) + ' ' + today.getFullYear() + '   ' );
         
     });
 });
