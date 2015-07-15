@@ -3255,9 +3255,11 @@ ul.icando-icons {
   height: 18em;
   position: relative;
   border: 2px solid #F3F6FA;
-  overflow: hidden; }
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; }
   .work_item:after {
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 0 11em rgba(0, 0, 0, 0.9) inset;
     position: absolute;
     top: 0;
     left: 0;
@@ -3269,14 +3271,6 @@ ul.icando-icons {
     -o-transition: box-shadow 0.1s ease-in-out;
     -ms-transition: box-shadow 0.1s ease-in-out;
     transition: box-shadow 0.1s ease-in-out; }
-  .work_item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    min-height: 18em;
-    height: auto;
-    min-width: 100%; }
   .work_item h4 {
     position: absolute;
     left: 1em;
@@ -3302,7 +3296,7 @@ ul.icando-icons {
   -ms-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
   #work_items > .work_item:hover:before {
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.4) inset; }
+    box-shadow: 0 0 11em rgba(0, 0, 0, 0.4) inset; }
 
 /* Footer */
 #footer {
@@ -3581,19 +3575,16 @@ you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 768px) {
   /* Work Item */
-  .work_item.half {
-    width: 50%; }
-  .work_item.twothirds {
-    width: 66.6%; }
-  .work_item.third {
-    width: 33.3%; }
-  .work_item.full img {
-    height: auto;
-    margin: -10% auto 0 0; }
-  .work_item img {
-    width: 100%; }
-  .work_item h4 {
-    max-width: 60%; }
+  .work_item {
+    background-position: left center; }
+    .work_item.half {
+      width: 50%; }
+    .work_item.twothirds {
+      width: 66.6%; }
+    .work_item.third {
+      width: 33.3%; }
+    .work_item h4 {
+      max-width: 60%; }
   /*Skills*/
   .highlightContainer {
     padding: 3em; }

@@ -2,6 +2,8 @@
 
 .work_item{
 
+    background-position: left center;
+    
     &.half{
         width:50%;
     }
@@ -13,18 +15,7 @@
     &.third{
         width:33.3%;   
     }
-    
-    &.full{
-        img{
-            height: auto;
-            margin: -10% auto 0 0;
-        }
-    }
-    
-    img{
-        width:100%;
-    }
-    
+            
     h4{
         max-width: 60%;
      }

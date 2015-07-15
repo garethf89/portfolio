@@ -449,7 +449,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 					return deferred.promise;
 				});
 			}
-		}
+        }
 		
 		return serviceObj;
 		
@@ -551,7 +551,7 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
 
  function ($scope, $routeParams, $location, dataService,$sce,lastFmService, $anchorScroll,$http,message) {
           
-     $scope.tech_classes = {
+      this.tech_classes = {
 	        'AngularJS': 'devicons devicons-angular',
             'CSS3': 'devicons devicons-css3',
             'HTML5': 'fa fa-html5',
@@ -566,32 +566,47 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
             'PayPal': 'fa fa-paypal',
             'SASS': 'devicons devicons-sass'
         };
-     
+          
         //prevent sorting on ngrepeat
-        $scope.notSorted = function(obj){
+        this.notSorted = function(obj){
             if (!obj) {
                 return [];
             }
             return Object.keys(obj);
         }
-
-        $scope.portfolios;
+        
+        var $this = this;
+        this.portfolios = false;
      
         //resposive image solution
         if($(window).width() > 767){
-            $scope.size = 'full';        
+            this.size = 'full';        
         }else{
-            $scope.size = 'small';   
+            this.size = 'small';   
+        }
+     
+        //retina?
+        if(window.matchMedia){
+         
+            var retinaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+                             (min-resolution: 144dpi)";
+            
+            if (window.matchMedia(retinaQuery).matches && this.size == "full"){
+                this.size = "high";
+            } else if (window.matchMedia(retinaQuery).matches && this.size == "small"){
+                this.size = "full";    
+            }
+            
         }
      
         dataService.getPortfolioItems().then(function (result) {
 
-            $scope.portfolios = result;
-            
+            $this.portfolios = result;
+
             if ($routeParams.workID) {
 
-                if ($scope.portfolios[$routeParams.workID]) {
-                    $scope.currentItem = $scope.portfolios[$routeParams.workID];
+                if ($this.portfolios[$routeParams.workID]) {
+                    $scope.currentItem = $this.portfolios[$routeParams.workID];
                     
                       $scope.convertToHTML = function() {
                             return $sce.trustAsHtml($scope.currentItem.desc);

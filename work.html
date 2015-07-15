@@ -1,5 +1,4 @@
-<article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url({{currentItem.bg}})">
-	
+<article id="work_page" class="site_row highlightContainer clearfix" ng-if="currentItem != undefined" style="background:linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url({{currentItem.bg}})" ng-controller="portfolioItems as pI">	
     <header>
         <a ng-href="/" class="workPage_home home_button">Home</a>
         <h2>{{currentItem.name}}</h2>
@@ -11,7 +10,7 @@
         <h4>Technology</h4>
         <ul id="tech_used">
             <li ng-repeat="skill in currentItem.skills" ng-add-custom-class>
-                <div class="work_icon {{tech_classes[skill]}}"></div>{{skill}}
+                <div class="work_icon {{pI.tech_classes[skill]}}"></div>{{skill}}
             </li> 
         </ul>
                 

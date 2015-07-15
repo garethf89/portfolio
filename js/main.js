@@ -117,7 +117,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 					return deferred.promise;
 				});
 			}
-		}
+        }
 		
 		return serviceObj;
 		

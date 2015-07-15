@@ -17,7 +17,8 @@ module.exports = function (grunt) {
 				js:"js",
 				img:"images",
 			}
-		}
+		},
+        url: "index.html"
 	};
     
     

@@ -483,8 +483,11 @@ ul.icando-icons{
     border:2px solid #F3F6FA;
     overflow: hidden;
     
+    background-size:cover;
+    background-position: center;
+    
     &:after{
-        box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+        box-shadow: 0 0 11em rgba(0,0,0,0.9) inset;
         position: absolute;
         top: 0;
         left: 0;
@@ -492,16 +495,6 @@ ul.icando-icons{
         bottom: 0;
         content: " ";  
         @include transitionMixin(box-shadow,0.1s,ease-in-out);
-    }
-    
-    img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: auto;
-      min-height: 18em;
-      height: auto;
-      min-width: 100%;
     }
     
      h4{
@@ -525,7 +518,7 @@ ul.icando-icons{
     opacity: 1; 
     @include transitionMixin(opacity,0.3s,ease-in-out);
     &:before{
-     box-shadow: 0 0 200px rgba(0,0,0,0.4) inset;
+     box-shadow: 0 0 11em rgba(0,0,0,0.4) inset;
     }
 }
     

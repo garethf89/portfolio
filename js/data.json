@@ -132,7 +132,7 @@
                     "JQuery & Javascript"
                 ],
                 "bg": "images/backgrounds/hphomebg.jpg",
-                "cover": "images/home/hhomecover",
+                "cover": "images/home/hpcover",
                 "images": [
                     {
                         "thumb": "images/thumbs/hphomethumb1.png",
@@ -167,7 +167,7 @@
                     "PostgreSQL"
                 ],
                 "bg": "images/backgrounds/hpbg.jpg",
-                "cover": "images/home/hpcover",
+                "cover": "images/home/happcover",
                 "images": [
                     {
                         "thumb": "images/thumbs/hpthumb1.png",
