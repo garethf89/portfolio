@@ -6,7 +6,7 @@
                     '<%= paths.src.css %>/main.css',
                     '<%= paths.src.css %>/jquery.fancybox.css'
                 ],
-               dest: '<%= paths.dest.css %>/main_css.css'
+               dest: '<%= paths.dest.css %>/main.css'
            },
 
            js: {
