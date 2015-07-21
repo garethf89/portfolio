@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     
     var ngrok = require('ngrok');
     
-            grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
+            grunt.registerTask('ngrok-test', 'Run pagespeed with ngrok', function() {
                 
             var done = this.async();
             var port = 8080;
@@ -24,6 +24,6 @@ module.exports = function (grunt) {
             });
           });
     
-    grunt.registerTask('perf', ['psi-ngrok']);
+    grunt.registerTask('perf', ['ngrok-test']);
     
 };

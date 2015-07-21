@@ -14,7 +14,6 @@
                     '<%= paths.src.js %>/socket.io.js',
                     '<%= paths.src.js %>/angular.min.js',
                     '<%= paths.src.js %>/angular-route.min.js',
-                    '<%= paths.src.js %>/angular-animate.min.js',
                     '<%= paths.src.js %>/angular-sanitize.min.js',
                     '<%= paths.src.js %>/angular-aria.min.js',
                     '<%= paths.src.js %>/main.js',

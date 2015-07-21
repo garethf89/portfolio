@@ -68,7 +68,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
     });
 
     //directive to show menu on scroll
-    garethPortfolio.directive("scroll",function ($window,$animate) {
+    garethPortfolio.directive("scroll",function ($window) {
         return {
             link: function(scope, element, attrs) {
                 
