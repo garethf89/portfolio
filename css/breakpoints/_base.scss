@@ -83,7 +83,7 @@ p {
     position: relative;
     @include transitionMixin(all,.5s,ease-in-out);
 
-    .inner{
+    .header__inner{
         @include animationMixin(fade-in, 1s, 0s, ease-in-out);
         color: white;
         display: block;
@@ -147,7 +147,7 @@ p {
     padding: 0;
     position: absolute;
     
-    #pullDown{
+    #nav__pullDown{
         float:left;
         font-size:1.5em;
         font-family: FontAwesome;
@@ -227,7 +227,7 @@ p {
         margin-top:6em;
     }
     
-    &.slideDown #pullDown{
+    &.slideDown #nav__pullDown{
         margin-top:0em;
     }    
 }
@@ -762,7 +762,7 @@ ul.icons li {
         text-align: center;
     }
     
-    .music-container {
+    .lastfm_albums__music-container {
         margin-right: 1.5em;
         width: 100%;
         text-align: center;
