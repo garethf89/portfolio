@@ -1,0 +1,88 @@
+/* Work */
+#work_page{
+    
+	background-repeat: repeat-y;
+	background-position: top right !important;
+    
+    .left_work,
+    .right_work{
+        float:none;
+        width:100%;
+    }
+    
+    @include breakpoint($desktop){
+        .right_work{
+            float:right;
+            width:35%;
+        }
+        .left_work{
+            float:left;
+            width:60%;
+        }
+    }    
+    
+    h2{
+        display: inline-block;
+    }
+    
+    h4{
+        margin:0;
+    }
+    
+    .button{
+        display: block;
+        @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
+        margin-top:2em;
+        text-align: center;
+        min-width:150px;
+    }  
+}
+
+.workPage_home{
+    border-bottom: none;
+}
+
+.workPage_home:after{
+    content: '/';
+    margin:0 10px;
+}
+
+.work_screenshot{ 
+    float:left;
+    width:40%;
+    margin:5% 5% 0 0;
+    cursor:pointer;
+    @include transitionMixin(all,0.2s,ease-in-out);
+}
+
+    
+.right_work .float_block:hover > .work_screenshot {
+  opacity: 0.5; }
+
+.right_work .float_block > .work_screenshot:hover{
+    @include scaleMixin(1.1);
+    opacity:1;
+}
+
+.work_screenshot img{ 
+    width:100%;
+}
+ 
+/* Tech Used List */
+
+#tech_used{
+    
+	list-style-type: none;
+    
+    li{
+	   margin: 1em 0;
+    }
+    
+}
+
+.work_icon{
+	font-size: 2em;
+	vertical-align: middle;
+	padding: 0 0.5em 0 0;
+	width: 1.5em;
+}

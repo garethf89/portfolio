@@ -1,3 +1,12 @@
+//Bourbon
+@import "bourbon/bourbon";
+
+//Breakpoint
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1400px;
+
 @import 'normalize'; 
 @import 'boilerplate';
 @import '../font-awesome/scss/font-awesome';
@@ -7,51 +16,36 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-/*********************
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
-*********************/
+//globals (+ icons colors, lightbox)
+@import "partials/globals";
 
-// styles in base.scss
-@import "breakpoints/base";
+//Grid
+@import "../bower_components/susy/sass/susy";
+@import "partials/grid";
 
-/*********************
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 768px) {
+//Work items on home page
+@import "modules/work-item";
 
-	// styles in 768up.scss
-	@import "breakpoints/768";
+//Last FM Module
+@import "modules/lastfm";
 
-} // end of media query
+//Header + Counter
+@import "modules/header";
 
-/*********************
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 1024px) {
+//Nav
+@import "modules/nav";
 
-	@import "breakpoints/1024";
+//Nav
+@import "modules/homepage";
 
-} // end of media query
+//Work page
+@import "modules/work-page";
 
-/*********************
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*********************/
-@media only screen and (min-width: 1400px) {
+//Contact page
+@import "modules/contact";
 
-	@import "breakpoints/1400";
-
-} // end of media query
-
+//Footer
+@import "modules/footer";
 
 /*********************
 RETINA (2x RESOLUTION DEVICES)
@@ -64,7 +58,7 @@ query for retina AND a certain size if you want. Go Nuts.
        only screen and (min-device-pixel-ratio: 1.5) {
 
 	// styles in 2x.scss
-	@import "breakpoints/2x";
+	@import "partials/2x";
 
 } // end of media query
 

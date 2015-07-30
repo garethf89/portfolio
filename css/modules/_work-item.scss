@@ -1,0 +1,116 @@
+#my_work{
+    margin-bottom: 5em;
+}
+
+.work_item{
+    
+    width:100%;
+    float:left;
+    border:0;
+      -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  height: 18em;
+    position: relative;
+    border:2px solid #F3F6FA;
+    overflow: hidden;
+    
+    background-size:cover;
+    background-position: center;
+    
+    @include breakpoint($tablet){
+        
+        background-position: left center;
+        
+        &.half{
+            width:50%;
+        }
+
+        &.twothirds{
+            width:66.6%;   
+        }
+
+        &.third{
+            width:33.3%;   
+        }
+
+        h4{
+            max-width: 60%;
+         }
+    }
+    
+    &:after{
+        box-shadow: 0 0 11em rgba(0,0,0,0.9) inset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: " ";  
+        @include transitionMixin(box-shadow,0.1s,ease-in-out);
+    }
+    
+     h4{
+        position: absolute;
+        left: 1em;
+        bottom: .25em;
+        color: #fff;
+        font-size: 1.3em;
+        background: rgba(0,0,0,.75);
+        padding: 0 1em; 
+     }
+}
+
+#work_items{
+
+    &:hover{
+        &> .work_item {
+        opacity: .6; 
+        @include transitionMixin(opacity,0.3s,ease-in-out);
+      }
+    }
+    
+    &> .work_item{
+        &:hover{
+           //@include scaleMixin(1.1);
+            opacity: 1; 
+            @include transitionMixin(opacity,0.3s,ease-in-out);
+            &:before{
+             box-shadow: 0 0 11em rgba(0,0,0,0.4) inset;
+            } 
+        }
+    }
+
+}
+
+/*Skills */
+
+.skillIcon{
+    
+    clear:both;   
+    width:100%;
+    padding-left: 0;
+    padding-top:2em;
+    text-align: center;
+    
+    @include span(12);
+    
+    @include breakpoint($desktop){
+        
+        float:left; 
+        clear: none;
+    
+        @include span(4 last);
+    }
+    
+    p{
+        text-align: center;
+    } 
+    
+    &:first-child{
+        padding-left:0px;
+    }
+    
+}

@@ -1,0 +1,33 @@
+$container-style: fluid;
+
+$susy: (
+  global-box-sizing: border-box,
+  columns: 12,
+  container: auto,
+  gutters: (1/4)
+);
+
+@include border-box-sizing;
+
+//Overall site row
+.site_row{
+    @include container(90%);
+    
+    
+    @include breakpoint($desktop){
+         @include container(80%); 
+    }
+    
+    @include breakpoint($large){
+        @include container(100%); 
+        max-width: 1400px;
+    }
+    
+}
+
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
