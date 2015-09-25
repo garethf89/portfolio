@@ -29,7 +29,7 @@ exports.getAlbums = function (options, callback) {
 
         //Use result
         if (err || !result[0]) {
-            url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=3month&limit=3';
+            url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
 
             request({
                 url: url
@@ -55,7 +55,7 @@ exports.getAlbums = function (options, callback) {
 //update every week!
 var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function () {
 
-    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=DirtyG&api_key=' + lastfmConstants.auth.key + '&format=json&period=3month&limit=3';
+    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=DirtyG&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
 
     request({
         url: url

@@ -93,12 +93,14 @@
     bottom: 0;
     right: 0;
     text-align: center;
-    min-width: 150px;   
+    min-width: em(150);   
     @include transitionMixin(bottom,.4s,cubic-bezier(0.68, -0.55, 0.265, 1.55));
 
     &.visible{
         opacity: 1;
-        bottom:-47px;
+        bottom: -40px;
+        z-index: -1;
+
     }
     
     @include breakpoint($desktop){

@@ -7,12 +7,9 @@
     width:100%;
     float:left;
     border:0;
-      -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  text-decoration: none;
-  height: 18em;
+    @include transition(all .2s ease-in-out);
+    text-decoration: none;
+    height: 18em;
     position: relative;
     border:2px solid #F3F6FA;
     overflow: hidden;
@@ -49,7 +46,7 @@
         right: 0;
         bottom: 0;
         content: " ";  
-        @include transitionMixin(box-shadow,0.1s,ease-in-out);
+        @include transition(box-shadow 0.1s ease-in-out);
     }
     
      h4{
@@ -68,7 +65,7 @@
     &:hover{
         &> .work_item {
         opacity: .6; 
-        @include transitionMixin(opacity,0.3s,ease-in-out);
+        @include transition(opacity 0.3s ease-in-out);
       }
     }
     
@@ -76,7 +73,7 @@
         &:hover{
            //@include scaleMixin(1.1);
             opacity: 1; 
-            @include transitionMixin(opacity,0.3s,ease-in-out);
+            @include transition(opacity 0.3s ease-in-out);
             &:before{
              box-shadow: 0 0 11em rgba(0,0,0,0.4) inset;
             } 

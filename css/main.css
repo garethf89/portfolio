@@ -2881,7 +2881,7 @@ p, ul, ol, dl, table {
 body {
   background: #f3f6fa;
   font-size: 13pt;
-  min-width: 320px;
+  min-width: 20em;
   padding-right: 0 !important; }
 
 p {
@@ -3080,7 +3080,6 @@ p {
   float: left;
   border: 0;
   -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   text-decoration: none;
@@ -3109,10 +3108,8 @@ p {
     right: 0;
     bottom: 0;
     content: " ";
-    -moz-transition: box-shadow 0.1s ease-in-out;
     -webkit-transition: box-shadow 0.1s ease-in-out;
-    -o-transition: box-shadow 0.1s ease-in-out;
-    -ms-transition: box-shadow 0.1s ease-in-out;
+    -moz-transition: box-shadow 0.1s ease-in-out;
     transition: box-shadow 0.1s ease-in-out; }
   .work_item h4 {
     position: absolute;
@@ -3125,17 +3122,13 @@ p {
 
 #work_items:hover > .work_item {
   opacity: .6;
-  -moz-transition: opacity 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
 #work_items > .work_item:hover {
   opacity: 1;
-  -moz-transition: opacity 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
   #work_items > .work_item:hover:before {
     box-shadow: 0 0 11em rgba(0, 0, 0, 0.4) inset; }
@@ -3299,7 +3292,7 @@ p {
   bottom: 0;
   right: 0;
   text-align: center;
-  min-width: 150px;
+  min-width: 9.375em;
   -moz-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -o-transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -3307,7 +3300,8 @@ p {
   transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   #counter.visible {
     opacity: 1;
-    bottom: -47px; }
+    bottom: -40px;
+    z-index: -1; }
   @media  (min-width: 1024px) {
     #counter {
       display: block; } }
@@ -3414,7 +3408,7 @@ p {
               animation: reveal-header 0.5s 0 "";
               animation-fill-mode: forwards;
               -moz-animation-fill-mode: forwards;
-              height: 55px;
+              height: 3.4375em;
               padding: 0.5em 1.5em;
               background: #6d9030;
               color: #fff; }
@@ -3509,7 +3503,7 @@ p {
       margin-bottom: 0;
       padding-top: 1.5em;
       text-align: center;
-      max-width: 960px;
+      max-width: 60em;
       margin: 0 auto; }
 
 #about_me .icon {
@@ -3618,7 +3612,7 @@ ul.icons li {
     padding: 0.5em;
     margin-top: 2em;
     text-align: center;
-    min-width: 150px; }
+    min-width: 9.375em; }
     #work_page .button:hover {
       text-shadow: 0 1px 0 #669E00;
       border: 1px solid #669E00;
@@ -3679,7 +3673,7 @@ ul.icons li {
   width: 1.5em; }
 
 #contact_me {
-  max-width: 800px; }
+  max-width: 50em; }
   #contact_me textarea {
     display: block;
     text-align: left;
