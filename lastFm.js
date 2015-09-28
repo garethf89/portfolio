@@ -26,22 +26,23 @@ exports.getAlbums = function (options, callback) {
     mongodb.lastfm.find({
         _id: options.name
     }, function (err, result) {
-
+        
         //Use result
         if (err || !result[0]) {
             url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
-
+            
             request({
                 url: url
             }, function (error, response, body) {
 
                 callback(body);
-
                 //store in mongoDB
-                mongodb.lastfm.update([{
+                mongodb.lastfm.update({
+                    _id: options.name,
+                },{
                     _id: options.name,
                     data: body
-                }],
+                },
                 { upsert: true });
             });
         } else {
