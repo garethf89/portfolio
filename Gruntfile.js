@@ -8,7 +8,8 @@ module.exports = function (grunt) {
 				css:"css",
 				scss:"css",
 				js:"js",
-				img:"images"
+				img:"images",
+                bower: "bower_components"
 			},
 			dest:{
 				root:"",
