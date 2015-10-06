@@ -673,9 +673,13 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
     $(".fancybox").fancybox();
      
      //last.fm plays
-    lastFmService.getAlbums().then(function(albums) {
-        $scope.albums = albums.topalbums.album;
-    });
+    this.getLastFMAlbums = function (){
+        lastFmService.getAlbums().then(function(albums) {
+            $scope.albums = albums.topalbums.album;
+        });
+    }
+     
+    this.getLastFMAlbums();
 
 }]);
 

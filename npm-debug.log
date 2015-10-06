@@ -1,0 +1,71 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'karama-requirejs',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'karama-requirejs', null ]
+6 verbose cache add name=undefined spec="karama-requirejs" args=["karama-requirejs",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'karama-requirejs',
+7 verbose parsed url   path: 'karama-requirejs',
+7 verbose parsed url   href: 'karama-requirejs' }
+8 silly lockFile c1ab6ba2-karama-requirejs karama-requirejs
+9 verbose lock karama-requirejs C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\c1ab6ba2-karama-requirejs.lock
+10 silly lockFile c1ab6ba2-karama-requirejs karama-requirejs
+11 silly lockFile c1ab6ba2-karama-requirejs karama-requirejs
+12 verbose addNamed [ 'karama-requirejs', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile b18ebc7e-karama-requirejs karama-requirejs@
+15 verbose lock karama-requirejs@ C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\b18ebc7e-karama-requirejs.lock
+16 silly addNameRange { name: 'karama-requirejs', range: '*', hasData: false }
+17 verbose request where is /karama-requirejs
+18 verbose request registry http://registry.npmjs.org/
+19 verbose request id f5bee241a7a08506
+20 verbose url raw /karama-requirejs
+21 verbose url resolving [ 'http://registry.npmjs.org/', './karama-requirejs' ]
+22 verbose url resolved http://registry.npmjs.org/karama-requirejs
+23 verbose request where is http://registry.npmjs.org/karama-requirejs
+24 info trying registry request attempt 1 at 15:41:03
+25 http GET http://registry.npmjs.org/karama-requirejs
+26 http 404 http://registry.npmjs.org/karama-requirejs
+27 silly registry.get cb [ 404,
+27 silly registry.get   { 'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '2',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Mon, 05 Oct 2015 14:41:03 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-lcy1123-LCY',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1444056063.293081,VS0,VE93' } ]
+28 silly lockFile b18ebc7e-karama-requirejs karama-requirejs@
+29 silly lockFile b18ebc7e-karama-requirejs karama-requirejs@
+30 error 404 Not Found
+30 error 404
+30 error 404 'karama-requirejs' is not in the npm registry.
+30 error 404 You should bug the author to publish it
+30 error 404
+30 error 404 Note that you can also install from a
+30 error 404 tarball, folder, or http url, or git url.
+31 error System Windows_NT 6.2.9200
+32 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "karama-requirejs" "-g"
+33 error cwd C:\Users\gareth.ferguson\Documents\portfolio
+34 error node -v v0.10.33
+35 error npm -v 1.4.28
+36 error code E404
+37 verbose exit [ 1, true ]

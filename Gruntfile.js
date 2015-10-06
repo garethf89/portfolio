@@ -9,7 +9,8 @@ module.exports = function (grunt) {
 				scss:"css",
 				js:"js",
 				img:"images",
-                bower: "bower_components"
+                bower: "bower_components",
+                testing:"tests",
 			},
 			dest:{
 				root:"",

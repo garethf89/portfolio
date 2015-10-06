@@ -1,0 +1,816 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'C:\\Users\\gareth.ferguson\\Documents\\portfolio',
+6 verbose install   [ 'express',
+6 verbose install     'mongojs',
+6 verbose install     'open',
+6 verbose install     'prerender-node',
+6 verbose install     'request',
+6 verbose install     'grunt',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-critical',
+6 verbose install     'grunt-dev-update',
+6 verbose install     'grunt-jsonmin',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-ng-annotate',
+6 verbose install     'grunt-nodemon',
+6 verbose install     'grunt-pagespeed',
+6 verbose install     'grunt-sass',
+6 verbose install     'grunt-uncss',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'load-grunt-config',
+6 verbose install     'mongodb',
+6 verbose install     'node-schedule',
+6 verbose install     'phantomjs',
+6 verbose install     'sinon',
+6 verbose install     'time-grunt' ] ]
+7 info preinstall gareth-portfolio@1.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-ng-annotate@^0.8.0 C:\Users\gareth.ferguson\Documents\portfolio
+10 verbose already installed skipping grunt-nodemon@^0.4.0 C:\Users\gareth.ferguson\Documents\portfolio
+11 verbose already installed skipping grunt-pagespeed@^1.0.0 C:\Users\gareth.ferguson\Documents\portfolio
+12 verbose already installed skipping grunt-sass@^0.18.1 C:\Users\gareth.ferguson\Documents\portfolio
+13 verbose already installed skipping grunt-uncss@^0.4.3 C:\Users\gareth.ferguson\Documents\portfolio
+14 verbose already installed skipping karma-jasmine@^0.2.0 C:\Users\gareth.ferguson\Documents\portfolio
+15 verbose already installed skipping karma-phantomjs-launcher@^0.2.1 C:\Users\gareth.ferguson\Documents\portfolio
+16 verbose already installed skipping load-grunt-config@^0.16.0 C:\Users\gareth.ferguson\Documents\portfolio
+17 verbose already installed skipping mongodb@^1.4.29 C:\Users\gareth.ferguson\Documents\portfolio
+18 verbose already installed skipping node-schedule@^0.1.15 C:\Users\gareth.ferguson\Documents\portfolio
+19 verbose already installed skipping phantomjs@^1.9.18 C:\Users\gareth.ferguson\Documents\portfolio
+20 verbose already installed skipping sinon@^1.17.1 C:\Users\gareth.ferguson\Documents\portfolio
+21 verbose already installed skipping time-grunt@^1.0.0 C:\Users\gareth.ferguson\Documents\portfolio
+22 verbose already installed skipping express@4.x C:\Users\gareth.ferguson\Documents\portfolio
+23 verbose already installed skipping mongojs@^1.3.0 C:\Users\gareth.ferguson\Documents\portfolio
+24 verbose already installed skipping open@* C:\Users\gareth.ferguson\Documents\portfolio
+25 verbose cache add [ 'prerender-node@latest', null ]
+26 verbose cache add name=undefined spec="prerender-node@latest" args=["prerender-node@latest",null]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'prerender-node@latest',
+27 verbose parsed url   path: 'prerender-node@latest',
+27 verbose parsed url   href: 'prerender-node@latest' }
+28 verbose cache add [ 'request@latest', null ]
+29 verbose cache add name=undefined spec="request@latest" args=["request@latest",null]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: 'request@latest',
+30 verbose parsed url   path: 'request@latest',
+30 verbose parsed url   href: 'request@latest' }
+31 verbose already installed skipping grunt@~0.4.1 C:\Users\gareth.ferguson\Documents\portfolio
+32 verbose already installed skipping grunt-concurrent@^1.0.0 C:\Users\gareth.ferguson\Documents\portfolio
+33 verbose already installed skipping grunt-contrib-concat@^0.5.0 C:\Users\gareth.ferguson\Documents\portfolio
+34 verbose already installed skipping grunt-contrib-copy@^0.8.1 C:\Users\gareth.ferguson\Documents\portfolio
+35 verbose already installed skipping grunt-contrib-cssmin@^0.10.0 C:\Users\gareth.ferguson\Documents\portfolio
+36 verbose already installed skipping grunt-contrib-imagemin@^0.4.0 C:\Users\gareth.ferguson\Documents\portfolio
+37 verbose already installed skipping grunt-contrib-uglify@^0.6.0 C:\Users\gareth.ferguson\Documents\portfolio
+38 verbose already installed skipping grunt-contrib-watch@^0.6.1 C:\Users\gareth.ferguson\Documents\portfolio
+39 verbose already installed skipping grunt-critical@^0.1.5 C:\Users\gareth.ferguson\Documents\portfolio
+40 verbose already installed skipping grunt-dev-update@^1.4.0 C:\Users\gareth.ferguson\Documents\portfolio
+41 verbose already installed skipping grunt-jsonmin@^0.2.4 C:\Users\gareth.ferguson\Documents\portfolio
+42 verbose already installed skipping grunt-newer@^1.1.0 C:\Users\gareth.ferguson\Documents\portfolio
+43 verbose cache add name="prerender-node" spec="latest" args=["prerender-node","latest"]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: 'latest',
+44 verbose parsed url   path: 'latest',
+44 verbose parsed url   href: 'latest' }
+45 verbose addNamed [ 'prerender-node', 'latest' ]
+46 verbose addNamed [ null, null ]
+47 verbose cache add name="request" spec="latest" args=["request","latest"]
+48 verbose parsed url { protocol: null,
+48 verbose parsed url   slashes: null,
+48 verbose parsed url   auth: null,
+48 verbose parsed url   host: null,
+48 verbose parsed url   port: null,
+48 verbose parsed url   hostname: null,
+48 verbose parsed url   hash: null,
+48 verbose parsed url   search: null,
+48 verbose parsed url   query: null,
+48 verbose parsed url   pathname: 'latest',
+48 verbose parsed url   path: 'latest',
+48 verbose parsed url   href: 'latest' }
+49 verbose addNamed [ 'request', 'latest' ]
+50 verbose addNamed [ null, null ]
+51 silly lockFile 1765d59d-prerender-node-latest prerender-node@latest
+52 verbose lock prerender-node@latest C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\1765d59d-prerender-node-latest.lock
+53 silly lockFile 5da6dfb1-request-latest request@latest
+54 verbose lock request@latest C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\5da6dfb1-request-latest.lock
+55 info addNameTag [ 'prerender-node', 'latest' ]
+56 info addNameTag [ 'request', 'latest' ]
+57 verbose request where is /prerender-node
+58 verbose request registry http://registry.npmjs.org/
+59 verbose request id 98c427836d037f59
+60 verbose url raw /prerender-node
+61 verbose url resolving [ 'http://registry.npmjs.org/', './prerender-node' ]
+62 verbose url resolved http://registry.npmjs.org/prerender-node
+63 verbose request where is http://registry.npmjs.org/prerender-node
+64 info trying registry request attempt 1 at 15:48:23
+65 verbose etag "4VI2ICW3HP8GPKUJPX3DMHSMR"
+66 http GET http://registry.npmjs.org/prerender-node
+67 verbose request where is /request
+68 verbose request registry http://registry.npmjs.org/
+69 verbose url raw /request
+70 verbose url resolving [ 'http://registry.npmjs.org/', './request' ]
+71 verbose url resolved http://registry.npmjs.org/request
+72 verbose request where is http://registry.npmjs.org/request
+73 info trying registry request attempt 1 at 15:48:23
+74 verbose etag "1W7KHC5YMQVWSZZLDQXV6MU9O"
+75 http GET http://registry.npmjs.org/request
+76 http 304 http://registry.npmjs.org/request
+77 silly registry.get cb [ 304,
+77 silly registry.get   { date: 'Mon, 05 Oct 2015 14:48:23 GMT',
+77 silly registry.get     via: '1.1 varnish',
+77 silly registry.get     'cache-control': 'max-age=60',
+77 silly registry.get     etag: '"1W7KHC5YMQVWSZZLDQXV6MU9O"',
+77 silly registry.get     age: '47',
+77 silly registry.get     connection: 'keep-alive',
+77 silly registry.get     'x-served-by': 'cache-ams4143-AMS',
+77 silly registry.get     'x-cache': 'HIT',
+77 silly registry.get     'x-cache-hits': '3',
+77 silly registry.get     'x-timer': 'S1444056503.902151,VS0,VE0',
+77 silly registry.get     vary: 'Accept' } ]
+78 verbose etag http://registry.npmjs.org/request from cache
+79 verbose addNamed [ 'request', '2.64.0' ]
+80 verbose addNamed [ '2.64.0', '2.64.0' ]
+81 silly lockFile dde332d2-request-2-64-0 request@2.64.0
+82 verbose lock request@2.64.0 C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\dde332d2-request-2-64-0.lock
+83 silly lockFile dde332d2-request-2-64-0 request@2.64.0
+84 silly lockFile dde332d2-request-2-64-0 request@2.64.0
+85 silly lockFile 5da6dfb1-request-latest request@latest
+86 silly lockFile 5da6dfb1-request-latest request@latest
+87 info already installed request@2.64.0
+88 http 304 http://registry.npmjs.org/prerender-node
+89 silly registry.get cb [ 304,
+89 silly registry.get   { date: 'Mon, 05 Oct 2015 14:48:23 GMT',
+89 silly registry.get     via: '1.1 varnish',
+89 silly registry.get     'cache-control': 'max-age=60',
+89 silly registry.get     etag: '"4VI2ICW3HP8GPKUJPX3DMHSMR"',
+89 silly registry.get     age: '0',
+89 silly registry.get     connection: 'keep-alive',
+89 silly registry.get     'x-served-by': 'cache-ams4127-AMS',
+89 silly registry.get     'x-cache': 'MISS',
+89 silly registry.get     'x-cache-hits': '0',
+89 silly registry.get     'x-timer': 'S1444056503.903728,VS0,VE94',
+89 silly registry.get     vary: 'Accept' } ]
+90 verbose etag http://registry.npmjs.org/prerender-node from cache
+91 verbose addNamed [ 'prerender-node', '2.1.0' ]
+92 verbose addNamed [ '2.1.0', '2.1.0' ]
+93 silly lockFile 0bf47bad-prerender-node-2-1-0 prerender-node@2.1.0
+94 verbose lock prerender-node@2.1.0 C:\Users\gareth.ferguson\AppData\Roaming\npm-cache\0bf47bad-prerender-node-2-1-0.lock
+95 silly lockFile 0bf47bad-prerender-node-2-1-0 prerender-node@2.1.0
+96 silly lockFile 0bf47bad-prerender-node-2-1-0 prerender-node@2.1.0
+97 silly lockFile 1765d59d-prerender-node-latest prerender-node@latest
+98 silly lockFile 1765d59d-prerender-node-latest prerender-node@latest
+99 info already installed prerender-node@2.1.0
+100 silly resolved []
+101 info build C:\Users\gareth.ferguson\Documents\portfolio
+102 verbose linkStuff [ false, false, false, 'C:\\Users\\gareth.ferguson\\Documents' ]
+103 info linkStuff gareth-portfolio@1.0.0
+104 verbose linkBins gareth-portfolio@1.0.0
+105 verbose linkMans gareth-portfolio@1.0.0
+106 verbose rebuildBundles gareth-portfolio@1.0.0
+107 verbose rebuildBundles [ '.bin',
+107 verbose rebuildBundles   'body-parser',
+107 verbose rebuildBundles   'bower',
+107 verbose rebuildBundles   'chai',
+107 verbose rebuildBundles   'compression',
+107 verbose rebuildBundles   'express',
+107 verbose rebuildBundles   'forever',
+107 verbose rebuildBundles   'grunt',
+107 verbose rebuildBundles   'grunt-cache-breaker',
+107 verbose rebuildBundles   'grunt-concurrent',
+107 verbose rebuildBundles   'grunt-contrib-concat',
+107 verbose rebuildBundles   'grunt-contrib-connect',
+107 verbose rebuildBundles   'grunt-contrib-copy',
+107 verbose rebuildBundles   'grunt-contrib-cssmin',
+107 verbose rebuildBundles   'grunt-contrib-imagemin',
+107 verbose rebuildBundles   'grunt-contrib-sass',
+107 verbose rebuildBundles   'grunt-contrib-uglify',
+107 verbose rebuildBundles   'grunt-contrib-watch',
+107 verbose rebuildBundles   'grunt-critical',
+107 verbose rebuildBundles   'grunt-dev-update',
+107 verbose rebuildBundles   'grunt-express',
+107 verbose rebuildBundles   'grunt-express-server',
+107 verbose rebuildBundles   'grunt-json-minify',
+107 verbose rebuildBundles   'grunt-jsonmin',
+107 verbose rebuildBundles   'grunt-newer',
+107 verbose rebuildBundles   'grunt-ng-annotate',
+107 verbose rebuildBundles   'grunt-ngrok',
+107 verbose rebuildBundles   'grunt-nodemon',
+107 verbose rebuildBundles   'grunt-pagespeed',
+107 verbose rebuildBundles   'grunt-sass',
+107 verbose rebuildBundles   'grunt-uncss',
+107 verbose rebuildBundles   'grunt-version',
+107 verbose rebuildBundles   'jasmine-core',
+107 verbose rebuildBundles   'karma',
+107 verbose rebuildBundles   'karma-chai',
+107 verbose rebuildBundles   'karma-chrome-launcher',
+107 verbose rebuildBundles   'karma-fixture',
+107 verbose rebuildBundles   'karma-jasmine',
+107 verbose rebuildBundles   'karma-mocha',
+107 verbose rebuildBundles   'karma-phantomjs-launcher',
+107 verbose rebuildBundles   'karma-requirejs',
+107 verbose rebuildBundles   'karma-sinon',
+107 verbose rebuildBundles   'karma-sinon-chai',
+107 verbose rebuildBundles   'load-grunt-config',
+107 verbose rebuildBundles   'look',
+107 verbose rebuildBundles   'mocha',
+107 verbose rebuildBundles   'mocha-as-promised',
+107 verbose rebuildBundles   'mongodb',
+107 verbose rebuildBundles   'mongojs',
+107 verbose rebuildBundles   'node-schedule',
+107 verbose rebuildBundles   'nodemailer',
+107 verbose rebuildBundles   'nodemon',
+107 verbose rebuildBundles   'open',
+107 verbose rebuildBundles   'phantomjs',
+107 verbose rebuildBundles   'prerender-node',
+107 verbose rebuildBundles   'request',
+107 verbose rebuildBundles   'requirejs',
+107 verbose rebuildBundles   'sinon',
+107 verbose rebuildBundles   'socket.io',
+107 verbose rebuildBundles   'time-grunt' ]
+108 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\body-parser
+109 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\body-parser
+110 info preinstall body-parser@1.10.1
+111 verbose linkStuff [ false,
+111 verbose linkStuff   false,
+111 verbose linkStuff   false,
+111 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+112 info linkStuff body-parser@1.10.1
+113 verbose linkBins body-parser@1.10.1
+114 verbose linkMans body-parser@1.10.1
+115 verbose rebuildBundles body-parser@1.10.1
+116 verbose rebuildBundles [ 'bytes',
+116 verbose rebuildBundles   'depd',
+116 verbose rebuildBundles   'iconv-lite',
+116 verbose rebuildBundles   'media-typer',
+116 verbose rebuildBundles   'on-finished',
+116 verbose rebuildBundles   'qs',
+116 verbose rebuildBundles   'raw-body',
+116 verbose rebuildBundles   'type-is' ]
+117 info install body-parser@1.10.1
+118 info postinstall body-parser@1.10.1
+119 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\bower
+120 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\bower
+121 info preinstall bower@1.4.1
+122 verbose linkStuff [ false,
+122 verbose linkStuff   false,
+122 verbose linkStuff   false,
+122 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+123 info linkStuff bower@1.4.1
+124 verbose linkBins bower@1.4.1
+125 verbose link bins [ { bower: 'bin/bower' },
+125 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+125 verbose link bins   false ]
+126 verbose linkMans bower@1.4.1
+127 verbose rebuildBundles bower@1.4.1
+128 verbose rebuildBundles [ '.bin',
+128 verbose rebuildBundles   'abbrev',
+128 verbose rebuildBundles   'archy',
+128 verbose rebuildBundles   'bower-config',
+128 verbose rebuildBundles   'bower-endpoint-parser',
+128 verbose rebuildBundles   'bower-json',
+128 verbose rebuildBundles   'bower-logger',
+128 verbose rebuildBundles   'bower-registry-client',
+128 verbose rebuildBundles   'cardinal',
+128 verbose rebuildBundles   'chalk',
+128 verbose rebuildBundles   'chmodr',
+128 verbose rebuildBundles   'configstore',
+128 verbose rebuildBundles   'decompress-zip',
+128 verbose rebuildBundles   'fstream',
+128 verbose rebuildBundles   'fstream-ignore',
+128 verbose rebuildBundles   'github',
+128 verbose rebuildBundles   'glob',
+128 verbose rebuildBundles   'graceful-fs',
+128 verbose rebuildBundles   'handlebars',
+128 verbose rebuildBundles   'inquirer',
+128 verbose rebuildBundles   'insight',
+128 verbose rebuildBundles   'is-root',
+128 verbose rebuildBundles   'junk',
+128 verbose rebuildBundles   'lockfile',
+128 verbose rebuildBundles   'lru-cache',
+128 verbose rebuildBundles   'mkdirp',
+128 verbose rebuildBundles   'mout',
+128 verbose rebuildBundles   'nopt',
+128 verbose rebuildBundles   'opn',
+128 verbose rebuildBundles   'p-throttler',
+128 verbose rebuildBundles   'promptly',
+128 verbose rebuildBundles   'q',
+128 verbose rebuildBundles   'request',
+128 verbose rebuildBundles   'request-progress',
+128 verbose rebuildBundles   'retry',
+128 verbose rebuildBundles   'rimraf',
+128 verbose rebuildBundles   'semver',
+128 verbose rebuildBundles   'shell-quote',
+128 verbose rebuildBundles   'stringify-object',
+128 verbose rebuildBundles   'tar-fs',
+128 verbose rebuildBundles   'tmp',
+128 verbose rebuildBundles   'update-notifier',
+128 verbose rebuildBundles   'user-home',
+128 verbose rebuildBundles   'which' ]
+129 info install bower@1.4.1
+130 info postinstall bower@1.4.1
+131 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\chai
+132 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\chai
+133 info preinstall chai@3.3.0
+134 verbose linkStuff [ false,
+134 verbose linkStuff   false,
+134 verbose linkStuff   false,
+134 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+135 info linkStuff chai@3.3.0
+136 verbose linkBins chai@3.3.0
+137 verbose linkMans chai@3.3.0
+138 verbose rebuildBundles chai@3.3.0
+139 verbose rebuildBundles [ 'assertion-error', 'deep-eql', 'type-detect' ]
+140 info install chai@3.3.0
+141 info postinstall chai@3.3.0
+142 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\compression
+143 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\compression
+144 info preinstall compression@1.3.0
+145 verbose linkStuff [ false,
+145 verbose linkStuff   false,
+145 verbose linkStuff   false,
+145 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+146 info linkStuff compression@1.3.0
+147 verbose linkBins compression@1.3.0
+148 verbose linkMans compression@1.3.0
+149 verbose rebuildBundles compression@1.3.0
+150 verbose rebuildBundles [ 'accepts',
+150 verbose rebuildBundles   'bytes',
+150 verbose rebuildBundles   'compressible',
+150 verbose rebuildBundles   'debug',
+150 verbose rebuildBundles   'on-headers',
+150 verbose rebuildBundles   'vary' ]
+151 info install compression@1.3.0
+152 info postinstall compression@1.3.0
+153 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\forever
+154 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\forever
+155 info preinstall forever@0.13.0
+156 verbose linkStuff [ false,
+156 verbose linkStuff   false,
+156 verbose linkStuff   false,
+156 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+157 info linkStuff forever@0.13.0
+158 verbose linkBins forever@0.13.0
+159 verbose link bins [ { forever: './bin/forever' },
+159 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+159 verbose link bins   false ]
+160 verbose linkMans forever@0.13.0
+161 verbose rebuildBundles forever@0.13.0
+162 verbose rebuildBundles [ '.bin',
+162 verbose rebuildBundles   'cliff',
+162 verbose rebuildBundles   'colors',
+162 verbose rebuildBundles   'flatiron',
+162 verbose rebuildBundles   'forever-monitor',
+162 verbose rebuildBundles   'nconf',
+162 verbose rebuildBundles   'nssocket',
+162 verbose rebuildBundles   'optimist',
+162 verbose rebuildBundles   'timespan',
+162 verbose rebuildBundles   'utile',
+162 verbose rebuildBundles   'winston' ]
+163 info install forever@0.13.0
+164 info postinstall forever@0.13.0
+165 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-cache-breaker
+166 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-cache-breaker
+167 info preinstall grunt-cache-breaker@1.0.1
+168 verbose linkStuff [ false,
+168 verbose linkStuff   false,
+168 verbose linkStuff   false,
+168 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+169 info linkStuff grunt-cache-breaker@1.0.1
+170 verbose linkBins grunt-cache-breaker@1.0.1
+171 verbose linkMans grunt-cache-breaker@1.0.1
+172 verbose rebuildBundles grunt-cache-breaker@1.0.1
+173 verbose rebuildBundles [ 'cache-breaker' ]
+174 info install grunt-cache-breaker@1.0.1
+175 info postinstall grunt-cache-breaker@1.0.1
+176 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-contrib-connect
+177 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-contrib-connect
+178 info preinstall grunt-contrib-connect@0.10.1
+179 verbose linkStuff [ false,
+179 verbose linkStuff   false,
+179 verbose linkStuff   false,
+179 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+180 info linkStuff grunt-contrib-connect@0.10.1
+181 verbose linkBins grunt-contrib-connect@0.10.1
+182 verbose linkMans grunt-contrib-connect@0.10.1
+183 verbose rebuildBundles grunt-contrib-connect@0.10.1
+184 verbose rebuildBundles [ '.bin',
+184 verbose rebuildBundles   'async',
+184 verbose rebuildBundles   'connect',
+184 verbose rebuildBundles   'connect-livereload',
+184 verbose rebuildBundles   'opn',
+184 verbose rebuildBundles   'portscanner' ]
+185 info install grunt-contrib-connect@0.10.1
+186 info postinstall grunt-contrib-connect@0.10.1
+187 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-contrib-sass
+188 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-contrib-sass
+189 info preinstall grunt-contrib-sass@0.8.1
+190 verbose linkStuff [ false,
+190 verbose linkStuff   false,
+190 verbose linkStuff   false,
+190 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+191 info linkStuff grunt-contrib-sass@0.8.1
+192 verbose linkBins grunt-contrib-sass@0.8.1
+193 verbose linkMans grunt-contrib-sass@0.8.1
+194 verbose rebuildBundles grunt-contrib-sass@0.8.1
+195 verbose rebuildBundles [ '.bin', 'async', 'chalk', 'dargs', 'which', 'win-spawn' ]
+196 info install grunt-contrib-sass@0.8.1
+197 info postinstall grunt-contrib-sass@0.8.1
+198 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-express
+199 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-express
+200 info preinstall grunt-express@1.4.1
+201 verbose linkStuff [ false,
+201 verbose linkStuff   false,
+201 verbose linkStuff   false,
+201 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+202 info linkStuff grunt-express@1.4.1
+203 verbose linkBins grunt-express@1.4.1
+204 verbose linkMans grunt-express@1.4.1
+205 verbose rebuildBundles grunt-express@1.4.1
+206 verbose rebuildBundles [ 'connect',
+206 verbose rebuildBundles   'connect-livereload',
+206 verbose rebuildBundles   'grunt-parallel',
+206 verbose rebuildBundles   'open',
+206 verbose rebuildBundles   'sugar',
+206 verbose rebuildBundles   'temp',
+206 verbose rebuildBundles   'touch' ]
+207 info install grunt-express@1.4.1
+208 info postinstall grunt-express@1.4.1
+209 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-express-server
+210 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-express-server
+211 info preinstall grunt-express-server@0.5.1
+212 verbose linkStuff [ false,
+212 verbose linkStuff   false,
+212 verbose linkStuff   false,
+212 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+213 info linkStuff grunt-express-server@0.5.1
+214 verbose linkBins grunt-express-server@0.5.1
+215 verbose linkMans grunt-express-server@0.5.1
+216 verbose rebuildBundles grunt-express-server@0.5.1
+217 info install grunt-express-server@0.5.1
+218 info postinstall grunt-express-server@0.5.1
+219 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-json-minify
+220 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-json-minify
+221 info preinstall grunt-json-minify@0.4.0
+222 verbose linkStuff [ false,
+222 verbose linkStuff   false,
+222 verbose linkStuff   false,
+222 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+223 info linkStuff grunt-json-minify@0.4.0
+224 verbose linkBins grunt-json-minify@0.4.0
+225 verbose linkMans grunt-json-minify@0.4.0
+226 verbose rebuildBundles grunt-json-minify@0.4.0
+227 verbose rebuildBundles [ '.bin', 'json5' ]
+228 info install grunt-json-minify@0.4.0
+229 info postinstall grunt-json-minify@0.4.0
+230 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-ngrok
+231 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-ngrok
+232 info preinstall grunt-ngrok@0.2.2
+233 verbose linkStuff [ false,
+233 verbose linkStuff   false,
+233 verbose linkStuff   false,
+233 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+234 info linkStuff grunt-ngrok@0.2.2
+235 verbose linkBins grunt-ngrok@0.2.2
+236 verbose linkMans grunt-ngrok@0.2.2
+237 verbose rebuildBundles grunt-ngrok@0.2.2
+238 verbose rebuildBundles [ '.bin', 'decompress-zip', 'js-yaml' ]
+239 info install grunt-ngrok@0.2.2
+240 info postinstall grunt-ngrok@0.2.2
+241 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-version
+242 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\grunt-version
+243 info preinstall grunt-version@0.3.0
+244 verbose linkStuff [ false,
+244 verbose linkStuff   false,
+244 verbose linkStuff   false,
+244 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+245 info linkStuff grunt-version@0.3.0
+246 verbose linkBins grunt-version@0.3.0
+247 verbose linkMans grunt-version@0.3.0
+248 verbose rebuildBundles grunt-version@0.3.0
+249 verbose rebuildBundles [ '.bin', 'semver' ]
+250 info install grunt-version@0.3.0
+251 info postinstall grunt-version@0.3.0
+252 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\jasmine-core
+253 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\jasmine-core
+254 info preinstall jasmine-core@2.3.4
+255 verbose linkStuff [ false,
+255 verbose linkStuff   false,
+255 verbose linkStuff   false,
+255 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+256 info linkStuff jasmine-core@2.3.4
+257 verbose linkBins jasmine-core@2.3.4
+258 verbose linkMans jasmine-core@2.3.4
+259 verbose rebuildBundles jasmine-core@2.3.4
+260 info install jasmine-core@2.3.4
+261 info postinstall jasmine-core@2.3.4
+262 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma
+263 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma
+264 info preinstall karma@0.13.10
+265 verbose linkStuff [ false,
+265 verbose linkStuff   false,
+265 verbose linkStuff   false,
+265 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+266 info linkStuff karma@0.13.10
+267 verbose linkBins karma@0.13.10
+268 verbose link bins [ { karma: './bin/karma' },
+268 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+268 verbose link bins   false ]
+269 verbose linkMans karma@0.13.10
+270 verbose rebuildBundles karma@0.13.10
+271 verbose rebuildBundles [ '.bin',
+271 verbose rebuildBundles   'bluebird',
+271 verbose rebuildBundles   'body-parser',
+271 verbose rebuildBundles   'chokidar',
+271 verbose rebuildBundles   'colors',
+271 verbose rebuildBundles   'connect',
+271 verbose rebuildBundles   'core-js',
+271 verbose rebuildBundles   'di',
+271 verbose rebuildBundles   'dom-serialize',
+271 verbose rebuildBundles   'expand-braces',
+271 verbose rebuildBundles   'glob',
+271 verbose rebuildBundles   'graceful-fs',
+271 verbose rebuildBundles   'http-proxy',
+271 verbose rebuildBundles   'lodash',
+271 verbose rebuildBundles   'log4js',
+271 verbose rebuildBundles   'memoizee',
+271 verbose rebuildBundles   'mime',
+271 verbose rebuildBundles   'minimatch',
+271 verbose rebuildBundles   'optimist',
+271 verbose rebuildBundles   'rimraf',
+271 verbose rebuildBundles   'socket.io',
+271 verbose rebuildBundles   'source-map',
+271 verbose rebuildBundles   'useragent' ]
+272 info install karma@0.13.10
+273 info postinstall karma@0.13.10
+274 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-chai
+275 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-chai
+276 info preinstall karma-chai@0.1.0
+277 verbose linkStuff [ false,
+277 verbose linkStuff   false,
+277 verbose linkStuff   false,
+277 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+278 info linkStuff karma-chai@0.1.0
+279 verbose linkBins karma-chai@0.1.0
+280 verbose linkMans karma-chai@0.1.0
+281 verbose rebuildBundles karma-chai@0.1.0
+282 info install karma-chai@0.1.0
+283 info postinstall karma-chai@0.1.0
+284 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-chrome-launcher
+285 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-chrome-launcher
+286 info preinstall karma-chrome-launcher@0.2.0
+287 verbose linkStuff [ false,
+287 verbose linkStuff   false,
+287 verbose linkStuff   false,
+287 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+288 info linkStuff karma-chrome-launcher@0.2.0
+289 verbose linkBins karma-chrome-launcher@0.2.0
+290 verbose linkMans karma-chrome-launcher@0.2.0
+291 verbose rebuildBundles karma-chrome-launcher@0.2.0
+292 verbose rebuildBundles [ '.bin', 'fs-access', 'which' ]
+293 info install karma-chrome-launcher@0.2.0
+294 info postinstall karma-chrome-launcher@0.2.0
+295 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-fixture
+296 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-fixture
+297 info preinstall karma-fixture@0.2.5
+298 verbose linkStuff [ false,
+298 verbose linkStuff   false,
+298 verbose linkStuff   false,
+298 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+299 info linkStuff karma-fixture@0.2.5
+300 verbose linkBins karma-fixture@0.2.5
+301 verbose linkMans karma-fixture@0.2.5
+302 verbose rebuildBundles karma-fixture@0.2.5
+303 info install karma-fixture@0.2.5
+304 info postinstall karma-fixture@0.2.5
+305 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-mocha
+306 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-mocha
+307 info preinstall karma-mocha@0.2.0
+308 verbose linkStuff [ false,
+308 verbose linkStuff   false,
+308 verbose linkStuff   false,
+308 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+309 info linkStuff karma-mocha@0.2.0
+310 verbose linkBins karma-mocha@0.2.0
+311 verbose linkMans karma-mocha@0.2.0
+312 verbose rebuildBundles karma-mocha@0.2.0
+313 info install karma-mocha@0.2.0
+314 info postinstall karma-mocha@0.2.0
+315 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-requirejs
+316 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-requirejs
+317 info preinstall karma-requirejs@0.2.2
+318 verbose linkStuff [ false,
+318 verbose linkStuff   false,
+318 verbose linkStuff   false,
+318 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+319 info linkStuff karma-requirejs@0.2.2
+320 verbose linkBins karma-requirejs@0.2.2
+321 verbose linkMans karma-requirejs@0.2.2
+322 verbose rebuildBundles karma-requirejs@0.2.2
+323 info install karma-requirejs@0.2.2
+324 info postinstall karma-requirejs@0.2.2
+325 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-sinon
+326 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-sinon
+327 info preinstall karma-sinon@1.0.4
+328 verbose linkStuff [ false,
+328 verbose linkStuff   false,
+328 verbose linkStuff   false,
+328 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+329 info linkStuff karma-sinon@1.0.4
+330 verbose linkBins karma-sinon@1.0.4
+331 verbose linkMans karma-sinon@1.0.4
+332 verbose rebuildBundles karma-sinon@1.0.4
+333 info install karma-sinon@1.0.4
+334 info postinstall karma-sinon@1.0.4
+335 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-sinon-chai
+336 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\karma-sinon-chai
+337 info preinstall karma-sinon-chai@1.1.0
+338 verbose linkStuff [ false,
+338 verbose linkStuff   false,
+338 verbose linkStuff   false,
+338 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+339 info linkStuff karma-sinon-chai@1.1.0
+340 verbose linkBins karma-sinon-chai@1.1.0
+341 verbose linkMans karma-sinon-chai@1.1.0
+342 verbose rebuildBundles karma-sinon-chai@1.1.0
+343 verbose rebuildBundles [ 'chai', 'sinon', 'sinon-chai' ]
+344 info install karma-sinon-chai@1.1.0
+345 info postinstall karma-sinon-chai@1.1.0
+346 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\look
+347 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\look
+348 info preinstall look@0.1.3
+349 verbose linkStuff [ false,
+349 verbose linkStuff   false,
+349 verbose linkStuff   false,
+349 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+350 info linkStuff look@0.1.3
+351 verbose linkBins look@0.1.3
+352 verbose linkMans look@0.1.3
+353 verbose rebuildBundles look@0.1.3
+354 verbose rebuildBundles [ 'clusterhub',
+354 verbose rebuildBundles   'connect',
+354 verbose rebuildBundles   'connect-route',
+354 verbose rebuildBundles   'nodetime',
+354 verbose rebuildBundles   'socket.io' ]
+355 info install look@0.1.3
+356 info postinstall look@0.1.3
+357 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\mocha
+358 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\mocha
+359 info preinstall mocha@2.3.3
+360 verbose linkStuff [ false,
+360 verbose linkStuff   false,
+360 verbose linkStuff   false,
+360 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+361 info linkStuff mocha@2.3.3
+362 verbose linkBins mocha@2.3.3
+363 verbose link bins [ { mocha: './bin/mocha', _mocha: './bin/_mocha' },
+363 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+363 verbose link bins   false ]
+364 verbose linkMans mocha@2.3.3
+365 verbose rebuildBundles mocha@2.3.3
+366 verbose rebuildBundles [ '.bin',
+366 verbose rebuildBundles   'commander',
+366 verbose rebuildBundles   'debug',
+366 verbose rebuildBundles   'diff',
+366 verbose rebuildBundles   'escape-string-regexp',
+366 verbose rebuildBundles   'glob',
+366 verbose rebuildBundles   'growl',
+366 verbose rebuildBundles   'jade',
+366 verbose rebuildBundles   'mkdirp',
+366 verbose rebuildBundles   'supports-color' ]
+367 info install mocha@2.3.3
+368 info postinstall mocha@2.3.3
+369 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\mocha-as-promised
+370 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\mocha-as-promised
+371 info preinstall mocha-as-promised@2.0.0
+372 verbose linkStuff [ false,
+372 verbose linkStuff   false,
+372 verbose linkStuff   false,
+372 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+373 info linkStuff mocha-as-promised@2.0.0
+374 verbose linkBins mocha-as-promised@2.0.0
+375 verbose linkMans mocha-as-promised@2.0.0
+376 verbose rebuildBundles mocha-as-promised@2.0.0
+377 info install mocha-as-promised@2.0.0
+378 info postinstall mocha-as-promised@2.0.0
+379 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\nodemailer
+380 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\nodemailer
+381 info preinstall nodemailer@0.7.1
+382 verbose linkStuff [ false,
+382 verbose linkStuff   false,
+382 verbose linkStuff   false,
+382 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+383 info linkStuff nodemailer@0.7.1
+384 verbose linkBins nodemailer@0.7.1
+385 verbose linkMans nodemailer@0.7.1
+386 verbose rebuildBundles nodemailer@0.7.1
+387 verbose rebuildBundles [ '.bin',
+387 verbose rebuildBundles   'aws-sdk',
+387 verbose rebuildBundles   'directmail',
+387 verbose rebuildBundles   'he',
+387 verbose rebuildBundles   'mailcomposer',
+387 verbose rebuildBundles   'public-address',
+387 verbose rebuildBundles   'readable-stream',
+387 verbose rebuildBundles   'simplesmtp' ]
+388 info install nodemailer@0.7.1
+389 info postinstall nodemailer@0.7.1
+390 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\nodemon
+391 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\nodemon
+392 info preinstall nodemon@1.2.1
+393 verbose linkStuff [ false,
+393 verbose linkStuff   false,
+393 verbose linkStuff   false,
+393 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+394 info linkStuff nodemon@1.2.1
+395 verbose linkBins nodemon@1.2.1
+396 verbose link bins [ { nodemon: './bin/nodemon.js' },
+396 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+396 verbose link bins   false ]
+397 verbose linkMans nodemon@1.2.1
+398 verbose rebuildBundles nodemon@1.2.1
+399 verbose rebuildBundles [ 'minimatch', 'ps-tree', 'update-notifier' ]
+400 info install nodemon@1.2.1
+401 info postinstall nodemon@1.2.1
+402 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\requirejs
+403 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\requirejs
+404 info preinstall requirejs@2.1.20
+405 verbose linkStuff [ false,
+405 verbose linkStuff   false,
+405 verbose linkStuff   false,
+405 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+406 info linkStuff requirejs@2.1.20
+407 verbose linkBins requirejs@2.1.20
+408 verbose link bins [ { 'r.js': './bin/r.js' },
+408 verbose link bins   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules\\.bin',
+408 verbose link bins   false ]
+409 verbose linkMans requirejs@2.1.20
+410 verbose rebuildBundles requirejs@2.1.20
+411 info install requirejs@2.1.20
+412 info postinstall requirejs@2.1.20
+413 verbose rebuild bundle C:\Users\gareth.ferguson\Documents\portfolio\node_modules\socket.io
+414 info build C:\Users\gareth.ferguson\Documents\portfolio\node_modules\socket.io
+415 info preinstall socket.io@1.2.1
+416 verbose linkStuff [ false,
+416 verbose linkStuff   false,
+416 verbose linkStuff   false,
+416 verbose linkStuff   'C:\\Users\\gareth.ferguson\\Documents\\portfolio\\node_modules' ]
+417 info linkStuff socket.io@1.2.1
+418 verbose linkBins socket.io@1.2.1
+419 verbose linkMans socket.io@1.2.1
+420 verbose rebuildBundles socket.io@1.2.1
+421 verbose rebuildBundles [ 'debug',
+421 verbose rebuildBundles   'engine.io',
+421 verbose rebuildBundles   'has-binary-data',
+421 verbose rebuildBundles   'socket.io-adapter',
+421 verbose rebuildBundles   'socket.io-client',
+421 verbose rebuildBundles   'socket.io-parser' ]
+422 info install socket.io@1.2.1
+423 info postinstall socket.io@1.2.1
+424 info install gareth-portfolio@1.0.0
+425 info postinstall gareth-portfolio@1.0.0
+426 info prepublish gareth-portfolio@1.0.0
+427 error peerinvalid The package mocha does not satisfy its siblings' peerDependencies requirements!
+427 error peerinvalid Peer karma-mocha@0.2.0 wants mocha@*
+427 error peerinvalid Peer mocha-as-promised@2.0.0 wants mocha@>= 1.8.0 <2
+428 error System Windows_NT 6.2.9200
+429 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+430 error cwd C:\Users\gareth.ferguson\Documents\portfolio\tests
+431 error node -v v0.10.33
+432 error npm -v 1.4.28
+433 error code EPEERINVALID
+434 verbose exit [ 1, true ]

@@ -25,6 +25,7 @@
     "angular-animate": "~1.4.6",
     "angular": "~1.4.6",
     "angular-aria": "~1.4.6",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "jasmine-jquery": "~2.1.1"
   }
 }
