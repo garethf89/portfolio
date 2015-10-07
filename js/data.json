@@ -57,7 +57,7 @@
             "j2o": {
                 "name": "J2O",
                 "work_class": "work_j2o",
-                "desc": "This project was for the J2O Midnight Editions flavours laucned in 2015. The site had 2 new flavours and re-styling to all other pages. A lot fo complex CSS animations were used to create the visual effects of the page.",
+                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.",
                 "cover": "images/home/j2ocover",
                 "skills": [
                     "CSS3",
