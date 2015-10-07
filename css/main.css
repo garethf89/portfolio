@@ -3033,11 +3033,6 @@ p {
   #header {
     background-image: url('http://garethferguson.s3.amazonaws.com/images/woods2x.jpg'); } }
 
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .site_row {
   max-width: 90%;
   margin-left: auto;
@@ -3092,6 +3087,8 @@ p {
   @media  (min-width: 768px) {
     .work_item {
       background-position: left center; }
+      .work_item[href='/j2o'] {
+        background-position: center; }
       .work_item.half {
         width: 50%; }
       .work_item.twothirds {

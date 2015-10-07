@@ -39,7 +39,31 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         var counterStatus = 'off';
 
+        var socket = io.connect('http://garethferguson.co.uk');
+            socket.on('connect', function () {
 
+                socket.send('here');
+
+                var count;
+
+                socket.on('count', function (msg) {
+
+                    if(msg.count > 1){
+                        count = '<strong>' + msg.count + '</strong> current viewers'; 
+                    }else{
+                        count = '<strong>' + msg.count + '</strong> current viewer';   
+                    }
+
+                    $('#counter').html(count);
+
+                    if(counterStatus == 'off'){
+                        counterStatus ='on';
+                        $('#counter').addClass('visible');
+                    }
+
+                });
+
+            });
 
     });
 

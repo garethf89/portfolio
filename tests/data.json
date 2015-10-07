@@ -1,73 +1,6 @@
 {
     "portfolio": {
         "Items": {
-            "barspot": {
-                "name": "Barspot",
-                "order": "1",
-                "work_class": "work_barspot",
-                "desc": "This is a Wordpress based site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
-                "cover": "images/home/barspotcover",
-                "skills": [
-                    "Wordpress",
-                    "SASS",
-                    "CSS3",
-                    "HTML5",
-                    "JQuery & Javascript",
-                    "PHP",
-                    "Responsive Design"
-                ],
-                "bg": "images/backgrounds/barspotbg.jpg",
-                "images": [
-                    {
-                        "thumb": "images/thumbs/bsthumb1.jpg",
-                        "image": "images/lightboximages/bsmain1.jpg"
-                    },
-                    {
-                        "thumb": "images/thumbs/bsthumb2.jpg",
-                        "image": "images/lightboximages/bsmain2.jpg"
-                    },
-                    {
-                        "thumb": "images/thumbs/bsthumb3.jpg",
-                        "image": "images/lightboximages/bsmain3.jpg"
-                    }
-                ],
-                "links": [
-                    {
-                        "title": "Barspot",
-                        "link": "http://www.barspot.co.uk"
-                    }
-                ],
-                "width": "full"
-            },
-            "ba": {
-                "name": "British Airways",
-                "work_class": "work_ba",
-                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
-                "skills": [
-                    "CSS3",
-                    "HTML5",
-                    "JQuery & Javascript"
-                ],
-                "cover": "images/home/bacover",
-                "bg": "images/backgrounds/babg.jpg",
-                "images": [
-                    {
-                        "thumb": "images/thumbs/bathumb1.png",
-                        "image": "images/lightboximages/bamain1.jpg"
-                    },
-                    {
-                        "thumb": "images/thumbs/bathumb3.png",
-                        "image": "images/lightboximages/bamain3.png"
-                    }
-                ],
-                "links": [
-                    {
-                        "title": "Leighton",
-                        "link": "http://www.leighton.com"
-                    }
-                ],
-                "width": "third"
-            },
             "elevon": {
                 "name": "Elevon World",
                 "work_class": "work_elevon",
@@ -117,6 +50,123 @@
                     {
                         "title": "Elevon Lifestlye Journal",
                         "link": "http://www.elevonworld.com/lifestylejournal"
+                    }
+                ],
+                "width": "twothirds"
+            },
+            "j2o": {
+                "name": "J2O",
+                "work_class": "work_j2o",
+                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+                "cover": "images/home/j2ocover",
+                "skills": [
+                    "CSS3",
+                    "HTML5",
+                    "JQuery & Javascript",
+                    "Responsive Design"
+                ],
+                "bg": "images/backgrounds/elevonbg.jpg",
+                "images": [
+                    {
+                        "thumb": "images/thumbs/elevonthumb1.png",
+                        "image": "images/lightboximages/elevonmain1.jpg"
+                    },
+                    {
+                        "thumb": "images/thumbs/elevonthumb2.png",
+                        "image": "images/lightboximages/elevonmain2.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/elevonthumb3.png",
+                        "image": "images/lightboximages/elevonmain3.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/lifestylethumb1.png",
+                        "image": "images/lightboximages/lifestyle1.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/lifestylethumb2.png",
+                        "image": "images/lightboximages/lifestyle2.png"
+                    },
+                    {
+                        "thumb": "images/thumbs/lifestylethumb3.png",
+                        "image": "images/lightboximages/lifestyle3.png"
+                    }
+                ],
+                "links": [
+                    {
+                        "title": "Elevon",
+                        "link": "http://www.elevonworld.com"
+                    },
+                    {
+                        "title": "Elevon Lifestlye Journal",
+                        "link": "http://www.elevonworld.com/lifestylejournal"
+                    }
+                ],
+                "width": "third"
+            },
+            "ba": {
+                "name": "British Airways",
+                "work_class": "work_ba",
+                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
+                "skills": [
+                    "CSS3",
+                    "HTML5",
+                    "JQuery & Javascript"
+                ],
+                "cover": "images/home/bacover",
+                "bg": "images/backgrounds/babg.jpg",
+                "images": [
+                    {
+                        "thumb": "images/thumbs/bathumb1.png",
+                        "image": "images/lightboximages/bamain1.jpg"
+                    },
+                    {
+                        "thumb": "images/thumbs/bathumb3.png",
+                        "image": "images/lightboximages/bamain3.png"
+                    }
+                ],
+                "links": [
+                    {
+                        "title": "Leighton",
+                        "link": "http://www.leighton.com"
+                    }
+                ],
+                "width": "third"
+            },
+             "barspot": {
+                "name": "Barspot",
+                "order": "1",
+                "work_class": "work_barspot",
+                "desc": "This is a Wordpress based site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
+                "cover": "images/home/barspotcover",
+                "skills": [
+                    "Wordpress",
+                    "SASS",
+                    "CSS3",
+                    "HTML5",
+                    "JQuery & Javascript",
+                    "PHP",
+                    "Responsive Design"
+                ],
+                "bg": "images/backgrounds/barspotbg.jpg",
+                "images": [
+                    {
+                        "thumb": "images/thumbs/bsthumb1.jpg",
+                        "image": "images/lightboximages/bsmain1.jpg"
+                    },
+                    {
+                        "thumb": "images/thumbs/bsthumb2.jpg",
+                        "image": "images/lightboximages/bsmain2.jpg"
+                    },
+                    {
+                        "thumb": "images/thumbs/bsthumb3.jpg",
+                        "image": "images/lightboximages/bsmain3.jpg"
+                    }
+                ],
+                "links": [
+                    {
+                        "title": "Barspot",
+                        "link": "http://www.barspot.co.uk"
                     }
                 ],
                 "width": "twothirds"

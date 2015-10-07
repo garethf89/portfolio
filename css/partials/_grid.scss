@@ -7,8 +7,6 @@ $susy: (
   gutters: (1/4)
 );
 
-@include border-box-sizing;
-
 //Overall site row
 .site_row{
     @include container(90%);

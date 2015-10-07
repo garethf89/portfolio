@@ -21,6 +21,10 @@
         
         background-position: left center;
         
+        &[href='/j2o']{
+             background-position: center;  
+        }
+        
         &.half{
             width:50%;
         }
