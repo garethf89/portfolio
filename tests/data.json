@@ -57,7 +57,7 @@
             "j2o": {
                 "name": "J2O",
                 "work_class": "work_j2o",
-                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.",
                 "cover": "images/home/j2ocover",
                 "skills": [
                     "CSS3",
@@ -65,41 +65,25 @@
                     "JQuery & Javascript",
                     "Responsive Design"
                 ],
-                "bg": "images/backgrounds/elevonbg.jpg",
+                "bg": "images/backgrounds/j2obg.jpg",
                 "images": [
                     {
-                        "thumb": "images/thumbs/elevonthumb1.png",
-                        "image": "images/lightboximages/elevonmain1.jpg"
+                        "thumb": "images/thumbs/j2othumb1.jpg",
+                        "image": "images/lightboximages/j2omain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/elevonthumb2.png",
-                        "image": "images/lightboximages/elevonmain2.png"
+                        "thumb": "images/thumbs/j2othumb2.jpg",
+                        "image": "images/lightboximages/j2omain2.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/elevonthumb3.png",
-                        "image": "images/lightboximages/elevonmain3.png"
-                    },
-                    {
-                        "thumb": "images/thumbs/lifestylethumb1.png",
-                        "image": "images/lightboximages/lifestyle1.png"
-                    },
-                    {
-                        "thumb": "images/thumbs/lifestylethumb2.png",
-                        "image": "images/lightboximages/lifestyle2.png"
-                    },
-                    {
-                        "thumb": "images/thumbs/lifestylethumb3.png",
-                        "image": "images/lightboximages/lifestyle3.png"
+                        "thumb": "images/thumbs/j2othumb3.jpg",
+                        "image": "images/lightboximages/j2omain3.jpg"
                     }
                 ],
                 "links": [
                     {
-                        "title": "Elevon",
-                        "link": "http://www.elevonworld.com"
-                    },
-                    {
-                        "title": "Elevon Lifestlye Journal",
-                        "link": "http://www.elevonworld.com/lifestylejournal"
+                        "title": "j2o",
+                        "link": "http://www.j2o.co.uk"
                     }
                 ],
                 "width": "third"
