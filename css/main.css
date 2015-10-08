@@ -3098,7 +3098,7 @@ p {
       .work_item h4 {
         max-width: 60%; } }
   .work_item:after {
-    box-shadow: 0 0 11em rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 0 10em rgba(0, 0, 0, 0.9) inset;
     position: absolute;
     top: 0;
     left: 0;
@@ -3128,7 +3128,7 @@ p {
   -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
   #work_items > .work_item:hover:before {
-    box-shadow: 0 0 11em rgba(0, 0, 0, 0.4) inset; }
+    box-shadow: 0 0 10em rgba(0, 0, 0, 0.4) inset; }
 
 /*Skills */
 .skillIcon {
@@ -3162,7 +3162,9 @@ p {
     @media  (min-width: 768px) {
       .lastfm-albums header {
         text-align: left;
-        margin-bottom: 2em; } }
+        margin-bottom: 2em; }
+        .lastfm-albums header h2 {
+          padding-left: 3em; } }
   .lastfm-albums .lastfm_albums__music-container {
     margin-right: 1.5em;
     width: 100%;
@@ -3181,6 +3183,9 @@ p {
     margin-right: 0.3em;
     opacity: 0.5;
     font-size: 3em; }
+    @media  (min-width: 768px) {
+      .lastfm-albums .logo-large {
+        position: absolute; } }
   .lastfm-albums .music-info {
     clear: both;
     width: 100%;

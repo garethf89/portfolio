@@ -43,7 +43,7 @@
     }
     
     &:after{
-        box-shadow: 0 0 11em rgba(0,0,0,0.9) inset;
+        box-shadow: 0 0 10em rgba(0,0,0,0.9) inset;
         position: absolute;
         top: 0;
         left: 0;
@@ -79,7 +79,7 @@
             opacity: 1; 
             @include transition(opacity 0.3s ease-in-out);
             &:before{
-             box-shadow: 0 0 11em rgba(0,0,0,0.4) inset;
+             box-shadow: 0 0 10em rgba(0,0,0,0.4) inset;
             } 
         }
     }
