@@ -103,7 +103,7 @@
     </header>
     <div id="work_items" class="row" ng-switch on="size">
         
-        <a ng-repeat="work in notSorted(pI.portfolios)" ng-init="value = pI.portfolios[work]" href="/{{work}}" class="work_item {{value.width}}" ng-if="pI.size == 'small'"
+        <a ng-repeat="work in pI.notSorted(pI.portfolios)" ng-init="value = pI.portfolios[work]" href="/{{work}}" class="work_item {{value.width}}" ng-if="pI.size == 'small'"
            style="background-image:url(http://garethferguson.s3.amazonaws.com/{{value.cover}}Half.jpg)">
              <h4>{{value.name}}</h4>
             
@@ -111,7 +111,7 @@
            style="background-image:url(http://garethferguson.s3.amazonaws.com/{{value.cover}}.jpg)">
              <h4>{{value.name}}</h4>
             
-        <a ng-repeat="work in notSorted(pI.portfolios)" ng-init="value = pI.portfolios[work]" href="/{{work}}" class="work_item {{value.width}}" ng-if="pI.size == 'high'"
+        <a ng-repeat="work in pI.notSorted(pI.portfolios)" ng-init="value = pI.portfolios[work]" href="/{{work}}" class="work_item {{value.width}}" ng-if="pI.size == 'high'"
            style="background-image:url(http://garethferguson.s3.amazonaws.com/{{value.cover}}2x.jpg);">
             
             <h4>{{value.name}}</h4>

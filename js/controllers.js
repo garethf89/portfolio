@@ -48,9 +48,9 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
                              (min-resolution: 144dpi)";
             
             if (window.matchMedia(retinaQuery).matches && this.size == "full"){
-                this.size = "high";
+                this.size = 'high';
             } else if (window.matchMedia(retinaQuery).matches && this.size == "small"){
-                this.size = "full";    
+                this.size = 'full';    
             }
             
         }
