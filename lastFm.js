@@ -21,29 +21,35 @@ if (os.hostname().indexOf("ip") > -1) {
 var mongodb = mongojs(mongoUrl, ['lastfm']);
 
 exports.getAlbums = function (options, callback) {
-
     //Its already in DB - get it from there
+     mongodb.lastfm.find({
+        _id: "DirtyG"
+    });
     mongodb.lastfm.find({
         _id: options.name
     }, function (err, result) {
-        
         //Use result
         if (err || !result[0]) {
             url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
-            
             request({
                 url: url
             }, function (error, response, body) {
-
-                callback(body);
                 //store in mongoDB
-                mongodb.lastfm.update({
-                    _id: options.name,
-                },{
-                    _id: options.name,
+                
+                 mongodb.lastfm.update(
+                   { _id: options.name }, 
+                   { 
+                     _id: options.name,
                     data: body
-                },
-                { upsert: true });
+                   },
+                   {
+                        upsert: true
+                   },
+                function(err, doc, lastErrorObject) {
+                    console.log(err)
+                    console.log(doc);
+                });
+                callback(body);
             });
         } else {
             callback(result[0].data);

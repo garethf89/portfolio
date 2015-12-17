@@ -1,9 +1,11 @@
 var express = require('express'),
+    http = require('http'),
     app = express(),
     compression = require('compression'),
     routes = require('./routes'),
     bodyParser = require('body-parser'),
-    os = require("os");
+    os = require("os"),
+    router = express.Router();
 
 
 //App setup
@@ -31,8 +33,20 @@ app.use('/*', express.static(html_dir, { maxAge: 86400000 }));
 
 //Routes
 
+// route middleware that will happen on every request
+router.use(function(req, res, next) {
+
+    // log each request to the console
+    console.log(req.method, req.url);
+
+    // continue doing what we were doing and go to the route
+    next(); 
+});
+
 //let angular handle routing
 app.get('/', routes.default);
+
+app.set('port', 8081);
 
 //send contact form
 app.post('/formEmail', function(req,res){
@@ -53,13 +67,18 @@ app.post('/lastFm', function(req,res){
 });
 
 // Loading socket.io
-var io = require('socket.io').listen(app.listen(8080));
+var server = http.createServer(app);
+server.listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
+
+var io = require('socket.io')(server);
 
 var count = 0,
     users = [];
 
 // User connects - count
-io.sockets.on('connection', function (socket) {
+io.on('connection', function (socket) {
     
     count++;
     io.sockets.emit('count',{
