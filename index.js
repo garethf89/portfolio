@@ -46,7 +46,7 @@ router.use(function(req, res, next) {
 //let angular handle routing
 app.get('/', routes.default);
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', 8081);
 
 //send contact form
 app.post('/formEmail', function(req,res){

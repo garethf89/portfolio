@@ -1,5 +1,5 @@
 module.exports = {
-        watch: {
+        dev: {
             tasks: ['nodemon', 'watch'],
             options: {
                 logConcurrentOutput: true

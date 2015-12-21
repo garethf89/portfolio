@@ -19,12 +19,7 @@ if (os.hostname().indexOf("ip") > -1) {
 
 //database connect
 var mongodb = mongojs(mongoUrl, ['lastfm']);
-
 exports.getAlbums = function (options, callback) {
-    //Its already in DB - get it from there
-     mongodb.lastfm.find({
-        _id: "DirtyG"
-    });
     mongodb.lastfm.find({
         _id: options.name
     }, function (err, result) {

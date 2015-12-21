@@ -3,11 +3,11 @@
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams', '$location', 'dataService','$sce','lastFmService', '$anchorScroll','$http',
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams',  '$location', 'dataService','$sce','lastFmService', '$anchorScroll','$http',
 
  function ($scope, $routeParams, $location, dataService,$sce,lastFmService, $anchorScroll,$http,message) {
-          
-      this.tech_classes = {
+
+     this.tech_classes = {
 	        'AngularJS': 'devicons devicons-angular',
             'CSS3': 'devicons devicons-css3',
             'HTML5': 'fa fa-html5',
@@ -22,7 +22,7 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
             'PayPal': 'fa fa-paypal',
             'SASS': 'devicons devicons-sass'
         };
-          
+     
         //prevent sorting on ngrepeat
         this.notSorted = function(obj){
             if (!obj) {
@@ -116,5 +116,5 @@ garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailSe
             });
         }
         
-        $scope.status = 'ready';
+
 }]);

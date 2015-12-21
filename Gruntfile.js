@@ -26,6 +26,6 @@ module.exports = function (grunt) {
     
     // measures the time each task takes
     require('time-grunt')(grunt);
-
+    grunt.loadNpmTasks('grunt-concurrent');
     require('load-grunt-config')(grunt,{data: data});
 };

@@ -7,11 +7,13 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
     $routeProvider.
       when('/', {
         templateUrl: '/homepage.html',
-        controller: 'portfolioItems'
+        controller: 'portfolioItems',
+        controllerAs: 'pI',
       }).
-      when('/my_work?scrollTo=my_work', {
+      when('/my_work', {
         templateUrl: '/homepage.html',
-        controller: 'portfolioItems'
+        controller: 'portfolioItems',
+        controllerAs: 'pI',
       }).
         when('/contact', {
         templateUrl: '/contact.html',
@@ -19,7 +21,8 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
       }).
       when('/:workID', {
         templateUrl: '/work.html',
-        controller: 'portfolioItems'
+        controller: 'portfolioItems',
+        work: 'yes'
       }).
       otherwise({
         redirectTo: '/'
@@ -39,7 +42,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         var counterStatus = 'off';
 
-        var socket = io.connect('http://garethferguson.co.uk');
+        var socket = io.connect('http://localhost:8081');
             socket.on('connect', function () {
 
                 socket.send('here');
@@ -150,7 +153,6 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         var serviceObj = {};
 
         serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
-            console.log(formData);
             $http({
                 method: 'POST',
                 url: '/formEmail',
