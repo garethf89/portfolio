@@ -3555,6 +3555,9 @@ p {
     transition: all 0.5s ease-in-out; }
   #nav.slideDown + #header {
     margin-top: 6em; }
+    @media (min-width: 1024px) {
+      #nav.slideDown + #header {
+        margin-top: 0; } }
   #nav.slideDown #nav__pullDown {
     margin-top: 0em; }
 

@@ -163,6 +163,9 @@
     
     &.slideDown + #header{
         margin-top:6em;
+        @include breakpoint($desktop){
+            margin-top:0;
+        }
     }
     
     &.slideDown #nav__pullDown{
