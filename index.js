@@ -10,6 +10,12 @@ var express = require('express'),
 
 //App setup
 
+//local or online?
+var port = 8081;
+if (os.hostname().indexOf("ip") > -1) {
+    port = 3000;
+} 
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -46,7 +52,7 @@ router.use(function(req, res, next) {
 //let angular handle routing
 app.get('/', routes.default);
 
-app.set('port', 8081);
+app.set('port', port);
 
 //send contact form
 app.post('/formEmail', function(req,res){
@@ -79,7 +85,7 @@ var count = 0,
 
 // User connects - count
 io.on('connection', function (socket) {
-    
+    console.log('here');
     count++;
     io.sockets.emit('count',{
         'count': count

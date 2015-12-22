@@ -446,7 +446,12 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         var counterStatus = 'off';
 
-        var socket = io.connect('http://localhost:8081');
+        var connectionString = "http://garethferguson.co.uk"
+        if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
+            connectionString = "http://localhost:8081";
+        }
+        
+        var socket = io.connect(connectionString);
             socket.on('connect', function () {
 
                 socket.send('here');
