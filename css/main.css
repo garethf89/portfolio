@@ -3628,12 +3628,13 @@ ul.icando-icons {
     display: block;
     float: left;
     text-align: center;
-    width: 33.3%;
+    width: 49%;
     padding-bottom: 2em; }
     @media (min-width: 768px) {
       ul.icando-icons li {
         display: block;
-        text-align: center; } }
+        text-align: center;
+        width: 25%; } }
     @media (min-width: 1024px) {
       ul.icando-icons li {
         padding-bottom: 0;
@@ -3851,8 +3852,8 @@ ul.icons li {
       border-bottom: none;
       width: 2em;
       height: 2em;
-      padding: .6em 0;
-      font-size: 2em; }
+      padding: 0.55em 0;
+      font-size: 1.5EM; }
       .contact-social-block li a.fa-facebook {
         background-color: #1C407B; }
       .contact-social-block li a.fa-google-plus {
@@ -3861,6 +3862,10 @@ ul.icons li {
         background-color: #5EA9DD; }
       .contact-social-block li a.fa-linkedin {
         background-color: #0B2B5C; }
+      @media (min-width: 768px) {
+        .contact-social-block li a {
+          padding: .6em 0;
+          font-size: 2em; } }
 
 .requiredWarning {
   font-size: 0.8em;

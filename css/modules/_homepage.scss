@@ -93,12 +93,13 @@ ul.icando-icons{
         display: block;
         float: left;
         text-align: center;
-        width: 33.3%;
+        width: 49%;
         padding-bottom: 2em;
         
         @include breakpoint($tablet){
             display: block;
             text-align: center;
+            width: 25%;
         }
         
         @include breakpoint($desktop){
