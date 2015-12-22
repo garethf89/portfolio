@@ -3422,7 +3422,7 @@ p {
   box-shadow: none;
   color: white;
   padding: 0;
-  position: absolute; }
+  position: fixed; }
   @media (min-width: 1024px) {
     #nav {
       top: 0;
@@ -3441,11 +3441,6 @@ p {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     display: block;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
     outline: none; }
     @media (min-width: 1024px) {
       #nav #nav__pullDown {
@@ -3473,15 +3468,15 @@ p {
             margin: 0;
             padding: 0.5em; }
         #nav nav.revealHeader-add {
-          -moz-animation: reveal-nav 0.5s 0 none;
+          -moz-animation: reveal-nav 0.2s 0 none;
           -moz-animation-fill-mode: forwards;
-          -webkit-animation: reveal-nav 0.5s 0 none;
+          -webkit-animation: reveal-nav 0.2s 0 none;
           -webkit-animation-fill-mode: forwards;
-          -o-animation: reveal-nav 0.5s 0 none;
+          -o-animation: reveal-nav 0.2s 0 none;
           -o-animation-fill-mode: forwards;
-          -ms-animation: reveal-nav 0.5s 0 none;
+          -ms-animation: reveal-nav 0.2s 0 none;
           -ms-animation-fill-mode: forwards;
-          animation: reveal-nav 0.5s 0 none;
+          animation: reveal-nav 0.2s 0 none;
           animation-fill-mode: forwards;
           -moz-animation-fill-mode: forwards; } }
     #nav nav ul {
@@ -3499,15 +3494,15 @@ p {
             width: auto;
             background: none; }
             #nav nav ul li.reveal {
-              -moz-animation: reveal-header 0.5s 0 "";
+              -moz-animation: reveal-header 0.2s 0 "";
               -moz-animation-fill-mode: forwards;
-              -webkit-animation: reveal-header 0.5s 0 "";
+              -webkit-animation: reveal-header 0.2s 0 "";
               -webkit-animation-fill-mode: forwards;
-              -o-animation: reveal-header 0.5s 0 "";
+              -o-animation: reveal-header 0.2s 0 "";
               -o-animation-fill-mode: forwards;
-              -ms-animation: reveal-header 0.5s 0 "";
+              -ms-animation: reveal-header 0.2s 0 "";
               -ms-animation-fill-mode: forwards;
-              animation: reveal-header 0.5s 0 "";
+              animation: reveal-header 0.2s 0 "";
               animation-fill-mode: forwards;
               -moz-animation-fill-mode: forwards;
               height: 3.4375em;
@@ -3539,7 +3534,7 @@ p {
           color: #000;
           width: 100%;
           border: none;
-          border-bottom: dotted 1px;
+          border-bottom: 1px solid #cdcdcd;
           display: inline-block;
           padding: 0 .75em;
           text-decoration: none; }

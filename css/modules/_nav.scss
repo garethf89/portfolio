@@ -12,7 +12,7 @@
     box-shadow: none;
     color: white;
     padding: 0;
-    position: absolute;
+    position: fixed;
     
     @include breakpoint($desktop){
         top: 0;
@@ -33,7 +33,7 @@
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;
         display: block;
-        @include transitionMixin(all,.5s,ease-in-out);
+        //@include transitionMixin(all,.5s,ease-in-out);
         outline: none;
         
         @include breakpoint($desktop){
@@ -67,7 +67,7 @@
             }
 
             &.revealHeader-add{
-                @include animationMixin(reveal-nav, 0.5s, 0, none);
+                @include animationMixin(reveal-nav, 0.2s, 0, none);
             }
         }
         
@@ -93,7 +93,7 @@
                     background: none;
                     
                     &.reveal {
-                        @include animationMixin(reveal-header, 0.5s, 0);
+                        @include animationMixin(reveal-header, 0.2s, 0);
                         height: em(55);
                         padding:0.5em 1.5em;
                         background: #6d9030;
@@ -132,7 +132,7 @@
                     color:#000; 
                     width:100%;
                     border:none;
-                    border-bottom: dotted 1px;
+                    border-bottom:1px solid #cdcdcd;
                     display: inline-block;
                     padding: 0 .75em;
                     text-decoration: none;
