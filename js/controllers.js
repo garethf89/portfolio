@@ -90,7 +90,11 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
     }
      
     this.getLastFMAlbums();
-
+     
+    this.workScroll = function(){
+        $('body').animate({scrollTop:$('#main_content').position().top - 100}, '500', 'swing');
+    }
+    
 }]);
 
 //Controller for the contact form
