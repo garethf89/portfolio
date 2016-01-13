@@ -85,7 +85,6 @@ var count = 0,
 
 // User connects - count
 io.on('connection', function (socket) {
-    console.log('here');
     count++;
     io.sockets.emit('count',{
         'count': count

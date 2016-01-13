@@ -22,7 +22,8 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
       when('/:workID', {
         templateUrl: '/work.html',
         controller: 'portfolioItems',
-        work: 'yes'
+        work: 'yes',
+        controllerAs: 'pI'
       }).
       otherwise({
         redirectTo: '/'

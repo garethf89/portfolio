@@ -255,7 +255,7 @@
             "other_projects": {
                 "name": "Other Projects",
                 "work_class": "work_mini",
-                "desc": "I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way/<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers. It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to da tabase and provide a rich user interface, back in the days before many of the big JS frameworks existed.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built as a single page application using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
+                "desc": "Atom Bank is a client which I have worked on several smaller projects for such as components for the website and CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers. It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to da tabase and provide a rich user interface, back in the days before many of the big JS frameworks existed.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built as a single page application using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
                 "skills": [
                     "PHP",
                     "MySQL",
@@ -266,6 +266,10 @@
                 "bg": "images/backgrounds/otherbg.jpg",
                 "cover": "images/home/othercover",
                 "images": [
+                    {
+                        "thumb": "images/thumbs/atomthumb1.jpg",
+                        "image": "images/lightboximages/atommain1.jpg"
+                    },
                     {
                         "thumb": "images/thumbs/otherthumb1.png",
                         "image": "images/lightboximages/other1.png"
@@ -289,12 +293,8 @@
                 ],
                 "links": [
                     {
-                        "title": "WiiSources",
-                        "link": "http://garethferguson.co.uk/files/menu.swf"
-                    },
-                    {
-                        "title": "Music Finder",
-                        "link": "http://garethferguson.co.uk/projects/esearcher/eSearcher.swf"
+                        "title": "Atom",
+                        "link": "http://www.atombank.co.uk"
                     }
                 ],
                 "width": "third"
