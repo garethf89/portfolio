@@ -3433,7 +3433,6 @@ p {
     font-family: FontAwesome;
     -webkit-font-smoothing: antialiased;
     left: 50%;
-    margin-top: 1.4em;
     cursor: pointer;
     margin-left: -1.25em;
     padding: 0 0.5em 0.2em 0.5em;
@@ -3441,7 +3440,8 @@ p {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     display: block;
-    outline: none; }
+    outline: none;
+    margin-top: 0; }
     @media (min-width: 1024px) {
       #nav #nav__pullDown {
         display: none; } }

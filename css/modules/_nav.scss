@@ -25,7 +25,6 @@
         font-family: FontAwesome;
         -webkit-font-smoothing: antialiased;
         left:50%;
-        margin-top:1.4em;
         cursor:pointer;
         margin-left: -1.25em;
         padding:0 0.5em 0.2em 0.5em;
@@ -35,6 +34,7 @@
         display: block;
         //@include transitionMixin(all,.5s,ease-in-out);
         outline: none;
+        margin-top: 0;
         
         @include breakpoint($desktop){
             display: none;
