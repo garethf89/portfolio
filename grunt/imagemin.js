@@ -38,6 +38,13 @@ module.exports = {
             src: ['**/*.{png,jpg}'],
             dest: '<%= paths.dest.img %>/thumbs'
                 }]
+    },
+    logos: {
+        files: [{
+            expand: true,
+            cwd: '<%= paths.src.img %>/logos',
+            src: ['**/*.{png,jpg}'],
+            dest: '<%= paths.dest.img %>/logos'
+                }]
     }
-
 };

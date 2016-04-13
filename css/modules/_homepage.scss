@@ -82,12 +82,25 @@
     }
 }
 
+.icon-ba{
+    background-image: url('../images/logos/ba.png'); 
+}
+.icon-very{
+    background-image: url('../images/logos/very.png'); 
+}
+.icon-anglian{
+    background-image: url('../images/logos/anglian.png'); 
+}
+.icon-j2o{
+    background-image: url('../images/logos/j2o.png'); 
+}
+
+
 /* Things I can do */
 
 ul.icando-icons{
 
     overflow: hidden;   
-    margin:0;
     
     li{
         display: block;
@@ -106,7 +119,7 @@ ul.icando-icons{
             padding-bottom: 0;
             width: 20%;  
         }
-    
+            
          &:nth-child(n+6){
             margin-top:0;
         }
@@ -125,9 +138,27 @@ ul.icando-icons{
                 font-size: 8em;
             }
             
+            &--logo{
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 1em;
+                background-position: center;
+                margin: 40px auto 0;
+                @include breakpoint($desktop){
+                    height:.5em;   
+                }
+            }
+            
         }
         
     }
+    
+    &.col-four li{
+        @include breakpoint($desktop){
+            width: 25%;  
+        } 
+    }  
+    
 }
 
 ul.icons li {
@@ -135,6 +166,9 @@ ul.icons li {
     line-height: 1em;
     padding-left: 0.5em;
 }
+
+
+
 
 /*Skills */
 
