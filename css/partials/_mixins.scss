@@ -9,7 +9,12 @@
     background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
     background: -o-linear-gradient(top, $color1 0%,$color2 100%);
     background: linear-gradient(top, $color1 0%,$color2 100%);
-    padding:0.5em;
+    padding:0.8em 1em;
+    margin: 1em 0;
+    line-height: 1rem;
+    display: block;
+    text-align: center;
+    cursor:pointer;
     &:hover
 		{
 			text-shadow:0 1px 0 #669E00;

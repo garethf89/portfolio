@@ -9,7 +9,7 @@ module.exports = {
     },
     css: {
         files: ['css/*.css', 'css/*.scss', 'css/*/*.scss'],
-        tasks: ['sass', 'concat:css', 'cssmin'],
+        tasks: ['sass', 'concat:css', 'cssmin', 'topdoc'],
         options: {
             spawn: false,
             livereload: true

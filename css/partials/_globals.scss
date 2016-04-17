@@ -66,9 +66,8 @@ p {
     background:$backgroundHighlightContainer;
     padding:1em;
     margin-bottom:5em;
-    border-top: 1px solid #d9dbda;
-    border-bottom: 1px solid #d9dbda;
-    
+    border: 1px solid #d9dbda;
+    box-shadow: 0px 10px 36px -22px rgba(0,0,0,0.75);
     @include breakpoint($desktop){
         padding:3em;
     }    
@@ -194,6 +193,41 @@ p {
     font-size: 1em;
     color: #27AE60;
 }
+
+/* Buttons */
+
+/* topdoc
+  name: Button
+  description: A button
+  markup:
+    <a class="button">Button</a>
+    <button role="button" id="submit_message" class="button"><span class="icon fa-envelope-o"></span>Submit</button>
+    <a class="button button--expand">Button</a>
+*/
+.button{
+	
+    @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
+    width:100%;
+    min-width:em(150);
+    
+    @include breakpoint($desktop){
+	    
+       width:auto;
+       display: inline-block;
+       
+       &.button--expand{
+	    	display: block;
+		}
+             
+    }
+        
+    .icon{
+	    margin-right: 0.5em;
+    }
+    
+}
+
+
 
 /* 2X Images */
 @media 

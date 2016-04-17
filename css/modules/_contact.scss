@@ -10,18 +10,7 @@
         padding: 0.5em;
         border-radius: 0.3em;  
     }
-    
-    button{
-        display: block;
-        @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
-        margin-top:1em;
-        width:100%;
-        
-        @include breakpoint($desktop){
-            width:25%;
-        }
-    }
-    
+   
     input{
         border:1px solid #CECECE;
         padding: 0.5em;

@@ -33,11 +33,7 @@
     }
     
     .button{
-        display: block;
-        @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
         margin-top:2em;
-        text-align: center;
-        min-width:em(150);
     }  
 }
 
