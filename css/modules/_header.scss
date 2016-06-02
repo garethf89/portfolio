@@ -5,7 +5,7 @@
     cursor: default;
     padding: 4em 0;
     text-align: center;
-    background-image:url('http://garethferguson.s3.amazonaws.com/images/woods.jpg');
+    background-image:url('/images/woods.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -13,7 +13,7 @@
     
     @include breakpoint($desktop){
         padding: 2em 0 0;
-        background-image:url('http://garethferguson.s3.amazonaws.com/images/woods2x.jpg');
+        background-image:url('/images/woods2x.jpg');
     }
 
     .header__inner{
