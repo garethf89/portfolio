@@ -43,7 +43,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
         var counterStatus = 'off';
 
-        var connectionString = "http://garethferguson.co.uk"
+        var connectionString = "http://garethferguson.co.uk:3000"
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
             connectionString = "http://localhost:8081";
         }
