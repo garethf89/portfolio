@@ -29,6 +29,12 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         redirectTo: '/'
       });
       
+      
+      
+      
+      
+      
+      
       $ariaProvider.config({
           tabindex: true,
           ariaHidden: true
