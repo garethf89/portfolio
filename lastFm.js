@@ -16,7 +16,6 @@ if (os.hostname().indexOf("ip") > -1) {
     lastfmConstants = require("./configLastFM.json");
     mongoUrl = "gareth";
 }
-
 //database connect
 var mongodb = mongojs(mongoUrl, ['lastfm']);
 exports.getAlbums = function (options, callback) {
