@@ -43,7 +43,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
     garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
-
+/*
         var connectionString = "http://garethferguson.co.uk"
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
             connectionString = "http://localhost:8081";
@@ -74,7 +74,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                 });
 
             });
-
+*/
     });
 
     //directive to show menu on scroll
@@ -188,7 +188,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         	serviceObj.requestAlbumData = function(){
                 return $http({
                     method: 'POST',
-                    url: '/lastFm',
+                    url: '/api/lastFm',
                     data: 'name=DirtyG',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
