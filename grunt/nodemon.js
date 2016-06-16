@@ -1,6 +1,6 @@
 module.exports = {
     dev: {
-        script: 'index.js',
+        script: 'api/index.js',
         options: {
             livereload: true,
             env: {

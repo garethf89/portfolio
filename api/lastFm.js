@@ -13,7 +13,7 @@ if (os.hostname().indexOf("ip") > -1) {
     lastfmConstants = require("/var/www/configLastFM.json");
     mongoUrl = lastfmConstants.mongoURL;
 } else {
-    lastfmConstants = require("./configLastFM.json");
+    lastfmConstants = require(".././configLastFM.json");
     mongoUrl = "gareth";
 }
 //database connect

@@ -6,11 +6,11 @@ var nodemailer = require("nodemailer"),
 if(os.hostname().indexOf("ip") > -1){
     settingsEmail = require("/var/www/config.json");
 }else{
-    settingsEmail = require("./config.json");
+    settingsEmail = require(".././config.json");
 }
 
 // create reusable transport method (opens pool of SMTP connections)
-var smtpTransport = nodemailer.createTransport("SMTP",settingsEmail);
+var smtpTransport = nodemailer.createTransport(settingsEmail);
 
 // setup e-mail data with unicode symbols
 var emailOptions,

@@ -43,13 +43,14 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
     garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
 
         var counterStatus = 'off';
-/*
-        var connectionString = "http://garethferguson.co.uk"
+
+        var connectionString = "http://garethferguson.co.uk:3000"
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
-            connectionString = "http://localhost:8081";
+            connectionString = "http://local.gareth.com:3000";
         }
+        console.log("now");
         
-        var socket = io.connect(connectionString);
+        var socket = io.connect(connectionString, {resource: '/api/index.js'});
             socket.on('connect', function () {
 
                 socket.send('here');
@@ -74,7 +75,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                 });
 
             });
-*/
+
     });
 
     //directive to show menu on scroll
@@ -162,7 +163,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         serviceObj.sendEmail = function (formData, callbackSuccess, callbackFailure) {
             $http({
                 method: 'POST',
-                url: '/formEmail',
+                url: '/api/formEmail',
                 data: $.param(formData),
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'

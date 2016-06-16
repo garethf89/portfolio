@@ -11,7 +11,6 @@
 
            js: {
                src: [
-                    '<%= paths.src.bower %>/socket.io.client/dist/*.js',
                     '<%= paths.src.bower %>/angular/angular.min.js',
                     '<%= paths.src.bower %>/angular-route/angular-route.min.js',
                     '<%= paths.src.bower %>/angular-sanitize/angular-sanitize.min.js',

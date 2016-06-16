@@ -11,10 +11,7 @@ var express = require('express'),
 //App setup
 
 //local or online?
-var port = 8081;
-if (os.hostname().indexOf("ip") > -1) {
-    port = 3000;
-} 
+port = 3000;
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -89,7 +86,7 @@ io.on('connection', function (socket) {
     io.sockets.emit('count',{
         'count': count
     });
-            
+            console.log("here");
     //reduce counter when user leaves
     socket.on('disconnect', function () {
         count--;
