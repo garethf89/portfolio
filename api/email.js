@@ -3,11 +3,8 @@ var nodemailer = require("nodemailer"),
     os = require("os"),
     settingsEmail;
 
-if(os.hostname().indexOf("ip") > -1){
-    settingsEmail = require("/var/www/config.json");
-}else{
-    settingsEmail = require(".././config.json");
-}
+
+var  settingsEmail = require("/var/www/config.json");
 
 // create reusable transport method (opens pool of SMTP connections)
 var smtpTransport = nodemailer.createTransport(settingsEmail);

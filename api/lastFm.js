@@ -1,3 +1,4 @@
+
 var express = require("express"),
     os = require("os"),
     fs = require("fs"),
@@ -7,15 +8,10 @@ var express = require("express"),
     request = require('request'),
     mongojs = require('mongojs'),
     schedule = require('node-schedule'),
-    mongoURL;
+    mongoURL,
+    lastfmConstants = require("/var/www/configLastFM.json"),
+    mongoUrl =  "gareth";
 
-if (os.hostname().indexOf("ip") > -1) {
-    lastfmConstants = require("/var/www/configLastFM.json");
-    mongoUrl = lastfmConstants.mongoURL;
-} else {
-    lastfmConstants = require(".././configLastFM.json");
-    mongoUrl = "gareth";
-}
 //database connect
 var mongodb = mongojs(mongoUrl, ['lastfm']);
 exports.getAlbums = function (options, callback) {

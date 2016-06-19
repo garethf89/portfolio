@@ -1,3 +1,4 @@
+
 var express = require('express'),
     http = require('http'),
     app = express(),
@@ -86,7 +87,7 @@ io.on('connection', function (socket) {
     io.sockets.emit('count',{
         'count': count
     });
-            console.log("here");
+
     //reduce counter when user leaves
     socket.on('disconnect', function () {
         count--;
