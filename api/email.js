@@ -1,10 +1,15 @@
 var nodemailer = require("nodemailer"),
     express = require("express"),
     os = require("os"),
+    settingsEmail,
+    env = process.env.NODE_ENV || 'dev',
     settingsEmail;
 
-
-var  settingsEmail = require("/var/www/config.json");
+if(env == "dev"){
+  settingsEmail = require("../config.json");
+}else{
+  settingsEmail = require("/var/www/config.json")
+}
 
 // create reusable transport method (opens pool of SMTP connections)
 var smtpTransport = nodemailer.createTransport(settingsEmail);
@@ -20,20 +25,20 @@ var emailOptions,
 }
 
 exports.sendEmail = function(options, callback){
-    
+
     //start with defaults
     emailOptions = mailOptions;
-        
+
     emailOptions.from = options.person_name + "<" + options.person_email + ">";
     emailOptions.text = options.person_enq;
     emailOptions.html = options.person_enq + "<br/><br/>" + "from: " + options.person_name + ',' + options.person_email;
-    
-    
+
+
     // send mail with defined transport object
     smtpTransport.sendMail(emailOptions, function(error, response){
 
         callback();
-        
+
         // if you don't want to use this transport object anymore, uncomment following line
         smtpTransport.close(); // shut down the connection pool, no more messages
     });

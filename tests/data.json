@@ -5,7 +5,7 @@
                 "name": "Elevon World",
                 "work_class": "work_elevon",
                 "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
-                "cover": "images/home/elevoncover",
+                "cover": "build/images/home/elevoncover",
                 "skills": [
                     "Wordpress",
                     "PayPal",
@@ -15,31 +15,31 @@
                     "PHP",
                     "Responsive Design"
                 ],
-                "bg": "images/backgrounds/elevonbg.jpg",
+                "bg": "build/images/backgrounds/elevonbg.jpg",
                 "images": [
                     {
-                        "thumb": "images/thumbs/elevonthumb1.png",
-                        "image": "images/lightboximages/elevonmain1.jpg"
+                        "thumb": "build/images/thumbs/elevonthumb1.png",
+                        "image": "build/images/lightboximages/elevonmain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/elevonthumb2.png",
-                        "image": "images/lightboximages/elevonmain2.png"
+                        "thumb": "build/images/thumbs/elevonthumb2.png",
+                        "image": "build/images/lightboximages/elevonmain2.png"
                     },
                     {
-                        "thumb": "images/thumbs/elevonthumb3.png",
-                        "image": "images/lightboximages/elevonmain3.png"
+                        "thumb": "build/images/thumbs/elevonthumb3.png",
+                        "image": "build/images/lightboximages/elevonmain3.png"
                     },
                     {
-                        "thumb": "images/thumbs/lifestylethumb1.png",
-                        "image": "images/lightboximages/lifestyle1.png"
+                        "thumb": "build/images/thumbs/lifestylethumb1.png",
+                        "image": "build/images/lightboximages/lifestyle1.png"
                     },
                     {
-                        "thumb": "images/thumbs/lifestylethumb2.png",
-                        "image": "images/lightboximages/lifestyle2.png"
+                        "thumb": "build/images/thumbs/lifestylethumb2.png",
+                        "image": "build/images/lightboximages/lifestyle2.png"
                     },
                     {
-                        "thumb": "images/thumbs/lifestylethumb3.png",
-                        "image": "images/lightboximages/lifestyle3.png"
+                        "thumb": "build/images/thumbs/lifestylethumb3.png",
+                        "image": "build/images/lightboximages/lifestyle3.png"
                     }
                 ],
                 "links": [
@@ -58,26 +58,26 @@
                 "name": "J2O",
                 "work_class": "work_j2o",
                 "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.",
-                "cover": "images/home/j2ocover",
+                "cover": "build/images/home/j2ocover",
                 "skills": [
                     "CSS3",
                     "HTML5",
                     "JQuery & Javascript",
                     "Responsive Design"
                 ],
-                "bg": "images/backgrounds/j2obg.jpg",
+                "bg": "build/images/backgrounds/j2obg.jpg",
                 "images": [
                     {
-                        "thumb": "images/thumbs/j2othumb1.jpg",
-                        "image": "images/lightboximages/j2omain1.jpg"
+                        "thumb": "build/images/thumbs/j2othumb1.jpg",
+                        "image": "build/images/lightboximages/j2omain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/j2othumb2.jpg",
-                        "image": "images/lightboximages/j2omain2.jpg"
+                        "thumb": "build/images/thumbs/j2othumb2.jpg",
+                        "image": "build/images/lightboximages/j2omain2.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/j2othumb3.jpg",
-                        "image": "images/lightboximages/j2omain3.jpg"
+                        "thumb": "build/images/thumbs/j2othumb3.jpg",
+                        "image": "build/images/lightboximages/j2omain3.jpg"
                     }
                 ],
                 "links": [
@@ -97,16 +97,16 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "cover": "images/home/bacover",
-                "bg": "images/backgrounds/babg.jpg",
+                "cover": "build/images/home/bacover",
+                "bg": "build/images/backgrounds/babg.jpg",
                 "images": [
                     {
-                        "thumb": "images/thumbs/bathumb1.png",
-                        "image": "images/lightboximages/bamain1.jpg"
+                        "thumb": "build/images/thumbs/bathumb1.png",
+                        "image": "build/images/lightboximages/bamain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/bathumb3.png",
-                        "image": "images/lightboximages/bamain3.png"
+                        "thumb": "build/images/thumbs/bathumb3.png",
+                        "image": "build/images/lightboximages/bamain3.png"
                     }
                 ],
                 "links": [
@@ -122,7 +122,7 @@
                 "order": "1",
                 "work_class": "work_barspot",
                 "desc": "This is a Wordpress based site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
-                "cover": "images/home/barspotcover",
+                "cover": "build/images/home/barspotcover",
                 "skills": [
                     "Wordpress",
                     "SASS",
@@ -132,19 +132,19 @@
                     "PHP",
                     "Responsive Design"
                 ],
-                "bg": "images/backgrounds/barspotbg.jpg",
+                "bg": "build/images/backgrounds/barspotbg.jpg",
                 "images": [
                     {
-                        "thumb": "images/thumbs/bsthumb1.jpg",
-                        "image": "images/lightboximages/bsmain1.jpg"
+                        "thumb": "build/images/thumbs/bsthumb1.jpg",
+                        "image": "build/images/lightboximages/bsmain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/bsthumb2.jpg",
-                        "image": "images/lightboximages/bsmain2.jpg"
+                        "thumb": "build/images/thumbs/bsthumb2.jpg",
+                        "image": "build/images/lightboximages/bsmain2.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/bsthumb3.jpg",
-                        "image": "images/lightboximages/bsmain3.jpg"
+                        "thumb": "build/images/thumbs/bsthumb3.jpg",
+                        "image": "build/images/lightboximages/bsmain3.jpg"
                     }
                 ],
                 "links": [
@@ -165,19 +165,19 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "bg": "images/backgrounds/hphomebg.jpg",
-                "cover": "images/home/hpcover",
+                "bg": "build/images/backgrounds/hphomebg.jpg",
+                "cover": "build/images/home/hpcover",
                 "images": [
                     {
-                        "thumb": "images/thumbs/hphomethumb1.png",
-                        "image": "images/lightboximages/hphome2.png"
+                        "thumb": "build/images/thumbs/hphomethumb1.png",
+                        "image": "build/images/lightboximages/hphome2.png"
                     },
                     {
-                        "thumb": "images/thumbs/hphomethumb2.png",
-                        "image": "images/lightboximages/hphome2.png"
+                        "thumb": "build/images/thumbs/hphomethumb2.png",
+                        "image": "build/images/lightboximages/hphome2.png"
                     }, {
-                        "thumb": "images/thumbs/hphomethumb3.png",
-                        "image": "images/lightboximages/hphome3.png"
+                        "thumb": "build/images/thumbs/hphomethumb3.png",
+                        "image": "build/images/lightboximages/hphome3.png"
                     }
 
                 ],
@@ -200,19 +200,19 @@
                     "PHP",
                     "PostgreSQL"
                 ],
-                "bg": "images/backgrounds/hpbg.jpg",
-                "cover": "images/home/happcover",
+                "bg": "build/images/backgrounds/hpbg.jpg",
+                "cover": "build/images/home/happcover",
                 "images": [
                     {
-                        "thumb": "images/thumbs/hpthumb1.png",
-                        "image": "images/lightboximages/hp2.png"
+                        "thumb": "build/images/thumbs/hpthumb1.png",
+                        "image": "build/images/lightboximages/hp2.png"
                     },
                     {
-                        "thumb": "images/thumbs/hpthumb2.png",
-                        "image": "images/lightboximages/hp2.png"
+                        "thumb": "build/images/thumbs/hpthumb2.png",
+                        "image": "build/images/lightboximages/hp2.png"
                     }, {
-                        "thumb": "images/thumbs/hpthumb3.png",
-                        "image": "images/lightboximages/hp3.png"
+                        "thumb": "build/images/thumbs/hpthumb3.png",
+                        "image": "build/images/lightboximages/hp3.png"
                     }
 
                 ],
@@ -228,19 +228,19 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "bg": "images/backgrounds/ahibg.jpg",
-                "cover": "images/home/ahicover",
+                "bg": "build/images/backgrounds/ahibg.jpg",
+                "cover": "build/images/home/ahicover",
                 "images": [
                     {
-                        "thumb": "images/thumbs/ahithumb1.jpg",
-                        "image": "images/lightboximages/ahimain1.jpg"
+                        "thumb": "build/images/thumbs/ahithumb1.jpg",
+                        "image": "build/images/lightboximages/ahimain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/ahithumb2.jpg",
-                        "image": "images/lightboximages/ahimain2.jpg"
+                        "thumb": "build/images/thumbs/ahithumb2.jpg",
+                        "image": "build/images/lightboximages/ahimain2.jpg"
                     }, {
-                        "thumb": "images/thumbs/ahithumb3.jpg",
-                        "image": "images/lightboximages/ahimain3.jpg"
+                        "thumb": "build/images/thumbs/ahithumb3.jpg",
+                        "image": "build/images/lightboximages/ahimain3.jpg"
                     }
 
                 ],
@@ -263,32 +263,32 @@
                     "HTML5",
                     "JQuery & Javascript"
                 ],
-                "bg": "images/backgrounds/otherbg.jpg",
-                "cover": "images/home/othercover",
+                "bg": "build/images/backgrounds/otherbg.jpg",
+                "cover": "build/images/home/othercover",
                 "images": [
                     {
-                        "thumb": "images/thumbs/atomthumb1.jpg",
-                        "image": "images/lightboximages/atommain1.jpg"
+                        "thumb": "build/images/thumbs/atomthumb1.jpg",
+                        "image": "build/images/lightboximages/atommain1.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/otherthumb1.png",
-                        "image": "images/lightboximages/other1.png"
+                        "thumb": "build/images/thumbs/otherthumb1.png",
+                        "image": "build/images/lightboximages/other1.png"
                     },
                     {
-                        "thumb": "images/thumbs/otherthumb2.png",
-                        "image": "images/lightboximages/other2.jpg"
+                        "thumb": "build/images/thumbs/otherthumb2.png",
+                        "image": "build/images/lightboximages/other2.jpg"
                     },
                     {
-                        "thumb": "images/thumbs/otherthumb3.png",
-                        "image": "images/lightboximages/other3.png"
+                        "thumb": "build/images/thumbs/otherthumb3.png",
+                        "image": "build/images/lightboximages/other3.png"
                     },
                     {
-                        "thumb": "images/thumbs/otherthumb4.png",
-                        "image": "images/lightboximages/other4.png"
+                        "thumb": "build/images/thumbs/otherthumb4.png",
+                        "image": "build/images/lightboximages/other4.png"
                     },
                     {
-                        "thumb": "images/thumbs/otherthumb5.png",
-                        "image": "images/lightboximages/other5.png"
+                        "thumb": "build/images/thumbs/otherthumb5.png",
+                        "image": "build/images/lightboximages/other5.png"
                     }
                 ],
                 "links": [

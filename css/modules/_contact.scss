@@ -1,20 +1,20 @@
 #contact_me{
-    
+
     max-width:em(800);
-    
+
     textarea{
         display: block;
         text-align: left;
         width:100%;
         border:1px solid #CECECE;
         padding: 0.5em;
-        border-radius: 0.3em;  
+        border-radius: 0.3em;
     }
-   
+
     input{
         border:1px solid #CECECE;
         padding: 0.5em;
-        border-radius: 0.3em;  
+        border-radius: 0.3em;
         display: block;
         text-align: left;
         width:100%;
@@ -23,7 +23,7 @@
             width:50%;
         }
     }
-    
+
     label{
         display: block;
         text-align: left;
@@ -33,53 +33,53 @@
             width:50%;
         }
     }
-    
+
 }
 
 .contact-social-block{
-    
+
     display: block;
     margin-bottom: 3em;
-    
+
     li {
-        
+
         margin: 0 2%;
         display: inline-block;
-        
-        a{            
+
+        a{
             &.fa-facebook{
-                background-color: $facebook;   
+                background-color: $facebook;
             }
             &.fa-google-plus{
-                 background-color: $googleplus;   
+                 background-color: $googleplus;
             }
             &.fa-twitter{
-                background-color: $twitter;   
+                background-color: $twitter;
             }
             &.fa-linkedin{
-                 background-color: $linkedin;   
+                 background-color: $linkedin;
             }
-            
+
             border-radius: 50%;
             list-style: none;
-            display: inline-block;   
-            text-decoration: none;  
+            display: inline-block;
+            text-decoration: none;
             color:#fff;
             border-bottom:none;
             width: 2em;
             height: 2em;
             padding: 0.55em 0;
             font-size: 1.5EM;
-            
+
             @include breakpoint($tablet){
                 padding: .6em 0;
                 font-size: 2em;
-            }           
-            
+            }
+
         }
-        
+
     }
-    
+
 }
 
 .requiredWarning{

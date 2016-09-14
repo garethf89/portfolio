@@ -9,8 +9,15 @@ var express = require("express"),
     mongojs = require('mongojs'),
     schedule = require('node-schedule'),
     mongoURL,
-    lastfmConstants = require("/var/www/configLastFM.json"),
+    env = process.env.NODE_ENV || 'dev',
+    lastfmConstants,
     mongoUrl =  "gareth";
+
+if (env == "dev") {
+    lastfmConstants = require("../configLastFM.json");
+} else {
+    lastfmConstants = require("/var/www/configLastFM.json")
+}
 
 //database connect
 var mongodb = mongojs(mongoUrl, ['lastfm']);
@@ -25,10 +32,10 @@ exports.getAlbums = function (options, callback) {
                 url: url
             }, function (error, response, body) {
                 //store in mongoDB
-                
+
                  mongodb.lastfm.update(
-                   { _id: options.name }, 
-                   { 
+                   { _id: options.name },
+                   {
                      _id: options.name,
                     data: body
                    },
@@ -64,12 +71,12 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
         {
             _id: "DirtyG",
             data: body
-        },    
+        },
         { upsert: true } );
-        
+
         var today = new Date();
 
         fs.appendFile('my_log.txt', 'Done on ' + today.getDate() + ' ' + (today.getMonth() + 1) + ' ' + today.getFullYear() + '   ' );
-        
+
     });
 });
