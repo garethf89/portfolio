@@ -13,7 +13,11 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     changed = require('gulp-changed'),
     jsonminify = require('gulp-jsonminify'),
-    browserSync = require('browser-sync').create();
+    cache = require('gulp-cached'),
+    browserSync = require('browser-sync').create(),
+    sequence = require('gulp-sequence'),
+    plumber = require('gulp-plumber'),
+    notify = require('gulp-notify');
 
 	var data = {
 		paths: {
@@ -25,6 +29,7 @@ var gulp = require('gulp'),
           fancybox_css: "bower_components/fancybox/source/*.css",
   				js:"build/js",
           js_src:"js",
+          js_libs: 'build/js/libs',
   				img:"build/images",
           img_src:"images",
           bower: "bower_components",
@@ -35,6 +40,18 @@ var gulp = require('gulp'),
 var filesToCopy =  data.paths.bower + '/fancybox/source/*.{png,gif,css}',
     filesToCopy_tests = data.paths.js_src + '/data.json' ;
 
+  // plumber error handler to stop things from breaking on errors
+	var errorHandler = {
+		errorHandler : notify.onError
+		(
+			{
+				title		: "Gulp",
+				message		: "Error: <%= error.message %>"
+			}
+		)
+	};
+
+
 // =============================================================================
 // Copy
 // =============================================================================
@@ -44,7 +61,7 @@ gulp.task('copy-tests', function() {
         .pipe(gulp.dest(data.paths.testing));
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', ['copy-tests'], function() {
     return gulp.src(filesToCopy)
         .pipe(gulp.dest(data.paths.css));
 });
@@ -63,6 +80,7 @@ gulp.task('css', function() {
     ];
 
     return gulp.src([data.paths.scss, data.paths.fancybox_css])
+        .pipe(plumber(errorHandler))
         .pipe(sass({
             outputStyle: "expanded",
             errLogToConsole: true,
@@ -125,15 +143,16 @@ gulp.task('scripts:libraries', function() {
             data.paths.bower + '/angular/angular.min.js', data.paths.bower + '/angular-route/angular-route.min.js',
             data.paths.bower + '/angular-sanitize/angular-sanitize.min.js', data.paths.bower + '/angular-aria/angular-aria.min.js', data.paths.bower + '/angular-animate/angular-animate.min.js'
         ])
+        .pipe(cache('libs'))
         .pipe(concat('libs.js'))
         .pipe(uglify({
             mangle: false
         }))
-        .pipe(gulp.dest(data.paths.js))
+        .pipe(gulp.dest(data.paths.js_libs))
 });
 
 gulp.task('scripts:combine', function() {
-  return gulp.src(data.paths.js + '/*js')
+  return gulp.src([data.paths.js_libs, data.paths.js + '/*js'])
       .pipe(concat('production.min.js'))
       .pipe(gulp.dest(data.paths.js))
 });
@@ -144,7 +163,7 @@ gulp.task('clean:scripts', function() {
     ]);
 });
 
-gulp.task('scripts', ['scripts:libraries', 'scripts:source', 'scripts:combine']);
+gulp.task('scripts', sequence('scripts:libraries', 'scripts:source', 'scripts:combine'));
 
 // =============================================================================
 // JSON
@@ -164,7 +183,7 @@ gulp.task('json', function () {
 gulp.task('images', function() {
   return gulp.src(data.paths.img_src + '/**/*')
       .pipe(changed(data.paths.img))
-      .pipe(imagemin())
+      .pipe(cache(imagemin()))
       .pipe(gulp.dest(data.paths.img))
 });
 
@@ -213,8 +232,8 @@ gulp.task("nodemon", function(){
 
 gulp.task('clean:start', function () {
   return del([
-    data.paths.build + "/{css,js}/*.{css.js}"
+    data.paths.build + "/{css,js}/*{.css,.js}"
   ]);
 });
 
-gulp.task('default', ['clean:start', 'copy', 'copy-tests', 'json', 'images', 'styles', 'scripts', 'watch']);
+gulp.task('default', sequence('clean:start', 'copy', 'json','images','styles','scripts', 'watch'));
