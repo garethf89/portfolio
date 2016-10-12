@@ -152,16 +152,16 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
       otherwise({
         redirectTo: '/'
       });
-            
-      
+
+
       $ariaProvider.config({
           tabindex: true,
           ariaHidden: true
       });
-      
+
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix('!');
-      
+
   }]);
 
     garethPortfolio.run(["$rootScope", "$location", "$anchorScroll", "$routeParams", function ($rootScope, $location, $anchorScroll, $routeParams) {
@@ -173,7 +173,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
             connectionString = "http://local.gareth.com:3000";
         }
         console.log("now");
-        
+
         var socket = io.connect(connectionString, {resource: '/api/index.js'});
             socket.on('connect', function () {
 
@@ -184,9 +184,9 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                 socket.on('count', function (msg) {
 
                     if(msg.count > 1){
-                        count = '<strong>' + msg.count + '</strong> current viewers'; 
+                        count = '<strong>' + msg.count + '</strong> current viewers';
                     }else{
-                        count = '<strong>' + msg.count + '</strong> current viewer';   
+                        count = '<strong>' + msg.count + '</strong> current viewer';
                     }
 
                     $('#counter').html(count);
@@ -206,10 +206,10 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
     garethPortfolio.directive("scroll",["$window", function ($window) {
         return {
             link: function(scope, element, attrs) {
-                
+
                 var windowElement = angular.element($window),
                     headerDiv = document.querySelector("#header");
-                
+
                 windowElement.bind('scroll', function(){
                     if(this.pageYOffset > headerDiv.offsetHeight){
                         if(!element.hasClass('revealHeader')){
@@ -222,25 +222,25 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
             }
         };
     }]);
-  
+
   //Service to get JSON data
   garethPortfolio.factory("dataService", ["$rootScope", "$http", "$q", function($rootScope, $http, $q) {
 
 		var portfolios, allJSON;
 		var serviceObj = {};
-	  		
+
 		//HTTP Request for new JSON
 		serviceObj.requestPortfolioData = function(){
 			return $http.get('/js/data.min.json').success(function(data){
 				allJSON = data;
 			});
 		}
-			
+
 		//Return the JSON for Portfolio items
 		serviceObj.getPortfolioItems = function(){
-			
+
 			var deferred = $q.defer();
-			
+
 			//Return it if its already been stored or request new JSON
 			if(portfolios){
 				deferred.resolve(portfolios);
@@ -253,9 +253,9 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 				});
 			}
         }
-		
+
 		return serviceObj;
-		
+
  }]);
 
 
@@ -327,8 +327,8 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                     return deferred.promise;
                 })
             }
-            
-            //return albums object        
+
+            //return albums object
             serviceObj.getAlbums = function () {
                 if(albums){
                     deferred.resolve(albums);
@@ -337,7 +337,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                     return serviceObj.requestAlbumData().then(function(result){
                         deferred.resolve(albums);
                         return deferred.promise;
-				    });             
+				    });
                 }
             }
 

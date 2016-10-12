@@ -17,7 +17,9 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     sequence = require('gulp-sequence'),
     plumber = require('gulp-plumber'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    proxy = require('proxy-middleware'),
+    browserSync = require('browser-sync');
 
 	var data = {
 		paths: {
@@ -195,6 +197,10 @@ gulp.task('images', function() {
 gulp.task('reload', function () {
     browserSync.reload();
 });
+var url = require('url');
+
+var proxyOptions = url.parse('http://localhost:3000');
+proxyOptions.route = '/api';
 
 gulp.task('watch', ['nodemon'], function() {
 
@@ -202,7 +208,8 @@ gulp.task('watch', ['nodemon'], function() {
         port: 8081,
         server: {
             baseDir: "." // Change this to your web root dir
-        }
+        },
+        middleware: [proxy(proxyOptions)]
     });
 
     gulp.watch(data.paths.js_src + '/*src/*js', ['scripts:source','scripts:combine', 'reload']);

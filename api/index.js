@@ -44,7 +44,7 @@ router.use(function(req, res, next) {
     console.log(req.method, req.url);
 
     // continue doing what we were doing and go to the route
-    next(); 
+    next();
 });
 
 //let angular handle routing
