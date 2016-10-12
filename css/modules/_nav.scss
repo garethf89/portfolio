@@ -1,8 +1,13 @@
 /* Nav */
-    
-#nav{
-    
-    top:-11em;
+
+/*Scale */
+@mixin sharedStlyesNav(){
+
+}
+
+/* Desktop Nav */
+#nav {
+    display: none;
     cursor: default;
     font-size: 0.8em;
     left: 0;
@@ -11,166 +16,197 @@
     background: transparent;
     box-shadow: none;
     color: white;
-    padding: 0;
+    padding: 2em 2.5em;
     position: fixed;
-    
-    @include breakpoint($desktop){
-        top: 0;
-        padding: 2em 2.5em;
-    }
-    
-    #nav__pullDown{
-        float:left;
-        font-size:1.5em;
-        font-family: FontAwesome;
-        -webkit-font-smoothing: antialiased;
-        left:50%;
-        cursor:pointer;
-        margin-left: -1.25em;
-        padding:0 0.5em 0.2em 0.5em;
-        background: rgba(163, 169, 170, 0.75);
-        border-bottom-left-radius:5px;
-        border-bottom-right-radius:5px;
+    @include breakpoint($desktop) {
         display: block;
-        //@include transitionMixin(all,.5s,ease-in-out);
-        outline: none;
-        margin-top: 0;
-        
-        @include breakpoint($desktop){
-            display: none;
-        }
-        
     }
-    
-    nav{
-        
-        @include breakpoint($desktop){
-            letter-spacing: 0.075em;
-            position: absolute;
-            right: 2.5em;
-            top: 1.75em;
-            left: initial;
-            
-            &.revealHeader {
-                position: fixed;
-                top:0em;
-                right:0;
-                width:100%;
-                background: $mainGreenFull;
-                text-align: right;
 
-            ul{
-                margin:0;
-                padding:0.5em;  
-            }
+    nav {
+        letter-spacing: 0.075em;
+        position: absolute;
+        right: 2.5em;
+        top: 1.75em;
+        left: initial;
+        text-transform: uppercase;
 
-            }
+        &.revealHeader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: $mainGreenFull;
+            text-align: right;
 
-            &.revealHeader-add{
-                @include animationMixin(reveal-nav, 0.2s, 0, none);
+            ul {
+                margin: 0;
+                padding: 0.5em;
             }
         }
-        
-        position: relative;
-        left:0;
-        top:0;
-        text-transform: uppercase;
-        
-        ul{
-            margin:0;
-            
-            li{
-                 display:block;
-                 width:100%;
-                 text-align: center;
-                 background:white;
-                 margin-left:0; 
-                
-                @include breakpoint($desktop){
-                    display: inline-block;
-                    margin-left: 1.5em;
-                    width: auto;
-                    background: none;
-                    
-                    &.reveal {
-                        @include animationMixin(reveal-header, 0.2s, 0);
-                        height: em(55);
-                        padding:0.5em 1.5em;
-                        background: #6d9030;
-                        color:#fff;
-                    }
-                     
-                    &.active > a{
-                        @include transitionMixin(all,0.2s,ease-in-out);
-                        background: rgba(188, 202, 206, 0.15);
-                        border: solid 1px;
+
+        &.revealHeader-add {
+            @include animationMixin(reveal-nav, 0.2s, 0, none);
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-left: 1.5em;
+                width: auto;
+                background: none;
+
+                &.reveal {
+                    @include animationMixin(reveal-header, 0.2s, 0);
+                    height: em(55);
+                    padding: 0.5em 1.5em;
+                    background: #6d9030;
+                    color: #fff;
+                }
+
+                &.active > a {
+                    @include transitionMixin(all,0.2s,ease-in-out);
+                    background: rgba(188, 202, 206, 0.15);
+                    border: solid 1px;
+                }
+
+                &:last-child {
+                    a {
+                        border-bottom: none;
                     }
                 }
-                
-                &:last-child{
-                    a{
-                        border-bottom:none;
-                    }
-                }
-                
-                &.current{
-                    & > a{
+
+                &.current {
+                    & > a {
                         font-weight: 900;
                     }
                 }
-                
-                &:hover{
-                   & > a {
+
+                &:hover {
+                    & > a {
                         border: none;
                         @include transitionMixin(all,0.2s,ease-in-out);
                         background: rgba(188, 202, 206, 0.15);
                         border: solid 1px #fff;
-                    } 
+                    }
                 }
-                
-                a{
-                    color:#000; 
-                    width:100%;
-                    border:none;
-                    border-bottom:1px solid #cdcdcd;
+
+                a {
+                    color: #000;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #cdcdcd;
                     display: inline-block;
-                    padding: 0 .75em;
+                    padding: 0 0.75em;
                     text-decoration: none;
-                    
-                    @include breakpoint($desktop){
+                    @include breakpoint($desktop) {
                         border: solid 1px transparent;
                         display: inline-block;
-                        padding: 0em 0.75em;
+                        padding: 0 0.75em;
                         text-decoration: none;
-                        color:#fff;   
+                        color: #fff;
                     }
-                    
                 }
             }
         }
-        
     }
-    
-    &.slideDown{
-        top:0em;
+}
+
+/* Mobile Nav */
+.nav_mobile{
+
+    background: #fff;
+
+    @include breakpoint($desktop){
+      display: none;
     }
-    
-    &.slideDown-add,
-    &.slideDown-remove,
-    {
-        @include transitionMixin(all,.5s,ease-in-out);
+
+    ul{
+      li{
+
+        border-bottom:1px solid #cdcdcd;
+
+          a{
+            display: block;
+            padding: 1rem .75em;
+            color:#000;
+            width:100%;
+            border:none;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+
+      }
     }
-    
-    &.slideDown + #header{
-        margin-top:6em;
-        @include breakpoint($desktop){
-            margin-top:0;
-        }
+}
+
+/* Slide Out */
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 200px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position:relative;
+  z-index: 1;
+  will-change: transform;
+  @include breakpoint($desktop){
+    will-change: unset;
+  }
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+  @include breakpoint($desktop){
+    display: none;
+  }
+}
+
+/* Icon */
+#nav__pullDown{
+    cursor:pointer;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    display: block;
+
+    &.spinner-master3 * {transition:all 0.3s;-webkit-transition:all 0.3s;box-sizing:border-box;}
+
+    &.spinner-master3 {position:absolute;top: 1rem;left: 1rem;height:2rem;width:2rem;}    t
+
+    &.spinner-master3 input[type=checkbox] {display:none;}
+    &.spinner-master3 label {cursor:pointer;position:absolute;z-index:99;height:100%;width:100%;top:10px;left:0;}
+
+    &.spinner-master3 .spinner3 {position:absolute;height:5px;width:100%;background-color:#fff;}
+
+    &.spinner-master3 .diagonal.part-1 {position:relative;float:left;}
+    &.spinner-master3 .horizontal {position:relative;float:left;margin-top:6px;}
+    &.spinner-master3 .diagonal.part-2 {position:relative;float:left;margin-top:6px;}
+
+    &.spinner-master3.active .spinner-spin3 > .horizontal {transform:scale(2,1);-webkit-transform:scale(2,1); opacity: 0;}
+    &.spinner-master3.active .spinner-spin3 > .diagonal.part-1 {transform:rotate(-135deg);-webkit-transform:rotate(-135deg);margin-top:10px;}
+    &.spinner-master3.active .spinner-spin3 > .diagonal.part-2 {transform:rotate(135deg);-webkit-transform:rotate(135deg);margin-top:-16px;}
+
+    @include breakpoint($desktop){
+        display: none;
     }
-    
-    &.slideDown #nav__pullDown{
-        margin-top:0em;
-    }    
 }
 
 .dlIcon{

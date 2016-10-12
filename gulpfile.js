@@ -93,8 +93,7 @@ gulp.task('css', function() {
         .pipe(gulp.dest(data.paths.css))
         .pipe(postcss(processors))
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest(data.paths.css));
-
+        .pipe(gulp.dest(data.paths.css))
 });
 
 gulp.task('clean:styles', function () {
@@ -126,6 +125,7 @@ gulp.task('styles', ['css'], function() {
 
 gulp.task('scripts:source', function() {
     return gulp.src(data.paths.js_src + '/src/*.js')
+        .pipe(plumber(errorHandler))
         .pipe(ngAnnotate())
         .pipe(concat('source.js'))
         .pipe(gulp.dest(data.paths.js))
@@ -143,7 +143,8 @@ gulp.task('scripts:libraries', function() {
             data.paths.bower + '/fancybox/source/jquery.fancybox.js',
             data.paths.bower + '/fancybox/source/jquery.fancybox-buttons.js',
             data.paths.bower + '/angular/angular.min.js', data.paths.bower + '/angular-route/angular-route.min.js',
-            data.paths.bower + '/angular-sanitize/angular-sanitize.min.js', data.paths.bower + '/angular-aria/angular-aria.min.js', data.paths.bower + '/angular-animate/angular-animate.min.js'
+            data.paths.bower + '/angular-sanitize/angular-sanitize.min.js', data.paths.bower + '/angular-aria/angular-aria.min.js', data.paths.bower + '/angular-animate/angular-animate.min.js',
+            data.paths.bower + '/slideout.js/dist/slideout.min.js'
         ])
         .pipe(cache('libs'))
         .pipe(concat('libs.js'))
@@ -154,9 +155,10 @@ gulp.task('scripts:libraries', function() {
 });
 
 gulp.task('scripts:combine', function() {
-  return gulp.src([data.paths.js_libs, data.paths.js + '/*js'])
+  return gulp.src([data.paths.js_libs + '/libs.js', data.paths.js + '/source.min.js'])
       .pipe(concat('production.min.js'))
       .pipe(gulp.dest(data.paths.js))
+
 });
 
 gulp.task('clean:scripts', function() {
@@ -165,7 +167,13 @@ gulp.task('clean:scripts', function() {
     ]);
 });
 
-gulp.task('scripts', sequence('scripts:libraries', 'scripts:source', 'scripts:combine'));
+gulp.task('scripts', function(callback) {
+   sequence('scripts:libraries', 'scripts:source', 'scripts:combine')(callback)
+});
+
+gulp.task('js-watch', ['scripts'], function() {
+     browserSync.reload();
+});
 
 // =============================================================================
 // JSON
@@ -194,9 +202,10 @@ gulp.task('images', function() {
 // Watching and Nodemon
 // =============================================================================
 
-gulp.task('reload', function () {
-    browserSync.reload();
+gulp.task('css-watch', ['styles'], function() {
+     browserSync.reload();
 });
+
 var url = require('url');
 
 var proxyOptions = url.parse('http://localhost:3000');
@@ -212,8 +221,9 @@ gulp.task('watch', ['nodemon'], function() {
         middleware: [proxy(proxyOptions)]
     });
 
-    gulp.watch(data.paths.js_src + '/*src/*js', ['scripts:source','scripts:combine', 'reload']);
-    gulp.watch(data.paths.css_src  + '/**/*.scss', ['styles','reload']);
+    gulp.watch(data.paths.js_src + '/*src/*js', ['js-watch']);
+    gulp.watch(data.paths.css_src  + '/**/*.scss', ['css-watch']);
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
 
 gulp.task("nodemon", function(){

@@ -48,7 +48,6 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
             connectionString = "http://local.gareth.com:3000";
         }
-        console.log("now");
 
         var socket = io.connect(connectionString, {resource: '/api/index.js'});
             socket.on('connect', function () {
@@ -72,10 +71,31 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
                         $('#counter').addClass('visible');
                     }
 
+
                 });
 
             });
 
+    });
+
+    //mobile menu slideout
+    garethPortfolio.directive("menu",function ($window) {
+      return {
+        link: function(scope, element, attrs) {
+            var slideout = new Slideout({
+               'panel': document.getElementById('content'),
+               'menu': document.getElementById('menu'),
+               'padding': 200,
+               'tolerance': 70,
+               'fx': 'ease-in-out',
+               'duration' : 400
+             });
+             document.getElementById('nav__pullDown').addEventListener('click', function() {
+              slideout.toggle();
+              this.classList.toggle('active');
+            });
+       }
+       };
     });
 
     //directive to show menu on scroll
@@ -133,7 +153,6 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 		return serviceObj;
 
  });
-
 
     garethPortfolio.directive('fancybox',function($compile, $timeout){
         return {

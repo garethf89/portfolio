@@ -25,18 +25,21 @@ p, ul, ol, dl, table {margin: 0 0 2em 0;padding:0;}
 
 /* Global */
 body{
-    background: #f3f6fa;
     font-size:13pt;
     min-width: em(320);
     padding-right: 0!important;
-}          
+}
 
 p {
     text-align: justify;
-    
+
     @include breakpoint($desktop){
         text-align: left;
     }
+}
+
+#content{
+  background: #f3f6fa;
 }
 
 .centered{
@@ -44,7 +47,7 @@ p {
 }
 
 #main_content{
-    margin-top:5em;   
+    margin-top:5em;
 }
 
 .required{
@@ -70,8 +73,8 @@ p {
     box-shadow: 0px 10px 36px -22px rgba(0,0,0,0.75);
     @include breakpoint($desktop){
         padding:3em;
-    }    
-    
+    }
+
 }
 
 /* Icon Colors */
@@ -135,11 +138,11 @@ p {
 /* Icons */
 
 .icon{
-   
+
     & > .label {
         display: none;
     }
-    
+
     &.feature {
         cursor: default;
         display: block;
@@ -147,14 +150,14 @@ p {
         opacity: 0.35;
         text-align: center;
         color:#6D902C;
-        
+
         &:before {
             font-size: 5em;
             line-height: 1em;
         }
-        
+
     }
-    
+
 }
 
 /* Animations */
@@ -165,7 +168,7 @@ p {
 
 .fadeAnimation2.ng-enter.ng-enter-active {
   opacity:1;
-} 
+}
 
 /* lightbox */
 .ngdialog-content img{
@@ -205,34 +208,34 @@ p {
     <a class="button button--expand">Button</a>
 */
 .button{
-	
+
     @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
     width:100%;
     min-width:em(150);
-    
+
     @include breakpoint($desktop){
-	    
+
        width:auto;
        display: inline-block;
-       
+
        &.button--expand{
 	    	display: block;
 		}
-             
+
     }
-        
+
     .icon{
 	    margin-right: 0.5em;
     }
-    
+
 }
 
 
 
 /* 2X Images */
-@media 
-(-webkit-min-device-pixel-ratio: 1.3), 
-(min-resolution: 124.8dpi){ 
+@media
+(-webkit-min-device-pixel-ratio: 1.3),
+(min-resolution: 124.8dpi){
     #header {
         background-image:url('/images/woods2x.jpg');
     }
