@@ -5363,12 +5363,14 @@ p {
 	left: 1rem;
 	z-index: 9999;
 	display: block;
+	outline: 0;
 }
 
 #nav__pullDown.spinner-master3 * {
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	box-sizing: border-box;
+	outline: 0;
 }
 
 #nav__pullDown.spinner-master3 {
@@ -5384,7 +5386,7 @@ t
 	display: none;
 }
 
-#nav__pullDown.spinner-master3 label {
+#nav__pullDown.spinner-master3 > div {
 	cursor: pointer;
 	position: absolute;
 	z-index: 99;
