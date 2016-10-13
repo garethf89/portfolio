@@ -83,7 +83,7 @@
 }
 
 .icon-ba{
-    background-image: url('/images/logos/ba.png'); 
+    background-image: url('/images/logos/ba.png');
 }
 .icon-very{
     background-image: url('/images/logos/very.png');
@@ -101,13 +101,15 @@
 ul.icando-icons{
 
     overflow: hidden;
+    margin: 0;
 
     li{
         display: block;
         float: left;
         text-align: center;
         width: 49%;
-        padding-bottom: 2em;
+        padding:0;
+        margin: 2rem 0;
 
         @include breakpoint($tablet){
             display: block;
@@ -120,28 +122,28 @@ ul.icando-icons{
             width: 20%;
         }
 
-         &:nth-child(n+6){
-            margin-top:0;
+        .label{
+          display: block;
         }
 
         .item{
-            font-size: 4em;
+            width: 6rem;
             display: inline-block;
             font-size: 4em;
-            width: 100%;
 
             @include breakpoint($desktop){
-                font-size: 6em;
+                width: 6rem;
             }
 
             @include breakpoint($large){
-                font-size: 8em;
+                width: 8rem;
             }
 
             &--logo{
                 background-repeat: no-repeat;
                 background-size: contain;
                 height: 1em;
+                font-size: 8rem;
                 background-position: center;
                 margin: 40px auto 0;
                 @include breakpoint($desktop){
