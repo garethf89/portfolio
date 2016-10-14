@@ -5054,6 +5054,13 @@ ul.icons li {
 	margin: 1em 0;
 }
 
+#tech_used li svg {
+	width: 3rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+
 .work_icon {
 	font-size: 2em;
 	vertical-align: middle;

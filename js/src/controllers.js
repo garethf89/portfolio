@@ -2,25 +2,14 @@
 
 var garethPortfolioControllers = angular.module('garethPortfolioControllers', []);
 
+/******************************
 //Controller for the display of portfolios
-garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams',  '$location', 'dataService','$sce','lastFmService', '$anchorScroll','$http',
+*******************************/
+garethPortfolioControllers.controller('portfolioItems', ['$scope', '$state', '$location', 'dataService','$sce','lastFmService', '$anchorScroll','$http',
 
- function ($scope, $routeParams, $location, dataService,$sce,lastFmService, $anchorScroll,$http,message) {
-     this.tech_classes = {
-	        'AngularJS': 'devicons devicons-angular',
-            'CSS3': 'devicons devicons-css3',
-            'HTML5': 'fa fa-html5',
-            'Responsive Design': 'devicons devicons-responsive',
-            'JQuery & Javascript': 'devicons devicons-javascript_badge',
-            'PHP': 'devicons devicons-php',
-            'Adobe Flash': 'fa fa-flash',
-            'MySQL': 'devicons devicons-mysql',
-            'SQL Lite': 'fa fa-database',
-            'PostgreSQL': 'devicons devicons-postgresql',
-            'Wordpress': 'fa fa-wordpress',
-            'PayPal': 'fa fa-paypal',
-            'SASS': 'devicons devicons-sass'
-        };
+ function ($scope, $state,$location, dataService,$sce,lastFmService, $anchorScroll,$http,message) {
+
+        this.state = $state.current.name;
 
         //prevent sorting on ngrepeat
         this.notSorted = function(obj){
@@ -54,32 +43,14 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
 
         }
 
-        dataService.getPortfolioItems().then(function (result) {
+        dataService.getPortfolioItems().then(function(result) {
 
             $this.portfolios = result;
-
-            if ($routeParams.workID) {
-
-                if ($this.portfolios[$routeParams.workID]) {
-                    $scope.currentItem = $this.portfolios[$routeParams.workID];
-
-                      $scope.convertToHTML = function() {
-                            return $sce.trustAsHtml($scope.currentItem.desc);
-                      };
-
-                } else {
-                    $location.path('/');
-                }
-
-            }
-
             $scope.status = 'ready';
 
-        }, function () {
+          }, function() {
             //console.log('error');
         });
-
-    $(".fancybox").fancybox();
 
      //last.fm plays
     this.getLastFMAlbums = function (){
@@ -96,7 +67,118 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$routeParams
 
 }]);
 
-//Controller for the contact form
+/******************************
+  Display Single Portfolio
+*******************************/
+garethPortfolioControllers.controller('workItem', ['$scope', '$state', '$location', 'dataService','$sce','$http',
+
+ function ($scope, $state,$location, dataService,$sce,$http,message) {
+
+      var $this = this;
+
+      //return url for svg includes
+      $scope.getSrc = function(target) {
+
+          var base = "html/svgs/",
+              url = "";
+            console.log(target);
+          switch (target) {
+              case "AngularJS":
+                  url = "angular.svg"
+                  break;
+              case "CSS3":
+                  url = "css.svg"
+                  break;
+              case "Responsive Design":
+                  url = "responsive.svg"
+                  break;
+              case "JQuery & Javascript":
+                  url = "jquery.svg"
+                  break;
+              case "PHP":
+                  url = "php.svg"
+                  break;
+              case "Adobe Flash":
+                  url = "flash.svg"
+                  break;
+              case "MySQL":
+                  url = "mysql.svg"
+                  break;
+              case "SQL Lite":
+                  url = "database.svg"
+                  break;
+              case "PostgreSQL":
+                  url = "postgres.svg"
+                  break;
+              case "Wordpress":
+                  url = "wordpress.svg"
+                  break;
+              case "PayPal":
+                  url = "paypal.svg"
+                  break;
+              case "SASS":
+                  url = "sass.svg"
+                  break;
+              default:   url = "html5.svg";
+          }
+
+          url = base + url;
+          return url;
+      }
+
+       //prevent sorting on ngrepeat
+       this.notSorted = function(obj) {
+           if (!obj) {
+               return [];
+           }
+           return Object.keys(obj);
+       }
+
+   this.portfolios = false;
+
+    $(".fancybox").fancybox();
+
+    dataService.getPortfolioItems().then(function(result) {
+
+      var work = $state.params.workID;
+      $this.portfolios = result;
+      $scope.status = 'ready';
+
+
+        if ($this.portfolios[work]) {
+            $scope.currentItem = $this.portfolios[work];
+            $scope.convertToHTML = function() {
+              return $sce.trustAsHtml($scope.currentItem.desc);
+            };
+
+        } else {
+            $location.path('/');
+        }
+
+      }, function() {
+        //console.log('error');
+    });
+
+    //retina?
+    if(window.matchMedia){
+
+        var retinaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+                         (min-resolution: 144dpi)";
+
+        if (window.matchMedia(retinaQuery).matches && this.size == "full"){
+            this.size = 'high';
+        } else if (window.matchMedia(retinaQuery).matches && this.size == "small"){
+            this.size = 'full';
+        }
+
+    }
+
+
+}]);
+
+/******************************
+Controller for the contact form
+*******************************/
 garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailService',
 
  function ($scope, $http, emailService) {
@@ -118,6 +200,4 @@ garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailSe
                 $scope.showErrorMessage = 'true';
             });
         }
-
-
 }]);

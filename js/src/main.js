@@ -1,34 +1,29 @@
 
-var garethPortfolio = angular.module('garethPortfolio',['ngRoute','ngAnimate','garethPortfolioControllers','ngSanitize', 'ngAria']);
+var garethPortfolio = angular.module('garethPortfolio',['ui.router','ngAnimate','garethPortfolioControllers','ngSanitize', 'ngAria']);
 
 
-garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
-  function($routeProvider,$locationProvider,$ariaProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: '/homepage.html',
-        controller: 'portfolioItems',
-        controllerAs: 'pI',
-      }).
-      when('/my_work', {
-        templateUrl: '/homepage.html',
-        controller: 'portfolioItems',
-        controllerAs: 'pI',
-      }).
-        when('/contact', {
-        templateUrl: '/contact.html',
-        controller: 'contactForm'
-      }).
-      when('/:workID', {
-        templateUrl: '/work.html',
-        controller: 'portfolioItems',
-        work: 'yes',
-        controllerAs: 'pI'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
+garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvider', '$ariaProvider',
+  function($stateProvider,$urlRouterProvider,$locationProvider,$ariaProvider) {
 
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('home', {
+          url: '/',
+          templateUrl: 'homepage.html',
+          controller: 'portfolioItems',
+          controllerAs: 'pI'
+      })
+        .state('contact', {
+              url: '/contact',
+              templateUrl: 'contact.html',
+              controller: 'contactForm'
+        })
+        .state('work', {
+              url: '/:workID',
+              templateUrl: 'work.html',
+              controller: 'workItem',
+              controllerAs: 'pI'
+        });
 
       $ariaProvider.config({
           tabindex: true,
@@ -40,7 +35,7 @@ garethPortfolio.config(['$routeProvider','$locationProvider','$ariaProvider',
 
   }]);
 
-    garethPortfolio.run(function ($rootScope, $location, $anchorScroll, $routeParams) {
+    garethPortfolio.run(function ($rootScope, $location, $anchorScroll) {
 
         var counterStatus = 'off';
 

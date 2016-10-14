@@ -142,7 +142,7 @@ gulp.task('scripts:libraries', function() {
             data.paths.js_src + '/plugins/*.js',
             data.paths.bower + '/fancybox/source/jquery.fancybox.js',
             data.paths.bower + '/fancybox/source/jquery.fancybox-buttons.js',
-            data.paths.bower + '/angular/angular.min.js', data.paths.bower + '/angular-route/angular-route.min.js',
+            data.paths.bower + '/angular/angular.min.js', data.paths.bower + '/angular-ui-router/release/angular-ui-router.min.js',
             data.paths.bower + '/angular-sanitize/angular-sanitize.min.js', data.paths.bower + '/angular-aria/angular-aria.min.js', data.paths.bower + '/angular-animate/angular-animate.min.js',
             data.paths.bower + '/slideout.js/dist/slideout.min.js'
         ])

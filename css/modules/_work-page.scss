@@ -1,18 +1,18 @@
 /* Work */
 #work_page{
-    
+
 	background-repeat: repeat-y;
 	background-position: top right !important;
-    
+
     border-right: 1px solid #d9dbda;
     border-left: 1px solid #d9dbda;
-    
+
     .left_work,
     .right_work{
         float:none;
         width:100%;
     }
-    
+
     @include breakpoint($desktop){
         .right_work{
             float:right;
@@ -22,19 +22,19 @@
             float:left;
             width:60%;
         }
-    }    
-    
+    }
+
     h2{
         display: inline-block;
     }
-    
+
     h4{
         margin:0;
     }
-    
+
     .button{
         margin-top:2em;
-    }  
+    }
 }
 
 .workPage_home{
@@ -46,7 +46,7 @@
     margin:0 10px;
 }
 
-.work_screenshot{ 
+.work_screenshot{
     float:left;
     width:40%;
     margin:5% 5% 0 0;
@@ -54,7 +54,7 @@
     @include transitionMixin(all,0.2s,ease-in-out);
 }
 
-    
+
 .right_work .float_block:hover > .work_screenshot {
   opacity: 0.5; }
 
@@ -63,20 +63,26 @@
     opacity:1;
 }
 
-.work_screenshot img{ 
+.work_screenshot img{
     width:100%;
 }
- 
+
 /* Tech Used List */
 
 #tech_used{
-    
+
 	list-style-type: none;
-    
+
     li{
 	   margin: 1em 0;
+      svg{
+        width: 3rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
     }
-    
+
 }
 
 .work_icon{
