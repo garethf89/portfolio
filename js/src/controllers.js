@@ -79,47 +79,47 @@ garethPortfolioControllers.controller('workItem', ['$scope', '$state', '$locatio
       //return url for svg includes
       $scope.getSrc = function(target) {
 
-          var base = "html/svgs/",
+          var base = "",
               url = "";
-            console.log(target);
+
           switch (target) {
               case "AngularJS":
-                  url = "angular.svg"
+                  url = "#angular"
                   break;
               case "CSS3":
-                  url = "css.svg"
+                  url = "#css"
                   break;
               case "Responsive Design":
-                  url = "responsive.svg"
+                  url = "#responsive"
                   break;
               case "JQuery & Javascript":
-                  url = "jquery.svg"
+                  url = "#jquery"
                   break;
               case "PHP":
-                  url = "php.svg"
+                  url = "#php"
                   break;
               case "Adobe Flash":
-                  url = "flash.svg"
+                  url = "#flash"
                   break;
               case "MySQL":
-                  url = "mysql.svg"
+                  url = "#mysql"
                   break;
               case "SQL Lite":
-                  url = "database.svg"
+                  url = "#database"
                   break;
               case "PostgreSQL":
-                  url = "postgres.svg"
+                  url = "#postgres"
                   break;
               case "Wordpress":
-                  url = "wordpress.svg"
+                  url = "#wordpress"
                   break;
               case "PayPal":
-                  url = "paypal.svg"
+                  url = "#paypal"
                   break;
               case "SASS":
-                  url = "sass.svg"
+                  url = "#sass"
                   break;
-              default:   url = "html5.svg";
+              default:   url = "#html5";
           }
 
           url = base + url;

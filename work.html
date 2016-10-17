@@ -10,7 +10,9 @@
         <h4>Technology</h4>
         <ul id="tech_used">
             <li ng-repeat="skill in currentItem.skills" ng-add-custom-class>
-                <ng-include src="getSrc(skill)"></ng-include>
+                <svg class="item" >
+                  <use ng-attr-xlink:href="{{getSrc(skill)}}" xlink:href="" />
+                </svg>
                 {{skill}}
             </li>
         </ul>

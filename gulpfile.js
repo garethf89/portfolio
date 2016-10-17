@@ -19,7 +19,9 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
     proxy = require('proxy-middleware'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    svgmin = require('gulp-svgmin'),
+    svgstore = require('gulp-svgstore');
 
 	var data = {
 		paths: {
@@ -35,7 +37,9 @@ var gulp = require('gulp'),
   				img:"build/images",
           img_src:"images",
           bower: "bower_components",
-          testing:"tests"
+          testing:"tests",
+          svgs_src: "html/svgs/src",
+          svgs_dest: "html/svgs/dest"
         }
     };
 
@@ -198,6 +202,14 @@ gulp.task('images', function() {
 });
 
 
+gulp.task('svgs', function() {
+  return gulp.src(data.paths.svgs_src + '/*.svg')
+      .pipe(svgmin())
+      .pipe(svgstore())
+      .pipe(gulp.dest(data.paths.svgs_dest))
+});
+
+
 // =============================================================================
 // Watching and Nodemon
 // =============================================================================
@@ -253,4 +265,4 @@ gulp.task('clean:start', function () {
   ]);
 });
 
-gulp.task('default', sequence('clean:start', 'copy', 'json','images','styles','scripts', 'watch'));
+gulp.task('default', sequence('clean:start', 'copy', 'json','images','svgs','styles','scripts', 'watch'));
