@@ -3,45 +3,40 @@
 }
 
 .work_item{
-    
+
     width:100%;
     float:left;
     border:0;
     @include transition(all .2s ease-in-out);
     text-decoration: none;
-    height: 18em;
+    height: 18rem;
     position: relative;
     border:2px solid #F3F6FA;
     overflow: hidden;
-    
+
     background-size:cover;
     background-position: center;
-    
+
     @include breakpoint($tablet){
-        
+
         background-position: left center;
-        
+        width:50%;
+        height: 25rem;
+        border:none;
+
         &[href='/j2o']{
-             background-position: center;  
-        }
-        
-        &.half{
-            width:50%;
-        }
-
-        &.twothirds{
-            width:66.6%;   
-        }
-
-        &.third{
-            width:33.3%;   
+            background-position: center;
         }
 
         h4{
             max-width: 60%;
          }
     }
-    
+
+    @include breakpoint($desktop){
+      width:33.3%
+    }
+
     &:after{
         box-shadow: 0 0 10em rgba(0,0,0,0.9) inset;
         position: absolute;
@@ -49,10 +44,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        content: " ";  
+        content: " ";
         @include transition(box-shadow 0.1s ease-in-out);
     }
-    
+
      h4{
         position: absolute;
         left: 1em;
@@ -60,7 +55,9 @@
         color: #fff;
         font-size: 1.3em;
         background: rgba(0,0,0,.75);
-        padding: 0 1em; 
+        padding: 0 1em;
+        opacity: 0;
+        @include transition(opacity .4s ease-in-out);
      }
 }
 
@@ -68,19 +65,22 @@
 
     &:hover{
         &> .work_item {
-        opacity: .6; 
+        opacity: .6;
         @include transition(opacity 0.3s ease-in-out);
       }
     }
-    
+
     &> .work_item{
         &:hover{
            //@include scaleMixin(1.1);
-            opacity: 1; 
+            opacity: 1;
             @include transition(opacity 0.3s ease-in-out);
             &:before{
              box-shadow: 0 0 10em rgba(0,0,0,0.4) inset;
-            } 
+            }
+            h4{
+              opacity: 1;
+            }
         }
     }
 
@@ -89,29 +89,29 @@
 /*Skills */
 
 .skillIcon{
-    
-    clear:both;   
+
+    clear:both;
     width:100%;
     padding-left: 0;
     padding-top:2em;
     text-align: center;
-    
+
     @include span(12);
-    
+
     @include breakpoint($desktop){
-        
-        float:left; 
+
+        float:left;
         clear: none;
-    
+
         @include span(4 last);
     }
-    
+
     p{
         text-align: center;
-    } 
-    
+    }
+
     &:first-child{
         padding-left:0px;
     }
-    
+
 }

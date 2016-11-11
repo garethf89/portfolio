@@ -40,8 +40,9 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$state', '$l
             } else if (window.matchMedia(retinaQuery).matches && this.size == "small"){
                 this.size = 'full';
             }
-
         }
+
+        $scope.isDisplayed = "height:200000px";
 
         dataService.getPortfolioItems().then(function(result) {
 
@@ -242,7 +243,7 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
     garethPortfolio.run(["$rootScope", "$http", "$location", "$anchorScroll", function ($rootScope, $http, $location, $anchorScroll) {
 
         var counterStatus = 'off';
-        
+
         var connectionString = "http://garethferguson.co.uk:3000"
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
             connectionString = "http://local.gareth.com:3000";
@@ -296,7 +297,7 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
        }
        };
     }]);
-
+    
     //directive to show menu on scroll
     garethPortfolio.directive("scroll",["$window", function ($window) {
         return {

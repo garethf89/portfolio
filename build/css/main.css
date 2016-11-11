@@ -4143,7 +4143,7 @@ p {
 	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
-	height: 18em;
+	height: 18rem;
 	position: relative;
 	border: 2px solid #F3F6FA;
 	overflow: hidden;
@@ -4154,21 +4154,21 @@ p {
 @media (min-width: 768px) {
 	.work_item {
 		background-position: left center;
+		width: 50%;
+		height: 25rem;
+		border: none;
 	}
 	.work_item[href='/j2o'] {
 		background-position: center;
 	}
-	.work_item.half {
-		width: 50%;
-	}
-	.work_item.twothirds {
-		width: 66.6%;
-	}
-	.work_item.third {
-		width: 33.3%;
-	}
 	.work_item h4 {
 		max-width: 60%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.work_item {
+		width: 33.3%;
 	}
 }
 
@@ -4193,6 +4193,10 @@ p {
 	font-size: 1.3em;
 	background: rgba(0, 0, 0, 0.75);
 	padding: 0 1em;
+	opacity: 0;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 }
 
 #work_items:hover > .work_item {
@@ -4211,6 +4215,10 @@ p {
 
 #work_items > .work_item:hover:before {
 	box-shadow: 0 0 10em rgba(0, 0, 0, 0.4) inset;
+}
+
+#work_items > .work_item:hover h4 {
+	opacity: 1;
 }
 
 /*Skills */

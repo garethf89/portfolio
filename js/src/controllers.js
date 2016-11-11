@@ -40,8 +40,9 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$state', '$l
             } else if (window.matchMedia(retinaQuery).matches && this.size == "small"){
                 this.size = 'full';
             }
-
         }
+
+        $scope.isDisplayed = "height:200000px";
 
         dataService.getPortfolioItems().then(function(result) {
 
