@@ -20,9 +20,27 @@ if (env == "dev") {
 }
 
 //database connect
-var mongodb = mongojs(mongoUrl, ['lastfm']);
+var mongodb = mongojs(mongoUrl, ['lastfm']),
+    dbConnected = false;
+
+mongodb.on('error', function() {
+    console.log('mongo db connect failed');
+});
+mongodb.on('connect', function() {
+    console.log('mongo db connect succes');
+    dbConnected = true;
+});
+
+
 exports.getAlbums = function (options, callback) {
-    mongodb.lastfm.find({
+
+
+  if(!dbConnected){
+    callback(null);
+    return
+  }
+
+  mongodb.lastfm.find({
         _id: options.name
     }, function (err, result) {
         //Use result
@@ -43,8 +61,7 @@ exports.getAlbums = function (options, callback) {
                         upsert: true
                    },
                 function(err, doc, lastErrorObject) {
-                    console.log(err)
-                    console.log(doc);
+
                 });
                 callback(body);
             });

@@ -14,7 +14,6 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),
     jsonminify = require('gulp-jsonminify'),
     cache = require('gulp-cached'),
-    browserSync = require('browser-sync').create(),
     sequence = require('gulp-sequence'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
@@ -76,13 +75,18 @@ gulp.task('copy', ['copy-tests'], function() {
 // Styles
 // =============================================================================
 
-gulp.task('css', function() {
+gulp.task('styles', function() {
 
     var processors = [
         autoprefixer({
             browsers: ['last 2 versions']
         }),
-        cssnano(),
+        cssnano({
+            autoprefixer: false,
+            discardComments: {
+              removeAll: true
+            }
+        })
     ];
 
     return gulp.src([data.paths.scss, data.paths.fancybox_css])
@@ -104,23 +108,6 @@ gulp.task('clean:styles', function () {
   return del([
     data.paths.css + "/*.css"
   ]);
-});
-
-gulp.task('styles', ['css'], function() {
-
-    critical.generate({
-        inline: true,
-        base: './',
-        src: 'index.html',
-        dest: 'index-critical.html',
-        css: [
-            data.paths.css + '/main.min.css'
-        ],
-        minify:true,
-        width: 1920,
-        height: 1080
-    });
-
 });
 
 // =============================================================================
@@ -227,13 +214,12 @@ gulp.task('watch', ['nodemon'], function() {
 
     browserSync.init({
         port: 8081,
-        server: {
-            baseDir: "." // Change this to your web root dir
-        },
+        proxy: "localhost:3000",
         middleware: [proxy(proxyOptions)]
     });
 
     gulp.watch(data.paths.js_src + '/*src/*js', ['js-watch']);
+    gulp.watch("js/data.json", ['json'])
     gulp.watch(data.paths.css_src  + '/**/*.scss', ['css-watch']);
     gulp.watch("*.html").on('change', browserSync.reload);
 });

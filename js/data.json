@@ -4,14 +4,14 @@
             "elevon": {
                 "name": "Elevon World",
                 "work_class": "work_elevon",
-                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently Woocommerce.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
                 "cover": "build/images/home/elevoncover",
                 "skills": [
                     "Wordpress",
-                    "PayPal",
+                    "PayPal and Woocommerce",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "PHP",
                     "Responsive Design"
                 ],
@@ -30,26 +30,14 @@
                         "image": "build/images/lightboximages/elevonmain3.png"
                     },
                     {
-                        "thumb": "build/images/thumbs/lifestylethumb1.png",
-                        "image": "build/images/lightboximages/lifestyle1.png"
-                    },
-                    {
                         "thumb": "build/images/thumbs/lifestylethumb2.png",
                         "image": "build/images/lightboximages/lifestyle2.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/lifestylethumb3.png",
-                        "image": "build/images/lightboximages/lifestyle3.png"
                     }
                 ],
                 "links": [
                     {
                         "title": "Elevon",
                         "link": "http://www.elevonworld.com"
-                    },
-                    {
-                        "title": "Elevon Lifestlye Journal",
-                        "link": "http://www.elevonworld.com/lifestylejournal"
                     }
                 ],
                 "width": "twothirds"
@@ -57,12 +45,12 @@
             "j2o": {
                 "name": "J2O",
                 "work_class": "work_j2o",
-                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.",
+                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.<br/><br/>This project was completed while working for digital agency THINK.",
                 "cover": "build/images/home/j2ocover",
                 "skills": [
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "Responsive Design"
                 ],
                 "bg": "build/images/backgrounds/j2obg.jpg",
@@ -91,11 +79,11 @@
             "ba": {
                 "name": "British Airways",
                 "work_class": "work_ba",
-                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
+                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects.<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
                 "skills": [
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "cover": "build/images/home/bacover",
                 "bg": "build/images/backgrounds/babg.jpg",
@@ -117,18 +105,47 @@
                 ],
                 "width": "third"
             },
+            "happiest_app": {
+                "name": "Happiest Application",
+                "work_class": "work_happ",
+                "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built as a single-page app with client side Javascript and server side PHP/Postgres.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
+                "skills": [
+                    "CSS3",
+                    "HTML5",
+                    "Javascript",
+                    "PHP",
+                    "PostgreSQL"
+                ],
+                "bg": "build/images/backgrounds/hpbg.jpg",
+                "cover": "build/images/home/happcover",
+                "images": [
+                    {
+                        "thumb": "build/images/thumbs/hpthumb1.png",
+                        "image": "build/images/lightboximages/hp2.png"
+                    },
+                    {
+                        "thumb": "build/images/thumbs/hpthumb2.png",
+                        "image": "build/images/lightboximages/hp2.png"
+                    }, {
+                        "thumb": "build/images/thumbs/hpthumb3.png",
+                        "image": "build/images/lightboximages/hp3.png"
+                    }
+
+                ],
+                "width": "half"
+            },
              "barspot": {
                 "name": "Barspot",
                 "order": "1",
                 "work_class": "work_barspot",
-                "desc": "This is a Wordpress based site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
+                "desc": "This is a Wordpress site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
                 "cover": "build/images/home/barspotcover",
                 "skills": [
                     "Wordpress",
                     "SASS",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "PHP",
                     "Responsive Design"
                 ],
@@ -163,14 +180,14 @@
                     "Responsive Design",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/hphomebg.jpg",
                 "cover": "build/images/home/hpcover",
                 "images": [
                     {
                         "thumb": "build/images/thumbs/hphomethumb1.png",
-                        "image": "build/images/lightboximages/hphome2.png"
+                        "image": "build/images/lightboximages/hphome1.png"
                     },
                     {
                         "thumb": "build/images/thumbs/hphomethumb2.png",
@@ -189,44 +206,15 @@
                 ],
                 "width": "half"
             },
-            "happiest_app": {
-                "name": "Happiest Application",
-                "work_class": "work_happ",
-                "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built with client side JQuery & Javascript and server side PHP which was built as an API connecting to a Postgres database.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
-                "skills": [
-                    "CSS3",
-                    "HTML5",
-                    "JQuery & Javascript",
-                    "PHP",
-                    "PostgreSQL"
-                ],
-                "bg": "build/images/backgrounds/hpbg.jpg",
-                "cover": "build/images/home/happcover",
-                "images": [
-                    {
-                        "thumb": "build/images/thumbs/hpthumb1.png",
-                        "image": "build/images/lightboximages/hp2.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/hpthumb2.png",
-                        "image": "build/images/lightboximages/hp2.png"
-                    }, {
-                        "thumb": "build/images/thumbs/hpthumb3.png",
-                        "image": "build/images/lightboximages/hp3.png"
-                    }
-
-                ],
-                "width": "half"
-            },
             "anglian": {
                 "name": "Anglian Home Improvements",
                 "work_class": "work_ahi",
-                "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.",
+                "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.<br/><br/>This project was completed while working for digital agency THINK.",
                 "skills": [
                     "Responsive Design",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/ahibg.jpg",
                 "cover": "build/images/home/ahicover",
@@ -255,13 +243,15 @@
             "other_projects": {
                 "name": "Other Projects",
                 "work_class": "work_mini",
-                "desc": "Atom Bank is a client which I have worked on several smaller projects for such as components for the website and CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers. It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to da tabase and provide a rich user interface, back in the days before many of the big JS frameworks existed.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built as a single page application using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
+                "desc": "Atom Bank is a client for digital agency THINK with which I have worked on several smaller projects such as components for the website and Sitecore CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>
+
+                One project I completed during the flash era was WiiSources which was an app to provide learning tools to children to improve hand-eye coordination using the Nintendo Wii.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to a database and provide a rich user interface, back in the days before many of the big JS frameworks existed.",
                 "skills": [
                     "PHP",
                     "MySQL",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/otherbg.jpg",
                 "cover": "build/images/home/othercover",
@@ -271,24 +261,12 @@
                         "image": "build/images/lightboximages/atommain1.jpg"
                     },
                     {
-                        "thumb": "build/images/thumbs/otherthumb1.png",
-                        "image": "build/images/lightboximages/other1.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/otherthumb2.png",
-                        "image": "build/images/lightboximages/other2.jpg"
-                    },
-                    {
                         "thumb": "build/images/thumbs/otherthumb3.png",
                         "image": "build/images/lightboximages/other3.png"
                     },
                     {
                         "thumb": "build/images/thumbs/otherthumb4.png",
                         "image": "build/images/lightboximages/other4.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/otherthumb5.png",
-                        "image": "build/images/lightboximages/other5.png"
                     }
                 ],
                 "links": [

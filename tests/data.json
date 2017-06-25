@@ -4,14 +4,14 @@
             "elevon": {
                 "name": "Elevon World",
                 "work_class": "work_elevon",
-                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently PayPal.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+                "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently Woocommerce.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
                 "cover": "build/images/home/elevoncover",
                 "skills": [
                     "Wordpress",
-                    "PayPal",
+                    "PayPal and Woocommerce",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "PHP",
                     "Responsive Design"
                 ],
@@ -30,26 +30,14 @@
                         "image": "build/images/lightboximages/elevonmain3.png"
                     },
                     {
-                        "thumb": "build/images/thumbs/lifestylethumb1.png",
-                        "image": "build/images/lightboximages/lifestyle1.png"
-                    },
-                    {
                         "thumb": "build/images/thumbs/lifestylethumb2.png",
                         "image": "build/images/lightboximages/lifestyle2.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/lifestylethumb3.png",
-                        "image": "build/images/lightboximages/lifestyle3.png"
                     }
                 ],
                 "links": [
                     {
                         "title": "Elevon",
                         "link": "http://www.elevonworld.com"
-                    },
-                    {
-                        "title": "Elevon Lifestlye Journal",
-                        "link": "http://www.elevonworld.com/lifestylejournal"
                     }
                 ],
                 "width": "twothirds"
@@ -57,12 +45,12 @@
             "j2o": {
                 "name": "J2O",
                 "work_class": "work_j2o",
-                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.",
+                "desc": "This project was for the J2O Midnight Editions flavours lauched in 2015. The site had 2 new flavours and re-styling to all other pages. A lot of complex CSS animations were used to create the visual effects of the page.<br/><br/>This project was completed while working for digital agency THINK.",
                 "cover": "build/images/home/j2ocover",
                 "skills": [
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "Responsive Design"
                 ],
                 "bg": "build/images/backgrounds/j2obg.jpg",
@@ -91,11 +79,11 @@
             "ba": {
                 "name": "British Airways",
                 "work_class": "work_ba",
-                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
+                "desc": "While working for web agency Leighton, I contributed to British Airways projects. This involved working directly with a team based in London and Newcastle to complete various projects.<br/><br/>The most high profile project i worked on was the front end interface to allow Saved Payment Cards on the payment page, giving the functnality re-use previously saved cards and save new ones. <br/><br/> I also worked on a project to improve the functionality of the recent searches feature. This used the browsers localStorage and a database to allow the user to replay a previous search by clicking a button.",
                 "skills": [
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "cover": "build/images/home/bacover",
                 "bg": "build/images/backgrounds/babg.jpg",
@@ -128,7 +116,7 @@
                     "SASS",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "PHP",
                     "Responsive Design"
                 ],
@@ -163,7 +151,7 @@
                     "Responsive Design",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/hphomebg.jpg",
                 "cover": "build/images/home/hpcover",
@@ -196,7 +184,7 @@
                 "skills": [
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript",
+                    "Javascript",
                     "PHP",
                     "PostgreSQL"
                 ],
@@ -226,7 +214,7 @@
                     "Responsive Design",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/ahibg.jpg",
                 "cover": "build/images/home/ahicover",
@@ -261,7 +249,7 @@
                     "MySQL",
                     "CSS3",
                     "HTML5",
-                    "JQuery & Javascript"
+                    "Javascript"
                 ],
                 "bg": "build/images/backgrounds/otherbg.jpg",
                 "cover": "build/images/home/othercover",

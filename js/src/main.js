@@ -41,7 +41,7 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
 
         var connectionString = "http://garethferguson.co.uk:3000"
         if(document.location.toString().indexOf('garethferguson.co.uk') === -1){
-            connectionString = "http://local.gareth.com:3000";
+            connectionString = "http://portfolio.dev/3000";
         }
 
         var socket = io.connect(connectionString, {resource: '/api/index.js'});
@@ -92,7 +92,7 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
        }
        };
     });
-    
+
     //directive to show menu on scroll
     garethPortfolio.directive("scroll",function ($window) {
         return {
@@ -120,13 +120,6 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
 		var portfolios, allJSON;
 		var serviceObj = {};
 
-		//HTTP Request for new JSON
-		serviceObj.requestPortfolioData = function(){
-			return $http.get('/js/data.min.json').success(function(data){
-				allJSON = data;
-			});
-		}
-
 		//Return the JSON for Portfolio items
 		serviceObj.getPortfolioItems = function(){
 
@@ -137,13 +130,13 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
 				deferred.resolve(portfolios);
 				return deferred.promise;
 			}else{
-				return serviceObj.requestPortfolioData().then(function(result){
-					portfolios = result.data.portfolio.Items;
-					deferred.resolve(portfolios);
-					return deferred.promise;
-				});
+				return $http.get('/js/data.min.json').then(function(data) {
+          portfolios = data.data.portfolio.Items;
+          deferred.resolve(portfolios);
+          return deferred.promise;
+        });
 			}
-        }
+    }
 
 		return serviceObj;
 
@@ -182,11 +175,11 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }
-            }).success(function (data) {
-                callbackSuccess(data);
-            }).error(function (data) {
-                callbackFailure(data);
-            })
+            }).then(function(data) {
+              callbackSuccess(data);
+            }, function(data) {
+              callbackFailure(data);
+            });
         };
 
         return serviceObj;
@@ -208,14 +201,14 @@ garethPortfolio.config(['$stateProvider', '$urlRouterProvider','$locationProvide
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
-                }).success(function (data) {
-                    albums = data;
-                    deferred.resolve(data);
-                    return deferred.promise;
-                }).error(function (data) {
-                    deferred.resolve(data);
-                    return deferred.promise;
-                })
+                }).then(function(data) {
+                  albums = data;
+                  deferred.resolve(data);
+                  return deferred.promise;
+                }, function(data) {
+                  deferred.resolve(data);
+                  return deferred.promise;
+                });
             }
 
             //return albums object

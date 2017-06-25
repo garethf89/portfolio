@@ -56,7 +56,9 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$state', '$l
      //last.fm plays
     this.getLastFMAlbums = function (){
         lastFmService.getAlbums().then(function(albums) {
+          if(albums.topalbums){
             $scope.albums = albums.topalbums.album;
+          }
         });
     }
 
@@ -93,8 +95,8 @@ garethPortfolioControllers.controller('workItem', ['$scope', '$state', '$locatio
               case "Responsive Design":
                   url = "#responsive"
                   break;
-              case "JQuery & Javascript":
-                  url = "#jquery"
+              case "Javascript":
+                  url = "#js"
                   break;
               case "PHP":
                   url = "#php"
@@ -114,7 +116,7 @@ garethPortfolioControllers.controller('workItem', ['$scope', '$state', '$locatio
               case "Wordpress":
                   url = "#wordpress"
                   break;
-              case "PayPal":
+              case "PayPal and Woocommerce":
                   url = "#paypal"
                   break;
               case "SASS":
@@ -192,7 +194,7 @@ garethPortfolioControllers.controller('contactForm', ['$scope', '$http','emailSe
 
             //call service
             emailService.sendEmail($scope.formData, function(data){
-                if (data == 'success') {
+                if (data.data == 'success') {
                     $scope.showSuccessMessage = 'true';
                 } else {
                     $scope.showErrorMessage = 'true';
