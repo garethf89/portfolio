@@ -4,7 +4,7 @@
           "arup": {
               "name": "Arup",
               "work_class": "work_arup",
-              "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently Woocommerce.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+              "desc": "This was a large project for a full design and build new website for engineering market leaders Arup. The challenge was matching the ambitions of the client for a new and innovative site with the scale and amount of content they have.<br/><br/>This project was completed while working for digital agency THINK.",
               "cover": "build/images/home/arupcover",
               "skills": [
                   "Javascript",
