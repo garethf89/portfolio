@@ -4252,6 +4252,7 @@ p {
 .lastfm-albums {
 	overflow: hidden;
 	margin-bottom: 3em;
+	margin-top: 3em;
 }
 
 .lastfm-albums header {
