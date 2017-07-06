@@ -94,6 +94,9 @@
 .icon-j2o{
     background-image: url('/images/logos/j2o.png');
 }
+.icon-arup{
+    background-image: url('/images/logos/arup.png');
+}
 
 
 /* Things I can do */
@@ -155,10 +158,12 @@ ul.icando-icons{
 
     }
 
-    &.col-four li{
-        @include breakpoint($desktop){
-            width: 25%;
-        }
+    &--logo{
+      .label{
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+      }
     }
 
 }

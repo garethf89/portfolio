@@ -1,6 +1,44 @@
 {
     "portfolio": {
         "Items": {
+          "arup": {
+              "name": "Arup",
+              "work_class": "work_arup",
+              "desc": "This is a Wordpress based site for a fashion company based in Newcastle. This project invovled work on the Wordpress template using PHP, HTML and JavaScript. It also required integration with a payment system which is currently Woocommerce.<br/><br/>The Lifestyle Journal blog was then developed using Wordpress. This is a fully responsive blog site to be used as a website to view articles from various contributors.",
+              "cover": "build/images/home/arupcover",
+              "skills": [
+                  "Javascript",
+                  "SASS",
+                  "HTML5",
+                  "Responsive Design"
+              ],
+              "bg": "build/images/backgrounds/arupbg.jpg",
+              "images": [
+                {
+                    "thumb": "build/images/thumbs/arupthumb1.jpg",
+                    "image": "build/images/lightboximages/arupmain1.jpg"
+                },
+                  {
+                      "thumb": "build/images/thumbs/arupthumb2.jpg",
+                      "image": "build/images/lightboximages/arupmain2.jpg"
+                  },
+                  {
+                      "thumb": "build/images/thumbs/arupthumb3.jpg",
+                      "image": "build/images/lightboximages/arupmain3.jpg"
+                  },
+                  {
+                      "thumb": "build/images/thumbs/arupthumb4.jpg",
+                      "image": "build/images/lightboximages/arupmain4.jpg"
+                  }
+              ],
+              "links": [
+                  {
+                      "title": "Arup",
+                      "link": "http://www.arup.com"
+                  }
+              ],
+              "width": "twothirds"
+          },
             "elevon": {
                 "name": "Elevon World",
                 "work_class": "work_elevon",
@@ -105,11 +143,40 @@
                 ],
                 "width": "third"
             },
+            "happiest_app": {
+                "name": "Happiest Application",
+                "work_class": "work_happ",
+                "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built as a single-page app with client side Javascript and server side PHP/Postgres.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
+                "skills": [
+                    "CSS3",
+                    "HTML5",
+                    "Javascript",
+                    "PHP",
+                    "PostgreSQL"
+                ],
+                "bg": "build/images/backgrounds/hpbg.jpg",
+                "cover": "build/images/home/happcover",
+                "images": [
+                    {
+                        "thumb": "build/images/thumbs/hpthumb1.png",
+                        "image": "build/images/lightboximages/hp2.png"
+                    },
+                    {
+                        "thumb": "build/images/thumbs/hpthumb2.png",
+                        "image": "build/images/lightboximages/hp2.png"
+                    }, {
+                        "thumb": "build/images/thumbs/hpthumb3.png",
+                        "image": "build/images/lightboximages/hp3.png"
+                    }
+
+                ],
+                "width": "half"
+            },
              "barspot": {
                 "name": "Barspot",
                 "order": "1",
                 "work_class": "work_barspot",
-                "desc": "This is a Wordpress based site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
+                "desc": "This is a Wordpress site developed with a custom Wordpress theme from scratch. The biggest challenge of the website was the balance between performance and the high-res images needed to showcase the designs of this new creative agency.",
                 "cover": "build/images/home/barspotcover",
                 "skills": [
                     "Wordpress",
@@ -158,7 +225,7 @@
                 "images": [
                     {
                         "thumb": "build/images/thumbs/hphomethumb1.png",
-                        "image": "build/images/lightboximages/hphome2.png"
+                        "image": "build/images/lightboximages/hphome1.png"
                     },
                     {
                         "thumb": "build/images/thumbs/hphomethumb2.png",
@@ -177,39 +244,10 @@
                 ],
                 "width": "half"
             },
-            "happiest_app": {
-                "name": "Happiest Application",
-                "work_class": "work_happ",
-                "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built with client side JQuery & Javascript and server side PHP which was built as an API connecting to a Postgres database.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
-                "skills": [
-                    "CSS3",
-                    "HTML5",
-                    "Javascript",
-                    "PHP",
-                    "PostgreSQL"
-                ],
-                "bg": "build/images/backgrounds/hpbg.jpg",
-                "cover": "build/images/home/happcover",
-                "images": [
-                    {
-                        "thumb": "build/images/thumbs/hpthumb1.png",
-                        "image": "build/images/lightboximages/hp2.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/hpthumb2.png",
-                        "image": "build/images/lightboximages/hp2.png"
-                    }, {
-                        "thumb": "build/images/thumbs/hpthumb3.png",
-                        "image": "build/images/lightboximages/hp3.png"
-                    }
-
-                ],
-                "width": "half"
-            },
             "anglian": {
                 "name": "Anglian Home Improvements",
                 "work_class": "work_ahi",
-                "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.",
+                "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.<br/><br/>This project was completed while working for digital agency THINK.",
                 "skills": [
                     "Responsive Design",
                     "CSS3",
@@ -243,7 +281,9 @@
             "other_projects": {
                 "name": "Other Projects",
                 "work_class": "work_mini",
-                "desc": "Atom Bank is a client which I have worked on several smaller projects for such as components for the website and CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>The WiiSources project was designed to be playable on Nintendo Wii but also on computers. It was a series of games aimed at small children to improve hand-eye coordination.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to da tabase and provide a rich user interface, back in the days before many of the big JS frameworks existed.<br/><br/>The Hartlepool Space to Learn site was built as a holding page for Hartlepool Council to advertise an upcoming learning building.<br/><br/>The Northern Grid Awards 2010 site was built to show the winners of the learning technology awards show. It was built as a single page application using JQuery. <br/><br/> Unfortunately these sites have served their purpose and are now offline. ",
+                "desc": "Atom Bank is a client for digital agency THINK with which I have worked on several smaller projects such as components for the website and Sitecore CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>
+
+                One project I completed during the flash era was WiiSources which was an app to provide learning tools to children to improve hand-eye coordination using the Nintendo Wii.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to a database and provide a rich user interface, back in the days before many of the big JS frameworks existed.",
                 "skills": [
                     "PHP",
                     "MySQL",
@@ -259,24 +299,12 @@
                         "image": "build/images/lightboximages/atommain1.jpg"
                     },
                     {
-                        "thumb": "build/images/thumbs/otherthumb1.png",
-                        "image": "build/images/lightboximages/other1.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/otherthumb2.png",
-                        "image": "build/images/lightboximages/other2.jpg"
-                    },
-                    {
                         "thumb": "build/images/thumbs/otherthumb3.png",
                         "image": "build/images/lightboximages/other3.png"
                     },
                     {
                         "thumb": "build/images/thumbs/otherthumb4.png",
                         "image": "build/images/lightboximages/other4.png"
-                    },
-                    {
-                        "thumb": "build/images/thumbs/otherthumb5.png",
-                        "image": "build/images/lightboximages/other5.png"
                     }
                 ],
                 "links": [
