@@ -56,8 +56,8 @@ garethPortfolioControllers.controller('portfolioItems', ['$scope', '$state', '$l
      //last.fm plays
     this.getLastFMAlbums = function (){
         lastFmService.getAlbums().then(function(albums) {
-          if(albums.topalbums){
-            $scope.albums = albums.topalbums.album;
+          if(albums.data.topalbums){
+            $scope.albums = albums.data.topalbums.album;
           }
         });
     }
