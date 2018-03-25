@@ -279,38 +279,31 @@
                 "width": "twothirds"
             },
             "other_projects": {
-                "name": "Other Projects",
+                "name": "Apps and Other Projects",
                 "work_class": "work_mini",
-                "desc": "Atom Bank is a client for digital agency THINK with which I have worked on several smaller projects such as components for the website and Sitecore CMS.<br/><br/>I developed several flash based projects between 2008-2010. Flash is deprecated technology today however it was not long ago that most of the internets interactive content ran on it. My flash projects were always driven by the programming capabilities of ActionScript 3, a language which shares a lot of similiarities with JQuery and other modern web technologies. I'm sure that one day we will look back on the likes of JQuery and many of big JS Frameworks in the same way.<br/><br/>
-
-                One project I completed during the flash era was WiiSources which was an app to provide learning tools to children to improve hand-eye coordination using the Nintendo Wii.<br/><br/>The music finder app was built using Adobe Flex (Flash Builder). This technology allowed the front end web app to connect to a database and provide a rich user interface, back in the days before many of the big JS frameworks existed.",
+                "desc": "The iOS Beacons App is an experimental app to track the users that are in each room. This was used for meeting rooms in the office but the concept can apply to much more ineresting scenarios.<br/><br/>
+                This used MongoDB to store the real time users in each room. It was built in Swift as a native iOS app.",
                 "skills": [
-                    "PHP",
-                    "MySQL",
-                    "CSS3",
-                    "HTML5",
-                    "Javascript"
+                    "Swift"
                 ],
                 "bg": "build/images/backgrounds/otherbg.jpg",
                 "cover": "build/images/home/othercover",
                 "images": [
                     {
-                        "thumb": "build/images/thumbs/atomthumb1.jpg",
-                        "image": "build/images/lightboximages/atommain1.jpg"
+                        "image": "build/images/lightboximages/beacons0.jpg",
+                        "thumb": "build/images/thumbs/beaconthumb1.jpg"
                     },
                     {
-                        "thumb": "build/images/thumbs/otherthumb3.png",
-                        "image": "build/images/lightboximages/other3.png"
+                        "image": "build/images/lightboximages/beacons1.jpg",
+                        "thumb": "build/images/thumbs/beaconthumb1.png"
                     },
                     {
-                        "thumb": "build/images/thumbs/otherthumb4.png",
-                        "image": "build/images/lightboximages/other4.png"
-                    }
-                ],
-                "links": [
+                        "image": "build/images/lightboximages/beacons2.jpg",
+                        "thumb": "build/images/thumbs/beaconsthumb2.jpg"
+                    },
                     {
-                        "title": "Atom",
-                        "link": "http://www.atombank.co.uk"
+                        "image": "build/images/lightboximages/beacons3.jpg",
+                        "thumb": "build/images/thumbs/beaconsthumb3.jpg"
                     }
                 ],
                 "width": "third"

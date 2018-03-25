@@ -1,6 +1,8 @@
 #contact_me{
 
-    max-width:em(800);
+    @include breakpoint($desktop){
+        max-width:50em;
+    }
 
     textarea{
         display: block;

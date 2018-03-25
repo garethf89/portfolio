@@ -16,11 +16,6 @@ $susy: (
          @include container(80%); 
     }
     
-    @include breakpoint($large){
-        @include container(100%); 
-        max-width: 1400px;
-    }
-    
 }
 
 .row:after {

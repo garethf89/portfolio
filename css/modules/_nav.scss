@@ -59,7 +59,7 @@
 
                 &.reveal {
                     @include animationMixin(reveal-header, 0.2s, 0);
-                    height: em(55);
+                    height: 3.125em;
                     padding: 0.5em 1.5em;
                     background: #6d9030;
                     color: #fff;

@@ -1,0 +1,10 @@
+<nav id="menu" class="nav_mobile" menu role="navigation">
+  <ul role="menubar">
+    <li (click)="toggleActive()" class="current" role="menuitem"><a routerLink="">Home</a></li>
+    <li (click)="toggleActive()"><a routerLink="" fragment="my_work" role="menuitem">Work</a></li>
+    <li (click)="toggleActive()"><a routerLink="/contact" role="menuitem">Contact</a></li>
+    <li (click)="toggleActive()" role="menuitem">
+      <a target="_blank" href="files/cv.pdf" download="cv.pdf"> <span class="icon dlIcon fa fa-download"></span>Download CV</a>
+    </li>
+  </ul>
+</nav>

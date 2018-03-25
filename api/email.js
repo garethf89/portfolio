@@ -29,9 +29,9 @@ exports.sendEmail = function(options, callback){
     //start with defaults
     emailOptions = mailOptions;
 
-    emailOptions.from = options.person_name + "<" + options.person_email + ">";
-    emailOptions.text = options.person_enq;
-    emailOptions.html = options.person_enq + "<br/><br/>" + "from: " + options.person_name + ',' + options.person_email;
+    emailOptions.from = options.personName + "<" + options.personEmail + ">";
+    emailOptions.text = options.personQuery;
+    emailOptions.html = options.personQuery + "<br/><br/>" + "from: " + options.personName + ',' + options.personEmail;
 
 
     // send mail with defined transport object

@@ -18,8 +18,6 @@ module.exports = function(config) {
         '../js/build/angular_app.js',
         '../js/build/libs.js',
         '../js/build/plugins.js',
-        '../bower_components/angular-mocks/angular-mocks.js',
-        '../bower_components/jasmine-jquery/lib/jasmine-jquery.js',
         'index.tests.js',
         {pattern: 'data.json', watched:  true,served: true,included: false}
     ],

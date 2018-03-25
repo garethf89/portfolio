@@ -1,0 +1,16 @@
+{
+    "short_name": "GF Portfolio",
+    "name": "Gareth Ferguson Portoflio",
+    "icons": [
+      {
+        "src": "android-chrome-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/",
+    "browser_action": {
+      "default_icon": "android-chrome-192x192.png",
+      "default_popup": "index.html"
+    }
+  }

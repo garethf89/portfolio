@@ -1,31 +1,31 @@
 /* Header */
 #header {
-    
+
     color: #fff;
     cursor: default;
     padding: 4em 0;
     text-align: center;
-    background-image:url('/images/woods.jpg');
+    background-image:url('/assets/images/woods.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     @include transitionMixin(all,.5s,ease-in-out);
-    
+
     @include breakpoint($desktop){
         padding: 2em 0 0;
-        background-image:url('/images/woods2x.jpg');
+        background-image:url('/assets/images/woods2x.jpg');
     }
 
     .header__inner{
-        
+
         @include animationMixin(fade-in, 1s, 0s, ease-in-out);
         color: white;
         display: block;
         background: none;
         opacity: 0;
         padding: 0 1.5em;
-        text-align: center; 
-        
+        text-align: center;
+
         @include breakpoint($desktop){
             display: inline-block;
             padding: 8em;
@@ -38,7 +38,7 @@
             display: inline-block;
             margin: 0 0 2em 0;
             padding: 3px 0 3px 0;
-            
+
             h2 {
                 font-size: 1.5em;
                 font-weight: 900;
@@ -46,20 +46,20 @@
                 margin: 0;
                 position: relative;
                 text-transform: uppercase;
-                
+
                  @include breakpoint($desktop){
                       font-size: 2.5em;
                  }
-                
+
             }
         }
-        
+
         p {
             letter-spacing: 0.1em;
             margin: 0;
             text-transform: uppercase;
             text-align: center;
-            
+
             a {
                 color: inherit;
                 font-weight: 400;
@@ -67,47 +67,15 @@
             }
         }
     }
-    
+
     &:before{
         content: " ";
-        background:  $mainGreen; 
+        background:  $mainGreen;
         position: absolute;
         width: 100%;
         bottom: 0;
         top: 0;
         left: 0;
     }
-    
-}
 
-#counter{
-    
-    display: none;
-    opacity:0;   
-    position: absolute;
-    background: $mainGreenFull;
-    color: white;
-    padding: .5em;
-    font-size: 0.8em;
-    width: 15%;
-    bottom: 0;
-    right: 0;
-    text-align: center;
-    min-width: em(150);   
-    @include transitionMixin(bottom,.4s,cubic-bezier(0.68, -0.55, 0.265, 1.55));
-
-    &.visible{
-        opacity: 1;
-        bottom: -40px;
-        z-index: -1;
-
-    }
-    
-    @include breakpoint($desktop){
-        display: block;
-    }
-    
-    strong{
-        margin-right: .2em;   
-    }
 }
