@@ -4,11 +4,8 @@
     background: $color2;
     text-shadow: 0 -1px 0 $border;
     border: 1px solid $border;
-    background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
-    background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
-    background: -o-linear-gradient(top, $color1 0%,$color2 100%);
-    background: linear-gradient(top, $color1 0%,$color2 100%);
+    background: -webkit-linear-gradient(to bottom, $color1 0%,$color2 100%);
+    background: linear-gradient(to bottom, $color1 0%,$color2 100%);
     padding:0.8em 1em;
     margin: 1em 0;
     line-height: 1rem;
@@ -20,11 +17,8 @@
 			text-shadow:0 1px 0 #669E00;
             border:1px solid #669E00;
             background:$hover1; /* Old browsers */
-            background: -moz-linear-gradient(top, $hover1 0%, $hover2 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$hover1), color-stop(100%,$hover2)); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, $hover1 0%,$hover2 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, $hover1 0%,$hover2 100%); /* Opera 11.10+ */
-            background: linear-gradient(top, $hover1 0%,$hover2 100%); /* W3C */
+            background: -webkit-linear-gradient(to bottom, $hover1 0%,$hover2 100%); /* Chrome10+,Safari5.1+ */
+            background: linear-gradient(to bottom, $hover1 0%,$hover2 100%); /* W3C */
 		}
 	
 }

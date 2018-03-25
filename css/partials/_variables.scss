@@ -1,16 +1,21 @@
+//Breakpoint
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1400px;
+
 $mainGreen:rgba(109, 144, 48,.5);
 $mainGreenFull:rgba(109, 144, 48,1);
 $footerBG:#e8eef4;
 $backgroundHighlightContainer:#fff;
-$headerBG: url('../images/white-texture.png');
+$headerBG: url('../assets/images/white-texture.png');
 $headerBorder: #004F2D;
 
 $sass:#CC6699;
 $html:#E34C26;
 $php:#6C7EB7;
 $jquery:#096BB6;
-$angular:#E62A39;  
-$css3:#0171BB;  
+$angular:#E62A39;
+$css3:#0171BB;
 $paypal:#003358;
 $wordpress:#21759B;
 $javacript:#F0DB4F;

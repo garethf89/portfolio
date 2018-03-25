@@ -1,0 +1,17 @@
+
+<!-- Lastfm -->
+<article *ngIf="albums" id="lastfm_albums" class="lastfm-albums site_row">
+  <header>
+      <div class="icon fa-lastfm logo-large"></div>
+      <h2>Recently Played...</h2>
+  </header>
+
+  <div class="lastfm_albums__music-container" *ngFor="let album of albums">
+      <img src="css/blank.gif" alt="{{album.name}} cover" [src]="album.image[2]['#text']" />
+      <div class="music-info">
+          <h5>{{album.name}}</h5>
+          <h6>{{album.artist.name}}</h6>
+      </div>
+  </div>
+
+</article>
