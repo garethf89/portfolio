@@ -1,0 +1,39 @@
+<article id="work_page" class="site_row highlightContainer clearfix" [ngStyle]="{'background':bg}" >
+  <header>
+      <a routerLink="" class="workPage_home home_button">Home</a>
+      <h2>{{work.name}}</h2>
+  </header>
+
+  <section class="left_work">
+      <p [innerHTML]="work.desc"></p>
+
+      <h4>Technology</h4>
+      <ul id="tech_used">
+          <li *ngFor="let skill of work.skills">
+              <svg class="item" >
+                <use [attr.xlink:href]="skill.svg"/>
+              </svg>
+              {{skill.name}}
+          </li>
+      </ul>
+
+  </section>
+
+  <section class="right_work">
+
+      <h4>Images</h4>
+      <div class="float_block photo-gallery">
+        <a aria-haspopup="true" *ngFor="let image of work.images" class="work_screenshot" rel="galWork" [href]="image.image">
+              <picture>
+                  <source alt="" type="image/webp" src="css/blank.gif" [src]="image.thumb" class="work_thumb">
+                  <img src="css/blank.gif" [src]="image.thumb" class="work_thumb">
+              </picture>
+        </a>
+      </div>
+
+      <div *ngFor="let link of work.links">
+        <a role="button" class="button button--expand" target="_blank" [href]="link.link" tabindex="1">Visit {{link.title}}</a>
+      </div>
+
+  </section>
+</article>

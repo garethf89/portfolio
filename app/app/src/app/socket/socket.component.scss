@@ -1,0 +1,34 @@
+// Sass variables
+@import "./app/css/partials/imports";
+
+#counter{
+    
+    display: none;
+    opacity:0;
+    position: absolute;
+    background: $mainGreenFull;
+    color: white;
+    padding: .5em;
+    font-size: 0.8em;
+    width: 15%;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    min-width: 9.5em;
+    @include transitionMixin(bottom,.4s,cubic-bezier(0.68, -0.55, 0.265, 1.55));
+
+    &.visible{
+        opacity: 1;
+        bottom: -40px;
+        z-index: -1;
+
+    }
+
+    @include breakpoint($desktop){
+        display: block;
+    }
+
+    strong{
+        margin-right: .2em;
+    }
+}

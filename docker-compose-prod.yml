@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+
+  # Build the container using the app Dockerfile
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile-prod
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  
+  # Build the container using the nginx Dockerfile
+  nginx:
+    build:
+      context: ./nginx
+      args: 
+        config: /prod.conf
+    ports:
+      - "80:80"
+    links: 
+      - app
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    command: mongod --bind_ip 0.0.0.0 -v

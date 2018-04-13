@@ -49,3 +49,5 @@ node_modules
 config.json
 configLastFM.json
 dist
+/data
+/nginx/dist

@@ -1,0 +1,40 @@
+//Bourbon
+@import "../../node_modules/bourbon/core/bourbon";
+
+
+@import 'baguettebox.js/dist/baguetteBox.min.css';
+
+@import 'normalize';
+@import 'boilerplate';
+
+$fa-font-path:'/assets/fonts';
+@import 'font-awesome/scss/font-awesome';
+//@import 'devicons';
+
+// Sass variables
+@import "partials/imports";
+
+//globals (+ icons colors, lightbox)grunt
+@import "partials/globals";
+
+//Grid
+@import "../../node_modules/susy/sass/_susy.scss";
+@import "partials/grid";
+
+//Work items on home page
+@import "modules/work-item";
+
+//Header + Counter
+@import "modules/header";
+
+//Nav
+@import "modules/nav";
+
+//home
+@import "modules/homepage";
+
+//Work page
+@import "modules/work-page";
+
+//Contact page
+@import "modules/contact";
