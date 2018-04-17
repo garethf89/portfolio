@@ -37,6 +37,12 @@ export class HeaderComponent implements OnInit {
        'duration' : 400
      });
 
+     this.slider.on('beforeopen', function() {
+        this.menu.classList.add('menu-open');
+      }).on('beforeclose', function() {
+        this.menu.classList.remove('menu-open');
+      });
+
     var headerDiv = document.querySelector("#header"),
          element = document.getElementById("mainnav");
 

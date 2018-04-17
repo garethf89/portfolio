@@ -60,7 +60,7 @@ export class AppRoutingModule {
         block:'start',
         behavior: 'smooth'
       });
-    }, 10);
+    }, 400);
   }
 
 }

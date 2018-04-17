@@ -144,7 +144,7 @@
 /* Slide Out */
 .slideout-menu {
   position: fixed;
-  left: 0;
+  left: -200px;
   top: 0;
   bottom: 0;
   right: 0;
@@ -152,13 +152,18 @@
   width: 200px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  display: none;
+  transition: left .3s ease-in-out;
+  z-index: 1;
+  &.menu-open{
+    left:0;
+  }
 }
 
 .slideout-panel {
   position:relative;
-  z-index: 1;
+  z-index: 2;
   will-change: transform;
+  background: $body;
   @include breakpoint($desktop){
     will-change: unset;
   }
@@ -171,7 +176,6 @@
 }
 
 .slideout-open .slideout-menu {
-  display: block;
   @include breakpoint($desktop){
     display: none;
   }
