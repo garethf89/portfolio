@@ -11,7 +11,7 @@ const apps = {
     "name": "Apps and Other Projects",
     "url": "Apps",
     "work_class": "work_mini",
-    "desc": "The iOS Beacons App is an experimental app to track the users that are in each room. This was used for meeting rooms in the office but the concept can apply to much more ineresting scenarios.<br/><br/>This used MongoDB to store the real time users in each room. It was built in Swift as a native iOS app.",
+    "desc": "The iOS Beacons App is an experimental app to track users that are in each room. This was used for meeting rooms in the office but the concept can apply to much more ineresting scenarios.<br/><br/>This used MongoDB to store the real time users in each room. It was built in Swift as a native iOS app.",
     "skills": skillsData.filter(x => skills.indexOf(x.name) > -1),
     "bg": "assets/images/backgrounds/otherbg.jpg",
     "cover": "assets/images/home/othercover",

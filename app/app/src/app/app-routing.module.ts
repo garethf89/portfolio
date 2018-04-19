@@ -55,12 +55,14 @@ export class AppRoutingModule {
 
   //scroll to element
   animateToElement(el){
+    let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
+    let timeAmount = style.display == 'none' ? 10 : 400;
     window.setTimeout(function(){ 
       document.getElementById(el).scrollIntoView({ 
         block:'start',
         behavior: 'smooth'
       });
-    }, 400);
+    }, timeAmount);
   }
 
 }

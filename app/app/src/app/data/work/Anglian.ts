@@ -14,7 +14,7 @@ const anglian = {
     "name": "Anglian Home Improvements",
     "work_class": "work_ahi",
     "url": "Anglian",
-    "desc": "This was developed as part of a team to modernise the companies existing website. It invloved creating the site to be an interactive brochure for people wanting to get a quote for home improvements.<br/><br/>This project was completed while working for digital agency THINK.",
+    "desc": "Developed as part of a team to modernise the existing website.The new website was created to be an interactive brochure for people wanting to get a quote for home improvements.<br/><br/>This project was completed while working for digital agency THINK.",
     "skills": skillsData.filter(x => skills.indexOf(x.name) > -1),
     "bg": "assets/images/backgrounds/ahibg.jpg",
     "cover": "assets/images/home/ahicover",

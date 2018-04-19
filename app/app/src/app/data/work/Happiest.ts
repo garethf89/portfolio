@@ -15,7 +15,7 @@ const happiest = {
     "name": "Happiest Application",
     "url": "Happiest",
     "work_class": "work_happ",
-    "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built as a single-page app with client side Javascript and server side PHP/Postgres.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars templating and Underscore. ",
+    "desc": "Happiest was a social network that allows users to connect with businesses and gain rewards for the products they buy. This complex RESTful site was built as a single-page app with client side Javascript and server side PHP/Postgres.<br/><br/> Most of the technology was developed in-house however I did get some exposure to JS libraries such as Handlebars and Underscore. ",
     "skills": skillsData.filter(x => skills.indexOf(x.name) > -1),
     "bg": "assets/images/backgrounds/hpbg.jpg",
     "cover": "assets/images/home/happcover",

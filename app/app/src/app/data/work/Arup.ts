@@ -14,7 +14,7 @@ const arup = {
     "name": "Arup",
     "url": "Arup",
     "work_class": "work_arup",
-    "desc": "This was a large project for a full design and build new website for engineering market leaders Arup. The challenge was matching the ambitions of the client for a new and innovative site with the scale and amount of content they have.<br/><br/>This project was completed while working for digital agency THINK.",
+    "desc": "A large project for a full design and build new website for engineering market leaders Arup. The challenge was matching the ambitions of the client for a new and innovative site with the scale and amount of content they have. The front end uses ES6 Javascipt to be compatible with large CMS back end with thousands of pages. <br/><br/>This project was completed while working for digital agency THINK.",
     "cover": "assets/images/home/arupcover",
     "skills": skillsData.filter(x => skills.indexOf(x.name) > -1),
     "bg": "assets/images/backgrounds/arupbg.jpg",
