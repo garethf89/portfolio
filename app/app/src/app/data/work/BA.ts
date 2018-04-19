@@ -26,11 +26,6 @@ const ba = {
             "thumb": "assets/images/thumbs/bathumb3.png",
             "image": "assets/images/lightboximages/bamain3.png"
         }
-    ],ms
-        {
-            "title": "Leighton",
-            "link": "http://www.leighton.com"
-        }
     ]
 };
 
