@@ -5,7 +5,7 @@
   "start": "ng serve --proxy-config proxy.conf.json",
   "scripts": {
     "ng": "ng",
-    "start": "forever app/api/index.js & ng serve -H 0.0.0.0 --port 80",
+    "start": "forever app/api/index.js & ng serve -H 0.0.0.0 --port 4200",
     "start-prod": "forever app/api/index.js",
     "build-prod": "ng build --prod --output-path ../nginx/dist --base-href / ",
     "test": "karma start ./karma.conf.js",

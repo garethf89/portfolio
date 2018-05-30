@@ -28,6 +28,7 @@ var db = null;
 // Use connect method to connect to the server
     mongo.connect(murl, function(err, client) {
     if(err){
+        console.log('no server')
        return
     }
   console.log("Connected successfully to server");
@@ -49,7 +50,7 @@ exports.getAlbums = function (options, callback) {
     }, function (err, result) {
         //Use result
         if (err || !result[0]) {
-            url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
+            url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=' + options.name + '&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=4';
             request({
                 url: url
             }, function (error, response, body) {
@@ -72,7 +73,7 @@ var scheduleWe = schedule.scheduleJob({hour: 0,minute: 0,dayOfWeek: 6}, function
 });
 
 function updateCollection(){
-    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=DirtyG&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=3';
+    url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=DirtyG&api_key=' + lastfmConstants.auth.key + '&format=json&period=1month&limit=4';
 
     request({
         url: url

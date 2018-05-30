@@ -18,7 +18,7 @@ export class LastfmComponent implements OnInit {
       this.lastfmService.getAlbums().subscribe(
         data => {
           if(data.topalbums){
-            this.albums = data.topalbums['album'];
+            this.albums = data.topalbums["album"].filter(element => element.artist.name != "Five Finger Death Punch");
           }
         }, 
         error => {
