@@ -1,0 +1,226 @@
+/* Top Section */
+
+.topSection{
+
+    margin-bottom: 5em;
+
+    &:before,
+    &:after{
+        width: 43%;
+    }
+
+}
+
+/* About Me */
+
+.topSection{
+    margin-bottom:3em;
+    padding-top: 4em;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint($desktop){
+        margin-bottom: 5em;
+    }
+
+    br{
+        display: none;
+    }
+
+    &:before{
+        left:0;
+    }
+
+    &:after{
+        right:0;
+    }
+    &:before,
+    &:after{
+        border-bottom: solid 2px;
+        content: '';
+        height: 7px;
+        opacity: 0.1;
+        position: absolute;
+        top: 1.75em;
+        width: 35%;
+
+        @include breakpoint($desktop){
+            width: 43%;
+        }
+
+    }
+
+    h2{
+        margin-bottom: 0em;
+
+        & + p{
+            margin-bottom: 0;
+            padding-top: 1.5em;
+            text-align:center;
+            max-width: 45em;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+#about_me {
+    .icon {
+        cursor: default;
+        height: 7em;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 1em;
+        width: 100%;
+    }
+}
+
+.face {
+    img{
+        margin:-30px 0 0 0 !important;
+    }
+}
+
+.nowebP{
+    .icon-ba{
+        background-image: url('/assets/images/logos/ba.png');
+    }
+    .icon-very{
+        background-image: url('/assets/images/logos/very.png');
+    }
+    .icon-anglian{
+        background-image: url('/assets/images/logos/anglian.png');
+    }
+    .icon-j2o{
+        background-image: url('/assets/images/logos/j2o.png');
+    }
+    .icon-arup{
+        background-image: url('/assets/images/logos/arup.png');
+    }
+}
+
+.webP{
+    .icon-ba{
+        background-image: url('/assets/images/logos/ba.webp');
+    }
+    .icon-very{
+        background-image: url('/assets/images/logos/very.webp');
+    }
+    .icon-anglian{
+        background-image: url('/assets/images/logos/anglian.webp');
+    }
+    .icon-j2o{
+        background-image: url('/assets/images/logos/j2o.webp');
+    }
+    .icon-arup{
+        background-image: url('/assets/images/logos/arup.webp');
+    }
+}
+
+
+/* Things I can do */
+
+ul.icando-icons{
+
+    overflow: hidden;
+    margin: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+
+    li{
+        display: block;
+        text-align: center;
+        width: 50%;
+        padding:0;
+        margin: 1rem 0;
+
+        @include breakpoint($tablet){
+            display: block;
+            text-align: center;
+            width: 25%;
+            margin: 2rem 0;
+        }
+
+        @include breakpoint($desktop){
+            padding-bottom: 0;
+            width: 20%;
+        }
+
+        .label{
+          display: block;
+        }
+
+        .item{
+            width: 50%;
+            display: inline-block;
+            height:80%;
+
+            &--logo{
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 1em;
+                font-size: 4rem;
+                background-position: center;
+                margin: 40px auto 0;
+                @include breakpoint($desktop){
+                    height:.5em;
+                    font-size: 8rem;
+                }
+            }
+
+        }
+
+    }
+
+    &--logo{
+      max-width: none;
+      .label{
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+
+}
+
+ul li {
+    display: inline-block;
+    padding-left: 0.5em;
+}
+
+
+/*Skills */
+
+.skillIcon{
+
+    clear:both;
+    width:100%;
+    padding-left: 0;
+    padding-top:2em;
+    text-align: center;
+
+    @include span(12);
+
+    @include breakpoint($desktop){
+        margin-right: gutter(12);
+        @include span(4 nobreak);
+        &:last-of-type{
+            margin-right: 0;
+        }
+
+        h3{
+            min-height: 5rem;
+        }
+    }
+
+    p{
+        text-align: center;
+    }
+
+    &:first-child{
+        padding-left:0px;
+    }
+
+}

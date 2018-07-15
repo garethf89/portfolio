@@ -1,0 +1,32 @@
+// Sass variables
+@import "./src/css/partials/imports";
+
+/* Mobile Nav */
+.nav_mobile{
+
+    background: #fff;
+
+    @include breakpoint($desktop){
+      display: none;
+    }
+
+    ul{
+      li{
+
+        display: block;
+
+        border-bottom:1px solid #cdcdcd;
+
+          a{
+            display: block;
+            padding: 1rem .75em;
+            color:#000;
+            width:100%;
+            border:none;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+
+      }
+    }
+}
