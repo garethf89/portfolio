@@ -1,5 +1,13 @@
 #contact_me{
 
+    .contact-hide{
+        display: none;
+    }
+
+    .form-loader{
+        margin:2rem;
+    }
+
     @include breakpoint($desktop){
         max-width:50em;
     }

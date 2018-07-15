@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import face from '../../assets/images/circle2X.png';
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class HomeDescription extends Component {
 
