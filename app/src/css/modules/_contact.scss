@@ -56,20 +56,18 @@
         margin: 0 2%;
         display: inline-block;
 
-        a{
-            &.fa-facebook{
-                background-color: $facebook;
-            }
-            &.fa-google-plus{
-                 background-color: $googleplus;
-            }
-            &.fa-twitter{
-                background-color: $twitter;
-            }
-            &.fa-linkedin{
-                 background-color: $linkedin;
-            }
+        .contact-social-block__facebook{
+            background-color: $facebook;
+        }
+        .contact-social-block__twitter{
+            background-color: $twitter;
+        }
+        .contact-social-block__linkedin{
+             background-color: $linkedin;
+        }
 
+        a{
+            position: relative;
             border-radius: 50%;
             list-style: none;
             display: inline-block;
@@ -80,6 +78,13 @@
             height: 2em;
             padding: 0.55em 0;
             font-size: 1.5EM;
+
+            svg{
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                left: 50%;
+            }
 
             @include breakpoint($tablet){
                 padding: .6em 0;

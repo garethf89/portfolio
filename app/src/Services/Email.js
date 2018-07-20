@@ -1,23 +1,13 @@
 
 import axios from 'axios';
 
-class Email {
+const headers = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+};
 
-    constructor () {
-        this.submit = this.submit.bind(this);
-    }
-    
-    submit (data) {
-
-        let headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-
-        let url = `http://localhost:3000/formEmail`;
-
-        return  axios.post(url, data, headers);
-    }
-}
+const url = `http://localhost:3000/formEmail`;
 
 
-export default Email;
+export const submitEmail = (data) => {
+    return axios.post(url, data, headers);
+};

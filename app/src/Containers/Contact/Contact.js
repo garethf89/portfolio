@@ -7,9 +7,10 @@ import Button from '../../Components/General/Button';
 import FormValidator from '../../Helpers/FormValidator';
 import ValidationMessages from '../../Helpers/ValidationMessages';
 
-import Email from '../../Services/Email';
+import * as email from '../../Services/Email';
 
 import { BeatLoader } from 'react-spinners';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class Contact extends Component {
 
@@ -21,9 +22,7 @@ class Contact extends Component {
       personEnq: '',
       error: false,
       loading : false
-    }
-
-    this.emailService = new Email();
+    }    
 
     this.validator = new FormValidator([
       { field: 'personName', method: 'isEmpty', validWhen: false, message: ValidationMessages.NAME},
@@ -43,7 +42,7 @@ class Contact extends Component {
   }
 
   sendForm = () => {
-    this.emailService.submit(this.state).then(() => {
+    email.submitEmail(this.state).then(() => {
       this.setState({
         apiError : false,
         success: true,
@@ -81,6 +80,25 @@ class Contact extends Component {
 
     let hideOrShow = this.state.submitted ? 'contact-hide' : '';
 
+
+    const icons = [
+      {
+        icon: 'twitter',
+        class: 'contact-social-block__twitter',
+        url: "//www.twitter.com/gazmatron1"
+      },
+      {
+        icon: 'facebook-f',
+        class: 'contact-social-block__facebook',
+        url: "//www.facebook.com/gazmatron1"
+      },
+      {
+        icon: 'linkedin-in',
+        class: "contact-social-block__linkedin",
+        url: "//uk.linkedin.com/in/garethferguson1"
+      }
+    ];
+
     return (
         <article id="contact_me" className="site_row centered">  
 
@@ -94,11 +112,22 @@ class Contact extends Component {
             </section>
           }
 
-          <section class="contact-social-block">
+          {this.state.apiError && 
+            <section id="contact_error" className="site_width fadeAnimation">
+                <p className="error">Failed to send enquiry! You could try directly emailing gareth.f@hotmail.co.uk</p>
+            </section>
+          }
+
+          <section className="contact-social-block">
               <ul>
-                  <li><a href="//www.twitter.com/gazmatron1" rel="noopener" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                  <li><a href="//www.facebook.com/gazmatron1" rel="noopener"target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                  <li><a href="//uk.linkedin.com/in/garethferguson1" rel="noopener" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                {icons.map((el, i) => {
+                  return <li key={i}>
+                            <a href={el.url} rel="noopener" className={el.class} target="_blank">
+                              <FontAwesomeIcon icon={["fab", el.icon]} className="icon" />
+                              <span className="label">{el.label}</span>
+                            </a>
+                        </li>
+                })}
               </ul>
           </section>
 
@@ -129,12 +158,6 @@ class Contact extends Component {
               rows="4"
               onChange={this.handleChange}
             />
-
-            {this.state.apiError && 
-              <section id="contact_error" className="site_width fadeAnimation">
-                  <p class="error">Failed to send enquiry! You could try directly emailing gareth.f@hotmail.co.uk</p>
-              </section>
-            }
 
             {this.state.error && 
               <section id="contact_error" className="site_width fadeAnimation">
