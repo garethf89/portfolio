@@ -1,26 +1,30 @@
-import {GET, SUCCESS, FAILURE} from '../Actions/ActionTypes';
+import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes';
 
 import lastFmService from '../Services/LastFM';
 
+const lfmService = new lastFmService();
+
 export function loginError(error) {
-    return { error, type: FAILURE };
-  }
+    return { type: FAILURE_LASTFM, payload: error};
+}
   
-  export function loginSuccess(response) {
-    return dispatch => {
-      dispatch({ response, type: SUCCESS });
-    };
-  }
+export function loginSuccess(response) {
+  return { type: SUCCESS_LASTFM, payload: response };
+}
   
   export function loginRequest(response) {
-    return { response, type: GET };
+    return {type: GET_LASTFM};
   }
 
 
 export const requestLastFm = (dispatch) => {
-    console.log(lastFmService)
-    return lastFmService.getAlbums().then(response => {
-        console.log(response);
-        dispatch(loginSuccess(response));
-    })
+  dispatch(loginRequest());
+
+  return lfmService.getAlbums().then(response => {
+    console.log(response);
+      dispatch(loginSuccess(response));
+  }).catch((error) => {
+    dispatch(loginError(error));
+  });
+ 
 };

@@ -1,4 +1,4 @@
-import {GET, SUCCESS, FAILURE} from '../Actions';
+import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes';
   
   const initialState = {
     albums: [],
@@ -6,35 +6,37 @@ import {GET, SUCCESS, FAILURE} from '../Actions';
     error: null
   };
   
-  export default function lastFmReducer(state = initialState, action) {
+  export default (state = initialState, action) => {
     const { type } = action;
+    console.log('WHAT@')
+    console.log(action)
     console.log(type);
-
+    
     switch(type) {
 
-      case GET:
+      case GET_LASTFM:
         return {
           ...state,
           loading: true,
           error: null
         };
   
-      case SUCCESS:
+      case SUCCESS_LASTFM:
         return {
           ...state,
           loading: false,
           albums: action.payload
         };
   
-      case FAILURE:
+      case FAILURE_LASTFM:
         return {
           ...state,
           loading: false,
-          error: action.payload.error,
+          error: action.payload,
           albums: []
         };
   
       default:
         return state;
     }
-  }
+  };

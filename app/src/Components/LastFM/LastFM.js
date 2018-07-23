@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import {requestLastFm} from '../../Actions/lastfm'
 import styles from './LastFM.scss';
@@ -13,7 +14,12 @@ class LastFM extends Component {
 
   componentDidMount()
   {
-    this.props.dispatch(requestLastFm());
+    this.props.requestLastFm();
+  }
+
+  componentDidUpdate()
+  {
+    console.log(this.props)
   }
 
   render() {
@@ -26,7 +32,7 @@ class LastFM extends Component {
         <article id="lastfm_albums" className={`${styles.lastfm_albums} site_row`} >
           <div className={`${activeClass}`}>
             <header>
-                <div class="icon fa-lastfm logo-large"></div>
+                <div className="icon fa-lastfm logo-large"></div>
                 <h2>Recently Played...</h2>
             </header>
             
@@ -51,4 +57,8 @@ const mapStateToProps = state => ({
   error: state.error
 });
   
-export default connect(mapStateToProps)(LastFM);
+const mapDispatchToProps = dispatch => ({
+  requestLastFm: () => dispatch(requestLastFm)
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(LastFM);

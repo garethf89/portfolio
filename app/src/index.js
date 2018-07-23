@@ -4,10 +4,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from './Reducers/reducers';
-const store = createStore(reducer);
+import thunk from 'redux-thunk';
+
+const initialState = {};
+const store = createStore(reducer, initialState, applyMiddleware(thunk));
 
 const root = document.getElementById('root');
 render(<Provider store={store}>
