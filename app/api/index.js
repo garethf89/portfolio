@@ -1,5 +1,5 @@
 
-var express = require('express'),
+const express = require('express'),
     http = require('http'),
     app = express(),
     compression = require('compression'),
@@ -12,7 +12,7 @@ var express = require('express'),
 //App setup
 
 //local or online?
-port = 3000;
+const port = 3000;
 
 app.use(bodyParser.urlencoded({
     extended: true

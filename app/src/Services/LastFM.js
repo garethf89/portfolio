@@ -15,7 +15,6 @@ export default class lastFmService{
 	}
 
 	getAlbums(){
-		console.log('here')
-		return axios.get(url, data, headers);
+		return axios.post(url, data, headers);
 	}
 }

@@ -12,17 +12,23 @@ export function loginSuccess(response) {
   return { type: SUCCESS_LASTFM, payload: response };
 }
   
-  export function loginRequest(response) {
-    return {type: GET_LASTFM};
+  export function loginRequest() {
+    return {type: GET_LASTFM };
   }
 
 
 export const requestLastFm = (dispatch) => {
+
   dispatch(loginRequest());
 
   return lfmService.getAlbums().then(response => {
-    console.log(response);
+    if(response.data){
       dispatch(loginSuccess(response));
+      return;
+    }
+
+    dispatch(loginError());
+
   }).catch((error) => {
     dispatch(loginError(error));
   });

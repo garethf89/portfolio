@@ -8,9 +8,6 @@ import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes
   
   export default (state = initialState, action) => {
     const { type } = action;
-    console.log('WHAT@')
-    console.log(action)
-    console.log(type);
     
     switch(type) {
 
@@ -18,14 +15,16 @@ import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes
         return {
           ...state,
           loading: true,
-          error: null
+          error: null,
+          albums : []
         };
   
       case SUCCESS_LASTFM:
         return {
           ...state,
           loading: false,
-          albums: action.payload
+          error: false,
+          albums: action.payload.data.topalbums.album
         };
   
       case FAILURE_LASTFM:

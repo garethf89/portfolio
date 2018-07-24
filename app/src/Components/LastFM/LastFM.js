@@ -1,61 +1,62 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import {requestLastFm} from '../../Actions/lastfm'
 import styles from './LastFM.scss';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class LastFM extends Component {
 
   constructor(){
     super();
-    this.isActive = false;
+    this.isActive = this.props;
   }
-
+ 
   componentDidMount()
   {
     this.props.requestLastFm();
+    this.test = this.props.albums
   }
 
-  componentDidUpdate()
+  componentWillUpdate(props)
   {
-    console.log(this.props)
+    this.isActive = props.albums && props.albums.length > 0;
+
   }
 
   render() {
 
-    console.log(this.props)
-
-    let activeClass = this.isActive ? 'lastfm_albums--active' : 'lastfm_albums--inactive';
+    let activeClass = this.isActive ? styles['lastfm_albums--active'] : styles['lastfm_albums--inactive'];
 
     return (
-        <article id="lastfm_albums" className={`${styles.lastfm_albums} site_row`} >
-          <div className={`${activeClass}`}>
+        <article className={`${styles.lastfm_albums} ${activeClass} site_row`}>
             <header>
                 <div className="icon fa-lastfm logo-large"></div>
+                <FontAwesomeIcon className={`icon ${styles['logo-large']}`} icon={['fab','lastfm']} />
                 <h2>Recently Played...</h2>
             </header>
             
-          
-            <div className="lastfm_albums__music-container">
-                {/* <img src="css/blank.gif" alt="{{album.name}} cover" src="album.image[2]['#text']" /> */}
-                <div className="music-info">
-                    {/* <h5>{{album.name}}</h5> */}
-                    {/* <h6>{{album.artist.name}}</h6> */}
-                </div>
-          </div>
-          </div>
-        
+            { this.props.albums.map((album, i) => {
+              return <div key={i} className={styles['lastfm_albums__music-container']}>
+                        <img alt={`${album.name} cover`} src={album.image[2]['#text']} />
+                        <div className={styles['music-info']}>
+                          <h5>{album.name}</h5>
+                          <h6>{album.artist.name}</h6>
+                        </div>
+                      </div>
+            })}     
         </article>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  albums: state.albums,
-  loading: state.loading,
-  error: state.error
-});
+const mapStateToProps = state => {
+  return { 
+    albums: state.lastFm.albums,
+    loading: state.lastFm.loading,
+    error: state.lastFm.error
+  }
+};
   
 const mapDispatchToProps = dispatch => ({
   requestLastFm: () => dispatch(requestLastFm)

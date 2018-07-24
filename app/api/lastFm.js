@@ -21,13 +21,15 @@ if (env == "dev") {
 var dbConnected = false;
 
 // Database Name
-const murl = 'mongodb://mongo';
+// const murl = 'mongodb://mongo';
+const murl = 'mongodb://localhost:27017'; // local
 const dbName = 'gareth';
 var db = null;
 
 // Use connect method to connect to the server
-    mongo.connect(murl, function(err, client) {
+mongo.connect(murl, function(err, client) {
     if(err){
+        console.log(err)
        return
     }
   console.log("Connected successfully to server");
