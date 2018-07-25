@@ -10,8 +10,12 @@ import routes from './Routes';
 
 import { Route, Switch } from 'react-router-dom';
 
+import dotenv from 'dotenv';
+
 import {Icons} from './Icons';
+
 Icons();
+dotenv.config();
 
 class App extends Component {
 

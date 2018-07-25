@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import SlideMenuIcon from '../../Components/SlideMenuIcon/SlideMenuIcon';
 import DesktopMenu from '../../Containers/DesktopMenu/DesktopMenu';
+import Socket from '../../Components/Socket/Socket';
 
 class Header extends Component {
     state = {
@@ -32,8 +33,9 @@ class Header extends Component {
                     </header>
                     <p>Web Developer based in Newcastle Upon Tyne</p>
                 </div>
-                    {/* <app-socket></app-socket> */}
+                <Socket />
             </section> 
+
 
         </section>
 
