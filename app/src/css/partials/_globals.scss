@@ -163,6 +163,26 @@ p {
   opacity:1;
 }
 
+/* Animations */
+.mainAnimation-enter,
+.mainAnimation-enter-done {
+ @include transitionMixin(all, .5s);
+}
+
+.mainAnimation-enter {
+  opacity:0;
+  transform: translateY(10px);
+}
+
+.mainAnimation-enter-active {
+  opacity:1;
+  transform: translateY(0);
+}
+
+.mainAnimation-exit-active{
+    display: none;
+}
+
 /* lightbox */
 .ngdialog-content img{
     max-width: 100%;

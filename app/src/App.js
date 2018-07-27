@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './css/main.scss';
 
@@ -19,6 +20,30 @@ dotenv.config();
 
 class App extends Component {
 
+  componentWillMount()
+  {
+    this.props.history.listen((location, action) => {
+     if(location.pathname === '/' ) return
+     if(location.pathname === '/#my_work'){
+       this.animateToElement('my_work');
+       return
+     }
+     
+     this.animateToElement('main_content');
+    });
+  }
+
+    animateToElement(el){
+      let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
+      let timeAmount = style.display === 'none' ? 10 : 400;
+      window.setTimeout(function(){ 
+        document.getElementById(el).scrollIntoView({ 
+          block:'start',
+          behavior: 'smooth'
+        });
+      }, timeAmount);
+    }
+
   render() {
     return (
       <main>
@@ -29,15 +54,19 @@ class App extends Component {
              <Header />
              
             <section id="main_content">
-                <Switch>
-                {routes.map((route, i) => (
-                    <Route
-                      key={i}
-                      path={route.path}
-                      component={route.component}
-                    />
-                  ))}
-                </Switch>
+              <TransitionGroup>
+                <CSSTransition key={this.props.location.key} classNames="mainAnimation" timeout={300}>
+                  <Switch location={this.props.location}>
+                    {routes.map((route, i) => (
+                        <Route
+                          key={i}
+                          path={route.path}
+                          component={route.component}
+                        />
+                      ))}
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
             </section>
 
             <Footer />
