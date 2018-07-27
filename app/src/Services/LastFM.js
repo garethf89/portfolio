@@ -1,7 +1,8 @@
 
 import axios from 'axios';
 
-const url = `http://localhost:3000/lastFm`;
+const url = `${process.env.REACT_APP_API_URL}/lastFm`;
+
 const data = {'name':'DirtyG'};
 const headers ={
 	'Content-Type': 'application/x-www-form-urlencoded'

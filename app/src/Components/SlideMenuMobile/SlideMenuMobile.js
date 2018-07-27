@@ -5,6 +5,8 @@ import * as Slideout from 'slideout';
 
 import styles from './SlideMenuMobile.scss';
 
+import Menu from '../../Components/Menu/Menu';
+
 class SlideMenuMobile extends Component {
 
 componentDidMount(){
@@ -33,14 +35,7 @@ componentWillReceiveProps(newProps){
   render() {
     return (
         <nav id="menu" className={styles.nav_mobile}>
-            <ul role="menubar">
-                <li className="current" role="menuitem"><a>Home</a></li>
-                <li><a fragment="my_work" role="menuitem">Work</a></li>
-                <li><a role="menuitem">Contact</a></li>
-                <li role="menuitem">
-                    <a target="_blank" href="files/cv.pdf" download="cv.pdf"> <span className="icon dlIcon fa fa-download"></span>Download CV</a>
-                </li>
-            </ul>
+           <Menu />
         </nav>
     );
   }
