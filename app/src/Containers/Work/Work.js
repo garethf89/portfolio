@@ -4,6 +4,7 @@ import {WorkData} from '../../Data/WorkData';
 import {Link} from 'react-router-dom'; 
 import TechList from "../../Components/TechList/TechList";
 import PhotoGallery from "../../Components/PhotoGallery/PhotoGallery";
+import Anchor from "../../Components/General/Anchor";
 
 class Work extends Component {
 
@@ -54,19 +55,11 @@ class Work extends Component {
           <section className="right_work">
 
             <h4>Images</h4>
+            
             <PhotoGallery images={this.work.images} classNames="work_screenshot"/>
-            {/* <div class="float_block photo-gallery">
-              <a aria-haspopup="true" *ngFor="let image of work.images" class="work_screenshot" rel="galWork" [href]="image.image">
-                    <picture>
-                        <source alt="" type="image/webp" src="css/blank.gif" [src]="image.thumb" class="work_thumb">
-                        <img src="css/blank.gif" [src]="image.thumb" class="work_thumb">
-                    </picture>
-              </a>
-            </div>
-
-            <div *ngFor="let link of work.links">
-              <a role="button" class="button button--expand" target="_blank" [href]="link.link" tabindex="1">Visit {{link.title}}</a>
-            </div> */}
+            {this.work.links && this.work.links.map((link, i) => {
+              return <Anchor key={i} link={link.link} text={link.title} classes="button--expand" tabindex={i} target="_blank" />
+            })}
 
           </section>
       </article>

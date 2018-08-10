@@ -167,6 +167,7 @@ p {
 .mainAnimation-enter,
 .mainAnimation-enter-done {
  @include transitionMixin(all, .5s);
+ -webkit-backface-visibility: hidden;
 }
 
 .mainAnimation-enter {
@@ -224,7 +225,6 @@ p {
 
     @include buttonMixin(rgba(143,196,0,1),rgba(107,165,0,1),rgba(198,226,120,1),rgba(167,211,44,1));
     width:100%;
-    min-width:20em;
 
     @include breakpoint($desktop){
 

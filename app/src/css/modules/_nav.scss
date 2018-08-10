@@ -77,10 +77,8 @@
                     }
                 }
 
-                &.current {
-                    & > a {
-                        font-weight: 900;
-                    }
+                a.active {
+                    font-weight: 900;
                 }
 
                 &:hover {

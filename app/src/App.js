@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { connect } from 'react-redux';
 
 import './css/main.scss';
 
 import Footer from "./Containers/Footer/Footer";
 import Header from './Containers/Header/Header';
 import SlideMenuMobile from './Components/SlideMenuMobile/SlideMenuMobile';
+import { toggleMenu } from './Actions/menu';
 
 import routes from './Routes';
 
@@ -23,8 +25,8 @@ class App extends Component {
   componentWillMount()
   {
     this.props.history.listen((location, action) => {
-     if(location.pathname === '/' ) return
-     if(location.pathname === '/#my_work'){
+      this.props.dispatch(toggleMenu(false))
+      if(location.hash === '#my_work'){
        this.animateToElement('my_work');
        return
      }
@@ -33,16 +35,16 @@ class App extends Component {
     });
   }
 
-    animateToElement(el){
-      let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
-      let timeAmount = style.display === 'none' ? 10 : 400;
-      window.setTimeout(function(){ 
-        document.getElementById(el).scrollIntoView({ 
-          block:'start',
-          behavior: 'smooth'
-        });
-      }, timeAmount);
-    }
+  animateToElement(el){
+    let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
+    let timeAmount = style.display === 'none' ? 10 : 400;
+    window.setTimeout(function(){ 
+      document.getElementById(el).scrollIntoView({ 
+        block:'start',
+        behavior: 'smooth'
+      });
+    }, timeAmount);
+  };
 
   render() {
     return (
@@ -77,4 +79,9 @@ class App extends Component {
   }
 }
 
-export default App;
+
+function mapStateToProps(state) {
+  return state
+}
+
+export default connect(mapStateToProps)(App);
