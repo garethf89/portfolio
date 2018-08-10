@@ -2,14 +2,13 @@
 @import "../../node_modules/bourbon/core/bourbon";
 @import '../../node_modules/baguettebox.js/dist/baguetteBox.min.css';
 
+
 :global{
 
 @import 'normalize';
 @import 'boilerplate';
 
 $fa-font-path:'/assets/fonts';
-
-//@import 'devicons';
 
 // Sass variables
 @import "partials/imports";
@@ -50,6 +49,10 @@ $fa-font-path:'/assets/fonts';
 .fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 250ms ease-in;
+}
+
+#baguetteBox-overlay.visible{
+  z-index: 9999;
 }
 
 

@@ -3,5 +3,5 @@ export const ProjectsData = [
   { name: 'British Araways',icon: "ba" },
   { name: 'Very', icon: "very" },
   { name: 'J2O', icon: "j2o" },
-  { name: 'Anglian Home Improvements', icon: "anglian" },
+  { name: 'Anglian Home Improvements', icon: "anglian" }
 ];

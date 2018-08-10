@@ -163,11 +163,7 @@ module.exports = {
             fallback: 'style-loader',
               use: [
                 {
-                  loader: 'css-loader',
-                  options: {
-                    modules: true,
-                    localIdentName: '[name]__[local]___[hash:base64:5]'
-                  }
+                  loader: 'css-loader'  
                 },
               'postcss-loader'
               ]
