@@ -13,13 +13,11 @@ import routes from './Routes';
 
 import { Route, Switch } from 'react-router-dom';
 
-import dotenv from 'dotenv';
-
 import {Icons} from './Icons';
 
 Icons();
-dotenv.config();
 
+console.log(process.env)
 class App extends Component {
 
   componentWillMount()
@@ -37,7 +35,7 @@ class App extends Component {
 
   animateToElement(el){
     let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
-    let timeAmount = style.display === 'none' ? 10 : 400;
+    let timeAmount = style.display === 'none' ? 10 : 500;
     window.setTimeout(function(){ 
       document.getElementById(el).scrollIntoView({ 
         block:'start',
