@@ -18,7 +18,7 @@ services:
   nginx:
     image: garethf89/portfolio_nginx
     build:
-      context: ./nginx
+      context: ./
       args: 
         config: /prod.conf
     ports:

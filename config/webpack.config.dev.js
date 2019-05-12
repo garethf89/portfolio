@@ -24,7 +24,7 @@ const publicUrl = '';
 const env = getClientEnvironment(publicUrl);
 
 // This is the development configuration.
-// It is focused on developer experience and fast rebuilds.
+// It is focused on developer experiencsasse and fast rebuilds.
 // The production configuration is different and lives in a separate file.
 module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.

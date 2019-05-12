@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from 'react-router-dom'; 
 import Globals from '../../Globals';
 import { WorkData } from '../../Data/WorkData';
 
@@ -26,9 +26,9 @@ class Skills extends Component {
                     backgroundImage: `url(/${work.cover}${this.imageExt}.jpg)`
                 };
 
-                return <a key={i} className="work_item" href={`/${work.url}`} style={bgStyle} >
+                return <Link key={i} className="work_item" to={`/${work.url}`} style={bgStyle}>
                     <h4>{work.name}</h4>
-                </a>
+                </Link>
             })}
 
             </div>

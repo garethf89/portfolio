@@ -2,9 +2,10 @@
 import axios from 'axios';
 
 const url = `${process.env.REACT_APP_API_URL}/lastFm`;
-
+console.log(url)
 const data = {'name':'DirtyG'};
 const headers ={
+	'Access-Control-Allow-Origin': '*',
 	'Content-Type': 'application/x-www-form-urlencoded'
 };
 
