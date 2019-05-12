@@ -1,0 +1,190 @@
+/* Nav */
+
+/*Scale */
+@mixin sharedStlyesNav(){
+
+}
+
+/* Desktop Nav */
+#nav {
+    display: none;
+    cursor: default;
+    font-size: 0.8em;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    box-shadow: none;
+    color: white;
+    padding: 2em 2.5em;
+    position: fixed;
+    @include breakpoint($desktop) {
+        display: block;
+    }
+
+    nav {
+        letter-spacing: 0.075em;
+        position: absolute;
+        right: 2.5em;
+        top: 1.75em;
+        left: initial;
+        text-transform: uppercase;
+
+        &.revealHeader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background: $mainGreenFull;
+            text-align: right;
+
+            ul {
+                margin: 0;
+                padding: 0.5em;
+            }
+        }
+
+        &.revealHeader-add {
+            @include animationMixin(reveal-nav, 0.2s, 0, none);
+        }
+
+        ul {
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-left: 1.5em;
+                width: auto;
+                background: none;
+
+                &.reveal {
+                    @include animationMixin(reveal-header, 0.2s, 0);
+                    height: 3.125em;
+                    padding: 0.5em 1.5em;
+                    background: #6d9030;
+                    color: #fff;
+                }
+
+                &.active > a {
+                    @include transitionMixin(all,0.2s,ease-in-out);
+                    background: rgba(188, 202, 206, 0.15);
+                    border: solid 1px;
+                }
+
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+
+                a.active {
+                    font-weight: 900;
+                }
+
+                &:hover {
+                    & > a {
+                        border: none;
+                        @include transitionMixin(all,0.2s,ease-in-out);
+                        background: rgba(188, 202, 206, 0.15);
+                        border: solid 1px #fff;
+                    }
+                }
+
+                a {
+                    color: #000;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #cdcdcd;
+                    display: inline-block;
+                    padding: 0 0.75em;
+                    text-decoration: none;
+                    @include breakpoint($desktop) {
+                        border: solid 1px transparent;
+                        display: inline-block;
+                        padding: 0 0.75em;
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Slide Out */
+.slideout-menu {
+  position: fixed;
+  left: -220px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 2220px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: left .3s ease-in-out;
+  z-index: 1;
+  &.menu-open{
+    left:0;
+  }
+}
+
+.slideout-panel {
+  position:relative;
+  z-index: 2;
+  will-change: transform;
+  background: $body;
+  @include breakpoint($desktop){
+    will-change: unset;
+  }
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  @include breakpoint($desktop){
+    display: none;
+  }
+}
+
+/* Icon */
+#nav__pullDown{
+    cursor:pointer;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    display: block;
+    outline: 0;
+
+    &.spinner-master3 * {transition:all 0.3s;-webkit-transition:all 0.3s;box-sizing:border-box;outline: 0;}
+
+    &.spinner-master3 {position:absolute;top: 1rem;left: 1rem;height:2rem;width:2rem;}    t
+
+    &.spinner-master3 input[type=checkbox] {display:none;}
+    &.spinner-master3 > div {cursor:pointer;position:absolute;z-index:99;height:100%;width:100%;top:10px;left:0;}
+
+    &.spinner-master3 .spinner3 {position:absolute;height:5px;width:100%;background-color:#fff;}
+
+    &.spinner-master3 .diagonal.part-1 {position:relative;float:left;}
+    &.spinner-master3 .horizontal {position:relative;float:left;margin-top:6px;}
+    &.spinner-master3 .diagonal.part-2 {position:relative;float:left;margin-top:6px;}
+
+    &.spinner-master3 .spinner-spin3.active > .horizontal {transform:scale(2,1);-webkit-transform:scale(2,1); opacity: 0;}
+    &.spinner-master3 .spinner-spin3.active > .diagonal.part-1 {transform:rotate(-135deg);-webkit-transform:rotate(-135deg);margin-top:10px;}
+    &.spinner-master3 .spinner-spin3.active > .diagonal.part-2 {transform:rotate(135deg);-webkit-transform:rotate(135deg);margin-top:-16px;}
+
+    @include breakpoint($desktop){
+        display: none;
+    }
+}
+
+.dlIcon{
+    font-size: 1em;
+    margin: 0 0.75em 0 0;
+}

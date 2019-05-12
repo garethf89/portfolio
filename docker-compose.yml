@@ -6,10 +6,9 @@ services:
   app:
     build:
       context: ./app
-      dockerfile: Dockerfile-dev
-    
+      dockerfile: Dockerfile-prod
     volumes:
-      - ./app/app:/usr/src/app/app
+      - ./app:/app
     ports:
       - "3000:3000"
     links:
@@ -17,10 +16,11 @@ services:
   
   # Build the container using the nginx Dockerfile
   nginx:
+    image: garethf89/portfolio_nginx
     build:
-      context: ./nginx
+      context: ./
       args: 
-        config: default.conf
+        config: /prod.conf
     ports:
       - "80:80"
     links: 

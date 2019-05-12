@@ -1,0 +1,27 @@
+#  Create a new image from the base nodejs 7 image.
+FROM node:9.11-alpine as webpack
+
+RUN apk update -f && \
+   apk add bash
+
+RUN apk add git
+RUN apk add yarn
+
+ENV APP_DIR=/opt/portfolio
+ENV NODE_ENV=production
+
+# Set the created directory as the working directory
+WORKDIR $APP_DIR
+
+# Copy the package.json inside the working directory
+COPY ./package.json $APP_DIR/package.json
+COPY ./config $APP_DIR/config
+COPY ./config.json $APP_DIR/config.json
+COPY ./configLastFM.json $APP_DIR/configLastFM.json
+
+# Install required dependencies
+RUN yarn install
+
+EXPOSE 3000
+
+CMD ["yarn", "run", "start-prod"]
