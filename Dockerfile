@@ -15,8 +15,6 @@ WORKDIR $APP_DIR
 
 COPY ./package.json $APP_DIR/package.json
 COPY ./config $APP_DIR/config
-COPY ./config.json $APP_DIR/config.json
-COPY ./configLastFM.json $APP_DIR/configLastFM.json
 COPY ./public $APP_DIR/public
 COPY ./scripts $APP_DIR/scripts
 COPY ./src $APP_DIR/src
