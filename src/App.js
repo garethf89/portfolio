@@ -17,7 +17,6 @@ import {Icons} from './Icons';
 
 Icons();
 
-console.log(process.env)
 class App extends Component {
 
   componentWillMount()
