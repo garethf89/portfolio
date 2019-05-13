@@ -20,7 +20,7 @@ function getRes(){
             return '2x';
         } 
     }
-    return '1x';
+    return '';
 }
 
 export default Globals;
