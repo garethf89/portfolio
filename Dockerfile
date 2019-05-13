@@ -28,6 +28,7 @@ RUN rm -rf /etc/nginx/conf.d/default.conf
 RUN rm -rf /etc/nginx/nginx.conf
 
 COPY /nginx/referral-spam.conf /etc/nginx/
+COPY /nginx/gzip.conf /etc/nginx/
 COPY /nginx/nginx.conf /etc/nginx/
 COPY /nginx/default.conf /etc/nginx/conf.d/
 
