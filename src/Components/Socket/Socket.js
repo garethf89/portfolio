@@ -27,9 +27,7 @@ class Socket extends PureComponent {
             if (msg.count > 1) {
               countText = ' current viewers';
             }
-
-            console.log(msg)
-
+            
             this.setState({
               ready : true,
               countText: countText,
