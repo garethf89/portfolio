@@ -1,45 +1,42 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as io from 'socket.io-client';
 
-class Socket extends Component {
+class Socket extends PureComponent {
 
     constructor(){
         super();
 
-        this.countText = '';
         this.state = {
-            ready : false
+          count: 0,
+          countText: '',
+          ready : false
         }
 
         const connectionString = process.env.REACT_APP_API_URL;
-        this.socket = io.connect(connectionString);
+        const socket = io.connect(connectionString);
+        this.startSocket(socket);
     }
 
-    componentDidMount(){
-        
-        this.socket.on('connect', () => {
+    startSocket(socket){
 
-            this.socket.send('here');
-        
-            this.socket.on('count', (msg) => {
+        socket.on('connect', () => {
+          socket.on('count', (msg) => {
 
-                this.count = msg.count;
-    
-              if (msg.count > 1) {
-                this.countText = ' current viewers';
-              } else {
-                this.countText = ' current viewer';
-              }
+            let countText = ' current viewer';
 
-              if (!this.ready) {
-                this.ready = true;
-              }
+            if (msg.count > 1) {
+              countText = ' current viewers';
+            }
 
-              this.setState({
-                ready : true
-              });
+            console.log(msg)
 
+            this.setState({
+              ready : true,
+              countText: countText,
+              count: msg.count
             });
+
+          });
         });
     }
 
@@ -47,12 +44,13 @@ class Socket extends Component {
     render() {
 
         let visible = this.state.ready ? 'visible' : '';
+        const { count, countText } = this.state;
 
         return (
             <div className="site_row">
                 <div id="counter" className={visible}>
-                    <strong>{this.count}</strong>
-                    {this.countText}
+                    <strong>{count}</strong>
+                    {countText}
                 </div>
             </div>
         );

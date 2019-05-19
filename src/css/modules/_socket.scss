@@ -1,6 +1,6 @@
 #counter{
     
-    display: none;
+    // display: none;
     opacity:0;
     position: absolute;
     background: $mainGreenFull;
@@ -21,9 +21,9 @@
 
     }
 
-    @include breakpoint($desktop){
-        display: block;
-    }
+    // @include breakpoint($desktop){
+    //     display: block;
+    // }
 
     strong{
         margin-right: .2em;

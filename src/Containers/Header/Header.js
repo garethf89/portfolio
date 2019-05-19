@@ -33,7 +33,7 @@ class Header extends Component {
                     </header>
                     <p>Web Developer based in Newcastle Upon Tyne</p>
                 </div>
-                {/* <Socket /> */}
+                <Socket />
             </section> 
 
 
