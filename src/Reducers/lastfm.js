@@ -8,7 +8,6 @@ import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes
   
   export default (state = initialState, action) => {
     const { type } = action;
-    
     switch(type) {
 
       case GET_LASTFM:

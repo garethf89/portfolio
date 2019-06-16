@@ -21,7 +21,6 @@ class LastFM extends Component {
   componentWillUpdate(props)
   {
     this.isActive = props.albums && props.albums.length > 0;
-
   }
 
   render() {

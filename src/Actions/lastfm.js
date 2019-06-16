@@ -12,10 +12,9 @@ export function loginSuccess(response) {
   return { type: SUCCESS_LASTFM, payload: response };
 }
   
-  export function loginRequest() {
-    return {type: GET_LASTFM };
-  }
-
+export function loginRequest() {
+  return {type: GET_LASTFM };
+}
 
 export const requestLastFm = (dispatch) => {
 
