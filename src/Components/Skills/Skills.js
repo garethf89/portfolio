@@ -7,6 +7,8 @@ class Skills extends Component {
 
   render() {
 
+    const { skills } = this.props;
+
     return (
 
         <article className="highlightContainer site_row">
@@ -17,8 +19,8 @@ class Skills extends Component {
 
         <ul className="icando-icons" aria-labelledby="thingsIcanDo" >
 
-            {SkillsData.map((skill, i) => {
-                if(!skill.show_home) return false;
+            {skills.map((skill, i) => {
+                if(!skill.home) return false;
                 return  <li key={i}>
                         <SVGInline svg={ skill.svg } className={`item ${skill.class || "" }`} />
                         <span id={`icon-${i}`} className="label">{skill.name}</span>

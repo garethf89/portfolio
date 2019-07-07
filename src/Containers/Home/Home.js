@@ -12,12 +12,12 @@ class Home extends Component {
 
   render() {
 
-    const { projects, work } = this.props.data;
+    const { projects, skills, work} = this.props.data;
 
     return (
         <div>
             <HomeDescription />
-            <Skills />
+            <Skills skills={skills} />
             <Projects projects={projects} />
             <Work work={work} />
             <LastFM />
