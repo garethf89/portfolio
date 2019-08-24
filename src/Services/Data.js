@@ -36,6 +36,17 @@ export default class dataService{
             data.work.push(entry)
         });
       });
+    })
+    .then(() => {
+      client.getEntries({
+        'content_type': 'skills',
+        order: 'sys.order'
+        }).then(function (entries) {
+          data.skills = [];
+          entries.items.forEach(function (entry) {
+            data.skills.push(entry)
+        });
+      });
     }).then(() => {
       return data;
     })
