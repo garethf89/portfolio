@@ -15,7 +15,6 @@ class LastFM extends Component {
   componentDidMount()
   {
     this.props.requestLastFm();
-    this.test = this.props.albums
   }
 
   componentWillUpdate(props)
