@@ -20,7 +20,6 @@ export const requestData = (dispatch) => {
   dispatch(dataRequest());
 
   return dataFetcher.getData().then(response => {
-    console.log(response)
     if(response){
       dispatch(dataSuccess(response));
       return;

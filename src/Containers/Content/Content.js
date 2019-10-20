@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+import LoadError from '../../Components/General/LoadError';
 import Spinner from '../../Components/General/Spinner';
 import { requestData } from '../../Actions/data';
 
@@ -18,6 +19,8 @@ const Content = WrappedComponent => {
 
       if ( loading) {
         return <Spinner />
+      } else if (!data) {
+        return <LoadError /> 
       }
 
       return <WrappedComponent data={data} {...this.props} />;

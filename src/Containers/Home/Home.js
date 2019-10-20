@@ -11,7 +11,6 @@ import Content from '../Content/Content';
 class Home extends Component {
 
   render() {
-
     const { projects, skills, work} = this.props.data;
 
     return (

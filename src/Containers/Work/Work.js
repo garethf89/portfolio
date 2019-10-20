@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import {WorkData} from '../../Data/WorkData';
 
 import {Link} from 'react-router-dom'; 
 import TechList from "../../Components/TechList/TechList";
 import PhotoGallery from "../../Components/PhotoGallery/PhotoGallery";
 import Anchor from "../../Components/General/Anchor";
 
+import { connect } from 'react-redux';
+import Content from '../Content/Content';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 class Work extends Component {
 
   constructor(){
@@ -15,40 +17,44 @@ class Work extends Component {
   }
 
   componentWillMount() {
-
     const url = this.props.match.url;
-    const result = WorkData.filter(work => url.indexOf(work.url) > -1);
+    const result = this.props.data.work.filter(work => url.indexOf(work.fields.url) > -1);
 
     if(!result.length){
       return;
     }
-    
+    this.myRef = React.createRef();
     this.work = result[0];
-    this.bg = `linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url(${this.work.bg})`;
-    
+    this.bg = `linear-gradient(50deg, rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 100%),url(${this.work.fields.bg})`;
   }
 
+  componentDidMount() {
+    const currentVal = this.myRef.current.innerHTML;
+    this.myRef.current.innerHTML =  currentVal.replace(/&nbsp;/g, ' ');
+  }
 
   render() {
 
     const bgStyle = {
       background: this.bg
     }
+ 
     
-    const content = {__html: this.work.desc};
+    const options = {};
+
+    const content = documentToReactComponents(this.work.fields.desc, options);
 
     return (
       <article id="work_page" className="site_row highlightContainer clearfix" style={bgStyle}>
         <header>
             <Link className="workPage_home home_button" to="/">Home</Link>
-            <h2>{this.work.name}</h2>
+            <h2>{this.work.fields.name}</h2>
         </header>
 
         <section className="left_work">
-              <p dangerouslySetInnerHTML={content}></p>
-
+              <div ref={this.myRef} className>{content}</div>
               <h4>Technology</h4>
-              <TechList skills={this.work.skills} />
+              <TechList refSkills={this.props.data.skills} skills={this.work.fields.skills} />
 
           </section>
 
@@ -56,8 +62,8 @@ class Work extends Component {
 
             <h4>Images</h4>
             
-            <PhotoGallery images={this.work.images} classNames="work_screenshot"/>
-            {this.work.links && this.work.links.map((link, i) => {
+            <PhotoGallery images={this.work.fields.images} classNames="work_screenshot"/>
+            {this.work.fields.links && this.work.fields.links.map((link, i) => {
               return <Anchor key={i} link={link.link} text={link.title} classes="button--expand" tabindex={i} target="_blank" />
             })}
 
@@ -68,4 +74,11 @@ class Work extends Component {
   }
 }
 
-export default Work;
+const mapStateToProps = state => {
+  return {
+    loading: state.data.loading,
+    data: state.data.data
+  }
+};
+
+export default connect(mapStateToProps, {})(Content(Work))
