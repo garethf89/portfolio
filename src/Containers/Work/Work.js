@@ -39,7 +39,7 @@ class Work extends Component {
       background: this.bg
     }
  
-    
+    console.log(this.work.fields)
     const options = {};
 
     const content = documentToReactComponents(this.work.fields.desc, options);
