@@ -1,4 +1,4 @@
-FROM node:11-alpine as webpack
+FROM node:12-alpine as webpack
 
 ENV APP_DIR=/opt/portfolio
 ENV NODE_ENV=production
