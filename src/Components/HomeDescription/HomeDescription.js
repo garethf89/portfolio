@@ -11,7 +11,7 @@ class HomeDescription extends Component {
     const icons = [
         {
             icon: 'briefcase',
-            header: 'Experience with many clients',
+            header: 'Experience',
             paragraph: 'Clients I have worked with have ranged from small start-ups to large global brands.'
         },
         {

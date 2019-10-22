@@ -19,10 +19,10 @@ const routes = [
       path: "/J2O",
       component: Work
     },
-    {
-      path: "/HomeGroup",
-      component: Work
-    },
+    // {
+    //   path: "/HomeGroup",
+    //   component: Work
+    // },
     {
       path: "/Happiest",
       component: Work
@@ -36,7 +36,15 @@ const routes = [
       component: Work
     },
     {
-      path: "/Barspot",
+      path: "/Barley",
+      component: Work
+    }, 
+    {
+      path: "/Elevon",
+      component: Work
+    },
+    {
+      path: "/contact",
       component: Contact
     },
     {

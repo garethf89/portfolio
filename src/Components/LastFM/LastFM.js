@@ -11,20 +11,11 @@ class LastFM extends Component {
     super();
     this.isActive = this.props;
   }
- 
-  componentDidMount()
-  {
-    this.props.requestLastFm();
-  }
-
-  componentWillUpdate(props)
-  {
-    this.isActive = props.albums && props.albums.length > 0;
-  }
 
   render() {
 
-    let activeClass = this.isActive ? styles['lastfm_albums--active'] : styles['lastfm_albums--inactive'];
+    let activeClass = (this.props.lastFm.albums && this.props.lastFm.albums.length > 0) ? 
+      styles['lastfm_albums--active'] : styles['lastfm_albums--inactive'];
 
     return (
         <article className={`${styles.lastfm_albums} ${activeClass} site_row`}>
@@ -50,6 +41,7 @@ class LastFM extends Component {
 
 const mapStateToProps = state => {
   return { 
+    ...state,
     albums: state.lastFm.albums,
     loading: state.lastFm.loading,
     error: state.lastFm.error

@@ -52,7 +52,7 @@ class Work extends Component {
         </header>
 
         <section className="left_work">
-              <div ref={this.myRef} className>{content}</div>
+              <div ref={this.myRef}>{content}</div>
               <h4>Technology</h4>
               <TechList refSkills={this.props.data.skills} skills={this.work.fields.skills} />
 

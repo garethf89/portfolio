@@ -9,6 +9,9 @@ import Header from './Containers/Header/Header';
 import SlideMenuMobile from './Components/SlideMenuMobile/SlideMenuMobile';
 import { toggleMenu } from './Actions/menu';
 
+import {requestLastFm} from './Actions/lastfm'
+import { requestData } from './Actions/data';
+
 import routes from './Routes';
 
 import { Route, Switch } from 'react-router-dom';
@@ -30,6 +33,10 @@ class App extends Component {
      
      this.animateToElement('main_content');
     });
+
+    console.log('runnning')
+    this.props.requestLastFm();
+    this.props.requestData();
   }
 
   animateToElement(el){
@@ -77,8 +84,14 @@ class App extends Component {
 }
 
 
-function mapStateToProps(state) {
-  return state
-}
+const mapStateToProps = state => ({
+  ...state
+});
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  dispatch: dispatch,
+  requestLastFm: () => dispatch(requestLastFm),
+  requestData: () => dispatch(requestData)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

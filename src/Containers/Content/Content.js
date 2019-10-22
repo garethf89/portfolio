@@ -2,16 +2,10 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import LoadError from '../../Components/General/LoadError';
 import Spinner from '../../Components/General/Spinner';
-import { requestData } from '../../Actions/data';
-
 
 const Content = WrappedComponent => {
   
   class ContentRenderingComponent extends Component {
-
-    componentDidMount () {
-      this.props.requestData();
-    }
 
     render() {
 
@@ -34,11 +28,7 @@ const Content = WrappedComponent => {
     }
   };
     
-  const mapDispatchToProps = dispatch => ({
-    requestData: () => dispatch(requestData)
-  });
-
-  return connect(mapStateToProps,mapDispatchToProps)(ContentRenderingComponent);
+  return connect(mapStateToProps)(ContentRenderingComponent);
 }
 
 export default Content;

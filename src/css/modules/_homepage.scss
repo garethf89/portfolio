@@ -199,7 +199,13 @@ ul li {
 
 /*Skills */
 
-.skillIcon{
+.skillIcons {
+  @include breakpoint($desktop){
+    display: flex;
+  }
+}
+
+.skillIcon {
 
     clear:both;
     width:100%;
@@ -211,13 +217,10 @@ ul li {
 
     @include breakpoint($desktop){
         margin-right: gutter(12);
+        flex: 1;
         @include span(4 nobreak);
         &:last-of-type{
             margin-right: 0;
-        }
-
-        h3{
-            min-height: 5rem;
         }
     }
 
