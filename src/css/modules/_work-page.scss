@@ -19,6 +19,8 @@
             width:35%;
         }
         .left_work{
+            @include clearfix();
+            // word-wrap: break-word;
             float:left;
             width:60%;
         }

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import SVGInline from "react-svg-inline";
-
-import { SkillsData } from '../../Data/SkillsData';
 
 class Skills extends Component {
 
   render() {
+
+    const { skills } = this.props;
 
     return (
 
@@ -16,12 +15,13 @@ class Skills extends Component {
         </header>
 
         <ul className="icando-icons" aria-labelledby="thingsIcanDo" >
-
-            {SkillsData.map((skill, i) => {
-                if(!skill.show_home) return false;
+            {skills.map((skill, i) => {
+                if(!skill.fields.home) return false;
+                if(skill.fields.svg === undefined) return false;
+                const renderImage = skill.fields.svg.source;
                 return  <li key={i}>
-                        <SVGInline svg={ skill.svg } className={`item ${skill.class || "" }`} />
-                        <span id={`icon-${i}`} className="label">{skill.name}</span>
+                        <span className={`item devicons-${skill.fields.name.toLowerCase() || "" }`} dangerouslySetInnerHTML={{ __html: renderImage }} />
+                        <span id={`icon-${i}`} className="label">{skill.fields.name}</span>
                     </li>
                 })}
         </ul>

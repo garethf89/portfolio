@@ -5,23 +5,30 @@ import Skills from '../../Components/Skills/Skills';
 import Projects from '../../Components/Projects/Projects';
 import Work from '../../Components/Work/Work';
 import LastFM from "../../Components/LastFM/LastFM";
+import { connect } from 'react-redux';
+import Content from '../Content/Content';
 
 class Home extends Component {
 
-
   render() {
+    const { projects, skills, work} = this.props.data;
 
     return (
         <div>
             <HomeDescription />
-            <Skills />
-            <Projects />
-            <Work />
+            <Skills skills={skills} />
+            <Projects projects={projects} />
+            <Work work={work} />
             <LastFM />
         </div>
     );
   }
 }
 
-
-export default Home;
+const mapStateToProps = state => {
+  return {
+    loading: state.data.loading,
+    data: state.data.data
+  }
+};
+export default connect(mapStateToProps, {})(Content(Home))

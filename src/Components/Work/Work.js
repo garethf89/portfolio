@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'; 
 import Globals from '../../Globals';
-import { WorkData } from '../../Data/WorkData';
 
 class Skills extends Component {
 
@@ -10,6 +9,18 @@ class Skills extends Component {
         this.imageExt = Globals.res;
     }
   render() {
+
+    const { work } = this.props;
+
+    work.sort((a, b) => {
+      if (a.fields.order < b.fields.order) {
+        return -1;
+      }
+      if (a.fields.order > b.fields.order) {
+        return 1;
+      }
+      return 0;
+    });
 
     return (
 
@@ -20,14 +31,16 @@ class Skills extends Component {
             </header>
             
             <div id="work_items" className="row">              
-            { WorkData.map((work, i) => {
+            { 
+              work.map((w, i) => {
 
+                const workDisplay = w.fields;
                 let bgStyle = {
-                    backgroundImage: `url(/${work.cover}${this.imageExt}.jpg)`
+                    backgroundImage: `url(/${workDisplay.cover}${this.imageExt}.jpg)`
                 };
 
-                return <Link key={i} className="work_item" to={`/${work.url}`} style={bgStyle}>
-                    <h4>{work.name}</h4>
+                return <Link key={i} className="work_item" to={`/${workDisplay.url}`} style={bgStyle}>
+                    <h4>{workDisplay.name}</h4>
                 </Link>
             })}
 

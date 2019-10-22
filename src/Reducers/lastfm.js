@@ -8,7 +8,7 @@ import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes
   
   export default (state = initialState, action) => {
     const { type } = action;
-    
+
     switch(type) {
 
       case GET_LASTFM:
@@ -24,7 +24,7 @@ import {GET_LASTFM, SUCCESS_LASTFM, FAILURE_LASTFM} from '../Actions/ActionTypes
           ...state,
           loading: false,
           error: false,
-          albums: action.payload.data[0].data.topalbums.album
+          albums: action.payload.data.data.album
         };
   
       case FAILURE_LASTFM:

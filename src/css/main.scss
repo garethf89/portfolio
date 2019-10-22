@@ -41,6 +41,12 @@ $fa-font-path:'/assets/fonts';
 //Socket page
 @import "modules/socket";
 
+// sPINNER
+@import "modules/spinner";
+
+// Load Error
+@import "modules/load-error";
+
 .fade-enter {
   opacity: 0;
   z-index: 1;
