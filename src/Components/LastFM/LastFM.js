@@ -25,7 +25,7 @@ class LastFM extends Component {
                 <h2>Recently Played...</h2>
             </header>
             
-            { this.props.lastFm.albums.map((album, i) => {
+            { this.props.lastFm.albums && this.props.lastFm.albums.map((album, i) => {
               return <div key={i} className={styles['lastfm_albums__music-container']}>
                         <img alt={`${album.name} cover`} src={album.image[2]['#text']} />
                         <div className={styles['music-info']}>
