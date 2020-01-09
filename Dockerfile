@@ -5,6 +5,7 @@ ENV NODE_ENV=production
 
 ARG REACT_APP_API_URL
 ARG REACT_APP_PROD
+ARG REACT_APP_REACT_APP_SENTRY
 
 RUN apk update -f && \
    apk add bash

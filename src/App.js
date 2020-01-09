@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { connect } from 'react-redux';
 
+import * as Sentry from '@sentry/browser';
+
 import './css/main.scss';
 
 import Footer from "./Containers/Footer/Footer";
@@ -17,6 +19,11 @@ import routes from './Routes';
 import { Route, Switch } from 'react-router-dom';
 
 import {Icons} from './Icons';
+
+if (process.env.REACT_APP_PROD === true) {
+  console.log('sentry starting');
+  Sentry.init({dsn: `${process.env.REACT_APP_SENTRY}`});
+}
 
 Icons();
 
@@ -58,7 +65,7 @@ class App extends Component {
 
         <div id="content" className="App">
              <Header />
-             
+
             <section id="main_content">
               <TransitionGroup>
                 <CSSTransition key={this.props.location.key} classNames="mainAnimation" timeout={300}>
