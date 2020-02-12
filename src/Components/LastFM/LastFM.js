@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { connect } from 'react-redux';
 
 import {requestLastFm} from '../../Actions/lastfm'
-import styles from './LastFM.scss';
+import * as styles from './LastFM.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-class LastFM extends Component {
+class LastFM extends React.Component {
 
   constructor(){
     super();

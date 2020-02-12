@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
-class LoadError extends Component {
+class LoadError extends React.Component {
 
   render() {
     return (

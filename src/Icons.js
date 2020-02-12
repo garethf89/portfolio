@@ -1,11 +1,11 @@
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import faDownload from '@fortawesome/fontawesome-free-solid/faDownload';
-import faBriefcase from '@fortawesome/fontawesome-free-solid/faBriefcase';
-import faCog from '@fortawesome/fontawesome-free-solid/faCog';
-import faMobile from '@fortawesome/fontawesome-free-solid/faMobile';
-import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faMobile } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 export const Icons = () => {
-    fontawesome.library.add(brands, faDownload, faBriefcase, faCog, faMobile, faEnvelope);
+    library.add(fab, faDownload, faBriefcase, faCog, faMobile, faEnvelope);
 }

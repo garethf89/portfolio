@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
-class Skills extends Component {
+class Skills extends React.Component {
 
   render() {
 

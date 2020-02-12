@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
 import HomeDescription from '../../Components/HomeDescription/HomeDescription';
 import Skills from '../../Components/Skills/Skills';
@@ -8,7 +8,7 @@ import LastFM from "../../Components/LastFM/LastFM";
 import { connect } from 'react-redux';
 import Content from '../Content/Content';
 
-class Home extends Component {
+class Home extends React.Component {
 
   render() {
     const { projects, skills, work} = this.props.data;

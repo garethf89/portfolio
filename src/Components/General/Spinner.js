@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { BeatLoader } from 'react-spinners';
 
-class Spinner extends Component {
+class Spinner extends React.Component {
 
   render() {
     return (

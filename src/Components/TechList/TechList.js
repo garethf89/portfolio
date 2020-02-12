@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
-class TechList extends Component {
+class TechList extends React.Component {
 
   render() {
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { connect } from 'react-redux';
 
@@ -27,7 +27,7 @@ if (process.env.REACT_APP_PROD === true) {
 
 Icons();
 
-class App extends Component {
+class App extends React.Component {
 
   componentWillMount()
   {
@@ -49,8 +49,12 @@ class App extends Component {
   animateToElement(el){
     let style = window.getComputedStyle(document.getElementById("nav__pullDown"));
     let timeAmount = style.display === 'none' ? 10 : 500;
-    window.setTimeout(function(){ 
-      document.getElementById(el).scrollIntoView({ 
+    window.setTimeout(() => { 
+      const t = document.getElementById(el);
+      if(!t) {
+        return;
+      }
+      t.scrollIntoView({ 
         block:'start',
         behavior: 'smooth'
       });

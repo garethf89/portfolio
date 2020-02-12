@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
-class RequiredLabel extends Component {
+class RequiredLabel extends React.Component {
 
   render() {
 

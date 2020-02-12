@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import styles from './Footer.scss';
+import * as styles from './Footer.scss';
 
-class Footer extends Component {
+class Footer extends React.Component {
 
   render() {
 

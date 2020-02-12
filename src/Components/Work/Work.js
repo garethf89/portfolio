@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { Link } from 'react-router-dom'; 
 import Globals from '../../Globals';
 
-class Skills extends Component {
+class Skills extends React.Component {
 
     constructor(){
         super();

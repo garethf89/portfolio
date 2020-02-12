@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import Menu from '../../Components/Menu/Menu';
 
-class DesktopMenu extends Component {
+class DesktopMenu extends React.Component {
 
   componentDidMount(){
 

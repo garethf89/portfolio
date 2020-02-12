@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { connect } from 'react-redux';
 
 import * as Slideout from 'slideout';
 
-import styles from './SlideMenuMobile.scss';
+import * as styles from './SlideMenuMobile.scss';
 
 import Menu from '../../Components/Menu/Menu';
 
-class SlideMenuMobile extends Component {
+class SlideMenuMobile extends React.Component {
 
 componentDidMount(){
 
@@ -31,7 +31,6 @@ componentDidMount(){
 componentWillReceiveProps(newProps){
     if(this.props.menu.open !== newProps.menu.open) this.slider.toggle();
 }
- 
   render() {
     return (
         <nav id="menu" className={styles.nav_mobile}>

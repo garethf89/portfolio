@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
 import * as baguetteBox from 'baguettebox.js';
 import '../../../node_modules/baguettebox.js/dist/baguetteBox.css';
 
-class PhotoGallery extends Component {
+class PhotoGallery extends React.Component {
 
 
 constructor()

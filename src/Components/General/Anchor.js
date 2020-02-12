@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
-class Anchor extends Component {
+class Anchor extends React.Component {
 
   render() {
 

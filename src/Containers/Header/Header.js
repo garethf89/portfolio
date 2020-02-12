@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
 import SlideMenuIcon from '../../Components/SlideMenuIcon/SlideMenuIcon';
 import DesktopMenu from '../../Containers/DesktopMenu/DesktopMenu';
 import Socket from '../../Components/Socket/Socket';
 
-class Header extends Component {
+class Header extends React.Component {
     state = {
         show: false
     }; 

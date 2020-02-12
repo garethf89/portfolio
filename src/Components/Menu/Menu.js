@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import {
     NavLink
   } from 'react-router-dom'; 
   
 import Icon from '../../Components/Icon/Icon';
 
-class Menu extends Component {
+class Menu extends React.Component {
 
   render() {
 

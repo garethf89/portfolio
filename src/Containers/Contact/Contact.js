@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
 import Input from  '../../Components/Form/Input';
 import Textarea from  '../../Components/Form/Teaxtarea';
@@ -12,7 +12,7 @@ import * as email from '../../Services/Email';
 import { BeatLoader } from 'react-spinners';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-class Contact extends Component {
+class Contact extends React.Component {
 
   constructor(){
     super();

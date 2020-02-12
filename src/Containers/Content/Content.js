@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { connect } from 'react-redux';
 import LoadError from '../../Components/General/LoadError';
 import Spinner from '../../Components/General/Spinner';
 
 const Content = WrappedComponent => {
   
-  class ContentRenderingComponent extends Component {
+  class ContentRenderingComponent extends React.Component {
 
     render() {
 

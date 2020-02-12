@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import RequiredLabel from "./RequiredLabel";
 
-class TextArea extends Component {
+class TextArea extends React.Component {
 
   render() {
     return (

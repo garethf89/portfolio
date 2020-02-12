@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import face from '../../assets/images/circle2X.png';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-class HomeDescription extends Component {
+class HomeDescription extends React.Component {
 
 
   render() {

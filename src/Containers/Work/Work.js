@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 
 import {Link} from 'react-router-dom'; 
 import TechList from "../../Components/TechList/TechList";
@@ -8,7 +8,7 @@ import Anchor from "../../Components/General/Anchor";
 import { connect } from 'react-redux';
 import Content from '../Content/Content';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-class Work extends Component {
+class Work extends React.Component {
 
   constructor(){
     super();

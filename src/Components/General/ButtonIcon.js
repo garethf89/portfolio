@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-class ButtonIcon extends Component {
+class ButtonIcon extends React.Component {
 
   render() {
 

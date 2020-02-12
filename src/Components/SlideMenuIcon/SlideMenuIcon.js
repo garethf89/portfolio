@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import { connect } from 'react-redux'
 
 import { toggleMenu } from '../../Actions/menu';
 
-class SlideMenuIcon extends Component {
+class SlideMenuIcon extends React.Component {
 
   isActive = false;
     

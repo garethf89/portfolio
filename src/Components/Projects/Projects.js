@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import * as React from "react"; 
 import Globals from '../../Globals';
 
-class Projects extends Component {
+class Projects extends React.Component {
 
   constructor(){
     super();
