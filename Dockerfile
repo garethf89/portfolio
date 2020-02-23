@@ -19,6 +19,7 @@ COPY ./config $APP_DIR/config
 COPY ./public $APP_DIR/public
 COPY ./scripts $APP_DIR/scripts
 COPY ./src $APP_DIR/src
+COPY ./tsconfig.json $APP_DIR/tsconfig.json
 
 RUN yarn install
 RUN yarn run build
