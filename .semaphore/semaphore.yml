@@ -1,0 +1,53 @@
+version: v1.0
+name: Portfolio Front End
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+global_job_config:
+  env_vars:
+    - name: APP_NAME
+      value: portfolio_fe
+blocks:
+  - name: Build App Cache and Dependencies
+    task:
+      prologue:
+        commands:
+          - checkout
+          - nvm use
+      jobs:
+        - name: NPM Cache
+          commands:
+            - cache restore
+            - yarn install
+            - cache store
+  - name: Build
+    task:
+      prologue:
+        commands:
+          - checkout
+          - nvm use
+          - cache restore
+      jobs:
+        - name: Build
+          commands:
+            - yarn build
+  - name: Build and Push Docker Image
+    task:
+      secrets:
+        - name: dockerhub
+      jobs:
+        - name: Deploy docker image
+          commands:
+            - checkout
+            - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
+            - 'docker pull "${DOCKER_USERNAME}"/${APP_NAME}:latest || true'
+            - 'docker build --cache-from "${DOCKER_USERNAME}"/${APP_NAME}:latest -t "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER" .'
+            - 'docker tag "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER" ${DOCKER_USERNAME}/${APP_NAME}:latest'
+            - 'docker push "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER"'
+            - 'docker push "${DOCKER_USERNAME}/${APP_NAME}:latest"'
+promotions:
+  - name: Production deploy
+    pipeline_file: production-deploy.yml
+    auto_promote_on:
+      - result: passed
