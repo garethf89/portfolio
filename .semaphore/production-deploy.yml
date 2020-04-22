@@ -1,0 +1,31 @@
+# .semaphore/production-deploy.yml
+version: v1.0
+name: Deploy to production
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+execution_time_limit:
+  minutes: 15
+
+blocks:
+  - name: Deploy to DO
+    task:
+      secrets:
+        - name: DigitalOcean
+      prologue:
+        commands:
+          - wget https://github.com/digitalocean/doctl/releases/download/v1.41.0/doctl-1.41.0-linux-amd64.tar.gz
+          - tar xf doctl-1.41.0-linux-amd64.tar.gz 
+          - sudo cp doctl /usr/local/bin
+          - ssh-keyscan -H $DO_IP  >> ~/.ssh/known_hosts
+          - ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+          - sudo apt-get install sshpass
+          - sshpass -e ssh-copy-id -i ~/.ssh/id_rsa $DO_IP_LOGIN
+          - doctl auth init --access-token $DO_ACCESS_TOKEN
+      jobs:
+        - name: 'Run Docker Compose'
+          commands:
+            - echo 'Running docker compose'
+            - doctl compute ssh $DROPLET_NAME --ssh-agent-forwarding --ssh-port 26 --ssh-command "docker-compose up -d --build"
