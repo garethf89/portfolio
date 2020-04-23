@@ -36,13 +36,14 @@ blocks:
     task:
       secrets:
         - name: dockerhub
+        - name: frontend
       jobs:
         - name: Deploy docker image
           commands:
             - checkout
             - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
             - 'docker pull "${DOCKER_USERNAME}"/${APP_NAME}:latest || true'
-            - 'docker build --cache-from "${DOCKER_USERNAME}"/${APP_NAME}:latest -t "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER" .'
+            - 'docker build --build-arg REACT_APP_PROD --build-arg REACT_APP_API_URL --cache-from "${DOCKER_USERNAME}"/${APP_NAME}:latest -t "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER" .'
             - 'docker tag "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER" ${DOCKER_USERNAME}/${APP_NAME}:latest'
             - 'docker push "${DOCKER_USERNAME}/${APP_NAME}:$SEMAPHORE_WORKFLOW_NUMBER"'
             - 'docker push "${DOCKER_USERNAME}/${APP_NAME}:latest"'
