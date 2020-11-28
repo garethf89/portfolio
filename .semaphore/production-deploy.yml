@@ -28,4 +28,6 @@ blocks:
         - name: 'Run Docker Compose'
           commands:
             - echo 'Running docker compose'
+            - chmod +x init-letsencrypt.sh
+            - sudo ./init-letsencrypt.sh
             - doctl compute ssh $DROPLET_NAME --ssh-agent-forwarding --ssh-port 26 --ssh-command "docker-compose up -d --build"
